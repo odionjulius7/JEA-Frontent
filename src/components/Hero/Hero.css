@@ -1,0 +1,192 @@
+.App {
+  position: relative;
+  overflow-x: clip;
+  background: linear-gradient(to bottom, #121212 72%, #121212 72%);
+}
+.App--prop {
+  position: relative;
+  overflow-x: clip;
+  min-height: 50vh;
+  background-image: linear-gradient(to bottom, #2422229f 30%, #1d1c1c8a 80%),
+    url("/public/props-img-page.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.App--prop-reqed {
+  position: relative;
+  overflow-x: clip;
+  min-height: 50vh;
+  background-image: linear-gradient(to bottom, #2422229f 30%, #1d1c1c8a 80%),
+    url("/public/property-req.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.App--selected-projs {
+  position: relative;
+  overflow-x: clip;
+  min-height: 60vh;
+  background-image: linear-gradient(to bottom, #2422229f 30%, #1d1c1c8a 80%),
+    url("/public/selected-proj.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+.App--selected-blog {
+  position: relative;
+  overflow-x: clip;
+  min-height: 60vh;
+  background-image: linear-gradient(to bottom, #2422229f 30%, #1d1c1c8a 80%),
+    url("/public/selected-blog-hero.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+.App--props-selected {
+  position: relative;
+  overflow-x: clip;
+  min-height: 50vh;
+  background: linear-gradient(to bottom, #fff 30%, #fff 80%);
+}
+.App--projs {
+  position: relative;
+  overflow-x: clip;
+  min-height: 50vh;
+  background: linear-gradient(to bottom, #000 30%, #000 80%);
+}
+.App--props-selected > :nth-child(1) {
+  color: #000000;
+}
+
+.App > :nth-child(1) {
+  /* background: #121212; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.hero-wrapper {
+  color: white;
+  position: relative;
+  z-index: 1;
+  /* padding-bottom: 2rem; */
+}
+
+.hero-container {
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+/* linear */
+.hero-img-down {
+  background-image: linear-gradient(to bottom, #121212 20%, #2422228a 80%),
+    url("/public/home-hero-img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* height: 100vh;
+  width: 100%; */
+}
+
+/* linear */
+
+/* left side */
+.hero-left {
+  gap: 3rem;
+}
+.hero-title {
+  position: relative;
+  z-index: 1;
+}
+.hero-title > h1,
+.h1-one {
+  font-weight: 600;
+  font-size: 3.3rem;
+  line-height: 4rem;
+}
+.orange-circle {
+  height: 4rem;
+  width: 4rem;
+  background: var(--orange-gradient);
+  border-radius: 999px;
+  position: absolute;
+  right: 28%;
+  top: -10%;
+  z-index: -1;
+}
+.search-bar {
+  background-color: white;
+  border-radius: 5px;
+  border: 3px solid rgba(120, 120, 120, 0.374);
+  padding: 0.5rem 1rem;
+  width: 100%;
+  justify-content: space-between;
+}
+.search-bar > input {
+  border: none;
+  outline: none;
+}
+.stats {
+  width: 100%;
+  justify-content: space-between;
+}
+.stat > :nth-child(1) {
+  font-size: 2rem;
+}
+.stat > :nth-child(1) > :last-child {
+  color: orange;
+}
+/* right side */
+
+.image-container {
+  width: 30rem;
+  height: 35rem;
+  overflow: hidden;
+  border-radius: 15rem 15rem 0 0;
+  border: 8px solid rgba(255, 255, 255, 0.12);
+}
+.image-container > img {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-btn button,
+.line-img {
+  border-radius: 30px;
+  padding: 8px 20px;
+}
+
+div .line-img {
+  border: 1px solid white;
+}
+div .line-img:hover {
+  background-color: #131110 !important;
+}
+
+/* mobile screens */
+@media (max-width: 640px) {
+  .hero-container {
+    margin-top: 2rem;
+  }
+  .hero-title > h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  .image-container {
+    width: 95%;
+    height: 25rem;
+  }
+  .stats {
+    justify-content: center;
+    gap: 1.5rem;
+    font-weight: wrap;
+  }
+  .stat > :nth-child(1) {
+    font-size: 1.5rem;
+  }
+  .stat > :nth-child(2) {
+    font-size: 0.8rem;
+  }
+}

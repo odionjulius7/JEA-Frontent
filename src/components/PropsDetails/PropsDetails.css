@@ -1,0 +1,26 @@
+.PropsDetails {
+  min-height: 400px;
+  padding: 50px;
+}
+.PropsDetails h5 {
+  font-weight: 500;
+  font-size: 20px;
+}
+.PropsDetails p {
+  font-weight: 400;
+  font-size: 15px;
+}
+.PropsDetails ul li {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 26px;
+}
+
+/* ds */
+.white-border {
+  border-bottom: 2px solid white;
+}
+
+.grey-border {
+  border-bottom: 2px solid grey;
+}

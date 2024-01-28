@@ -1,0 +1,44 @@
+.AllProperties {
+  min-height: 400px;
+  color: #000000;
+  padding: 20px 50px 40px 50px;
+}
+.AllProperties h2 {
+  font-weight: 600;
+  font-size: 32px;
+  padding: 2rem 0;
+}
+
+/* import './Pagination.css' */
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+
+.pagination__react .page-num {
+  margin: 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.pagination__react .previous,
+.pagination__react .next {
+  margin: 0;
+  padding: 8px;
+  /* border: 1px solid #ccc; */
+  border-radius: 4px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.pagination__react .active {
+  background-color: #007bff;
+  color: #fff;
+}

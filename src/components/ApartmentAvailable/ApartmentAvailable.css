@@ -1,0 +1,11 @@
+.apartment-available {
+  background-color: #000000;
+  min-height: 600px;
+  color: #ffffff;
+  padding: 50px 20px;
+}
+
+.card-title-1 {
+  font-size: 24px;
+  font-weight: 600;
+}

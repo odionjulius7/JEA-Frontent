@@ -1,0 +1,23 @@
+.SelectedProjVideo {
+  min-height: 400px;
+  /* padding: 50px; */
+  background-color: #000000;
+  padding: 0;
+}
+.SelectedPorjImg {
+  min-height: 400px;
+
+  padding: 50px;
+  /* padding-top: 20rem; */
+  background-color: #000000;
+}
+
+.SelectedProjMap {
+  min-height: 300px;
+  width: 100vw;
+  padding: 0;
+}
+
+.SelectedPorjImg .btn:hover {
+  background-color: inherit;
+}

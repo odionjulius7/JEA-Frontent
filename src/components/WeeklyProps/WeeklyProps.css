@@ -1,0 +1,30 @@
+.home-weekly-props {
+  background-color: #ffffff;
+  min-height: 503px;
+  padding: 50px 50px;
+}
+.home-blog {
+  background-color: #e1e1e1 !important;
+  min-height: 503px;
+  padding: 50px 50px;
+}
+
+.weekly-props-header h2 {
+  font-weight: 600;
+  font-size: 32px;
+}
+
+.row-btn button:hover {
+  background-color: white;
+}
+
+/* Swiperjs */
+.home-blog .swiper-button-next:after,
+.home-blog .swiper-button-prev:after,
+.home-weekly-props .swiper-button-next:after,
+.home-weekly-props .swiper-button-prev:after {
+  background: #fbc34499;
+  padding: 10px 20px;
+  border-radius: 200px;
+  color: #ffffff;
+}

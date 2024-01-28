@@ -1,0 +1,51 @@
+.home-prop {
+  background-color: #232424;
+  min-height: 50vh;
+}
+
+.search-home .search-btn {
+  background-color: #fbc344 !important;
+  width: 100% !important;
+  color: black !important;
+}
+
+/* default edit */
+.home-prop .nav-pills .nav-link {
+  background-color: #ffffff;
+  color: #121212;
+}
+.App--prop .nav-pills .nav-link {
+  background-color: #ffffff;
+  color: #121212;
+}
+
+.App--prop .nav-pills .nav-link.active,
+.App--prop .nav-pills .show > .nav-link,
+.home-prop .nav-pills .nav-link.active,
+.home-prop .nav-pills .show > .nav-link {
+  color: var(--bs-nav-pills-link-active-color);
+  background-color: #fbc344;
+}
+
+/* fbdhjfn */
+.App--projs .nav-link {
+  border-bottom: 2px solid white;
+}
+
+/* Yellow border bottom for the active Nav link */
+.App--projs .nav-link.active {
+  border-bottom: 2px solid yellow;
+}
+.App--projs .proj-tab-bg {
+  min-height: 300px;
+  width: 100vw;
+  background-image: linear-gradient(to bottom, #2422229f 30%, #1d1c1c8a 80%),
+    url("/public/property-req.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+.App--projs .proj-tab-bg h2 {
+  font-weight: 600;
+  font-size: 60px;
+}

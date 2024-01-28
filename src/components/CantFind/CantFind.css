@@ -1,0 +1,27 @@
+.CantFind {
+  min-height: 350px;
+  padding: 50px;
+  color: #ffffff;
+  background-image: linear-gradient(to bottom, #2422229f 20%, #2422228a 80%),
+    url("/public/cant-find.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.NewsLetter {
+  min-height: 350px;
+  padding: 50px 80px;
+  color: #ffffff;
+  background-image: linear-gradient(to bottom, #1111119f 20%, #111111af 80%),
+    url("/public/news-letter-img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.NewsLetter h4 {
+  font-weight: 600;
+  font-size: 30px;
+}
+.NewsLetter span {
+  font-weight: 400;
+  font-size: 15px;
+}

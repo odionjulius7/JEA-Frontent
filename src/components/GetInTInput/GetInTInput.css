@@ -1,0 +1,29 @@
+.input-styles {
+  border-bottom: 2px solid #000;
+  color: #000;
+}
+.news-lett-input {
+  border-bottom: 2px solid #fff;
+  color: #fff;
+}
+.input-styles span,
+.news-lett-input span {
+  font-weight: 400;
+  font-size: 13px;
+}
+.input-styles input,
+.news-lett-input input,
+.input-styles textarea {
+  border: none;
+  background-color: transparent;
+}
+.input-styles input:focus,
+.input-styles input:hover,
+.news-lett-input input:focus,
+.news-lett-input input:hover,
+.input-styles textarea:hover,
+.input-styles textarea:focus {
+  border-color: none;
+  box-shadow: none;
+  background-color: transparent;
+}

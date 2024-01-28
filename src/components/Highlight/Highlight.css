@@ -1,0 +1,9 @@
+.Highlight {
+  min-height: 600px;
+  background-image: linear-gradient(to bottom, #2422229f 30%, #1d1c1c8a 80%),
+    url("/public/hightlight.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 50px;
+}
