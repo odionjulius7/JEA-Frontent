@@ -8,7 +8,7 @@ const LocatioCards = () => {
       <Card.Img
         variant="top"
         src="./location-img.png"
-        className="fit-content"
+        // className="fit-content"
       />
     </Card>
   );

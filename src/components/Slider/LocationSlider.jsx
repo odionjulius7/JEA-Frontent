@@ -13,34 +13,20 @@ import LocatioCards from "../Cards/LocatioCards";
 const LocationSlider = () => {
   return (
     <Swiper
-      spaceBetween={10}
+      spaceBetween={11}
       slidesPerView={5}
       navigation
       autoplay={{ delay: 3000, disableOnInteraction: false }}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
     >
-      <SwiperSlide className="mx-3">
-        <LocatioCards />
-      </SwiperSlide>
-      <SwiperSlide className="mx-3">
-        <LocatioCards />
-      </SwiperSlide>
-      <SwiperSlide className="mx-3">
-        <LocatioCards />
-      </SwiperSlide>
-      <SwiperSlide className="mx-3">
-        <LocatioCards />
-      </SwiperSlide>
-      <SwiperSlide className="mx-3">
-        <LocatioCards />
-      </SwiperSlide>
-      <SwiperSlide className="mx-3">
-        <LocatioCards />
-      </SwiperSlide>
-      <SwiperSlide className="mx-3">
-        <LocatioCards />
-      </SwiperSlide>
+      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((Item, i) => {
+        return (
+          <SwiperSlide key={i} className="mx-3">
+            <LocatioCards />
+          </SwiperSlide>
+        );
+      })}
       {/* Add more slides as needed */}
     </Swiper>
   );

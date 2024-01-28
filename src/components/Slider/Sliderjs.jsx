@@ -24,7 +24,7 @@ const MySwiper = ({ blogPage, url_str }) => {
         return (
           <SwiperSlide>
             <Link to={`/${url_str}`}>
-              <Card style={{ width: "26rem" }}>
+              <Card style={{ width: "24rem" }}>
                 <Card.Img variant="top" src="./first-slide-img.png" />
                 <Card.Body
                   style={{

@@ -26,7 +26,7 @@ const Hero = () => {
             // }}
           >
             <div className="row px-5 justify-content-between">
-              <div className="col-4 d-flex flex-column justify-content-around">
+              <div className="col-5 d-flex flex-column justify-content-around">
                 <p className="text-white">
                   The Sixtus contains 4 Bedroom Terrace houses and two fully
                   detached homes which brings it to six units. This development
@@ -62,7 +62,7 @@ const Hero = () => {
                     </div>
                   </div>
                 </div>
-                <div className="row py-3 px-5 align-items-center text-center">
+                <div className="row py-4 px-5 align-items-center text-center">
                   <div className="col">
                     <button
                       className="btn btn-outline-light line-img "
