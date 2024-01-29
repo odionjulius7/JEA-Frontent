@@ -15,7 +15,7 @@
 .App--prop-reqed {
   position: relative;
   overflow-x: clip;
-  min-height: 75vh;
+  min-height: 53vh;
   background-image: linear-gradient(to bottom, #2422229f 30%, #1d1c1c8a 80%),
     url("/public/property-req.png");
   background-size: cover;
