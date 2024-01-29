@@ -14,7 +14,7 @@ SwiperCore.use([Navigation, Autoplay]);
 const ProjAndPropSlide = ({ homePage }) => {
   return (
     <Swiper
-      spaceBetween={0}
+      spaceBetween={5}
       slidesPerView={5}
       navigation
       autoplay={{ delay: 3000, disableOnInteraction: false }}
@@ -22,7 +22,7 @@ const ProjAndPropSlide = ({ homePage }) => {
       {[1, 2, 3, 4, 5, 6, 7, 8].map((slide, i) => {
         return (
           <SwiperSlide key={i}>
-            <Card style={{ width: homePage ? "26rem" : "17rem" }}>
+            <Card style={{ width: homePage ? "24rem" : "16rem" }}>
               <Card.Img variant="top" src="./selected-pro.png" />
             </Card>
           </SwiperSlide>

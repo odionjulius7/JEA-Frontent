@@ -6,10 +6,22 @@ const SelectedProjVideo = () => {
   return (
     <div className="container-fluid SelectedProjVideo py-5">
       <div className="row gap-5 align-items-center">
-        <div className="col-6 px-3">
-          <img src="./SelectedProjVideo.png" alt="" className="fit-content" />
+        <div
+          className="col-6 px-3"
+          style={{
+            marginLeft: "2rem",
+          }}
+        >
+          <img
+            src="./SelectedProjVideo.png"
+            alt=""
+            className=""
+            style={{
+              width: "100%",
+            }}
+          />
         </div>
-        <div className="col-5 ml-2 text-white">
+        <div className="col-5 ml-3 text-white">
           <p
             style={{
               fontSize: "15px",

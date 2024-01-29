@@ -9,24 +9,24 @@ const SelectedProjImg = () => {
   return (
     <div className="container-fluid SelectedPorjImg">
       <div className="row my-5">
-        <div className="col">
+        <div className="col-4">
           <img src="./selected-proj-ig.png" alt="" className="fit-content" />
         </div>
-        <div className="col">
+        <div className="col-4">
           <img src="./selected-proj-ig.png" alt="" className="fit-content" />
         </div>
-        <div className="col">
+        <div className="col-4">
           <img src="./selected-proj-ig.png" alt="" className="fit-content" />
         </div>
       </div>
       <div className="row my-5">
-        <div className="col">
+        <div className="col-4">
           <img src="./selected-proj-ig.png" alt="" className="fit-content" />
         </div>
-        <div className="col">
+        <div className="col-4">
           <img src="./selected-proj-ig.png" alt="" className="fit-content" />
         </div>
-        <div className="col">
+        <div className="col-4">
           <img src="./selected-proj-ig.png" alt="" className="fit-content" />
         </div>
       </div>
@@ -76,7 +76,7 @@ const SelectedProjImg = () => {
             </button>
           </div>
           <div
-            className="row my-5"
+            className="row my-4"
             style={{
               textAlign: "center",
             }}
