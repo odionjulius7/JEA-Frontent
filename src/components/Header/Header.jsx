@@ -4,11 +4,18 @@ import { BiMenuAltRight } from "react-icons/bi";
 import { getMenuStyles } from "../../utils/common";
 import useHeaderColor from "../../hooks/useHeaderColor";
 import OutsideClickHandler from "react-outside-click-handler";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const headerColor = useHeaderColor();
+
+  //
+
+  let activeStyle = {
+    borderBottom: "2px solid #fbc344",
+  };
+  //
 
   return (
     <section className="h-wrapper" style={{ background: headerColor }}>
@@ -22,18 +29,39 @@ const Header = () => {
             setMenuOpened(false);
           }}
         >
-          <div
-            // ref={menuRef}
-            className="flexCenter h-menu"
-            style={getMenuStyles(menuOpened)}
-          >
-            <Link to="/">HOMEPAGE</Link>
-            <Link to="/properties">PROPERTIES</Link>
-            <Link to="/projects">PROJECTS</Link>
-            <Link to="/blogs">BLOG</Link>
-            <Link id="about-mobile" to="/about-us">
+          <div className="flexCenter h-menu" style={getMenuStyles(menuOpened)}>
+            <NavLink
+              to="/"
+              exact
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              HOMEPAGE
+            </NavLink>
+            <NavLink
+              to="/properties"
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              PROPERTIES
+            </NavLink>
+            <NavLink
+              to="/projects"
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              PROJECTS
+            </NavLink>
+            <NavLink
+              to="/blogs"
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              BLOG
+            </NavLink>
+            <NavLink
+              id="about-mobile"
+              to="/about-us"
+              activeClassName="activeLink"
+            >
               ABOUT US
-            </Link>
+            </NavLink>
           </div>
         </OutsideClickHandler>
         <div>
