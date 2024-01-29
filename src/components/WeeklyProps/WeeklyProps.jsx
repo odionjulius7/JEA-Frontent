@@ -49,7 +49,7 @@ const WeeklyProps = ({ blogPage, url_str }) => {
             </div>
           </>
         )}
-        <div className="row ">
+        <div className="row pt-3 pb-4">
           <div className="col d-flex  text-align-center justify-content-center">
             <MySwiper blogPage={blogPage} url_str={url_str} />
           </div>
