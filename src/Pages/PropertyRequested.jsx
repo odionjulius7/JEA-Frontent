@@ -7,7 +7,7 @@ const PropertyRequested = () => {
   const [newLetterComp, setNewLetterComp] = useState(true);
   return (
     <>
-      <PropertyReqHero />
+      <PropertyReqHero text="Property Request" />
       <PropReqForm />
       <NewsLetter newLetterComp={newLetterComp} />
       <Footer />
