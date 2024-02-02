@@ -5,9 +5,14 @@ import { Button } from "react-bootstrap";
 import Buttons from "../Buttons";
 import MySwiper from "../Slider/Sliderjs";
 
-const WeeklyProps = ({ blogPage, url_str }) => {
+const WeeklyProps = ({ blogPage, url_str, homeBg }) => {
   return (
-    <div className="container-fluid home-weekly-props">
+    <div
+      className="container-fluid home-weekly-props"
+      style={{
+        backgroundColor: homeBg ? "#e1e1e1" : "#ffffff",
+      }}
+    >
       <div className="row">
         {!blogPage && (
           <>

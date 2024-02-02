@@ -12,6 +12,7 @@ import WeeklyProps from "../components/WeeklyProps/WeeklyProps";
 const Home = () => {
   const [homePage, setHomePage] = useState(true);
   const [blogPage, setBlogPage] = useState(true);
+  const [homeBg, setHomeBg] = useState(true);
 
   const url_str = "property-selected";
   const url_strblog = "selected-blog";
@@ -24,7 +25,7 @@ const Home = () => {
       <WeeklyProps homePage={homePage} url_str={url_str} />
       <ApartmentAvailable />
       <LocationProps />
-      <WeeklyProps blogPage={blogPage} url_str={url_strblog} />
+      <WeeklyProps blogPage={blogPage} url_str={url_strblog} homeBg={homeBg} />
       {/* <HomeBlog homePage={homePage} /> */}
       <GetInTouch homePage={homePage} />
       <Footer />
