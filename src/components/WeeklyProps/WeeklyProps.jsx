@@ -55,6 +55,7 @@ const WeeklyProps = ({ blogPage, url_str, homeBg }) => {
           </>
         )}
         <div className="row pt-3 pb-4">
+          {homeBg && <h2 className="mb-5 mt-2">From Our Blog</h2>}
           <div className="col d-flex  text-align-center justify-content-center">
             <MySwiper blogPage={blogPage} url_str={url_str} />
           </div>
