@@ -2,8 +2,13 @@ import React from "react";
 
 import { Col, Nav, Row, Tab } from "react-bootstrap";
 
-import "./FindProp.css";
+import { FaLongArrowAltLeft } from "react-icons/fa";
+import { FaLongArrowAltRight } from "react-icons/fa";
+
 import { Link } from "react-router-dom";
+
+import "./FindProp.css";
+
 const ProjectsTab = () => {
   return (
     <>
@@ -84,7 +89,7 @@ const ProjectsTab = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="row py-3 px-5 align-items-center text-center">
+                      <div className="row pb-3 pt-5 px-5 align-items-center ">
                         <div className="col">
                           <button
                             className="btn btn-outline-light line-img "
@@ -92,7 +97,7 @@ const ProjectsTab = () => {
                             data-bs-target="#carouselExample"
                             data-bs-slide="prev"
                           >
-                            <img src="./Line-1.png" alt="line-img" />
+                            <FaLongArrowAltLeft />
                           </button>
                         </div>
                         <div className="col">01 - 03</div>
@@ -103,7 +108,7 @@ const ProjectsTab = () => {
                             data-bs-target="#carouselExample"
                             data-bs-slide="next"
                           >
-                            <img src="./Line-2.png" alt="line-img" />
+                            <FaLongArrowAltRight />
                           </button>
                         </div>
                       </div>
@@ -162,7 +167,7 @@ const ProjectsTab = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="row py-3 px-5 align-items-center text-center">
+                      <div className="row pb-3 pt-5 px-5 align-items-center ">
                         <div className="col">
                           <button
                             className="btn btn-outline-light line-img "
@@ -170,7 +175,7 @@ const ProjectsTab = () => {
                             data-bs-target="#carouselExample"
                             data-bs-slide="prev"
                           >
-                            <img src="./Line-1.png" alt="line-img" />
+                            <FaLongArrowAltLeft />
                           </button>
                         </div>
                         <div className="col">01 - 03</div>
@@ -181,7 +186,7 @@ const ProjectsTab = () => {
                             data-bs-target="#carouselExample"
                             data-bs-slide="next"
                           >
-                            <img src="./Line-2.png" alt="line-img" />
+                            <FaLongArrowAltRight />
                           </button>
                         </div>
                       </div>
@@ -240,7 +245,7 @@ const ProjectsTab = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="row py-3 px-5 align-items-center text-center">
+                      <div className="row pb-3 pt-5 px-5 align-items-center ">
                         <div className="col">
                           <button
                             className="btn btn-outline-light line-img "
@@ -248,7 +253,7 @@ const ProjectsTab = () => {
                             data-bs-target="#carouselExample"
                             data-bs-slide="prev"
                           >
-                            <img src="./Line-1.png" alt="line-img" />
+                            <FaLongArrowAltLeft />
                           </button>
                         </div>
                         <div className="col">01 - 03</div>
@@ -259,7 +264,7 @@ const ProjectsTab = () => {
                             data-bs-target="#carouselExample"
                             data-bs-slide="next"
                           >
-                            <img src="./Line-2.png" alt="line-img" />
+                            <FaLongArrowAltRight />
                           </button>
                         </div>
                       </div>
@@ -318,7 +323,7 @@ const ProjectsTab = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="row py-3 px-5 align-items-center text-center">
+                      <div className="row pb-3 pt-5 px-5 align-items-center ">
                         <div className="col">
                           <button
                             className="btn btn-outline-light line-img "
@@ -326,7 +331,7 @@ const ProjectsTab = () => {
                             data-bs-target="#carouselExample"
                             data-bs-slide="prev"
                           >
-                            <img src="./Line-1.png" alt="line-img" />
+                            <FaLongArrowAltLeft />
                           </button>
                         </div>
                         <div className="col">01 - 03</div>
@@ -337,7 +342,85 @@ const ProjectsTab = () => {
                             data-bs-target="#carouselExample"
                             data-bs-slide="next"
                           >
-                            <img src="./Line-2.png" alt="line-img" />
+                            <FaLongArrowAltRight />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="my-5 proj-tab-bg py-3">
+                  <div className="row align-items-center p-5 justify-content-between">
+                    <div className="col-5">
+                      <h2>Megamound</h2>
+                      <div className="d-flex gap-4 py-3">
+                        <span>5 Beds</span>
+                        <span>2017</span>
+                        <span>Fully Detached</span>
+                        <span>Fully Detached</span>
+                        <span>Ikota</span>
+                      </div>
+                      <hr
+                        className="text-white my-3"
+                        style={{
+                          borderTop: "3px solid white !important",
+                        }}
+                      />
+                      <div>
+                        <span>
+                          In a groundbreaking and imaginative leap forward in
+                          real estate, the concept of "Floating Cities" is
+                          taking the industry by storm. Imagine a world where
+                          entire commu ...
+                        </span>
+                      </div>
+                      <div className="row mt-5">
+                        <div className="col-8 ">
+                          <button className="btn btn-outline-light px-5">
+                            <Link to="/selected-project"> VIEW MORE</Link>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-5">
+                      <div id="carouselExample" className="carousel slide">
+                        <div className="carousel-inner">
+                          <div className="carousel-item active">
+                            <img
+                              src="./projs-side-img.png"
+                              className="d-block w-100"
+                              alt="..."
+                            />
+                          </div>
+                          <div className="carousel-item">
+                            <img
+                              src="./projs-side-img.png"
+                              className="d-block w-100"
+                              alt="..."
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="row pb-3 pt-5 px-5 align-items-center ">
+                        <div className="col">
+                          <button
+                            className="btn btn-outline-light line-img "
+                            type="button"
+                            data-bs-target="#carouselExample"
+                            data-bs-slide="prev"
+                          >
+                            <FaLongArrowAltLeft />
+                          </button>
+                        </div>
+                        <div className="col">01 - 03</div>
+                        <div className="col">
+                          <button
+                            className="btn btn-outline-light line-img"
+                            type="button"
+                            data-bs-target="#carouselExample"
+                            data-bs-slide="next"
+                          >
+                            <FaLongArrowAltRight />
                           </button>
                         </div>
                       </div>
@@ -345,7 +428,7 @@ const ProjectsTab = () => {
                   </div>
                 </div>
                 <div className="row mt-5 justify-content-center">
-                  <div className="col-3 mx-auto">
+                  <div className="col-3 mx-auto d-flex justify-content-center">
                     <button className="btn btn-outline-light px-5">
                       Show MORE
                     </button>

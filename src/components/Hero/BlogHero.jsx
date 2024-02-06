@@ -11,9 +11,9 @@ const BlogHero = () => {
         <Header />
         <div className="container-fluid px-5 py-5 ">
           <div className="row py-5">
-            <h2 className="fw-bold" style={{ textAlign: "center" }}>
+            <h1 className="fw-bold" style={{ textAlign: "center" }}>
               Our Blog
-            </h2>
+            </h1>
             <span
               className="fs-6 "
               style={{ textAlign: "center", padding: "10px " }}

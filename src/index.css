@@ -1,5 +1,14 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"); */
 
+@font-face {
+  font-family: MaderaMedium;
+  src: url(/public/Madera_Complete_Family_Pack/Madera-Medium.ttf);
+}
+@font-face {
+  font-family: ClashDisplay;
+  src: url(/public/Fonts/OTF/ClashDisplay-Medium.otf);
+}
+
 :root {
   --primary: #1f3e72;
   --secondary: rgba(255, 255, 255, 0.78);
@@ -22,15 +31,33 @@
 
 body {
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: MaderaMedium;
+  /* font-family: "Montserrat", sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: "Montserrat", sans-serif;
+  font-family: myFont;
+  /* font-family: "Montserrat", sans-serif; */
 }
 /*  */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: ClashDisplay;
+}
+
+h2 {
+  font-size: 2.3rem;
+}
+
+h1 {
+  font-size: 3.6rem;
+}
 
 a {
   color: inherit;

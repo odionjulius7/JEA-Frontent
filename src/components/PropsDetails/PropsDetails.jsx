@@ -1,10 +1,9 @@
 import React from "react";
 
-import { IoMdCall } from "react-icons/io";
+import { IoIosCall } from "react-icons/io";
 import { IoLogoWhatsapp } from "react-icons/io";
 
 import "./PropsDetails.css";
-import AntDesignBtn from "../AntDesignBtn";
 
 const PropsDetails = ({ propsDetails }) => {
   return (
@@ -129,10 +128,29 @@ const PropsDetails = ({ propsDetails }) => {
       </div>
       {propsDetails && (
         <div className="row py-4 my-4 ">
-          <div className="col-5 d-flex gap-4 mx-auto">
-            <AntDesignBtn text={"CALL AGENT"} icons={<IoMdCall />} />
+          <div className="col-5 d-flex justify-content-center gap-4 mx-auto">
+            <div className="row gap-3">
+              <button
+                type="button"
+                className="btn btn-outline-dark fit-content "
+                style={{
+                  fontWeight: "600",
+                }}
+              >
+                <IoIosCall className="fs-4" /> Call Agent
+              </button>
 
-            <AntDesignBtn text={"MESSAGE AGENT"} icons={<IoLogoWhatsapp />} />
+              <button
+                type="button"
+                className="btn btn-outline-dark fit-content"
+                style={{
+                  // width: "50%",
+                  fontWeight: "600",
+                }}
+              >
+                <IoLogoWhatsapp className="fs-4" /> Message Agent
+              </button>
+            </div>
           </div>
         </div>
       )}

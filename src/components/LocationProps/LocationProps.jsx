@@ -1,7 +1,7 @@
 import React from "react";
 import "./LocationProps.css";
-
-import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
+import { FaLongArrowAltLeft } from "react-icons/fa";
+import { FaLongArrowAltRight } from "react-icons/fa";
 import LocationSlider from "../Slider/LocationSlider";
 
 const LocationProps = () => {
@@ -21,10 +21,10 @@ const LocationProps = () => {
         </div>
         <div className="row justify-content-center my-2">
           <div
-            className="col-3 d-flex gap-5"
-            style={{
-              marginRight: "-10%",
-            }}
+            className="col-3 d-flex justify-content-center gap-5"
+            // style={{
+            //   marginRight: "-10%",
+            // }}
           >
             <button
               className="btn btn-outline-dark"
@@ -35,7 +35,7 @@ const LocationProps = () => {
               }}
             >
               {/* <img src="./Line-1.png" alt="line-img" /> */}
-              <ArrowLeftOutlined />
+              <FaLongArrowAltLeft />
             </button>
             <button
               className="btn btn-outline-dark "
@@ -46,7 +46,7 @@ const LocationProps = () => {
               }}
             >
               {/* <img src="./Line-2.png" alt="line-img" /> */}
-              <ArrowRightOutlined />
+              <FaLongArrowAltRight />
             </button>
           </div>
         </div>

@@ -12,13 +12,14 @@ const PropertySelected = () => {
   const [allProps, setAllProps] = useState(false);
   const [homePage, setHomePage] = useState(false);
   const [propsDetails, setPropsDetails] = useState(true);
+  const [selectedProps, setSelectedProps] = useState(true);
 
   const url_str = "property-selected";
   return (
     <>
       <PropsSelectedHero />
       <PropsDetails propsDetails={propsDetails} />
-      <NewsLetter newLetterComp={newLetterComp} />
+      <NewsLetter newLetterComp={newLetterComp} selectedProps={selectedProps} />
       <AllProperties allProps={allProps} url_str={url_str} />
       <GetInTouch homePage={homePage} />
       <Footer />

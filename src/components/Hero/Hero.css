@@ -152,17 +152,28 @@
   height: 100%;
 }
 
-.hero-btn button,
-.line-img {
+.hero-btn button {
   border-radius: 30px;
   padding: 8px 20px;
 }
 
-div .line-img {
-  border: 1px solid white;
+.line-img {
+  margin-top: 1rem;
+  border-radius: 30px;
+  padding: 6px 30px;
 }
+
+.line-img svg {
+  font-size: 1.6rem;
+}
+
+/* div .line-img {
+  border: 1px solid white;
+} */
+
 div .line-img:hover {
-  background-color: #131110 !important;
+  color: #fff;
+  background-color: transparent !important;
 }
 
 /* mobile screens */

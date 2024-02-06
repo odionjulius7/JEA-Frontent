@@ -1,6 +1,9 @@
 import React from "react";
 import Cards from "../components/Cards/Cards";
 
+import { FaLongArrowAltLeft } from "react-icons/fa";
+import { FaLongArrowAltRight } from "react-icons/fa";
+
 const CommonSlide = ({ px, colr, gbColr, stlr }) => {
   return (
     <div
@@ -24,14 +27,14 @@ const CommonSlide = ({ px, colr, gbColr, stlr }) => {
           display: stlr,
         }}
       >
-        <div className="col-3 mx-auto d-flex gap-5">
+        <div className="col-3 mx-auto d-flex justify-content-center gap-5">
           <button
             className="btn btn-outline-light line-img "
             type="button"
             data-bs-target="#carouselExample"
             data-bs-slide="prev"
           >
-            <img src="./Line-1.png" alt="line-img" />
+            <FaLongArrowAltLeft />
           </button>
           <button
             className="btn btn-outline-light line-img"
@@ -39,7 +42,7 @@ const CommonSlide = ({ px, colr, gbColr, stlr }) => {
             data-bs-target="#carouselExample"
             data-bs-slide="next"
           >
-            <img src="./Line-2.png" alt="line-img" />
+            <FaLongArrowAltRight />
           </button>
         </div>
       </div>

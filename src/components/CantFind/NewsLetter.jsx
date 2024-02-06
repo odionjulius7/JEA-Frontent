@@ -3,7 +3,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import GetInTInput from "../GetInTInput/GetInTInput";
 import "./CantFind.css";
 
-const NewsLetter = ({ newLetterComp, blogPage }) => {
+const NewsLetter = ({ newLetterComp, blogPage, selectedProps }) => {
   return (
     <div className="container-fluid NewsLetter">
       <div className="row py-4">
@@ -11,6 +11,7 @@ const NewsLetter = ({ newLetterComp, blogPage }) => {
           {newLetterComp ? (
             <div className="col-6">
               <h4>Subscribe to Our Newslettter</h4>
+
               <span>
                 Stay ahead in the real estate game. Sign up for our newsletter
                 to receive exclusive property listings, market insights, and
@@ -19,7 +20,7 @@ const NewsLetter = ({ newLetterComp, blogPage }) => {
             </div>
           ) : (
             <div className="col-6">
-              {blogPage ? (
+              {selectedProps ? (
                 <h4>Get Latest Properties</h4>
               ) : (
                 <h4 className="pb-2">Subscribe to Our Newslettter</h4>

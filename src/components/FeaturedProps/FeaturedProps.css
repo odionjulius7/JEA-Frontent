@@ -2,3 +2,7 @@
   min-height: 400px;
   color: #000000;
 }
+
+.FeaturedProps svg {
+  font-size: 1.6rem;
+}

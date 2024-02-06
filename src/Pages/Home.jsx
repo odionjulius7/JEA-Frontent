@@ -19,7 +19,18 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <div className="container-fluid p-5 text-white home-prop">
+      <div
+        className="container-fluid px-5 text-white home-prop"
+        style={{
+          paddingTop: "80px",
+          paddingBottom: "100px",
+        }}
+      >
+        <div className="row mb-5">
+          <div className="col d-flex justify-content-center">
+            <h2 className="text-center">Find Your Next Property</h2>
+          </div>
+        </div>
         <FindProperties />
       </div>
       <WeeklyProps homePage={homePage} url_str={url_str} />

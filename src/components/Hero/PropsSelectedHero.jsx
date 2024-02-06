@@ -1,12 +1,9 @@
 import { useState } from "react";
 import Header from "../Header/Header";
-import AntDesignBtn from "../AntDesignBtn";
-
-import { IoMdCall } from "react-icons/io";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaShareAlt } from "react-icons/fa";
 
-import HomeBlogSlide from "../Slider/HomeBlogSlide";
+import { IoIosCall } from "react-icons/io";
 
 import "./Hero.css";
 import ProjAndPropSlide from "../Slider/ProjAndPropSlide";
@@ -50,19 +47,40 @@ const PropsSelectedHero = () => {
               </div>
               <div className="row d-flex my-4">
                 <div className="col-6 d-flex gap-4">
-                  <AntDesignBtn text={"CALL AGENT"} icons={<IoMdCall />} />
+                  <div className="row gap-3">
+                    <button
+                      type="button"
+                      className="btn btn-outline-dark fit-content "
+                      style={{
+                        fontWeight: "600",
+                      }}
+                    >
+                      <IoIosCall className="fs-4" /> Call Agent
+                    </button>
 
-                  <AntDesignBtn
-                    text={"MESSAGE AGENT"}
-                    icons={<IoLogoWhatsapp />}
-                  />
+                    <button
+                      type="button"
+                      className="btn btn-outline-dark fit-content"
+                      style={{
+                        // width: "50%",
+                        fontWeight: "600",
+                      }}
+                    >
+                      <IoLogoWhatsapp className="fs-4" /> Message Agent
+                    </button>
+                  </div>
                 </div>
               </div>
               <div className="row my-3">
-                <AntDesignBtn
-                  text={"SHARE THIS PROPERTY"}
-                  icons={<FaShareAlt />}
-                />
+                <button
+                  type="button"
+                  className="btn btn-outline-dark fit-content"
+                  style={{
+                    fontWeight: "600",
+                  }}
+                >
+                  <FaShareAlt className="fs-4 mx-4" /> Share this property
+                </button>
               </div>
             </div>
             <div className="col-4 px-5">

@@ -9,25 +9,22 @@ const Footer = () => {
   const List = ["Home", "Properties", "Projects", "Blog"];
   return (
     <div className="container-fluid f-wrapper px-5 py-2">
-      <div className="row">
+      <div className="row justify-content-between">
         <div className="col-10">
           <div className="row justify-content-center align-align-items-center footer-1st-row py-4">
-            <div className="col-4">
-              <img src="./logo-equinix.png" alt="logo" width={70} />
+            <div className="col-5">
+              <img src="./Logo-svg.svg" alt="logo" width={70} />
             </div>
             <div className="col-4 mt-3">
               <h5>Quick Links</h5>
             </div>
-            <div className="col-4 mt-3">
+            <div className="col-3 mt-3">
               <h5>Company</h5>
             </div>
           </div>
-          <hr
-            className="divider mx-1 my-0"
-            style={{ border: "1px solid #fff" }}
-          />
+          <hr className="divider my-0" style={{ border: "1px solid #fff" }} />
           <div className="row footer-2nd-row pt-5 pb-2">
-            <div className="col-4">
+            <div className="col-5">
               <span>
                 {" "}
                 Copyright © 2020 <br />
@@ -38,15 +35,20 @@ const Footer = () => {
             <div className="col-4">
               <FooterList List={List} />
             </div>
-            <div className="col-4">
+            <div className="col-3">
               <FooterList List={["About Us", "Get in touch", "Live Chat"]} />
             </div>
           </div>
         </div>
         <div className="col-2 mt-5 back-wrap">
-          <div className=" back-top">
-            <ArrowUpOutlined />
-          </div>
+          <img
+            src="./footer-up-svg.svg"
+            alt="img"
+            className="img-fluid"
+            style={{
+              cursor: "pointer",
+            }}
+          />
         </div>
       </div>
       <div className="row">

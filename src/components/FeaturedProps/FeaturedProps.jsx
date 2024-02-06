@@ -1,5 +1,6 @@
 import React from "react";
-import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
+import { FaLongArrowAltLeft } from "react-icons/fa";
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 import "./FeaturedProps.css";
 import CommonSlide from "../CommonSlide";
@@ -20,7 +21,7 @@ const FeaturedProps = () => {
               }}
             >
               {/* <img src="./Line-1.png" alt="line-img" /> */}
-              <ArrowLeftOutlined />
+              <FaLongArrowAltLeft />
             </button>
             <button
               className="btn btn-outline-dark "
@@ -31,7 +32,7 @@ const FeaturedProps = () => {
               }}
             >
               {/* <img src="./Line-2.png" alt="line-img" /> */}
-              <ArrowRightOutlined />
+              <FaLongArrowAltRight />
             </button>
           </div>
         </div>

@@ -9,7 +9,7 @@ import AllProperties from "../components/AllProperties/AllProperties";
 const SelectedBlog = () => {
   const [newLetterComp, setNewLetterComp] = useState(true);
   const [allProps, setAllProps] = useState(true);
-  const [blogPage, setBlogPage] = useState(true);
+  const [selblogPage, setSelBlogPage] = useState(true);
 
   const url_str = "selected-blog";
   return (
@@ -18,7 +18,7 @@ const SelectedBlog = () => {
       <BlogBody />
       <AllProperties
         allProps={allProps}
-        blogPage={blogPage}
+        selblogPage={selblogPage}
         url_str={url_str}
       />
       <NewsLetter newLetterComp={newLetterComp} />

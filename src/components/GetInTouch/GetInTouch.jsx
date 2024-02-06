@@ -15,7 +15,14 @@ const GetInTouch = ({ homePage }) => {
     >
       <div className="row">
         <div className="col-5">
-          <img src="./get-in-touch.png" alt="" className="fit-content" />
+          <img
+            src="./get-in-touch.png"
+            alt=""
+            className="fit-content"
+            style={{
+              height: "100%",
+            }}
+          />
         </div>
         <div className="col-6 input-side">
           <div className="container">

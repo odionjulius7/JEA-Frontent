@@ -3,3 +3,10 @@
   min-height: 500px;
   padding: 50px;
 }
+.location-props svg {
+  font-size: 1.6rem;
+}
+.location-props .btn:hover {
+  /* color: var(--bs-btn-hover-color); */
+  background-color: transparent !important;
+}

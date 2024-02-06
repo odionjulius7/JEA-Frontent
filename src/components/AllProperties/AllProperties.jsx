@@ -12,7 +12,7 @@ const items = [
   23,
 ];
 
-const AllProperties = ({ allProps, blogPage, url_str }) => {
+const AllProperties = ({ allProps, blogPage, url_str, selblogPage }) => {
   const [currentItems, setCurrentItems] = useState(null);
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
@@ -37,24 +37,32 @@ const AllProperties = ({ allProps, blogPage, url_str }) => {
           <div className="col-12">
             <h2
               style={{
-                display: allProps & !blogPage ? "block" : "none",
+                display: allProps & !blogPage & !selblogPage ? "block" : "none",
               }}
             >
               All Properties
             </h2>
             <h2
               style={{
-                display: blogPage ? "block" : "none",
+                display: blogPage & !selblogPage ? "block" : "none",
               }}
             >
               All Blog Posts
             </h2>
             <h2
               style={{
-                display: !allProps & !blogPage ? "block" : "none",
+                display:
+                  !allProps & !blogPage & !selblogPage ? "block" : "none",
               }}
             >
               Similar Properties In This Area
+            </h2>
+            <h2
+              style={{
+                display: selblogPage ? "block" : "none",
+              }}
+            >
+              Related Posts
             </h2>
           </div>
         </div>

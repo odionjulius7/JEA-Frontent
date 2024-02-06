@@ -11,7 +11,7 @@
 }
 
 .h-menu {
-  gap: 2rem;
+  gap: 4.2rem;
 }
 .h-menu > *:hover {
   cursor: pointer;
