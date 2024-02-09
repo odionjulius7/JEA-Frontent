@@ -7,6 +7,8 @@ import "./Footer.css";
 
 const Footer = () => {
   const List = ["Home", "Properties", "Projects", "Blog"];
+  const url_links1 = ["home", "properties", "projects", "blogs"];
+  const url_links2 = ["about-us"];
   return (
     <div className="container-fluid f-wrapper px-5x py-2">
       <div className="row justify-content-between">
@@ -33,10 +35,13 @@ const Footer = () => {
               </span>
             </div>
             <div className="col-4">
-              <FooterList List={List} />
+              <FooterList List={List} url_links={url_links1} />
             </div>
             <div className="col-3">
-              <FooterList List={["About Us", "Get in touch", "Live Chat"]} />
+              <FooterList
+                List={["About Us", "Get in touch", "Live Chat"]}
+                url_links={url_links2}
+              />
             </div>
           </div>
         </div>
