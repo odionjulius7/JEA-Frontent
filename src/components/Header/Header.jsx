@@ -18,10 +18,13 @@ const Header = () => {
   //
 
   return (
-    <section className="h-wrapper" style={{ background: headerColor }}>
+    <section
+      className="h-wrapper pt-3 px-4"
+      style={{ background: headerColor }}
+    >
       <div className="flexCenter innerWidth paddings h-container">
         {/* logo */}
-        <img src="./Logo-svg.svg" alt="logo" width={80} />
+        <img src="./Logo-svg.svg" alt="logo" width={75} />
 
         {/* menu */}
         <OutsideClickHandler

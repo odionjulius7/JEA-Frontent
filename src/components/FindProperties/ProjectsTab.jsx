@@ -64,9 +64,11 @@ const ProjectsTab = () => {
                       </div>
                       <div className="row mt-5">
                         <div className="col-md-8 col-sm-12 btn_center">
-                          <button className="btn btn-outline-light px-5 btn_center">
-                            <Link to="/selected-project"> VIEW MORE</Link>
-                          </button>
+                          <Link to="/selected-project">
+                            <button className="btn btn-outline-light px-5 btn_center">
+                              VIEW MORE
+                            </button>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -142,9 +144,11 @@ const ProjectsTab = () => {
                       </div>
                       <div className="row mt-5">
                         <div className="col-md-8 col-sm-12 btn_center">
-                          <button className="btn btn-outline-light px-5 btn_center">
-                            <Link to="/selected-project"> VIEW MORE</Link>
-                          </button>
+                          <Link to="/selected-project">
+                            <button className="btn btn-outline-light px-5 btn_center">
+                              VIEW MORE
+                            </button>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -220,9 +224,11 @@ const ProjectsTab = () => {
                       </div>
                       <div className="row mt-5">
                         <div className="col-md-8 col-sm-12 btn_center">
-                          <button className="btn btn-outline-light px-5 btn_center">
-                            <Link to="/selected-project"> VIEW MORE</Link>
-                          </button>
+                          <Link to="/selected-project">
+                            <button className="btn btn-outline-light px-5 btn_center">
+                              VIEW MORE
+                            </button>
+                          </Link>
                         </div>
                       </div>
                     </div>

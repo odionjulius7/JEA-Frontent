@@ -23,7 +23,7 @@ const CommonSlide = ({ px, colr, gbColr, stlr }) => {
             }
           }
         > */}
-        <div className="row my-5 gap-5x">
+        <div className="row my-5 gap-3x">
           <div className="col-md-3 col-sm-10 ms-auto">
             <Cards text={"01"} colr={colr} gbColr={gbColr} />
           </div>

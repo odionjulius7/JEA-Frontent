@@ -9,20 +9,84 @@ import PropertyRequested from "./Pages/PropertyRequested";
 import PropertySelected from "./Pages/PropertySelected";
 import SelectedProject from "./Pages/SelectedProject";
 import SelectedBlog from "./Pages/SelectedBlog";
+import PageTransition from "./PageTransition";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/properties" element={<Properties />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/blogs" element={<Blogs />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/property-reqed" element={<PropertyRequested />} />
-        <Route path="/property-selected" element={<PropertySelected />} />
-        <Route path="/selected-project" element={<SelectedProject />} />
-        <Route path="/selected-blog" element={<SelectedBlog />} />
+        <Route
+          path="/"
+          element={
+            <PageTransition>
+              <Home />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/properties"
+          element={
+            <PageTransition>
+              <Properties />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/projects"
+          element={
+            <PageTransition>
+              <Projects />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/blogs"
+          element={
+            <PageTransition>
+              <Blogs />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/about-us"
+          element={
+            <PageTransition>
+              <AboutUs />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/property-reqed"
+          element={
+            <PageTransition>
+              <PropertyRequested />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/property-selected"
+          element={
+            <PageTransition>
+              <PropertySelected />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/selected-project"
+          element={
+            <PageTransition>
+              <SelectedProject />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/selected-blog"
+          element={
+            <PageTransition>
+              <SelectedBlog />
+            </PageTransition>
+          }
+        />
       </Routes>
     </Router>
   );

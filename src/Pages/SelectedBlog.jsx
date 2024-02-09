@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import Footer from "../components/Footer/Footer";
 import NewsLetter from "../components/CantFind/NewsLetter";
@@ -10,6 +10,11 @@ const SelectedBlog = () => {
   const [newLetterComp, setNewLetterComp] = useState(true);
   const [allProps, setAllProps] = useState(true);
   const [selblogPage, setSelBlogPage] = useState(true);
+
+  useEffect(() => {
+    // Scroll to the top when the component is mounted
+    window.scrollTo(0, 0);
+  }, []);
 
   const url_str = "selected-blog";
   return (

@@ -11,7 +11,7 @@
 }
 
 .h-menu {
-  gap: 4.2rem;
+  gap: 5.5rem;
 }
 .h-menu > *:hover {
   cursor: pointer;
@@ -22,6 +22,7 @@
 
 #about-mobile {
   display: none;
+  padding: 7px 13px;
 }
 
 .header-btn a {
@@ -32,6 +33,7 @@ div .header-btn {
   background: #fbc344 !important;
   border-radius: 9px;
   color: #000000 !important;
+  padding: 7px 13px;
 }
 
 .activeLink {

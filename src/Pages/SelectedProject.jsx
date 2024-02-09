@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer/Footer";
 import SelectedProjHero from "../components/Hero/SelectedProjHero";
 import Companies from "../components/Companies/Companies";
@@ -10,6 +10,11 @@ import SelectedProjImg from "../components/SelectedProjComp/SelectedProjImg";
 const SelectedProject = () => {
   const [homePage, setHomePage] = useState(false);
   const [propsDetails, setPropsDetails] = useState(false);
+
+  useEffect(() => {
+    // Scroll to the top when the component is mounted
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

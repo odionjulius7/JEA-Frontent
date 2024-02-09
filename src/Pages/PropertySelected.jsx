@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import Footer from "../components/Footer/Footer";
 import NewsLetter from "../components/CantFind/NewsLetter";
@@ -13,6 +13,11 @@ const PropertySelected = () => {
   const [homePage, setHomePage] = useState(false);
   const [propsDetails, setPropsDetails] = useState(true);
   const [selectedProps, setSelectedProps] = useState(true);
+
+  useEffect(() => {
+    // Scroll to the top when the component is mounted
+    window.scrollTo(0, 0);
+  }, []);
 
   const url_str = "property-selected";
   return (
