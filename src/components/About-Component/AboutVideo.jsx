@@ -7,7 +7,7 @@ const AboutVideo = () => {
   return (
     <div className="container-fluid AboutVideo">
       <div className="row py-5 align-items-center">
-        <div className="col-6 p-5">
+        <div className="col-md-6 col-sm-11 p-5 AboutVideo_2nd_col">
           <h3>Defying The Ordinary</h3>
           <p className="py-4">
             Joe Etoniru & Associates is a leading Real Estate firm raising the
@@ -17,7 +17,7 @@ const AboutVideo = () => {
             expertise.
           </p>
         </div>
-        <div className="col-6">
+        <div className="col-md-6 col-sm-10 AboutVideo_1st_col">
           <img src="/about-vid.png" className="fit-content" alt="" />
         </div>
       </div>
@@ -82,10 +82,10 @@ const AboutVideo = () => {
         </div>
       </div>
       <div className="row py-5 px-5 align-items-center">
-        <div className="col-6">
+        <div className="col-md-6 col-sm-12">
           <img src="/about-mission.png" className="w-100 fit-content" alt="" />
         </div>
-        <div className="col-6 py-5 px-3">
+        <div className="col-md-6 col-sm-12 py-5 px-3">
           <h3>Our Mission / Vision</h3>
           <span
             className="fs-6"

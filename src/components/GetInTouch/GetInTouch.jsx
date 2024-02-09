@@ -14,7 +14,7 @@ const GetInTouch = ({ homePage }) => {
       }}
     >
       <div className="row">
-        <div className="col-5">
+        <div className="col-md-5 col-sm-12 display_none">
           <img
             src="./get-in-touch.png"
             alt=""
@@ -24,7 +24,7 @@ const GetInTouch = ({ homePage }) => {
             }}
           />
         </div>
-        <div className="col-6 input-side">
+        <div className="col-md-6 col-sm-12 input-side">
           <div className="container">
             <div className="row">
               <h2>Get in Touch</h2>
@@ -56,13 +56,13 @@ const GetInTouch = ({ homePage }) => {
               </div>
             </div>
             <div className="row my-4">
-              <div className="col-4">
+              <div className="col-md-4 col-sm-6">
                 <button
                   type="button"
-                  class="btn btn-outline-dark "
+                  class="btn btn-outline-dark font_15"
                   style={{
                     fontWeight: 500,
-                    fontSize: "15px",
+                    // fontSize: "15px",
                   }}
                 >
                   GET IN TOUCH
@@ -71,7 +71,7 @@ const GetInTouch = ({ homePage }) => {
             </div>
 
             <div className="row align-items-right justify-content-end">
-              <div className="col-6 d-flex align-items-center gap-3">
+              <div className="col-md-6 col-sm-6 d-flex justify-content-end align-items-center gap-3">
                 {" "}
                 <button
                   id="search-btn"

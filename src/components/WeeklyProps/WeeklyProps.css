@@ -28,3 +28,50 @@
   border-radius: 200px;
   color: #ffffff;
 }
+
+@media (max-width: 640px) {
+  .home-weekly-props {
+    padding: 40px 10px;
+  }
+
+  .weekly-props-header {
+    flex-direction: column;
+  }
+  .weekly-props-header h2 {
+    font-size: 27px;
+    margin-bottom: 1rem;
+  }
+
+  .row-btn button {
+    padding: 3px 10px !important;
+    font-size: 14px;
+  }
+
+  .swipe_card_with {
+    padding: 0px;
+  }
+  .swipe_card_with .card_body {
+    padding: 10px;
+  }
+  .swipe_card_with .card_body b {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  .swipe_card_with .card_body span,
+  .swipe_card_with .card_body span b {
+    font-size: 0.79rem;
+  }
+
+  .swipe_card_with .card_body p,
+  .swipe_card_with .card_body p b {
+    font-size: 0.79rem !important;
+    margin: 0px;
+  }
+  .home-blog .swiper-button-next:after,
+  .home-blog .swiper-button-prev:after,
+  .home-weekly-props .swiper-button-next:after,
+  .home-weekly-props .swiper-button-prev:after {
+    background: #fbc34499;
+    padding: 5px 10px;
+  }
+}

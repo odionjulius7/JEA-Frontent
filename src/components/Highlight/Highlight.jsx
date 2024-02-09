@@ -7,15 +7,15 @@ const Highlight = () => {
   return (
     <div className="container-fluid Highlight">
       <div className="row py-4 mb-5 flex-row justify-content-between align-items-center">
-        <div className="col-3 ">
+        <div className="col-md-3 col-sm-6">
           <h4 className="fw-bold">Highlights</h4>
         </div>
-        <div className="col-5">
+        <div className="col-md-5 col-sm-6">
           <Inputs />
         </div>
       </div>
       <div className="row mt-5">
-        <div className="col-6 pt-5">
+        <div className="col-md-6 col-sm-12 pt-5">
           <p className="fs-6 mt-2">October 31, 2023</p>
           <h4 className="fw-bold mt-2">
             Futuristic Floating Cities: The Next Frontier in Luxury Real Estate

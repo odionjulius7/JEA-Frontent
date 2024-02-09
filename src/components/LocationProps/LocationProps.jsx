@@ -9,10 +9,10 @@ const LocationProps = () => {
     <div className="container-fluid location-props">
       <h2 className="card-title-1">properties by location</h2>
       <div
-        className="row text-align-right "
-        style={{
-          marginRight: "-80px",
-        }}
+        className="row text-align-right div_1"
+        // style={{
+        //   marginRight: "-80px",
+        // }}
       >
         <div className="col-12 justify-content-right my-5 gap-5 d-flex">
           {/* <div className="ms-auto d-flex gap-3 "> */}
@@ -21,7 +21,7 @@ const LocationProps = () => {
         </div>
         <div className="row justify-content-center my-2">
           <div
-            className="col-3 d-flex justify-content-center gap-5"
+            className="col-3 d-flex justify-content-center gap-5x"
             // style={{
             //   marginRight: "-10%",
             // }}
@@ -30,7 +30,7 @@ const LocationProps = () => {
               className="btn btn-outline-dark"
               style={{
                 border: "1px solid #000000",
-                padding: "0.3rem 1.4rem",
+                padding: "0.3rem 1.3rem",
                 borderRadius: "2rem",
               }}
             >
@@ -41,7 +41,7 @@ const LocationProps = () => {
               className="btn btn-outline-dark "
               style={{
                 border: "1px solid #000000",
-                padding: "0.3rem 1.4rem",
+                padding: "0.3rem 1.3rem",
                 borderRadius: "2rem",
               }}
             >
@@ -51,7 +51,7 @@ const LocationProps = () => {
           </div>
         </div>
         <div className="row my-4">
-          <div className="col-3 mx-auto search-home ">
+          <div className="col-md-3 col-sm-3 d-flex justify-content-center  mx-auto search-home ">
             <button
               id="search-btn"
               className="button fit-content"

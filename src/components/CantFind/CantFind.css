@@ -25,3 +25,32 @@
   font-weight: 400;
   font-size: 15px;
 }
+
+.make_req {
+  width: 50%;
+}
+
+@media (max-width: 640px) {
+  .CantFind {
+    padding: 10px;
+  }
+  .NewsLetter {
+    padding: 40px 10px;
+  }
+
+  .NewsLetter h4 {
+    font-size: 25px;
+  }
+  .NewsLetter span {
+    font-size: 13px;
+  }
+
+  .cant_D {
+    justify-content: center;
+  }
+
+  .make_req {
+    width: 80%;
+    font-size: 16px;
+  }
+}

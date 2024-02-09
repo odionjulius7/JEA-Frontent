@@ -6,3 +6,13 @@
 .get-in-touch .input-side {
   padding: 50px 70px;
 }
+
+@media (max-width: 640px) {
+  .display_none {
+    display: none;
+  }
+
+  .get-in-touch .input-side {
+    padding: 40px 10px;
+  }
+}

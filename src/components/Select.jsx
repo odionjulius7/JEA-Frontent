@@ -3,12 +3,12 @@ import { Select, Space } from "antd";
 const handleChange = (value) => {
   console.log(`selected ${value}`);
 };
-const SelectComp = ({ widthx }) => (
+const SelectComp = ({ widthx, heightx }) => (
   <Select
     defaultValue="lucy"
     style={{
       width: widthx,
-      height: 45,
+      height: heightx,
     }}
     onChange={handleChange}
     options={[

@@ -10,12 +10,18 @@ const FindProperties = () => {
     <>
       <Tab.Container id="left-tabs-example" defaultActiveKey="first">
         <Row>
-          <Col sm={6} className="mx-auto">
+          <Col
+            xl={8}
+            lg={10}
+            md={12}
+            sm={12}
+            className="mx-auto d-flex justify-content-center"
+          >
             <Nav variant="pills" className="flex-row">
               <Nav.Item>
                 <Nav.Link
                   eventKey="first"
-                  className="py-2 px-5 mx-1"
+                  className="py-2 px-5xr mx-1"
                   style={{
                     fontWeight: "bold",
                   }}
@@ -26,7 +32,7 @@ const FindProperties = () => {
               <Nav.Item>
                 <Nav.Link
                   eventKey="second"
-                  className="py-2 px-5 mx-1"
+                  className="py-2 px-5xr mx-1"
                   style={{
                     fontWeight: "bold",
                   }}
@@ -37,7 +43,7 @@ const FindProperties = () => {
               <Nav.Item>
                 <Nav.Link
                   eventKey="third"
-                  className="py-2 px-5 mx-1"
+                  className="py-2 px-5xr mx-1"
                   style={{
                     fontWeight: "bold",
                   }}
@@ -48,7 +54,7 @@ const FindProperties = () => {
               <Nav.Item>
                 <Nav.Link
                   eventKey="forth"
-                  className="py-2 px-5 mx-1"
+                  className="py-2 px-5xr mx-1"
                   style={{
                     fontWeight: "bold",
                   }}
@@ -60,7 +66,7 @@ const FindProperties = () => {
           </Col>
         </Row>
         <Row>
-          <Col sm={8} className="mx-auto text-dark">
+          <Col xl={8} lg={10} md={12} sm={12} className="mx-auto text-dark ">
             <Tab.Content
               style={{
                 marginTop: "-0.5rem",
@@ -70,23 +76,23 @@ const FindProperties = () => {
               }}
             >
               <Tab.Pane eventKey="first" className="py-3">
-                <div className="d-flex flex-row justify-content-center gap-5 align-items-center pt-4">
-                  <div>
-                    <SelectComp widthx={"180px"} />
+                <div className="d-flex flex-row justify-content-center gap-4x align-items-center pt-4">
+                  <div className="select-width">
+                    <SelectComp widthx={"inherit"} heightx={"inherit"} />
                   </div>
                   <div
                     className="divider py-1 bg-dark"
                     style={{ borderRight: "1px solid #000000", height: "20px" }}
                   ></div>
-                  <div>
-                    <SelectComp widthx={"180px"} />
+                  <div className="select-width">
+                    <SelectComp widthx={"inherit"} heightx={"inherit"} />
                   </div>
                   <div
                     className="divider py-1 bg-dark"
                     style={{ borderRight: "1px solid #000000", height: "20px" }}
                   ></div>
-                  <div>
-                    <SelectComp widthx={"180px"} />
+                  <div className="select-width">
+                    <SelectComp widthx={"inherit"} heightx={"inherit"} />
                   </div>
                 </div>
                 <div className="row mt-4">

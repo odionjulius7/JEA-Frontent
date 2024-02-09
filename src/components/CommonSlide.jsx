@@ -7,19 +7,37 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 const CommonSlide = ({ px, colr, gbColr, stlr }) => {
   return (
     <div
-      className="row text-align-right "
+      className="row rower_wrap"
       style={{
         marginLeft: px,
         // overflowX: "hidden",
       }}
     >
-      <div className="col-12 justify-content-right my-5  d-flex">
-        <div className="ms-auto d-flex gap-5 ">
-          <Cards text={"01"} colr={colr} gbColr={gbColr} />
-          <Cards text={"02"} colr={colr} gbColr={gbColr} />
-          <Cards text={"03"} colr={colr} gbColr={gbColr} />
-          <Cards text={"04"} colr={colr} gbColr={gbColr} />
+      <div className="col-12">
+        {/* <div
+          className="ms-auto d-flex gap-5x "
+          style={
+            {
+              // overflowX: "scroll",
+              // maxWidthidth: "100vw",
+            }
+          }
+        > */}
+        <div className="row my-5 gap-5x">
+          <div className="col-md-3 col-sm-10 ms-auto">
+            <Cards text={"01"} colr={colr} gbColr={gbColr} />
+          </div>
+          <div className="col-md-3 col-sm-10 ms-auto">
+            <Cards text={"01"} colr={colr} gbColr={gbColr} />
+          </div>
+          <div className="col-md-3 col-sm-10 ms-auto">
+            <Cards text={"01"} colr={colr} gbColr={gbColr} />
+          </div>
+          <div className="col-md-3 col-sm-10 ms-auto">
+            <Cards text={"01"} colr={colr} gbColr={gbColr} />
+          </div>
         </div>
+        {/* </div> */}
       </div>
       <div
         className="row"
@@ -27,7 +45,7 @@ const CommonSlide = ({ px, colr, gbColr, stlr }) => {
           display: stlr,
         }}
       >
-        <div className="col-3 mx-auto d-flex justify-content-center gap-5">
+        <div className="col-3 mx-auto d-flex justify-content-center gap-5x">
           <button
             className="btn btn-outline-light line-img "
             type="button"

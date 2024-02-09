@@ -7,3 +7,9 @@
   color: #fff;
   padding: 50px;
 }
+
+@media (max-width: 370px) {
+  .Highlight {
+    padding: 40px 10px;
+  }
+}

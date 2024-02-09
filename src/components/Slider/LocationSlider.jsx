@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // import SwiperCore, { Navigation, Autoplay } from "swiper/core";
@@ -11,12 +11,28 @@ import LocatioCards from "../Cards/LocatioCards";
 // SwiperCore.use([Navigation, Autoplay]);
 
 const LocationSlider = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  // console.log(isMobile);
+
   return (
     <Swiper
       spaceBetween={11}
-      slidesPerView={5}
+      slidesPerView={isMobile ? 3 : 5}
       navigation
-      autoplay={{ delay: 3000, disableOnInteraction: false }}
+      // autoplay={{ delay: 3000, disableOnInteraction: false }}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
     >

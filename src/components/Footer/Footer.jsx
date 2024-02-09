@@ -8,9 +8,9 @@ import "./Footer.css";
 const Footer = () => {
   const List = ["Home", "Properties", "Projects", "Blog"];
   return (
-    <div className="container-fluid f-wrapper px-5 py-2">
+    <div className="container-fluid f-wrapper px-5x py-2">
       <div className="row justify-content-between">
-        <div className="col-10">
+        <div className="col-md-10 col-sm-12">
           <div className="row justify-content-center align-align-items-center footer-1st-row py-4">
             <div className="col-5">
               <img src="./Logo-svg.svg" alt="logo" width={70} />

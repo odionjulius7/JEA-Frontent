@@ -25,7 +25,7 @@ const WeeklyProps = ({ blogPage, url_str, homeBg }) => {
               </div>
             </div>
             <div className="row">
-              <div className="col-6 d-flex gap-3 my-5 row-btn">
+              <div className="col-md-6 col-sm-12 d-flex gap-3 my-5 row-btn">
                 <Buttons
                   text="Buy"
                   style={{

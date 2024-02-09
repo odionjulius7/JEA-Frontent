@@ -20,7 +20,7 @@ const Home = () => {
     <>
       <Hero />
       <div
-        className="container-fluid px-5 text-white home-prop"
+        className="container-fluid px-5x text-white home-prop"
         style={{
           paddingTop: "80px",
           paddingBottom: "100px",

@@ -27,6 +27,11 @@
   background-color: #fbc344;
 }
 
+.select-width {
+  width: 180px;
+  height: 45px;
+}
+
 /* fbdhjfn */
 .App--projs .nav-link {
   border-bottom: 2px solid white;
@@ -48,4 +53,68 @@
 .App--projs .proj-tab-bg h2 {
   font-weight: 600;
   font-size: 60px;
+}
+
+/* Responsiveness */
+
+@media (max-width: 1200px) {
+}
+@media (max-width: 1015px) {
+}
+
+@media (max-width: 940px) {
+  /* Adjust styles for screens up to 940px */
+}
+@media (max-width: 700px) {
+  /* Adjust styles for screens up to 940px */
+  .select-width {
+    width: 140px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .btn_center {
+    text-align: center;
+  }
+  /* Adjust styles for screens up to 640px */
+  .proj-tab-bg h2 {
+    font-size: 40px;
+  }
+  .proj-tab-bg span {
+    font-size: 13px;
+  }
+  .proj-tab-bg img {
+    margin-left: 1rem;
+  }
+  .select-width {
+    width: 120px;
+    height: 36px;
+  }
+}
+@media (max-width: 640px) {
+  /* Adjust styles for screens up to 640px */
+  .proj-tab-bg h2 {
+    font-size: 30px;
+  }
+  .select-width {
+    width: 100px;
+    height: 33px;
+  }
+  .App--projs .proj-tab-bg h2 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 540px) {
+  .select-width {
+    width: 80px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Adjust styles for screens up to 480px */
+  .proj-tab-bg h2 {
+    font-size: 30px;
+  }
 }

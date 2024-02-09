@@ -2,6 +2,9 @@
   min-height: 50vh;
   color: #000000;
 }
+.AboutImages {
+  padding: 40px;
+}
 
 .AboutVideo h3 {
   font-weight: 600;
@@ -30,4 +33,56 @@
     url("/public/news-letter-img.png");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.font_18 {
+  font-weight: 500;
+  font-size: 18px;
+}
+.font_15 {
+  font-weight: 400;
+  font-size: 15px;
+}
+.font_12 {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.img_padding {
+  padding: 0px 80px;
+}
+
+.work_us {
+}
+.work_us-img {
+}
+.work_us-text {
+  padding: 10px 100px;
+}
+
+@media (max-width: 640px) {
+  .AboutVideo .affil-sub {
+    padding: 20px 10px;
+  }
+  .AboutVideo .affil-sub h3 {
+    font-size: 22px;
+    margin: 10px 0px !important;
+  }
+  .AboutVideo .affil-sub p {
+    font-size: 13px;
+  }
+
+  .AboutVideo_1st_col {
+    order: 1;
+  }
+  .AboutVideo_1st_col img {
+    width: 100%;
+  }
+  .AboutVideo_2nd_col {
+    order: 2;
+  }
+
+  .work_us-text {
+    padding: 20px;
+  }
 }

@@ -8,7 +8,7 @@ const CantFind = () => {
     <div className="container-fluid CantFind">
       <div className="row">
         <div
-          className="col-6 mx-auto"
+          className="col-md-6 col-sm-12 mx-auto"
           style={{
             textAlign: "center",
           }}
@@ -16,10 +16,10 @@ const CantFind = () => {
           <h3 className="mt-3">Can’t Find The Property You’re Looking For?</h3>
           <button
             id="search-btn"
-            className="button fit-content my-4"
+            className="button fit-content my-4 make_req"
             style={{
               background: "#FBC344",
-              width: "50%",
+
               color: "#000000",
               fontWeight: "600",
             }}
@@ -28,8 +28,8 @@ const CantFind = () => {
           </button>
         </div>
       </div>
-      <div className="row align-items-right justify-content-end">
-        <div className="col-4 d-flex align-items-center gap-3">
+      <div className="row align-items-right mt-4 justify-content-end">
+        <div className="col-md-4 col-sm-12 d-flex align-items-center gap-3 cant_D">
           {" "}
           <button
             id="search-btn"

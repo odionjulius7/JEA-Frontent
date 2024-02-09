@@ -41,7 +41,51 @@ code {
   font-family: myFont;
   /* font-family: "Montserrat", sans-serif; */
 }
-/*  */
+
+/* universal */
+
+.px-5x,
+.px-5xr {
+  padding-right: 3rem;
+  padding-left: 3rem;
+}
+
+.gap-4x {
+  gap: 1.5rem;
+}
+.gap-5x {
+  gap: 3rem;
+}
+
+.un-input {
+  height: 50px;
+  padding: 0 150px;
+}
+
+.font_15 {
+  font-size: 15px;
+}
+
+/* .home-blog .swiper-button-next:after,
+.home-blog .swiper-button-prev:after,
+.home-weekly-props .swiper-button-next:after,
+.home-weekly-props .swiper-button-prev:after {
+  background: #fbc34499;
+  padding: 10px 20px;
+  border-radius: 200px;
+  color: #ffffff;
+} */
+.swiper-button-next:after,
+.swiper-button-prev:after,
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  background: #fbc34499;
+  padding: 10px 20px;
+  border-radius: 200px;
+  color: #ffffff;
+}
+
+/* universal */
 
 h1,
 h2,
@@ -63,6 +107,11 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+:where(.css-dev-only-do-not-override-1b0bdye).ant-select {
+  font-family: MaderaMedium;
+}
+
 .paddings {
   padding: 1.5rem;
 }
@@ -133,6 +182,11 @@ a {
   }
 }
 
+@media (min-width: 1190px) {
+  h2 {
+    font-size: 2.1rem;
+  }
+}
 @media (min-width: 640px) {
   .paddings {
     padding: 4rem;
@@ -166,4 +220,63 @@ a {
 .button:hover {
   cursor: pointer;
   transform: scale(1.1);
+}
+
+@media (max-width: 640px) {
+  .font_15 {
+    font-size: 13px;
+  }
+  /* universal */
+  .px-5x {
+    padding-right: 0.4rem;
+    padding-left: 0.4rem;
+  }
+  .px-5xr {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .un-input {
+    height: 38px;
+    padding: 0 10px;
+  }
+
+  h2 {
+    font-size: 1.9rem;
+  }
+
+  h1 {
+    font-size: 2.9rem;
+  }
+  /* universal */
+  .gap-4x {
+    gap: 0.8rem;
+  }
+  .gap-5x {
+    gap: 1rem;
+  }
+  /* universal */
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after,
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 370px) {
+  /* universal */
+  .px-5x {
+    padding-right: 0.2rem;
+    padding-left: 0.2rem;
+  }
+  .px-5xr {
+    padding-right: 0.6rem;
+    padding-left: 0.6rem;
+  }
+
+  .gap-4x {
+    gap: 0.6rem;
+  }
 }

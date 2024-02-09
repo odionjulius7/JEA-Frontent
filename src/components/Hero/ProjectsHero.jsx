@@ -10,7 +10,7 @@ const ProjectsHero = () => {
         <Header />
         <div className="container-fluid">
           <div className="row py-5">
-            <div className="col-4 mx-auto d-flex flex-column justify-content-center align-items-center gap-3">
+            <div className="col-md-4 col-sm-8 mx-auto d-flex flex-column justify-content-center align-items-center gap-3">
               <h1 className="h1-one my-4">Our Projects</h1>
             </div>
           </div>

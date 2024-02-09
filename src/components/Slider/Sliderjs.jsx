@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import SwiperCore, { Navigation, Autoplay } from "swiper/core";
@@ -11,10 +11,26 @@ import { Link } from "react-router-dom";
 SwiperCore.use([Navigation, Autoplay]);
 
 const MySwiper = ({ blogPage, url_str }) => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  // console.log(isMobile);
+
   return (
     <Swiper
       spaceBetween={10}
-      slidesPerView={3}
+      slidesPerView={isMobile ? 2 : 3}
       navigation
       autoplay={{ delay: 3000, disableOnInteraction: false }}
       onSlideChange={() => console.log("slide change")}
@@ -24,12 +40,16 @@ const MySwiper = ({ blogPage, url_str }) => {
         return (
           <SwiperSlide>
             <Link to={`/${url_str}`}>
-              <Card style={{ width: "24rem" }}>
+              <Card
+                className="swipe_card_with"
+                // style={{ width: "24rem" }}
+              >
                 <Card.Img variant="top" src="./first-slide-img.png" />
                 <Card.Body
                   style={{
                     backgroundColor: "#f9f9f9",
                   }}
+                  className="card_body"
                 >
                   <Card.Title>
                     <b
@@ -70,7 +90,7 @@ const MySwiper = ({ blogPage, url_str }) => {
                   </div>
 
                   <div
-                    className={`my-3`}
+                    className={`my-2`}
                     style={{
                       borderBottom: blogPage ? "2px solid grey" : "",
                     }}

@@ -12,7 +12,7 @@ const RecentBlog = ({ blogPage }) => {
           <h2>Recent Blog Posts</h2>
         </div>
         <div className="row justify-content-between my-3">
-          <div className="col-6 ">
+          <div className="col-md-6 col-sm-12 my-2">
             <Link to="/selected-blog">
               <Card>
                 <Card.Img
@@ -58,7 +58,7 @@ const RecentBlog = ({ blogPage }) => {
               </Card>
             </Link>
           </div>
-          <div className="col-6 ">
+          <div className="col-md-6 col-sm-12 my-2">
             <Link to="/selected-blog">
               <Card className="d-flex flex-row mb-3">
                 <Card.Img

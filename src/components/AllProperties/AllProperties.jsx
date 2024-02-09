@@ -70,7 +70,7 @@ const AllProperties = ({ allProps, blogPage, url_str, selblogPage }) => {
           {currentItems &&
             currentItems.map((item, i) => {
               return (
-                <div className="col-4 my-2" key={i}>
+                <div className="col-md-4 col-sm-6 my-2" key={i}>
                   <Link to={`/${url_str}`}>
                     <Card>
                       <Card.Img variant="top" src="./first-slide-img.png" />
@@ -146,7 +146,7 @@ const AllProperties = ({ allProps, blogPage, url_str, selblogPage }) => {
 
         <div className="row pagination__react my-3">
           {allProps ? (
-            <div className="col-6 mx-auto">
+            <div className="col-md-6 col-sm-12 mx-auto">
               {/* <Paginations />
               <hr /> */}
               <ReactPaginate

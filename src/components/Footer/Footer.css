@@ -49,4 +49,13 @@
 }
 
 @media (max-width: 768px) {
+  .f-wrapper h5 {
+    font-size: 15px;
+  }
+  .f-wrapper span {
+    font-size: 13px;
+  }
+  .footer-2nd-row .footer-list li {
+    font-size: 13px;
+  }
 }

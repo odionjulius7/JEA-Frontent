@@ -3,10 +3,29 @@
   min-height: 500px;
   padding: 50px;
 }
+.location-props .div_1 {
+  margin-right: -80px;
+}
 .location-props svg {
   font-size: 1.6rem;
 }
 .location-props .btn:hover {
-  /* color: var(--bs-btn-hover-color); */
+  color: #000;
   background-color: transparent !important;
+}
+
+@media (max-width: 640px) {
+  .location-props #search-btn {
+    margin-left: 1rem;
+  }
+
+  .location-props {
+    padding: 40px 10px;
+  }
+  .location-props {
+    padding: 40px 5px;
+  }
+  .location-props .div_1 {
+    margin-right: 0px;
+  }
 }

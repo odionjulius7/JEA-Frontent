@@ -13,28 +13,21 @@ const Hero = () => {
         <section className="hero-wrapper">
           <div className="container-fluid">
             <div className="row py-5">
-              <div className="col-2 mx-auto">
+              <div className="col-md-2 col-sm-3 mx-auto d-flex justify-content-center home_img_wrap">
                 <img src="./sixtus-svg.svg" alt="img" className="img-fluid" />
               </div>
             </div>
           </div>
-          <div
-            className="container-fluid py-3 hero-img-down"
-            // style={{
-            //   backgroundImage: `url("./home-hero-img.png")`,
-            //   backgroundSize: "cover",
-            //   backgroundRepeat: "no-repeat",
-            // }}
-          >
-            <div className="row px-5 justify-content-between">
-              <div className="col-5 d-flex flex-column justify-content-around">
+          <div className="container-fluid py-3 hero-img-down">
+            <div className="row px-5x justify-content-between">
+              <div className="col-md-5 d-flex flex-column justify-content-around dflex_2nd ">
                 <p className="text-white">
                   The Sixtus contains 4 Bedroom Terrace houses and two fully
                   detached homes which brings it to six units. This development
                   is a sleek contemporary work of art, designed specially for
                   the ones who have chosen a luxurious life.
                 </p>
-                <div className="d-flex gap-4 hero-btn">
+                <div className="d-flex gap-4 hero-btn my-2">
                   <button className="btn btn-outline-light">
                     VIEW THIS PROJECT
                   </button>
@@ -43,7 +36,7 @@ const Hero = () => {
                   </button>
                 </div>
               </div>
-              <div className="col-6">
+              <div className="col-md-6  dflex_1st">
                 {/* <img src="./hero-img-1.png" alt="hero-img" className="pb-4" /> */}
                 <div id="carouselExample" className="carousel slide">
                   <div className="carousel-inner">
@@ -63,7 +56,7 @@ const Hero = () => {
                     </div>
                   </div>
                 </div>
-                <div className="row py-4 px-5 align-items-center text-center">
+                <div className="row py-4 px-5x align-items-center text-center d-md-flex d-sm-none d-xs-none div_btn">
                   <div className="col">
                     <button
                       className="btn btn-outline-light line-img "

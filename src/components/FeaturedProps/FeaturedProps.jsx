@@ -7,11 +7,11 @@ import CommonSlide from "../CommonSlide";
 
 const FeaturedProps = () => {
   return (
-    <div className="container-fluid FeaturedProps p-5">
+    <div className="container-fluid FeaturedProps">
       <div className="row">
         <div className="col-12 d-flex justify-content-between align-items-center weekly-props-header">
           <h2>Featured Properties</h2>
-          <div className="d-flex gap-5">
+          <div className="d-flex gap-5x">
             <button
               className="btn btn-outline-dark  "
               style={{

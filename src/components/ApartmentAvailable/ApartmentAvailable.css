@@ -9,3 +9,27 @@
   font-size: 2.3rem;
   font-weight: 600;
 }
+
+@media (max-width: 640px) {
+  .apartment-available {
+    padding: 40px 10px;
+  }
+
+  .card-title-1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .apartment-available {
+    padding: 40px 10px;
+    overflow-x: scroll;
+  }
+  .apartment-available .rower_wrap {
+    margin-left: 0px;
+  }
+  .apartment-available .line-img {
+    padding: 5px 20px;
+  }
+}
+
+@media (max-width: 460px) {
+}

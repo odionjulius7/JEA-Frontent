@@ -1,8 +1,15 @@
 .FeaturedProps {
   min-height: 400px;
   color: #000000;
+  padding: 3rem;
 }
 
 .FeaturedProps svg {
   font-size: 1.6rem;
+}
+
+@media (max-width: 640px) {
+  .FeaturedProps {
+    padding: 2rem 0.2rem;
+  }
 }
