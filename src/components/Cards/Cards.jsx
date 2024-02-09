@@ -8,7 +8,8 @@ function Cards({ text, colr, gbColr }) {
   return (
     <Card
       style={{
-        width: "20rem",
+        width: "90%",
+        // width: "20rem",
         backgroundColor: gbColr,
         color: colr,
         position: "relative",

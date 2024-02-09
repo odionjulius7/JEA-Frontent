@@ -18,7 +18,8 @@ const GetInTouch = ({ homePage }) => {
           <img
             src="./get-in-touch.png"
             alt=""
-            className="fit-content"
+            className="w-100"
+            // className="fit-content"
             style={{
               height: "100%",
             }}
