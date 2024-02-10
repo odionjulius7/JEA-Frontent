@@ -2,12 +2,25 @@
   position: absolute;
   top: 5%;
   left: -7%;
-  font-size: 3.5rem;
+  font-size: 3.15rem;
   font-weight: 600;
 }
 
 .location_carded {
   width: 15rem;
+}
+
+.avail-card-wrap .font_21 {
+  font-size: 20px;
+}
+.avail-card-wrap span {
+  font-size: 15px;
+}
+.avail-card-wrap p {
+  font-size: 13px;
+}
+.avail-card-wrap p b {
+  font-size: 13px;
 }
 
 @media (max-width: 640px) {

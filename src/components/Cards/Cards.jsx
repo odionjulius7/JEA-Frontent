@@ -21,16 +21,16 @@ function Cards({ text, colr, gbColr }) {
         {" "}
         <Card.Img variant="top" src="./avail-img.png" />
         <Card.Body>
-          <h1
+          <div
             className="avail-card-num"
             style={{
               color: colr,
             }}
           >
             {text}
-          </h1>
+          </div>
           <Card.Title>
-            <b>4 Bedroom Terrace</b>
+            <b className="font_21">4 Bedroom Terrace</b>
           </Card.Title>
           <div className="py-2">
             <img src="" alt="" />
@@ -39,8 +39,11 @@ function Cards({ text, colr, gbColr }) {
             </span>
           </div>
           <Card.Text className="fs-6 py-1">
-            <b>Features:</b> Nicely finished, Fully fitted Kitchen, All rooms
-            ensuite, Serene Neighbourhood , Secured Estate, BQ ...
+            <b>Features:</b>{" "}
+            <span>
+              Nicely finished, Fully fitted Kitchen, All rooms ensuite, Serene
+              Neighbourhood , Secured Estate, BQ ...
+            </span>
           </Card.Text>
         </Card.Body>
       </Link>
