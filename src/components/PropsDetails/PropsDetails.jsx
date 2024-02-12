@@ -10,14 +10,13 @@ const PropsDetails = ({ propsDetails }) => {
     <div className="container-fluid PropsDetails">
       {propsDetails && (
         <div className="row">
-          <div className="col-3">
+          <div className="col-md-3 col-md-12">
             <h5>
-              Property <br />
-              Description
+              Property <br className="brk_none" /> Description
             </h5>
           </div>
-          <div className="col-8">
-            <p>
+          <div className="col-md-8 col-md-12">
+            <p className="font_15">
               Nestled in the heart of Osapa London, Lagos, this exquisite
               4-bedroom terrace house presents an ideal family retreat. With its
               contemporary design, spacious layout, and top-notch amenities,
@@ -33,30 +32,29 @@ const PropsDetails = ({ propsDetails }) => {
         ></div>
       )}
       <div className="row">
-        <div className="col-3">
+        <div className="col-md-3 col-sm-12">
           <h5>
             Property
-            <br />
-            Details
+            <br className="brk_none" /> Details
           </h5>
         </div>
-        <div className="col-8">
+        <div className="col-md-8 col-sm-12">
           <ul>
-            <li>Price: ₦140,000,000</li>
-            <li>Address: Osapa London, Lagos.</li>
-            <li>
+            <li className="font_15">Price: ₦140,000,000</li>
+            <li className="font_15">Address: Osapa London, Lagos.</li>
+            <li className="font_15">
               Additional fees (For only rent categories): Service charge (2.3M),
               Agency (5%),
             </li>
-            <li>Deposit (1M), Legal (5%).</li>
-            <li>Property ID: 2023TERRACE456</li>
-            <li>Property Type: Terrace House</li>
-            <li>Year Built: 2017</li>
-            <li>Category: For Sale</li>
-            <li>Status: Active</li>
-            <li>Number of Stories: 2</li>
-            <li>Garage Capacity: 2 cars</li>
-            <li>
+            <li className="font_15">Deposit (1M), Legal (5%).</li>
+            <li className="font_15">Property ID: 2023TERRACE456</li>
+            <li className="font_15">Property Type: Terrace House</li>
+            <li className="font_15">Year Built: 2017</li>
+            <li className="font_15">Category: For Sale</li>
+            <li className="font_15">Status: Active</li>
+            <li className="font_15">Number of Stories: 2</li>
+            <li className="font_15">Garage Capacity: 2 cars</li>
+            <li className="font_15">
               Recent Renovations: Freshly painted interior, updated kitchen, and
               modern fixtures.
             </li>
@@ -67,35 +65,38 @@ const PropsDetails = ({ propsDetails }) => {
         className={`my-3 ${propsDetails ? "grey-border" : "white-border"}`}
       ></div>
       <div className="row">
-        <div className="col-3">
+        <div className="col-md-3 col-sm-15">
           <h5>
             Amenities &
-            <br />
-            Features
+            <br className="brk_none" /> Features
           </h5>
         </div>
-        <div className="col-8">
+        <div className="col-md-8 col-sm-15">
           <ul>
-            <li>
+            <li className="font_15">
               4 spacious bedrooms, including a master suite with a walk-in
               closet and en-suite bathroom.
             </li>
-            <li>
+            <li className="font_15">
               A gourmet kitchen with top-of-the-line appliances and granite
               countertops.
             </li>
-            <li>
+            <li className="font_15">
               Open-concept living and dining areas with large windows for
               natural light.
             </li>
-            <li>Cozy fireplace in the living room.</li>
-            <li>
+            <li className="font_15">Cozy fireplace in the living room.</li>
+            <li className="font_15">
               Private backyard garden with a patio, perfect for outdoor
               gatherings.
             </li>
-            <li>Two-car garage with ample storage space.</li>
-            <li>Central air conditioning and heating.</li>
-            <li>Hardwood floors and elegant finishes throughout.</li>
+            <li className="font_15">
+              Two-car garage with ample storage space.
+            </li>
+            <li className="font_15">Central air conditioning and heating.</li>
+            <li className="font_15">
+              Hardwood floors and elegant finishes throughout.
+            </li>
           </ul>
         </div>
       </div>
@@ -103,36 +104,41 @@ const PropsDetails = ({ propsDetails }) => {
         className={`my-3 ${propsDetails ? "grey-border" : "white-border"}`}
       ></div>
       <div className="row">
-        <div className="col-3">
+        <div className="col-md-3 col-sm-12">
           <h5>
             Neighborhood
-            <br />
-            Information
+            <br className="brk_none" /> Information
           </h5>
         </div>
-        <div className="col-8">
+        <div className="col-md-8 col-sm-12">
           <ul>
-            <li>
+            <li className="font_15">
               Osapa London is a highly sought-after neighborhood in Lagos, known
               for its tranquility and convenience.
             </li>
-            <li>Nearby schools, including XYZ School and ABC Academy</li>
-            <li>Shopping options at the Osapa Shopping Mall</li>
-            <li>Dining and entertainment choices within a short drive</li>
-            <li>
+            <li className="font_15">
+              Nearby schools, including XYZ School and ABC Academy
+            </li>
+            <li className="font_15">
+              Shopping options at the Osapa Shopping Mall
+            </li>
+            <li className="font_15">
+              Dining and entertainment choices within a short drive
+            </li>
+            <li className="font_15">
               Well-maintained parks and green spaces for leisure activities
             </li>
-            <li>Easy access to public transportation</li>
+            <li className="font_15">Easy access to public transportation</li>
           </ul>
         </div>
       </div>
       {propsDetails && (
         <div className="row py-4 my-4 ">
-          <div className="col-5 d-flex justify-content-center gap-4 mx-auto">
+          <div className="col-md-5 col-sm-12 d-flex justify-content-center gap-4 mx-auto">
             <div className="row gap-3">
               <button
                 type="button"
-                className="btn btn-outline-dark fit-content "
+                className="btn btn-outline-dark fit-content font_15"
                 style={{
                   fontWeight: "600",
                 }}
@@ -142,13 +148,13 @@ const PropsDetails = ({ propsDetails }) => {
 
               <button
                 type="button"
-                className="btn btn-outline-dark fit-content"
+                className="btn btn-outline-dark fit-content font_15"
                 style={{
                   // width: "50%",
                   fontWeight: "600",
                 }}
               >
-                <IoLogoWhatsapp className="fs-4" /> Message Agent
+                <IoLogoWhatsapp className="fs-4 " /> Message Agent
               </button>
             </div>
           </div>

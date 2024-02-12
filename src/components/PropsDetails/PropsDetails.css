@@ -24,3 +24,9 @@
 .grey-border {
   border-bottom: 2px solid grey;
 }
+
+@media (max-width: 700px) {
+  .PropsDetails {
+    padding: 30px 10px;
+  }
+}

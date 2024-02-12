@@ -45,7 +45,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="col-2 mt-5 back-wrap">
+        <div className="col-2 mt-5 back-wrap display_none">
           <img
             src="./footer-up-svg.svg"
             alt="img"
@@ -57,7 +57,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="row">
-        <div className="col-3 social-icon-wrap">
+        <div className="col-md-3 col-sm-12 social-icon-wrap">
           <p className="">Follow us</p>
           <div className="social-icon">
             <FaFacebookF />

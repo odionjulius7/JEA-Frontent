@@ -10,8 +10,8 @@ const FeaturedProps = () => {
     <div className="container-fluid FeaturedProps">
       <div className="row">
         <div className="col-12 d-flex justify-content-between align-items-center weekly-props-header">
-          <h2>Featured Properties</h2>
-          <div className="d-flex gap-5x">
+          <h2 className="mb-0">Featured Properties</h2>
+          <div className="d-flex gap-5x display-none">
             <button
               className="btn btn-outline-dark  "
               style={{

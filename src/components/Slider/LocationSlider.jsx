@@ -30,7 +30,7 @@ const LocationSlider = () => {
   return (
     <Swiper
       spaceBetween={11}
-      slidesPerView={isMobile ? 3 : 5}
+      slidesPerView={isMobile ? 2 : 5}
       navigation
       // autoplay={{ delay: 3000, disableOnInteraction: false }}
       onSlideChange={() => console.log("slide change")}
@@ -38,8 +38,14 @@ const LocationSlider = () => {
     >
       {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((Item, i) => {
         return (
-          <SwiperSlide key={i} className="mx-3">
-            <LocatioCards />
+          <SwiperSlide key={i} className="mx-2">
+            {/* <LocatioCards /> */}
+            <div className="location_wrap">
+              <img src="./location-img.png" alt="" className="w-100" />
+              <div className="location_rotate">
+                <span>VICTORIA ISLAND</span>
+              </div>
+            </div>
           </SwiperSlide>
         );
       })}

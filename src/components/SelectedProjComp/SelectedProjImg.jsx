@@ -12,7 +12,7 @@ const SelectedProjImg = () => {
         <div className="col-4">
           <img src="./selected-proj-ig.png" alt="" className="fit-content" />
         </div>
-        <div className="col-4">
+        <div className="col-4 ">
           <img src="./selected-proj-ig.png" alt="" className="fit-content" />
         </div>
         <div className="col-4">
@@ -34,12 +34,12 @@ const SelectedProjImg = () => {
       <div className="row align-items-center ">
         <div className="row">
           <div
-            className="col-6 mx-auto"
+            className="col-md-6 col-sm-12 mx-auto"
             style={{
               textAlign: "center",
             }}
           >
-            <div className="d-flex gap-3 justify-content-center">
+            <div className="d-flex gap-3 justify-content-center call_mess_btn">
               <button
                 type="button"
                 className="btn btn-outline-light fit-content my-4"
@@ -65,7 +65,7 @@ const SelectedProjImg = () => {
             </div>
             <button
               type="button"
-              className="btn btn-outline-light fit-content my-2"
+              className="btn btn-outline-light fit-content my-2 share_btn"
               style={{
                 width: "50%",
                 color: "#fff",
@@ -81,10 +81,10 @@ const SelectedProjImg = () => {
               textAlign: "center",
             }}
           >
-            <div className="col-8 mx-auto">
+            <div className="col-md-8 col-sm-12 mx-auto">
               <button
                 type="button"
-                className="btn btn-outline-light fit-content my-2"
+                className="btn btn-outline-light fit-content my-2 share_btn"
                 style={{
                   width: "60%",
                   color: "#fff",
@@ -97,11 +97,11 @@ const SelectedProjImg = () => {
           </div>
         </div>
         <div className="row align-items-right justify-content-end">
-          <div className="col-4 d-flex align-items-center gap-3">
+          <div className="col-md-4 col-sm-12 d-flex align-items-center gap-3">
             {" "}
             <button
               id="search-btn"
-              className="button fit-content my-4"
+              className="button fit-content my-4 "
               style={{
                 background: "#25D366",
                 //   width: "50%",

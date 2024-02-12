@@ -41,6 +41,18 @@ div .header-btn {
   /* // You can customize other styles for the active link here */
 }
 
+@media (max-width: 900px) {
+  .h-menu {
+    gap: 2rem;
+  }
+  .h-wrapper {
+    padding-top: 4px !important;
+  }
+  .h-wrapper {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+}
 @media (max-width: 768px) {
   .menu-icon {
     display: block;
@@ -70,5 +82,11 @@ div .header-btn {
   }
   #about-mobile {
     display: block;
+  }
+}
+
+@media (max-width: 700px) {
+  .h-wrapper img {
+    width: 65px;
   }
 }

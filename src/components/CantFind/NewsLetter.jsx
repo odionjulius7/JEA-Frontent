@@ -9,8 +9,8 @@ const NewsLetter = ({ newLetterComp, blogPage, selectedProps }) => {
       <div className="row py-4">
         <div className="row mb-4">
           {newLetterComp ? (
-            <div className="col-6">
-              <h4>Subscribe to Our Newslettter</h4>
+            <div className="col-md-6 col-sm-12">
+              <h4 className="pb-2">Subscribe to Our Newslettter</h4>
 
               <span>
                 Stay ahead in the real estate game. Sign up for our newsletter
@@ -19,9 +19,9 @@ const NewsLetter = ({ newLetterComp, blogPage, selectedProps }) => {
               </span>
             </div>
           ) : (
-            <div className="col-6">
+            <div className="col-md-6 col-sm-12">
               {selectedProps ? (
-                <h4>Get Latest Properties</h4>
+                <h4 className="pb-2">Get Latest Properties</h4>
               ) : (
                 <h4 className="pb-2">Subscribe to Our Newslettter</h4>
               )}
@@ -34,16 +34,16 @@ const NewsLetter = ({ newLetterComp, blogPage, selectedProps }) => {
           )}
         </div>
         <div className="row my-5">
-          <div className="col-6">
+          <div className="col-md-6 col-sm-12">
             <GetInTInput text={"First name"} bordr={"news-lett-input"} />
           </div>
-          <div className="col-6">
+          <div className="col-md-6 col-sm-12">
             <GetInTInput text={"Email address"} bordr={"news-lett-input"} />
           </div>
         </div>
       </div>
       <div className="row">
-        <div className="col-3">
+        <div className="col-md-3 col-sm-12">
           <button type="button" class="btn btn-outline-light ">
             {newLetterComp ? "SUBSCRIBE" : "SUBMIT"}
           </button>
@@ -51,11 +51,11 @@ const NewsLetter = ({ newLetterComp, blogPage, selectedProps }) => {
       </div>
       {newLetterComp && (
         <div className="row align-items-right justify-content-end">
-          <div className="col-3 d-flex align-items-center gap-3">
+          <div className="col-md-3 col-sm-6 d-flex align-items-center gap-3 mt-4">
             {" "}
             <button
               id="search-btn"
-              className="button fit-content my-4"
+              className="button fit-content my-4 font_15"
               style={{
                 background: "#25D366",
                 //   width: "50%",

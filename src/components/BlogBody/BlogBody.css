@@ -2,3 +2,22 @@
   padding: 50px;
   color: #000;
 }
+
+@media (max-width: 640px) {
+  .BlogBody {
+    padding: 20px;
+  }
+  .BlogBody span,
+  .BlogBody p {
+    font-size: 13px !important;
+    margin: 0px !important;
+  }
+  .BlogBody h3,
+  .BlogBody h5 {
+    font-size: 18px !important;
+  }
+
+  .BlogBody button {
+    width: 100%;
+  }
+}

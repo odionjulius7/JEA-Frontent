@@ -21,3 +21,24 @@
 .SelectedPorjImg .btn:hover {
   background-color: inherit;
 }
+
+@media (max-width: 640px) {
+  .pLeft {
+    margin-left: 0px !important;
+  }
+
+  .SelectedPorjImg {
+    padding: 30px 10px;
+  }
+  .SelectedPorjImg img {
+    width: 100%;
+    /* margin-bottom: 10px; */
+  }
+
+  .call_mess_btn button {
+    width: 100% !important;
+  }
+  .share_btn {
+    width: 70% !important;
+  }
+}

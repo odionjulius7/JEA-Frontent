@@ -9,27 +9,27 @@ const PropReqForm = () => {
   return (
     <div className="container-fluid PropReqForm">
       <div className="row">
-        <div className="col-8">
+        <div className="col-md-8 col-sm-12">
           <h4>
             Please complete the form below with the details of your request and
             we will get back to you as soon as possible
           </h4>
-          <div className="row py-5">
+          <div className="row py-5x">
             <h5 className="py-2">Inquirer Category</h5>
             <Radios />
           </div>
           <div className="row">
-            <div className="col-sm-12 col-md-6">
+            <div className="col-md-6 col-sm-12  py-5x">
               <h5 className="py-2">Property Category</h5>
               <SelectComp widthx={"80%"} />
             </div>
-            <div className="col-sm-12 col-md-6">
+            <div className="col-md-6 col-sm-12  py-5x">
               <h5 className="py-2">Number of Bedrooms</h5>
               <SelectComp widthx={"80%"} />
             </div>
           </div>
-          <div className="row my-5">
-            <div className="col-sm-12 col-md-6">
+          <div className="row my-5x">
+            <div className="col-md-6 col-sm-12  py-5x">
               <h5 className="py-2">Maximum Budget (N)</h5>
               <Input
                 style={{
@@ -38,7 +38,7 @@ const PropReqForm = () => {
                 }}
               />
             </div>
-            <div className="col-sm-12 col-md-6">
+            <div className="col-md-6 col-sm-12 py-5x">
               <h5 className="py-2">Location</h5>
               <Input
                 style={{
@@ -50,8 +50,8 @@ const PropReqForm = () => {
           </div>
           {/* textarea */}
           {/* textarea */}
-          <div className="row my-5">
-            <div className="col-sm-12 col-md-6">
+          <div className="row my-5x">
+            <div className="col-md-6 col-sm-12 py-5x">
               <h5 className="py-2">Full Name</h5>
               <Input
                 style={{
@@ -60,7 +60,7 @@ const PropReqForm = () => {
                 }}
               />
             </div>
-            <div className="col-sm-12 col-md-6">
+            <div className="col-md-6 col-sm-12 py-5x">
               <h5 className="py-2">Country</h5>
               <Input
                 style={{
@@ -70,8 +70,8 @@ const PropReqForm = () => {
               />
             </div>
           </div>
-          <div className="row my-5">
-            <div className="col-sm-12 col-md-6">
+          <div className="row my-5x">
+            <div className="col-md-6 col-sm-12 py-5x">
               <h5 className="py-2">Phone Number</h5>
               <Input
                 style={{
@@ -80,7 +80,7 @@ const PropReqForm = () => {
                 }}
               />
             </div>
-            <div className="col-sm-12 col-md-6">
+            <div className="col-md-6 col-sm-12 py-5x">
               <h5 className="py-2">Email Address</h5>
               <Input
                 style={{

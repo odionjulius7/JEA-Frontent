@@ -22,7 +22,7 @@ const SelectedProject = () => {
       <Companies />
       <SelectedProjVideo />
       <div
-        className="py-5 text-white"
+        className="py-5 text-white py-wrap"
         style={{
           backgroundColor: "#000000",
         }}

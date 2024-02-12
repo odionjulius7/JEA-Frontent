@@ -15,11 +15,11 @@ const BlogHero = () => {
               Our Blog
             </h1>
             <span
-              className="fs-6 "
+              className="fs-6 span_12"
               style={{ textAlign: "center", padding: "10px " }}
             >
               Our Real Estate News Blog provides a comprehensive view of our{" "}
-              <br />
+              <br className="brk_none" />
               industry. Discover the multifaceted insights that shape the world
               of real estate
             </span>

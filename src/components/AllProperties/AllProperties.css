@@ -46,17 +46,17 @@
 
 @media (max-width: 640px) {
   .AllProperties {
-    padding: 40px 10px;
+    padding: 40px 5px;
   }
 
   .AllProperties h2 {
-    font-size: 27px;
+    font-size: 22px;
     padding: 1rem 0;
     text-align: center;
   }
 
   .card-title b {
-    font-size: 16px;
+    font-size: 15px;
   }
   .AllProperties span {
     font-size: 13px;

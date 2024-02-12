@@ -65,7 +65,7 @@ const ProjectsTab = () => {
                       <div className="row mt-5">
                         <div className="col-md-8 col-sm-12 btn_center">
                           <Link to="/selected-project">
-                            <button className="btn btn-outline-light px-5 btn_center">
+                            <button className="btn btn-outline-light px-5 btn_center font_15">
                               VIEW MORE
                             </button>
                           </Link>
@@ -145,7 +145,7 @@ const ProjectsTab = () => {
                       <div className="row mt-5">
                         <div className="col-md-8 col-sm-12 btn_center">
                           <Link to="/selected-project">
-                            <button className="btn btn-outline-light px-5 btn_center">
+                            <button className="btn btn-outline-light px-5 btn_center font_15">
                               VIEW MORE
                             </button>
                           </Link>
@@ -225,7 +225,7 @@ const ProjectsTab = () => {
                       <div className="row mt-5">
                         <div className="col-md-8 col-sm-12 btn_center">
                           <Link to="/selected-project">
-                            <button className="btn btn-outline-light px-5 btn_center">
+                            <button className="btn btn-outline-light px-5 btn_center font_15">
                               VIEW MORE
                             </button>
                           </Link>
@@ -279,7 +279,7 @@ const ProjectsTab = () => {
                 </div>
                 <div className="row mt-5 justify-content-center">
                   <div className="col-md-3 col-sm-6 mx-auto d-flex justify-content-center">
-                    <button className="btn btn-outline-light px-5">
+                    <button className="btn btn-outline-light px-5 font_15">
                       Show MORE
                     </button>
                   </div>

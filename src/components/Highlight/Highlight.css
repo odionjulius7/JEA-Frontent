@@ -8,6 +8,14 @@
   padding: 50px;
 }
 
+@media (max-width: 640px) {
+  .Highlight .span_12 {
+    font-size: 13px !important;
+  }
+  .Highlight {
+    padding: 40px 20px;
+  }
+}
 @media (max-width: 370px) {
   .Highlight {
     padding: 40px 10px;

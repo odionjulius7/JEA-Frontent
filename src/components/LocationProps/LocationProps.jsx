@@ -14,12 +14,12 @@ const LocationProps = () => {
         //   marginRight: "-80px",
         // }}
       >
-        <div className="col-12 justify-content-right my-5 gap-5 d-flex">
+        <div className="col-12 justify-content-right my-5x gap-5 d-flex">
           {/* <div className="ms-auto d-flex gap-3 "> */}
           <LocationSlider />
           {/* </div> */}
         </div>
-        <div className="row justify-content-center my-2">
+        <div className="row justify-content-center my-2 display-none">
           <div
             className="col-3 d-flex justify-content-center gap-5x"
             // style={{

@@ -20,7 +20,7 @@ const Highlight = () => {
           <h4 className="fw-bold mt-2">
             Futuristic Floating Cities: The Next Frontier in Luxury Real Estate
           </h4>
-          <p className="fs-6 mt-2">
+          <p className="fs-6 mt-2 span_12">
             In a groundbreaking and imaginative leap forward in real estate, the
             concept of "Floating Cities" is taking the industry by storm.
             Imagine a world where entire commu ...

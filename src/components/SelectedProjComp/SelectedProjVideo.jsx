@@ -7,7 +7,7 @@ const SelectedProjVideo = () => {
     <div className="container-fluid SelectedProjVideo py-5">
       <div className="row gap-5 align-items-center">
         <div
-          className="col-6 px-3"
+          className="col-md-6 col-sm-12 px-3 pLeft"
           style={{
             marginLeft: "2rem",
           }}
@@ -21,8 +21,9 @@ const SelectedProjVideo = () => {
             }}
           />
         </div>
-        <div className="col-5 ml-3 text-white">
+        <div className="col-md-5 col-sm-12 ml-3 text-white">
           <p
+            className="font_15 p-1"
             style={{
               fontSize: "15px",
               fontWeight: "400",
@@ -41,7 +42,7 @@ const SelectedProjVideo = () => {
               fontSize: "15px",
               fontWeight: "400",
             }}
-            className="my-4"
+            className="my-4 font_15 p-1"
           >
             Designed with meticulous attention to detail, this 4-bedroom terrace
             house boasts a unique architectural style that sets it apart from

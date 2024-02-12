@@ -61,6 +61,28 @@
 }
 
 @media (max-width: 640px) {
+  .AboutImages_our_agent {
+    margin-left: 5px;
+  }
+
+  .AboutVideo h3 {
+    font-size: 22px;
+  }
+
+  .AboutImages {
+    padding: 10px;
+  }
+
+  .AboutVideo .AboutVideo_wrap {
+    padding-bottom: 0px !important;
+  }
+
+  .AboutVideo h2 {
+    font-size: 23px;
+    margin-top: 0.4rem !important;
+    /* margin-bottom: 2rem !important; */
+  }
+
   .AboutVideo .affil-sub {
     padding: 20px 10px;
   }
@@ -82,7 +104,24 @@
     order: 2;
   }
 
+  .work_us-img img {
+    width: 100%;
+  }
+
   .work_us-text {
     padding: 20px;
+  }
+
+  .img_padding {
+    padding: 0px 0px;
+  }
+
+  .img_padding img {
+    width: 92%;
+  }
+
+  .AboutImages {
+    padding: 0 5 0 15px;
+    align-items: center;
   }
 }

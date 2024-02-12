@@ -6,7 +6,7 @@ const AboutImages = () => {
   return (
     <div className="container-fluid AboutImages">
       {/* Images */}
-      <div className="row my-5">
+      <div className="row my-5x">
         <div className="row">
           <div className="col-md-7 col-sm-6">
             <img
@@ -15,6 +15,7 @@ const AboutImages = () => {
               className="w-100 "
               style={{
                 height: "350px",
+                margin: "1rem",
               }}
             />
           </div>
@@ -25,11 +26,12 @@ const AboutImages = () => {
               className="w-100"
               style={{
                 height: "350px",
+                margin: "1rem",
               }}
             />
           </div>
         </div>
-        <div className="row my-4">
+        <div className="row my-4x">
           <div className="col-md-5 col-sm-6">
             <img
               src="./about_img-3.png"
@@ -37,6 +39,7 @@ const AboutImages = () => {
               className="w-100"
               style={{
                 height: "350px",
+                margin: "1rem",
               }}
             />
           </div>
@@ -47,11 +50,12 @@ const AboutImages = () => {
               className="w-100"
               style={{
                 height: "350px",
+                margin: "1rem",
               }}
             />
           </div>
         </div>
-        <div className="row my-4">
+        <div className="row my-4x">
           <div className="col-md-7 col-sm-6">
             <img
               src="./about_img-5.png"
@@ -59,6 +63,7 @@ const AboutImages = () => {
               className="w-100"
               style={{
                 height: "350px",
+                margin: "1rem",
               }}
             />
           </div>
@@ -69,11 +74,12 @@ const AboutImages = () => {
               className="w-100"
               style={{
                 height: "350px",
+                margin: "1rem",
               }}
             />
           </div>
         </div>
-        <div className="row my-4">
+        <div className="row my-4x">
           <div className="col-md-5 col-sm-6">
             <img
               src="./about_img-7.png"
@@ -81,6 +87,7 @@ const AboutImages = () => {
               className="w-100"
               style={{
                 height: "350px",
+                margin: "1rem",
               }}
             />
           </div>
@@ -91,6 +98,7 @@ const AboutImages = () => {
               className="w-100"
               style={{
                 height: "350px",
+                margin: "1rem",
               }}
             />
           </div>
@@ -98,7 +106,7 @@ const AboutImages = () => {
       </div>
 
       {/* Our Agent */}
-      <div className="row my-4">
+      <div className="row my-4 AboutImages_our_agent">
         <div className="row my-4 ">
           <div className="col d-flex justify-content-center">
             <h2>Our Agents</h2>

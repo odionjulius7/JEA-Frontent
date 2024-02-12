@@ -13,14 +13,14 @@ const SelectedProjHero = () => {
         <Header />
         <div className="container-fluid py-5">
           <div
-            className="row py-5 px-4"
+            className="row py-5 px-4 sel_project_wrap"
             style={{
               marginBottom: "6.5rem",
             }}
           >
-            <div className="col-8 d-flex  justify-content-between align-items-center gap-3">
+            <div className="col-md-8 col-sm-12 d-flex  justify-content-between align-items-center gap-3 center-display">
               <button
-                className="btn btn-outline-light line-img "
+                className="btn btn-outline-light line-img brk_none "
                 type="button"
                 data-bs-target="#carouselExample"
                 data-bs-slide="prev"
@@ -32,13 +32,13 @@ const SelectedProjHero = () => {
             </div>
           </div>
           <div
-            className="row  pt-5"
+            className="row pt-5 sel_project_wrap-2"
             style={{
               paddingLeft: "30px",
               marginRight: "-25%",
             }}
           >
-            <div className="col-10 d-flex  text-align-center justify-content-center">
+            <div className="col-md-10 col-sm-12 d-flex  text-align-center justify-content-center">
               <ProjAndPropSlide />
             </div>
           </div>

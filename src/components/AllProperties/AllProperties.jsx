@@ -166,7 +166,7 @@ const AllProperties = ({ allProps, blogPage, url_str, selblogPage }) => {
               />
             </div>
           ) : (
-            <div className="col-3 mx-auto">
+            <div className="col-md-3 col-sm-12 d-flex justify-content-center mx-auto">
               <button
                 id="search-btn"
                 className="button fit-content my-4"

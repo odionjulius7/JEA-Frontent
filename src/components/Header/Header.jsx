@@ -24,7 +24,9 @@ const Header = () => {
     >
       <div className="flexCenter innerWidth paddings h-container">
         {/* logo */}
-        <img src="./Logo-svg.svg" alt="logo" width={75} />
+        <Link to="/">
+          <img src="./Logo-svg.svg" alt="logo" width={75} />
+        </Link>
 
         {/* menu */}
         <OutsideClickHandler

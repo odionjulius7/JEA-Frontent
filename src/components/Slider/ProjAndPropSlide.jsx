@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import SwiperCore, { Navigation, Autoplay } from "swiper/core";
@@ -12,17 +12,35 @@ import Card from "react-bootstrap/Card";
 SwiperCore.use([Navigation, Autoplay]);
 
 const ProjAndPropSlide = ({ homePage }) => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  // console.log(isMobile);
   return (
     <Swiper
-      spaceBetween={5}
-      slidesPerView={5}
+      spaceBetween={isMobile ? 3 : 5}
+      slidesPerView={isMobile ? 3 : 5}
       navigation
       autoplay={{ delay: 3000, disableOnInteraction: false }}
     >
       {[1, 2, 3, 4, 5, 6, 7, 8].map((slide, i) => {
         return (
           <SwiperSlide key={i}>
-            <Card style={{ width: homePage ? "24rem" : "16rem" }}>
+            <Card
+              className="card_img_selc"
+              style={{ width: homePage ? "24rem" : "16rem" }}
+            >
               <Card.Img variant="top" src="./selected-pro.png" />
             </Card>
           </SwiperSlide>

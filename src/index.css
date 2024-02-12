@@ -43,11 +43,33 @@ code {
 }
 
 /* universal */
+.location_wrap {
+  position: relative !important;
+}
+.location_wrap .location_rotate {
+  position: absolute !important;
+  bottom: 16%;
+  left: -24%;
+  background: #676767;
+  transform: rotate(270deg);
+  padding: 15px 25px;
+  color: #fff;
+}
 
+.px-5no,
 .px-5x,
 .px-5xr {
   padding-right: 3rem;
   padding-left: 3rem;
+}
+
+.py-5x {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.my-5x {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .gap-4x {
@@ -62,8 +84,17 @@ code {
   padding: 0 150px;
 }
 
+.font_30 {
+  font-size: 30px;
+}
 .font_15 {
   font-size: 15px;
+}
+.font_16 {
+  font-size: 16px;
+}
+.font_22 {
+  font-size: 22px;
 }
 
 /* .home-blog .swiper-button-next:after,
@@ -187,6 +218,7 @@ a {
     font-size: 2.1rem;
   }
 }
+
 @media (min-width: 640px) {
   .paddings {
     padding: 4rem;
@@ -199,7 +231,58 @@ a {
   }
 }
 
+@media (max-width: 740px) {
+  .px-5no {
+    padding-right: 0rem;
+    padding-left: 0rem;
+  }
+  .display-none {
+    display: none !important;
+  }
+  .font_30 {
+    font-size: 19px;
+  }
+}
+
 @media (max-width: 640px) {
+  .location_wrap .location_rotate {
+    bottom: 16%;
+    left: -23%;
+    padding: 5px 17px;
+  }
+  .location_wrap .location_rotate span {
+    font-size: 13px;
+  }
+
+  .py-wrap {
+    padding-top: 0.3rem !important;
+    padding-bottom: 0.3rem !important;
+  }
+
+  #search-btn {
+    padding: 5px 8px;
+    width: 60%;
+  }
+  #search-btn a {
+    font-size: 13px;
+  }
+
+  /* universal */
+
+  svg {
+    font-size: 18px;
+  }
+
+  /* Universal container */
+  .container-fluid,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    --bs-gutter-x: 0.3rem;
+  }
+
   .primaryText {
     font-size: 1.5rem;
   }
@@ -223,10 +306,29 @@ a {
 }
 
 @media (max-width: 640px) {
+  .card_img_selc {
+    width: 95% !important;
+  }
+  .card_img_selc img {
+    width: 100%;
+  }
+
   .font_15 {
-    font-size: 13px;
+    font-size: 13px !important;
+  }
+
+  .font_16 {
+    font-size: 14px !important;
+  }
+  .font_22 {
+    font-size: 18px !important;
   }
   /* universal */
+  .my-5x,
+  .py-5x {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
   .px-5x {
     padding-right: 0.4rem;
     padding-left: 0.4rem;
