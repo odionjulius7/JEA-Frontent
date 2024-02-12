@@ -371,6 +371,11 @@ a {
   }
 }
 
+@media (max-width: 350px) {
+  .location_wrap .location_rotate {
+    left: -25%;
+  }
+}
 @media (max-width: 370px) {
   /* universal */
   .px-5x {
