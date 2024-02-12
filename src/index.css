@@ -371,9 +371,9 @@ a {
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 450px) {
   .location_wrap .location_rotate {
-    left: -25%;
+    left: -33%;
   }
 }
 @media (max-width: 370px) {
