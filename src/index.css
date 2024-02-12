@@ -246,7 +246,7 @@ a {
 
 @media (max-width: 640px) {
   body {
-    overflow: hidden;
+    overflow-x: hidden;
   }
   .location_wrap .location_rotate {
     bottom: 16%;
