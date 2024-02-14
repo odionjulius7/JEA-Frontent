@@ -1,10 +1,10 @@
 .get-in-touch {
   min-height: 400px;
   /* background-color: #ffffff; */
-  padding: 0px;
+  /* padding: 0px; */
 }
 .get-in-touch .input-side {
-  padding: 50px 70px;
+  padding: 50px 50px;
 }
 
 @media (max-width: 640px) {

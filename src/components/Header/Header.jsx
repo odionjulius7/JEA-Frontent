@@ -10,8 +10,6 @@ const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const headerColor = useHeaderColor();
 
-  //
-
   let activeStyle = {
     borderBottom: "2px solid #fbc344",
   };
@@ -86,6 +84,7 @@ const Header = () => {
         <div
           className="menu-icon"
           onClick={() => setMenuOpened((prev) => !prev)}
+          // onClick={unhandle}
         >
           <BiMenuAltRight size={30} />
         </div>

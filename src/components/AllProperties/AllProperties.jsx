@@ -151,11 +151,11 @@ const AllProperties = ({ allProps, blogPage, url_str, selblogPage }) => {
               <hr /> */}
               <ReactPaginate
                 breakLabel="..."
-                nextLabel="next >"
+                nextLabel=">>"
                 onPageChange={handlePageClick}
                 pageRangeDisplayed={5}
                 pageCount={pageCount}
-                previousLabel="< previous"
+                previousLabel="<<"
                 renderOnZeroPageCount={null}
                 // styling the whole btns, note: always know when to use thw class with link a tags and without for just li tags
                 containerClassName="pagination"

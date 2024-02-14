@@ -5,6 +5,9 @@
 .AboutImages {
   padding: 40px;
 }
+.WhatPeepsSay {
+  padding: 40px;
+}
 
 .AboutVideo h3 {
   font-weight: 600;
@@ -25,6 +28,35 @@
   text-align: center;
   min-height: 400px;
 }
+
+/* what_peep_wrap-1 */
+.what_peep_wrap-1 {
+  background-color: #ebebeb;
+  text-align: center;
+  position: relative;
+  min-height: 200px;
+  padding: 40px 50px;
+}
+.what_peep_wrap-1 span,
+.what_peep_wrap-1 p {
+  font-weight: 400;
+  font-size: 15px;
+}
+.what_peep_wrap-1 .top-img {
+  border-radius: 200px !important;
+  /* border: 15px solid #fff; */
+  display: flex;
+  justify-content: center;
+}
+.what_peep_wrap-1 .top-img img {
+  width: 25%;
+  height: 25%;
+  border-radius: 200px;
+  outline: 15px solid #fff;
+  margin-bottom: 3rem;
+  margin-top: -85px;
+}
+/* what_peep_wrap-1 */
 
 .comp-logo {
   /* min-height: 300px; */
@@ -53,6 +85,7 @@
 }
 
 .work_us {
+  background-color: #e1e1e1;
 }
 .work_us-img {
 }

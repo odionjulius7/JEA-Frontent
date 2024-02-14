@@ -6,8 +6,8 @@
 .App--prop {
   position: relative;
   overflow-x: clip;
-  min-height: 50vh;
-  background-image: linear-gradient(to bottom, #2422229f 30%, #1d1c1c8a 80%),
+  min-height: 750px;
+  background-image: linear-gradient(to bottom, #000000a6 30%, #000000a6 80%),
     url("/public/props-img-page.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -52,7 +52,7 @@
 .App--projs {
   position: relative;
   overflow-x: clip;
-  min-height: 50vh;
+  min-height: 60vh;
   background: linear-gradient(to bottom, #000 30%, #000 80%);
 }
 .App--props-selected > :nth-child(1) {

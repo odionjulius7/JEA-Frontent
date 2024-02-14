@@ -1,3 +1,23 @@
 .fit-content {
   width: fit-content;
 }
+
+/* Select */
+.css-hfutr2-MuiSvgIcon-root-MuiSelect-icon {
+  color: #fbc344 !important;
+  width: 1.2em !important;
+  height: 1.2em !important;
+}
+
+.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+  height: 45px;
+  width: 190px;
+  /* margin: 1rem; */
+  font-family: MaderaMedium;
+}
+
+.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root em {
+  font-family: MaderaMedium;
+  font-size: 15px;
+  font-weight: 400;
+}

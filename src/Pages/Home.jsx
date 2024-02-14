@@ -8,6 +8,7 @@ import Hero from "../components/Hero/Hero";
 import LocationProps from "../components/LocationProps/LocationProps";
 import HomeBlog from "../components/WeeklyProps/HomeBlog";
 import WeeklyProps from "../components/WeeklyProps/WeeklyProps";
+import FloatWhatsapp from "../components/FloatWhatsapp/FloatWhatsapp";
 
 const Home = () => {
   const [homePage, setHomePage] = useState(true);
@@ -40,6 +41,7 @@ const Home = () => {
       {/* <HomeBlog homePage={homePage} /> */}
       <GetInTouch homePage={homePage} />
       <Footer />
+      <FloatWhatsapp />
     </>
   );
 };

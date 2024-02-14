@@ -5,6 +5,7 @@ import NewsLetter from "../components/CantFind/NewsLetter";
 import SelectedBlogHero from "../components/Hero/SelectedBlogHero";
 import BlogBody from "../components/BlogBody/BlogBody";
 import AllProperties from "../components/AllProperties/AllProperties";
+import FloatWhatsapp from "../components/FloatWhatsapp/FloatWhatsapp";
 
 const SelectedBlog = () => {
   const [newLetterComp, setNewLetterComp] = useState(true);
@@ -28,6 +29,7 @@ const SelectedBlog = () => {
       />
       <NewsLetter newLetterComp={newLetterComp} />
       <Footer />
+      <FloatWhatsapp />
     </>
   );
 };

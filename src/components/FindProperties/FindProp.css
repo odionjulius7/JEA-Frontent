@@ -28,8 +28,8 @@
 }
 
 .select-width {
-  width: 180px;
-  height: 45px;
+  /* width: 180px;
+  height: 45px; */
 }
 
 /* fbdhjfn */
@@ -44,7 +44,7 @@
 .App--projs .proj-tab-bg {
   min-height: 300px;
   width: 100vw;
-  background-image: linear-gradient(to bottom, #2422229f 30%, #1d1c1c8a 80%),
+  background-image: linear-gradient(to bottom, #1312129f 70%, #050505f6 85%),
     url("/public/property-req.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -68,8 +68,9 @@
 @media (max-width: 700px) {
   /* Adjust styles for screens up to 940px */
   .select-width {
-    width: 140px;
-    height: 40px;
+    /* width: 140px;
+    height: 40px; */
+    margin: 5px 1rem;
   }
 }
 

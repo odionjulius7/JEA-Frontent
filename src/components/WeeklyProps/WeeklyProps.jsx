@@ -16,7 +16,7 @@ const WeeklyProps = ({ blogPage, url_str, homeBg }) => {
       <div className="row">
         {!blogPage && (
           <>
-            <div className="col-12 d-flex justify-content-between align-items-center weekly-props-header">
+            <div className="col-12 d-flex justify-content-between align-items-center weekly-props-header mb-3">
               <h2>Properties of the Week</h2>
               <div className="">
                 <Button variant="outline-dark py-2 px-5">
@@ -25,7 +25,7 @@ const WeeklyProps = ({ blogPage, url_str, homeBg }) => {
               </div>
             </div>
             <div className="row">
-              <div className="col-md-6 col-sm-12 d-flex gap-3 my-5 row-btn">
+              <div className="col-md-6 col-sm-12 d-flex gap-3 my-4 row-btn">
                 <Buttons
                   text="Buy"
                   style={{
@@ -56,7 +56,7 @@ const WeeklyProps = ({ blogPage, url_str, homeBg }) => {
         )}
         <div className="row pt-3 pb-4">
           {homeBg && <h2 className="mb-5 mt-2">From Our Blog</h2>}
-          <div className="col d-flex  text-align-center justify-content-center">
+          <div className="col d-flex text-align-center justify-content-center">
             <MySwiper blogPage={blogPage} url_str={url_str} />
           </div>
         </div>

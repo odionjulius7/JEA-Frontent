@@ -53,6 +53,9 @@ const Footer = () => {
             style={{
               cursor: "pointer",
             }}
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}
           />
         </div>
       </div>

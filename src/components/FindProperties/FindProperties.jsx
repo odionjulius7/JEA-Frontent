@@ -5,6 +5,7 @@ import SelectComp from "../Select";
 import Inputs from "../Inputs";
 
 import "./FindProp.css";
+import SelectTwo from "../SelectTwo";
 const FindProperties = () => {
   return (
     <>
@@ -21,7 +22,7 @@ const FindProperties = () => {
               <Nav.Item>
                 <Nav.Link
                   eventKey="first"
-                  className="py-2 px-5xr mx-1"
+                  className="py-2 pb-3 px-5xr mx-2"
                   style={{
                     fontWeight: "bold",
                   }}
@@ -32,7 +33,7 @@ const FindProperties = () => {
               <Nav.Item>
                 <Nav.Link
                   eventKey="second"
-                  className="py-2 px-5xr mx-1"
+                  className="py-2 pb-3 px-5xr mx-2"
                   style={{
                     fontWeight: "bold",
                   }}
@@ -43,7 +44,7 @@ const FindProperties = () => {
               <Nav.Item>
                 <Nav.Link
                   eventKey="third"
-                  className="py-2 px-5xr mx-1"
+                  className="py-2 pb-3 px-5xr mx-2"
                   style={{
                     fontWeight: "bold",
                   }}
@@ -54,7 +55,7 @@ const FindProperties = () => {
               <Nav.Item>
                 <Nav.Link
                   eventKey="forth"
-                  className="py-2 px-5xr mx-1"
+                  className="py-2 pb-3 px-5xr mx-2"
                   style={{
                     fontWeight: "bold",
                   }}
@@ -66,7 +67,7 @@ const FindProperties = () => {
           </Col>
         </Row>
         <Row>
-          <Col xl={8} lg={10} md={12} sm={12} className="mx-auto text-dark ">
+          <Col lg={7} md={12} sm={12} className="mx-auto text-dark ">
             <Tab.Content
               style={{
                 marginTop: "-0.5rem",
@@ -75,27 +76,40 @@ const FindProperties = () => {
                 borderRadius: "9px",
               }}
             >
-              <Tab.Pane eventKey="first" className="py-3">
-                <div className="d-flex flex-row justify-content-center gap-4x align-items-center pt-4">
+              <Tab.Pane eventKey="first" className="py-3 ">
+                <div className="d-flex flex-row justify-content-center gap-4x align-items-center pt-4 mb-4">
                   <div className="select-width">
-                    <SelectComp widthx={"inherit"} heightx={"inherit"} />
+                    <SelectTwo
+                      text={"No. of Bedrooms"}
+                      widthx={"inherit"}
+                      heightx={"inherit"}
+                    />
                   </div>
                   <div
                     className="divider py-1 bg-dark"
-                    style={{ borderRight: "1px solid #000000", height: "20px" }}
+                    style={{ borderRight: "1px solid #000000", height: "35px" }}
                   ></div>
                   <div className="select-width">
-                    <SelectComp widthx={"inherit"} heightx={"inherit"} />
+                    <SelectTwo
+                      text={"Min. Price"}
+                      widthx={"inherit"}
+                      heightx={"inherit"}
+                    />
                   </div>
                   <div
                     className="divider py-1 bg-dark"
-                    style={{ borderRight: "1px solid #000000", height: "20px" }}
+                    style={{ borderRight: "1px solid #000000", height: "35px" }}
                   ></div>
                   <div className="select-width">
-                    <SelectComp widthx={"inherit"} heightx={"inherit"} />
+                    <SelectTwo
+                      text={"Max Price"}
+                      widthx={"inherit"}
+                      heightx={"inherit"}
+                    />
+                    {/* <SelectComp widthx={"inherit"} heightx={"inherit"} /> */}
                   </div>
                 </div>
-                <div className="row mt-4">
+                <div className="row mt-4 pt-1">
                   <div className="col-10 mx-auto">
                     <Inputs />
                   </div>

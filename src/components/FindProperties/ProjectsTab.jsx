@@ -37,7 +37,7 @@ const ProjectsTab = () => {
           <Col sm={12} className="text-dark">
             <Tab.Content className="p-0">
               <Tab.Pane eventKey="first" className=" text-white ">
-                <div className="my-5 proj-tab-bg py-3">
+                <div className="proj-tab-bg py-3">
                   <div className="row align-items-center p-5 justify-content-between">
                     <div className="col-md-5 col-sm-12 dflex_2nd px-3">
                       <h2>Megamound</h2>
@@ -117,7 +117,7 @@ const ProjectsTab = () => {
                     </div>
                   </div>
                 </div>
-                <div className="my-5 proj-tab-bg py-3">
+                <div className="proj-tab-bg py-3">
                   <div className="row align-items-center p-5 justify-content-between">
                     <div className="col-md-5 col-sm-12 dflex_2nd px-3">
                       <h2>Megamound</h2>
@@ -153,7 +153,7 @@ const ProjectsTab = () => {
                       </div>
                     </div>
                     <div className="col-md-5 col-sm-12 dflex_1st">
-                      <div id="carouselExample" className="carousel slide">
+                      <div id="carouselExample-1" className="carousel slide">
                         <div className="carousel-inner">
                           <div className="carousel-item active">
                             <img
@@ -176,7 +176,7 @@ const ProjectsTab = () => {
                           <button
                             className="btn btn-outline-light line-img "
                             type="button"
-                            data-bs-target="#carouselExample"
+                            data-bs-target="#carouselExample-1"
                             data-bs-slide="prev"
                           >
                             <FaLongArrowAltLeft />
@@ -187,7 +187,7 @@ const ProjectsTab = () => {
                           <button
                             className="btn btn-outline-light line-img"
                             type="button"
-                            data-bs-target="#carouselExample"
+                            data-bs-target="#carouselExample-1"
                             data-bs-slide="next"
                           >
                             <FaLongArrowAltRight />
@@ -197,7 +197,7 @@ const ProjectsTab = () => {
                     </div>
                   </div>
                 </div>
-                <div className="my-5 proj-tab-bg py-3">
+                <div className="proj-tab-bg py-3">
                   <div className="row align-items-center p-5 justify-content-between">
                     <div className="col-md-5 col-sm-12 dflex_2nd px-3">
                       <h2>Megamound</h2>
@@ -233,7 +233,7 @@ const ProjectsTab = () => {
                       </div>
                     </div>
                     <div className="col-md-5 col-sm-12 dflex_1st">
-                      <div id="carouselExample" className="carousel slide">
+                      <div id="carouselExample-2" className="carousel slide">
                         <div className="carousel-inner">
                           <div className="carousel-item active">
                             <img
@@ -256,7 +256,7 @@ const ProjectsTab = () => {
                           <button
                             className="btn btn-outline-light line-img "
                             type="button"
-                            data-bs-target="#carouselExample"
+                            data-bs-target="#carouselExample-2"
                             data-bs-slide="prev"
                           >
                             <FaLongArrowAltLeft />
@@ -267,7 +267,7 @@ const ProjectsTab = () => {
                           <button
                             className="btn btn-outline-light line-img"
                             type="button"
-                            data-bs-target="#carouselExample"
+                            data-bs-target="#carouselExample-2"
                             data-bs-slide="next"
                           >
                             <FaLongArrowAltRight />
@@ -278,7 +278,7 @@ const ProjectsTab = () => {
                   </div>
                 </div>
                 <div className="row mt-5 justify-content-center">
-                  <div className="col-md-3 col-sm-6 mx-auto d-flex justify-content-center">
+                  <div className="col-md-3 col-sm-6 mx-auto d-flex justify-content-center my-5 ">
                     <button className="btn btn-outline-light px-5 font_15">
                       Show MORE
                     </button>
@@ -286,7 +286,7 @@ const ProjectsTab = () => {
                 </div>
               </Tab.Pane>
               <Tab.Pane eventKey="second" className="py-3 text-white">
-                Rent
+                Nothing Yet
               </Tab.Pane>
             </Tab.Content>
           </Col>

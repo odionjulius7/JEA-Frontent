@@ -29,7 +29,7 @@ const MySwiper = ({ blogPage, url_str }) => {
 
   return (
     <Swiper
-      spaceBetween={10}
+      spaceBetween={25}
       slidesPerView={isMobile ? 2 : 3}
       navigation
       autoplay={{ delay: 3000, disableOnInteraction: false }}

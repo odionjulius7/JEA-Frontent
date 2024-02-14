@@ -96,7 +96,7 @@ const SelectedProjImg = () => {
             </div>
           </div>
         </div>
-        <div className="row align-items-right justify-content-end">
+        {/* <div className="row align-items-right justify-content-end">
           <div className="col-md-4 col-sm-12 d-flex align-items-center gap-3">
             {" "}
             <button
@@ -129,7 +129,7 @@ const SelectedProjImg = () => {
               />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

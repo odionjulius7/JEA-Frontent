@@ -6,6 +6,7 @@ import PropsDetails from "../components/PropsDetails/PropsDetails";
 import SelectedProjVideo from "../components/SelectedProjComp/SelectedProjVideo";
 import SelectedProjMap from "../components/SelectedProjComp/SelectedProjMap";
 import SelectedProjImg from "../components/SelectedProjComp/SelectedProjImg";
+import FloatWhatsapp from "../components/FloatWhatsapp/FloatWhatsapp";
 
 const SelectedProject = () => {
   const [homePage, setHomePage] = useState(false);
@@ -32,6 +33,7 @@ const SelectedProject = () => {
       <SelectedProjMap />
       <SelectedProjImg />
       <Footer />
+      <FloatWhatsapp />
     </>
   );
 };

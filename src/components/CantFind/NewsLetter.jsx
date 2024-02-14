@@ -10,7 +10,7 @@ const NewsLetter = ({ newLetterComp, blogPage, selectedProps }) => {
         <div className="row mb-4">
           {newLetterComp ? (
             <div className="col-md-6 col-sm-12">
-              <h4 className="pb-2">Subscribe to Our Newslettter</h4>
+              <h4 className="pb-2">Subscribe to Our Newsletter</h4>
 
               <span>
                 Stay ahead in the real estate game. Sign up for our newsletter
@@ -49,7 +49,7 @@ const NewsLetter = ({ newLetterComp, blogPage, selectedProps }) => {
           </button>
         </div>
       </div>
-      {newLetterComp && (
+      {/* {newLetterComp && (
         <div className="row align-items-right justify-content-end">
           <div className="col-md-3 col-sm-6 d-flex align-items-center gap-3 mt-4">
             {" "}
@@ -84,7 +84,7 @@ const NewsLetter = ({ newLetterComp, blogPage, selectedProps }) => {
             </div>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 };

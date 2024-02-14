@@ -8,7 +8,7 @@ const CantFind = () => {
     <div className="container-fluid CantFind">
       <div className="row">
         <div
-          className="col-md-6 col-sm-12 mx-auto"
+          className="col-md-6 col-sm-12 mx-auto mt-5"
           style={{
             textAlign: "center",
           }}
@@ -28,7 +28,7 @@ const CantFind = () => {
           </button>
         </div>
       </div>
-      <div className="row align-items-right mt-4 justify-content-end">
+      {/* <div className="row align-items-right mt-4 justify-content-end">
         <div className="col-md-4 col-sm-12 d-flex align-items-center gap-3 cant_D">
           {" "}
           <button
@@ -61,7 +61,7 @@ const CantFind = () => {
             />
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
