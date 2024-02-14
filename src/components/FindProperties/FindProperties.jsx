@@ -24,7 +24,7 @@ const FindProperties = () => {
                   eventKey="first"
                   className="py-2 pb-3 px-5xr mx-2"
                   style={{
-                    fontWeight: "bold",
+                    fontWeight: "400",
                   }}
                 >
                   Buy
@@ -35,7 +35,7 @@ const FindProperties = () => {
                   eventKey="second"
                   className="py-2 pb-3 px-5xr mx-2"
                   style={{
-                    fontWeight: "bold",
+                    fontWeight: "400",
                   }}
                 >
                   Rent
@@ -46,7 +46,7 @@ const FindProperties = () => {
                   eventKey="third"
                   className="py-2 pb-3 px-5xr mx-2"
                   style={{
-                    fontWeight: "bold",
+                    fontWeight: "400",
                   }}
                 >
                   Short Let
@@ -57,7 +57,7 @@ const FindProperties = () => {
                   eventKey="forth"
                   className="py-2 pb-3 px-5xr mx-2"
                   style={{
-                    fontWeight: "bold",
+                    fontWeight: "400",
                   }}
                 >
                   Land
