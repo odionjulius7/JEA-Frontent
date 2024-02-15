@@ -4,6 +4,14 @@
   padding: 20px 50px 40px 50px;
 }
 
+.AllProperties .h5 {
+  font-size: 18px !important;
+}
+.AllProperties span,
+.AllProperties p {
+  font-size: 14px !important;
+}
+
 .AllProperties h2 {
   font-weight: 600;
   font-size: 32px;

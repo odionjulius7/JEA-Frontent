@@ -83,6 +83,7 @@ const AllProperties = ({ allProps, blogPage, url_str, selblogPage }) => {
                           <b
                             style={{
                               display: allProps & !blogPage ? "block" : "none",
+                              // fontWeight: "500",
                             }}
                           >
                             4 Bedroom Terrace
@@ -99,16 +100,18 @@ const AllProperties = ({ allProps, blogPage, url_str, selblogPage }) => {
                           <b
                             style={{
                               display: !allProps & !blogPage ? "block" : "none",
+                              fontWeight: "500",
                             }}
                           >
                             4 Bedroom Terrace
                           </b>
                         </Card.Title>
-                        <div className="py-2">
-                          <img src="" alt="" />
+                        <div className="py-2 d-flex gap-2">
+                          <img src="./location_icon.svg" alt="" />
                           <span
                             style={{
                               display: allProps & !blogPage ? "block" : "none",
+                              fontWeight: "400",
                             }}
                           >
                             Osapa London | <b>₦140,000,000</b>{" "}

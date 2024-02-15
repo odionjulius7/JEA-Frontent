@@ -69,8 +69,8 @@ const MySwiper = ({ blogPage, url_str }) => {
                       October 31, 2023
                     </span>
                   </Card.Title>
-                  <div className="py-2">
-                    <img src="" alt="" />
+                  <div className="py-2 d-flex gap-2">
+                    <img src="./location_icon.svg" alt="" />
                     <span
                       style={{
                         display: !blogPage ? "inline" : "none",

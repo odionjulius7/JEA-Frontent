@@ -32,8 +32,8 @@ function Cards({ text, colr, gbColr }) {
           <Card.Title>
             <b className="font_21">4 Bedroom Terrace</b>
           </Card.Title>
-          <div className="py-2">
-            <img src="" alt="" />
+          <div className="py-2 d-flex gap-2">
+            <img src="./location_icon.svg" alt="" />
             <span>
               Osapa London | <b>₦140,000,000</b>{" "}
             </span>
