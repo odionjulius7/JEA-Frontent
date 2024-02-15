@@ -132,10 +132,8 @@ body {
 }
 
 .css-fvipm8 {
-  height: 42px !important;
-  width: 300px !important;
-  font-family: MaderaMedium;
-  font-weight: 400;
+  font-family: MaderaMedium !important;
+  font-weight: 400 !important;
 }
 
 /* universal */

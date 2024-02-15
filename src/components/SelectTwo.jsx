@@ -14,7 +14,14 @@ export default function SelectTwo({ widthx, heightx, text }) {
   };
 
   return (
-    <FormControl sx={{ width: widthx, height: heightx }}>
+    <FormControl
+      sx={
+        {
+          //  width: widthx,
+          //  height: heightx
+        }
+      }
+    >
       <Select
         value={age}
         onChange={handleChange}
