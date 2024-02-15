@@ -107,7 +107,9 @@ const AllProperties = ({ allProps, blogPage, url_str, selblogPage }) => {
                           </b>
                         </Card.Title>
                         <div className="py-2 d-flex gap-2">
-                          <img src="./location_icon.svg" alt="" />
+                          {!blogPage && (
+                            <img src="./location_icon.svg" alt="" />
+                          )}
                           <span
                             style={{
                               display: allProps & !blogPage ? "block" : "none",

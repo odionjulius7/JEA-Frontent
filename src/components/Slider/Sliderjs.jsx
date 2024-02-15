@@ -70,7 +70,7 @@ const MySwiper = ({ blogPage, url_str }) => {
                     </span>
                   </Card.Title>
                   <div className="py-2 d-flex gap-2">
-                    <img src="./location_icon.svg" alt="" />
+                    {!blogPage && <img src="./location_icon.svg" alt="" />}
                     <span
                       style={{
                         display: !blogPage ? "inline" : "none",
