@@ -19,38 +19,36 @@ const RecentBlog = ({ blogPage }) => {
                   variant="top"
                   src="./first-slide-img.png"
                   style={{
-                    maxHeight: "360px",
+                    height: "270px",
                   }}
                 />
                 <Card.Body
                   className=" px-4"
                   style={{
                     backgroundColor: "#f9f9f9",
-                    height: "200px",
+                    padding: "20px 20px",
+                    // height: "200px",
                   }}
                 >
-                  <Card.Title>
-                    <span
-                      style={{
-                        fontSize: "14px",
-                        fontWeight: "400",
-                      }}
-                    >
-                      October 31, 2023
-                    </span>
+                  <Card.Title className="pb-3">
+                    <span>October 31, 2023</span>
                   </Card.Title>
                   <div className="py-2">
-                    <span>
-                      <b>
-                        How urban greening projects affect sustainable cities
-                      </b>
-                    </span>
+                    <h5>
+                      How urban greening projects affect sustainable cities
+                    </h5>
                     <div
-                      className="my-3"
-                      style={{ borderBottom: "2px solid grey" }}
+                      className="mb-3 mt-5"
+                      style={{ borderBottom: "2px solid #D7D7D7" }}
                     ></div>
                   </div>
-                  <Card.Text className="fs-6 py-1">
+                  <Card.Text
+                    className="py-1"
+                    style={{
+                      fontSize: "15px",
+                      fontWeight: "400",
+                    }}
+                  >
                     <b>Features:</b> Nicely finished, Fully fitted Kitchen, All
                     rooms ensuite, Serene Neighbourhood , Secured Estate, BQ ...
                   </Card.Text>
@@ -76,27 +74,18 @@ const RecentBlog = ({ blogPage }) => {
                   }}
                 >
                   <Card.Title className="my-2">
-                    <span
-                      style={{
-                        fontSize: "14px",
-                        fontWeight: "400",
-                      }}
-                    >
-                      October 31, 2023
-                    </span>
+                    <span>October 31, 2023</span>
                   </Card.Title>
                   <div className="py-2 my-2">
-                    <span>
-                      <b>
-                        How urban greening projects affect sustainable cities
-                      </b>
-                    </span>
+                    <h5>
+                      How urban greening projects affect sustainable cities
+                    </h5>
                   </div>
                   <div
                     className="my-3"
-                    style={{ borderBottom: "2px solid grey" }}
+                    style={{ borderBottom: "2px solid #D7D7D7" }}
                   ></div>
-                  <Card.Text className="fs-6 py-1">
+                  <Card.Text className="py-1">
                     <b>Features:</b> Nicely finished, Fully fitted Kitchen, All
                     rooms ensuite, Serene Neighbourhood , Secured Estate, BQ ...
                   </Card.Text>
@@ -120,27 +109,18 @@ const RecentBlog = ({ blogPage }) => {
                   }}
                 >
                   <Card.Title>
-                    <span
-                      style={{
-                        fontSize: "14px",
-                        fontWeight: "400",
-                      }}
-                    >
-                      October 31, 2023
-                    </span>
+                    <span>October 31, 2023</span>
                   </Card.Title>
                   <div className="py-2">
-                    <span>
-                      <b>
-                        How urban greening projects affect sustainable cities
-                      </b>
-                    </span>
+                    <h5 className="">
+                      How urban greening projects affect sustainable cities
+                    </h5>
                   </div>
                   <div
                     className="my-3"
-                    style={{ borderBottom: "2px solid grey" }}
+                    style={{ borderBottom: "2px solid #D7D7D7" }}
                   ></div>
-                  <Card.Text className="fs-6 py-1">
+                  <Card.Text className="py-1">
                     <b>Features:</b> Nicely finished, Fully fitted Kitchen, All
                     rooms ensuite, Serene Neighbourhood , Secured Estate, BQ ...
                   </Card.Text>

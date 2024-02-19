@@ -39,19 +39,31 @@ const ProjectsTab = () => {
               <Tab.Pane eventKey="first" className=" text-white ">
                 <div className="proj-tab-bg py-3">
                   <div className="row align-items-center p-5 justify-content-between">
-                    <div className="col-md-5 col-sm-12 dflex_2nd px-3">
+                    <div className="col-md-6 col-sm-12 dflex_2nd px-3">
                       <h2>Megamound</h2>
-                      <div className="d-flex gap-4x py-3">
-                        <span>5 Beds</span>
-                        <span>2017</span>
-                        <span>Fully Detached</span>
-                        <span>Fully Detached</span>
-                        <span>Ikota</span>
+                      <div className="d-flex gap-5x py-3 align-items-center">
+                        <div className="d-flex gap-2 align-items-center">
+                          <img src="./bed_proj.svg" alt="" />
+                          <span>5 Beds</span>
+                        </div>
+                        <div className="d-flex gap-2 align-items-center">
+                          <img src="./new_releases.svg" alt="" />
+                          <span>2017</span>
+                        </div>
+
+                        <div className="d-flex gap-2 align-items-center">
+                          <img src="./cottage.svg" alt="" />
+                          <span>Fully Detached</span>
+                        </div>
+                        <div className="d-flex gap-2 align-items-center">
+                          <img src="./location_on.svg" alt="" />
+                          <span>Ikota</span>
+                        </div>
                       </div>
                       <hr
                         className="text-white my-3"
                         style={{
-                          borderTop: "3px solid white !important",
+                          borderTop: "4px solid white",
                         }}
                       />
                       <div>
@@ -63,9 +75,16 @@ const ProjectsTab = () => {
                         </span>
                       </div>
                       <div className="row mt-5">
-                        <div className="col-md-8 col-sm-12 btn_center">
-                          <Link to="/selected-project">
-                            <button className="btn btn-outline-light px-5 btn_center font_15">
+                        <div className="col-md-6 col-sm-12 btn_center">
+                          <Link className="w-100" to="/selected-project">
+                            <button
+                              className="btn btn-outline-light px-5 btn_center font_15 mt-5 w-100"
+                              style={{
+                                fontWeight: "500",
+                                paddingBottom: "1rem",
+                                paddingTop: "1rem",
+                              }}
+                            >
                               VIEW MORE
                             </button>
                           </Link>
@@ -119,19 +138,31 @@ const ProjectsTab = () => {
                 </div>
                 <div className="proj-tab-bg py-3">
                   <div className="row align-items-center p-5 justify-content-between">
-                    <div className="col-md-5 col-sm-12 dflex_2nd px-3">
+                    <div className="col-md-6 col-sm-12 dflex_2nd px-3">
                       <h2>Megamound</h2>
-                      <div className="d-flex gap-4x py-3">
-                        <span>5 Beds</span>
-                        <span>2017</span>
-                        <span>Fully Detached</span>
-                        <span>Fully Detached</span>
-                        <span>Ikota</span>
+                      <div className="d-flex gap-5x py-3 align-items-center">
+                        <div className="d-flex gap-2 align-items-center">
+                          <img src="./bed_proj.svg" alt="" />
+                          <span>5 Beds</span>
+                        </div>
+                        <div className="d-flex gap-2 align-items-center">
+                          <img src="./new_releases.svg" alt="" />
+                          <span>2017</span>
+                        </div>
+
+                        <div className="d-flex gap-2 align-items-center">
+                          <img src="./cottage.svg" alt="" />
+                          <span>Fully Detached</span>
+                        </div>
+                        <div className="d-flex gap-2 align-items-center">
+                          <img src="./location_on.svg" alt="" />
+                          <span>Ikota</span>
+                        </div>
                       </div>
                       <hr
                         className="text-white my-3"
                         style={{
-                          borderTop: "3px solid white !important",
+                          borderTop: "4px solid white",
                         }}
                       />
                       <div>
@@ -143,9 +174,16 @@ const ProjectsTab = () => {
                         </span>
                       </div>
                       <div className="row mt-5">
-                        <div className="col-md-8 col-sm-12 btn_center">
-                          <Link to="/selected-project">
-                            <button className="btn btn-outline-light px-5 btn_center font_15">
+                        <div className="col-md-6 col-sm-12 btn_center">
+                          <Link className="w-100" to="/selected-project">
+                            <button
+                              className="btn btn-outline-light px-5 btn_center font_15 mt-5 w-100"
+                              style={{
+                                fontWeight: "500",
+                                paddingBottom: "1rem",
+                                paddingTop: "1rem",
+                              }}
+                            >
                               VIEW MORE
                             </button>
                           </Link>
@@ -153,7 +191,7 @@ const ProjectsTab = () => {
                       </div>
                     </div>
                     <div className="col-md-5 col-sm-12 dflex_1st">
-                      <div id="carouselExample-1" className="carousel slide">
+                      <div id="carouselExample" className="carousel slide">
                         <div className="carousel-inner">
                           <div className="carousel-item active">
                             <img
@@ -176,7 +214,7 @@ const ProjectsTab = () => {
                           <button
                             className="btn btn-outline-light line-img "
                             type="button"
-                            data-bs-target="#carouselExample-1"
+                            data-bs-target="#carouselExample"
                             data-bs-slide="prev"
                           >
                             <FaLongArrowAltLeft />
@@ -187,7 +225,7 @@ const ProjectsTab = () => {
                           <button
                             className="btn btn-outline-light line-img"
                             type="button"
-                            data-bs-target="#carouselExample-1"
+                            data-bs-target="#carouselExample"
                             data-bs-slide="next"
                           >
                             <FaLongArrowAltRight />
@@ -199,19 +237,31 @@ const ProjectsTab = () => {
                 </div>
                 <div className="proj-tab-bg py-3">
                   <div className="row align-items-center p-5 justify-content-between">
-                    <div className="col-md-5 col-sm-12 dflex_2nd px-3">
+                    <div className="col-md-6 col-sm-12 dflex_2nd px-3">
                       <h2>Megamound</h2>
-                      <div className="d-flex gap-4x py-3">
-                        <span>5 Beds</span>
-                        <span>2017</span>
-                        <span>Fully Detached</span>
-                        <span>Fully Detached</span>
-                        <span>Ikota</span>
+                      <div className="d-flex gap-5x py-3 align-items-center">
+                        <div className="d-flex gap-2 align-items-center">
+                          <img src="./bed_proj.svg" alt="" />
+                          <span>5 Beds</span>
+                        </div>
+                        <div className="d-flex gap-2 align-items-center">
+                          <img src="./new_releases.svg" alt="" />
+                          <span>2017</span>
+                        </div>
+
+                        <div className="d-flex gap-2 align-items-center">
+                          <img src="./cottage.svg" alt="" />
+                          <span>Fully Detached</span>
+                        </div>
+                        <div className="d-flex gap-2 align-items-center">
+                          <img src="./location_on.svg" alt="" />
+                          <span>Ikota</span>
+                        </div>
                       </div>
                       <hr
                         className="text-white my-3"
                         style={{
-                          borderTop: "3px solid white !important",
+                          borderTop: "4px solid white",
                         }}
                       />
                       <div>
@@ -223,9 +273,16 @@ const ProjectsTab = () => {
                         </span>
                       </div>
                       <div className="row mt-5">
-                        <div className="col-md-8 col-sm-12 btn_center">
-                          <Link to="/selected-project">
-                            <button className="btn btn-outline-light px-5 btn_center font_15">
+                        <div className="col-md-6 col-sm-12 btn_center">
+                          <Link className="w-100" to="/selected-project">
+                            <button
+                              className="btn btn-outline-light px-5 btn_center font_15 mt-5 w-100"
+                              style={{
+                                fontWeight: "500",
+                                paddingBottom: "1rem",
+                                paddingTop: "1rem",
+                              }}
+                            >
                               VIEW MORE
                             </button>
                           </Link>
@@ -233,7 +290,7 @@ const ProjectsTab = () => {
                       </div>
                     </div>
                     <div className="col-md-5 col-sm-12 dflex_1st">
-                      <div id="carouselExample-2" className="carousel slide">
+                      <div id="carouselExample" className="carousel slide">
                         <div className="carousel-inner">
                           <div className="carousel-item active">
                             <img
@@ -256,7 +313,7 @@ const ProjectsTab = () => {
                           <button
                             className="btn btn-outline-light line-img "
                             type="button"
-                            data-bs-target="#carouselExample-2"
+                            data-bs-target="#carouselExample"
                             data-bs-slide="prev"
                           >
                             <FaLongArrowAltLeft />
@@ -267,7 +324,7 @@ const ProjectsTab = () => {
                           <button
                             className="btn btn-outline-light line-img"
                             type="button"
-                            data-bs-target="#carouselExample-2"
+                            data-bs-target="#carouselExample"
                             data-bs-slide="next"
                           >
                             <FaLongArrowAltRight />

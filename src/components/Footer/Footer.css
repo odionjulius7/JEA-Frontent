@@ -5,6 +5,18 @@
   margin-bottom: -2rem;
 }
 
+.f-wrapper h5 {
+  font-size: 1.1rem;
+}
+.f-wrapper span,
+.f-wrapper p {
+  font-size: 15px;
+}
+.f-wrapper svg {
+  font-size: 20px;
+  cursor: pointer;
+}
+
 .footer-1st-row {
 }
 .footer-1st-row span {

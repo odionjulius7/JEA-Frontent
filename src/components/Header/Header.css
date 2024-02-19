@@ -13,6 +13,10 @@
 .h-menu {
   gap: 5.5rem;
 }
+.h-menu a {
+  font-size: 12px !important;
+  font-weight: 500;
+}
 .h-menu > *:hover {
   cursor: pointer;
 }
@@ -34,6 +38,8 @@ div .header-btn {
   border-radius: 9px;
   color: #000000 !important;
   padding: 7px 13px;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .activeLink {

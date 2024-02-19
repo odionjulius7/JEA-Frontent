@@ -10,9 +10,10 @@ import { Link } from "react-router-dom";
 
 SwiperCore.use([Navigation, Autoplay]);
 
-const MySwiper = ({ blogPage, url_str }) => {
+const MySwiper = ({ blogPage, url_str, homeBg }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
 
+  console.log("hhome bg is" + homeBg);
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 640);
@@ -48,13 +49,16 @@ const MySwiper = ({ blogPage, url_str }) => {
                 <Card.Body
                   style={{
                     backgroundColor: "#f9f9f9",
+                    padding: "1rem 2rem",
                   }}
-                  className="card_body"
+                  className="card_body py-3"
                 >
                   <Card.Title>
                     <b
                       style={{
                         display: !blogPage ? "inline" : "none",
+                        fontSize: "21px",
+                        fontWeight: "700",
                       }}
                     >
                       4 Bedroom Terrace
@@ -62,25 +66,35 @@ const MySwiper = ({ blogPage, url_str }) => {
                     <span
                       style={{
                         display: blogPage ? "inline" : "none",
-                        fontSize: "15px",
+                        fontSize: "12px",
                         fontWeight: "400",
                       }}
                     >
                       October 31, 2023
                     </span>
                   </Card.Title>
-                  <div className="py-2 d-flex gap-2">
+                  <div className="py-3 d-flex gap-2">
                     {!blogPage && <img src="./location_icon.svg" alt="" />}
                     <span
                       style={{
                         display: !blogPage ? "inline" : "none",
+                        fontSize: "15px",
                       }}
                     >
-                      Osapa London | <b>₦140,000,000</b>{" "}
+                      Osapa London |{" "}
+                      <b
+                        style={{
+                          fontWeight: "700",
+                        }}
+                      >
+                        ₦140,000,000
+                      </b>{" "}
                     </span>
                     <span
                       style={{
                         display: blogPage ? "inline" : "none",
+                        fontSize: "20px",
+                        fontWeight: "700",
                       }}
                     >
                       <b>
@@ -92,13 +106,26 @@ const MySwiper = ({ blogPage, url_str }) => {
                   <div
                     className={`my-2`}
                     style={{
-                      borderBottom: blogPage ? "2px solid grey" : "",
+                      borderBottom: blogPage ? "2px solid #D7D7D7" : "",
                     }}
                   ></div>
 
-                  <Card.Text className="fs-6 py-1">
-                    <b>Features:</b> Nicely finished, Fully fitted Kitchen, All
-                    rooms ensuite, Serene Neighbourhood , Secured Estate, BQ ...
+                  <Card.Text
+                    className=" py-1"
+                    style={{
+                      fontSize: homeBg ? "13px" : "15px",
+                      fontWeight: "400",
+                    }}
+                  >
+                    <b
+                      style={{
+                        fontSize: "700",
+                      }}
+                    >
+                      Features:
+                    </b>{" "}
+                    Nicely finished, Fully fitted Kitchen, All rooms ensuite,
+                    Serene Neighbourhood , Secured Estate, BQ ...
                   </Card.Text>
                 </Card.Body>
               </Card>

@@ -13,15 +13,17 @@ const CantFind = () => {
             textAlign: "center",
           }}
         >
-          <h3 className="mt-3">Can’t Find The Property You’re Looking For?</h3>
+          <h2 className="mt-3 mb-3">
+            Can’t Find The Property You’re Looking For?
+          </h2>
           <button
             id="search-btn"
             className="button fit-content my-4 make_req"
             style={{
               background: "#FBC344",
-
+              fontSize: "15px",
               color: "#000000",
-              fontWeight: "600",
+              fontWeight: "500",
             }}
           >
             <Link to="/property-reqed">MAKE A CUSTOM REQUEST</Link>

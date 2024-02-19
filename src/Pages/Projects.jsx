@@ -11,15 +11,10 @@ const Projects = () => {
   return (
     <>
       <ProjectsHero />
-      {/* <div className="container-fluid ProjectsTab">
-        <div className="row py-5">
-          <ProjectsTab />
-        </div>
-      </div> */}
       <GetInTouch homePage={homePage} />
 
       <Footer />
-      {/* <FloatWhatsapp /> */}
+      <FloatWhatsapp />
     </>
   );
 };

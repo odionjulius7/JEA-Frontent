@@ -10,12 +10,12 @@ const BlogHero = () => {
         <div className="white-gradient" />
         <Header />
         <div className="container-fluid px-5 py-5 ">
-          <div className="row py-5">
+          <div className="row py-5 blog_text">
             <h1 className="fw-bold" style={{ textAlign: "center" }}>
               Our Blog
             </h1>
             <span
-              className="fs-6 span_12"
+              className="span_12"
               style={{ textAlign: "center", padding: "10px " }}
             >
               Our Real Estate News Blog provides a comprehensive view of our{" "}

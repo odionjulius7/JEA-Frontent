@@ -13,7 +13,7 @@ const FeaturedProps = () => {
           <h2 className="mb-0">Featured Properties</h2>
           <div className="d-flex gap-5x display-none">
             <button
-              className="btn btn-outline-dark  "
+              className="btn btn-outline-dark"
               style={{
                 border: "1px solid #000000",
                 padding: "0.3rem 1.4rem",

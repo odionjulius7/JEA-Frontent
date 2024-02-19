@@ -18,6 +18,7 @@ const FloatWhatsapp = () => {
           color: "#ffffff",
           fontWeight: "600",
           borderRadius: "90px",
+          fontSize: "13px",
         }}
       >
         Chat with us

@@ -34,7 +34,7 @@ const Home = () => {
         </div>
         <FindProperties />
       </div>
-      <WeeklyProps homePage={homePage} url_str={url_str} />
+      <WeeklyProps homeBg={homeBg} homePage={homePage} url_str={url_str} />
       <ApartmentAvailable />
       <LocationProps />
       <WeeklyProps blogPage={blogPage} url_str={url_strblog} homeBg={homeBg} />

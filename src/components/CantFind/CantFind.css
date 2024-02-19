@@ -2,7 +2,7 @@
   min-height: 350px;
   padding: 50px;
   color: #ffffff;
-  background-image: linear-gradient(to bottom, #2422229f 20%, #2422228a 80%),
+  background-image: linear-gradient(to bottom, #000000ad 20%, #000000ad 80%),
     url("/public/cant-find.png");
   background-size: cover;
   background-repeat: no-repeat;

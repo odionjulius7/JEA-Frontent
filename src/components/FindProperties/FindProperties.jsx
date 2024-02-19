@@ -124,6 +124,8 @@ const FindProperties = () => {
                         width: "100%",
                         color: "#000000",
                         fontWeight: "400",
+                        fontSize: "15px",
+                        borderRadius: "9px",
                       }}
                     >
                       Search

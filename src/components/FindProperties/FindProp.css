@@ -13,10 +13,14 @@
 .home-prop .nav-pills .nav-link {
   background-color: #ffffff;
   color: #121212;
+  font-size: 15px;
+  font-weight: 400 !important;
 }
 .App--prop .nav-pills .nav-link {
   background-color: #ffffff;
   color: #121212;
+  font-size: 15px;
+  font-weight: 400 !important;
 }
 
 .App--prop .nav-pills .nav-link.active,
@@ -35,24 +39,39 @@
 /* fbdhjfn */
 .App--projs .nav-link {
   border-bottom: 2px solid white;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 /* Yellow border bottom for the active Nav link */
 .App--projs .nav-link.active {
-  border-bottom: 2px solid yellow;
+  border-bottom: 2px solid #fbc344;
+  color: #fbc344 !important;
 }
 .App--projs .proj-tab-bg {
   min-height: 300px;
   width: 100vw;
   background-image: linear-gradient(to bottom, #1312129f 70%, #050505f6 85%),
-    url("/public/property-req.png");
+    url("/public/selected_proj_new.png");
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
+  background-position: center;
 }
 .App--projs .proj-tab-bg h2 {
   font-weight: 600;
-  font-size: 60px;
+  font-size: 68px;
+}
+.App--projs .proj-tab-bg span {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+/* placeholder */
+:where(.css-dev-only-do-not-override-1b0bdye).ant-input-affix-wrapper
+  > input.ant-input {
+  font-size: 15px;
+  font-weight: 400;
 }
 
 /* Responsiveness */

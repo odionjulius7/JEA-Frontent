@@ -3,6 +3,7 @@ import "./LocationProps.css";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import LocationSlider from "../Slider/LocationSlider";
+import { Link } from "react-router-dom";
 
 const LocationProps = () => {
   return (
@@ -50,20 +51,29 @@ const LocationProps = () => {
             </button>
           </div>
         </div>
-        <div className="row my-4">
+        <div className="row  mb-4 mt-5">
           <div className="col-md-3 col-sm-3 d-flex justify-content-center  mx-auto search-home ">
-            <button
-              id="search-btn"
-              className="button fit-content"
+            <Link
+              to="/properties"
               style={{
-                background: "#FBC344",
                 width: "100%",
-                color: "#000000",
-                fontWeight: "500",
               }}
             >
-              VIEW ALL PROPERTIES
-            </button>
+              <button
+                id="search-btn"
+                className="button fit-content"
+                style={{
+                  background: "#FBC344",
+                  width: "100%",
+                  color: "#000000",
+                  fontWeight: "500",
+                  fontSize: "15px",
+                  borderRadius: "9px",
+                }}
+              >
+                VIEW ALL PROPERTIES
+              </button>
+            </Link>
           </div>
         </div>
       </div>

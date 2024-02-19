@@ -14,14 +14,22 @@ const Hero = () => {
           <div className="container-fluid">
             <div className="row py-5">
               <div className="col-md-2 col-sm-3 mx-auto d-flex justify-content-center home_img_wrap">
-                <img src="./sixtus-svg.svg" alt="img" className="img-fluid" />
+                <div
+                  className="my-3"
+                  style={{
+                    width: "198px",
+                    height: "184px",
+                  }}
+                >
+                  <img src="./sixtus-svg.svg" alt="img" className="img-fluid" />
+                </div>
               </div>
             </div>
           </div>
           <div className="container-fluid py-3 hero-img-down">
             <div className="row px-5x justify-content-between">
-              <div className="col-md-5 d-flex flex-column justify-content-around dflex_2nd ">
-                <p className="text-white">
+              <div className="col-md-4 d-flex flex-column justify-content-around dflex_2nd ">
+                <p className="text-white italic_p">
                   The Sixtus contains 4 Bedroom Terrace houses and two fully
                   detached homes which brings it to six units. This development
                   is a sleek contemporary work of art, designed specially for

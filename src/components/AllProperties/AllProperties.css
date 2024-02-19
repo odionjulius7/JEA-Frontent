@@ -7,11 +7,20 @@
 .AllProperties .h5 {
   font-size: 18px !important;
 }
-.AllProperties span,
+.AllProperties span {
+  font-size: 12px;
+  font-weight: 400;
+}
 .AllProperties p {
-  font-size: 14px !important;
+  font-size: 15px;
+  font-weight: 400;
 }
 
+.AllProperties h5 {
+  font-weight: 700;
+  font-size: 20px;
+  /* margin-bottom: 1.4rem; */
+}
 .AllProperties h2 {
   font-weight: 600;
   font-size: 32px;

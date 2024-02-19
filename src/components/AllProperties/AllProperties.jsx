@@ -77,20 +77,21 @@ const AllProperties = ({ allProps, blogPage, url_str, selblogPage }) => {
                       <Card.Body
                         style={{
                           backgroundColor: "#f9f9f9",
+                          padding: "20px",
                         }}
                       >
                         <Card.Title>
                           <b
                             style={{
                               display: allProps & !blogPage ? "block" : "none",
-                              // fontWeight: "500",
+                              fontWeight: "700",
+                              fontSize: "21px",
                             }}
                           >
                             4 Bedroom Terrace
                           </b>
                           <span
                             style={{
-                              fontSize: "14px",
                               fontWeight: "400",
                               display: blogPage ? "block" : "none",
                             }}
@@ -114,32 +115,47 @@ const AllProperties = ({ allProps, blogPage, url_str, selblogPage }) => {
                             style={{
                               display: allProps & !blogPage ? "block" : "none",
                               fontWeight: "400",
+                              fontSize: "15px",
                             }}
                           >
-                            Osapa London | <b>₦140,000,000</b>{" "}
+                            Osapa London |{" "}
+                            <b style={{ fontWeight: "700" }}>₦140,000,000</b>{" "}
                           </span>
-                          <span
+                          <h5
                             style={{
                               display: blogPage ? "block" : "none",
                             }}
                           >
-                            <b>
-                              How urban greening projects affect sustainable
-                              cities
-                            </b>
-                          </span>
+                            How urban greening projects affect sustainable
+                            cities
+                          </h5>
                           <span
                             style={{
                               display: !allProps & !blogPage ? "block" : "none",
+                              fontWeight: "400",
+                              fontSize: "15px",
                             }}
                           >
-                            Osapa London | <b>₦140,000,000</b>{" "}
+                            Osapa London |{" "}
+                            <b style={{ fontWeight: "700" }}>₦140,000,000</b>{" "}
                           </span>
                         </div>
-                        <Card.Text className="fs-6 py-1">
-                          <b>Features:</b> Nicely finished, Fully fitted
-                          Kitchen, All rooms ensuite, Serene Neighbourhood ,
-                          Secured Estate, BQ ...
+                        <Card.Text
+                          className="py-2"
+                          style={{
+                            fontSize: "13px",
+                            fontWeight: "400",
+                          }}
+                        >
+                          <b
+                            style={{
+                              fontWeight: "700",
+                            }}
+                          >
+                            Features:
+                          </b>{" "}
+                          Nicely finished, Fully fitted Kitchen, All rooms
+                          ensuite, Serene Neighbourhood , Secured Estate, BQ ...
                         </Card.Text>
                       </Card.Body>
                     </Card>

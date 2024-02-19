@@ -6,7 +6,9 @@ import CommonSlide from "../CommonSlide";
 const ApartmentAvailable = () => {
   return (
     <div className="container-fluid apartment-available">
-      <h2 className="card-title-1">Available Luxury Apartments</h2>
+      <h2 className="card-title-1">
+        Available Luxury Apartments <img src="./long.svg" alt="" />
+      </h2>
       <CommonSlide px={"10px"} colr={"#ffffff"} gbColr={"#000000"} />
     </div>
   );

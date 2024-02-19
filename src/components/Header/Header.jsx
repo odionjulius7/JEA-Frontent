@@ -23,7 +23,12 @@ const Header = () => {
       <div className="flexCenter innerWidth paddings h-container">
         {/* logo */}
         <Link to="/">
-          <img src="./Logo-svg.svg" alt="logo" width={75} />
+          <img
+            src="./Logo-svg.svg"
+            alt="logo"
+            width={55}
+            style={{ height: "35px" }}
+          />
         </Link>
 
         {/* menu */}
@@ -74,6 +79,7 @@ const Header = () => {
               to="/about-us"
               style={{
                 color: "#000",
+                padding: "6px 15px",
               }}
             >
               ABOUT US

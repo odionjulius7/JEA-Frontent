@@ -2,14 +2,16 @@
   position: relative;
   overflow-x: clip;
   background: linear-gradient(to bottom, #121212 72%, #121212 72%);
+  /* background-position: center; */
 }
 .App--prop {
   position: relative;
   overflow-x: clip;
   min-height: 750px;
-  background-image: linear-gradient(to bottom, #000000a6 30%, #000000a6 80%),
+  background-image: linear-gradient(to bottom, #000000ad 30%, #000000ad 80%),
     url("/public/props-img-page.png");
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 .App--prop-reqed {
@@ -21,6 +23,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
+  background-position: center;
 }
 
 .App--selected-projs {
@@ -86,8 +89,11 @@
     url("/public/home-hero-img.png");
   background-size: cover;
   background-repeat: no-repeat;
-  /* height: 100vh;
-  width: 100%; */
+}
+.hero-img-down .italic_p {
+  font-size: 17px;
+  font-weight: 300;
+  font-style: italic;
 }
 
 /* linear */
@@ -156,6 +162,8 @@
 .hero-btn button {
   border-radius: 30px;
   padding: 8px 20px;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .line-img {
@@ -171,6 +179,11 @@
 div .line-img:hover {
   color: #fff;
   background-color: transparent !important;
+}
+
+.blog_text span {
+  font-size: 15px;
+  font-weight: 400;
 }
 
 /* mobile screens */

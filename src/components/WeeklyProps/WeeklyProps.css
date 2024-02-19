@@ -13,6 +13,10 @@
   font-weight: 600;
   font-size: 32px;
 }
+.weekly-props-header button {
+  font-weight: 500;
+  font-size: 15px;
+}
 
 .row-btn button:hover {
   background-color: white;
@@ -48,7 +52,7 @@
 
   .row-btn button {
     padding: 3px 10px !important;
-    font-size: 14px;
+    font-weight: 400;
   }
 
   .swipe_card_with {

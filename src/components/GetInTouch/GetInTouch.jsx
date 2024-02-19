@@ -28,8 +28,14 @@ const GetInTouch = ({ homePage }) => {
         <div className="col-md-7 col-sm-12 input-side d-flex flex-column justify-content-center">
           {/* <div className="container"> */}
           <div className="row">
-            <h2>Get in Touch</h2>
-            <p className="fs-6">
+            <h2
+              style={{
+                fontWeight: "600",
+              }}
+            >
+              Get in Touch
+            </h2>
+            <p className="">
               Have an inquiry or some feedback for us?
               <br />
               Fill out the form below and our team will get in touch with you.
@@ -63,7 +69,8 @@ const GetInTouch = ({ homePage }) => {
                 class="btn btn-outline-dark font_15"
                 style={{
                   fontWeight: 500,
-                  // fontSize: "15px",
+                  fontSize: "15px",
+                  padding: "10px 20px",
                 }}
               >
                 GET IN TOUCH

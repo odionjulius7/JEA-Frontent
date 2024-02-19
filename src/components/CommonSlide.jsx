@@ -28,13 +28,13 @@ const CommonSlide = ({ px, colr, gbColr, stlr }) => {
             <Cards text={"01"} colr={colr} gbColr={gbColr} />
           </div>
           <div className="col-md-3 col-sm-8 col-xs-12 my-2 ms-auto">
-            <Cards text={"01"} colr={colr} gbColr={gbColr} />
+            <Cards text={"02"} colr={colr} gbColr={gbColr} />
           </div>
           <div className="col-md-3 col-sm-8 col-xs-12 my-2 ms-auto">
-            <Cards text={"01"} colr={colr} gbColr={gbColr} />
+            <Cards text={"03"} colr={colr} gbColr={gbColr} />
           </div>
           <div className="col-md-3 col-sm-8 col-xs-12 my-2 ms-auto">
-            <Cards text={"01"} colr={colr} gbColr={gbColr} />
+            <Cards text={"04"} colr={colr} gbColr={gbColr} />
           </div>
         </div>
         {/* </div> */}
