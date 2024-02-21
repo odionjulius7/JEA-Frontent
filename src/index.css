@@ -25,7 +25,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* font-family: "Montserrat", sans-serif; */
   scroll-behavior: smooth;
 }
 
@@ -275,10 +274,6 @@ a {
 }
 
 @media (max-width: 640px) {
-  body {
-    max-width: 100vw !important;
-    overflow-x: hidden !important;
-  }
   .location_wrap .location_rotate {
     bottom: 16%;
     left: -23%;
@@ -402,6 +397,19 @@ a {
 }
 
 @media (max-width: 460px) {
+  /* .container-fluid {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .container {
+    margin-left: 0px;
+    margin-right: 0px;
+  } */
+  .row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
   .less460 {
     display: block !important;
   }
