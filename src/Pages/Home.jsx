@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import ApartmentAvailable from "../components/ApartmentAvailable/ApartmentAvailable";
 import FindProperties from "../components/FindProperties/FindProperties";
@@ -11,6 +11,19 @@ import WeeklyProps from "../components/WeeklyProps/WeeklyProps";
 import FloatWhatsapp from "../components/FloatWhatsapp/FloatWhatsapp";
 
 const Home = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const [homePage, setHomePage] = useState(true);
   const [blogPage, setBlogPage] = useState(true);
   const [homeBg, setHomeBg] = useState(true);
@@ -23,8 +36,8 @@ const Home = () => {
       <div
         className="container-fluid px-5x text-white home-prop"
         style={{
-          paddingTop: "80px",
-          paddingBottom: "100px",
+          paddingTop: isMobile ? "50px" : "80px",
+          paddingBottom: isMobile ? "70px" : "100px",
         }}
       >
         <div className="row mb-5">
@@ -35,10 +48,10 @@ const Home = () => {
         <FindProperties />
       </div>
       <WeeklyProps homeBg={homeBg} homePage={homePage} url_str={url_str} />
-      <ApartmentAvailable />
+      <ApartmentAvailable homePage={homePage} />
       <LocationProps />
-      <WeeklyProps blogPage={blogPage} url_str={url_strblog} homeBg={homeBg} />
-      {/* <HomeBlog homePage={homePage} /> */}
+      {/* <WeeklyProps blogPage={blogPage} url_str={url_strblog} homeBg={homeBg} /> */}
+      <HomeBlog homeBg={homeBg} homePage={homePage} url_strblog={url_strblog} />
       <GetInTouch homePage={homePage} />
       <Footer />
       <FloatWhatsapp />

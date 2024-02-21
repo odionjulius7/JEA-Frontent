@@ -21,7 +21,7 @@
   }
   .apartment-available {
     padding: 40px 10px;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
   }
   .apartment-available .rower_wrap {
     margin-left: 0px;
@@ -32,4 +32,11 @@
 }
 
 @media (max-width: 460px) {
+  .card-title-1 {
+    font-size: 1.13rem;
+  }
+
+  .apartment-available {
+    padding: 30px 0px;
+  }
 }

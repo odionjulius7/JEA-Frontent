@@ -31,13 +31,58 @@
 }
 
 .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
-  width: 185px !important;
-  height: 49px !important;
+  width: 197px !important;
+  height: 45px !important;
   font-family: MaderaMedium !important;
+  border-radius: 9px !important;
 }
 
 .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root em {
   font-family: MaderaMedium !important;
   font-size: 15px !important;
   font-weight: 400 !important;
+  color: #12121273 !important;
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 1 !important; /* Set the desired opacity for disabled buttons */
+  cursor: pointer !important;
+  pointer-events: auto !important;
+}
+
+/* Media query */
+
+@media (max-width: 460px) {
+  .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+    width: 271px !important;
+    height: 45px !important;
+  }
+  .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root em {
+    margin-left: 1rem;
+    font-size: 13px !important;
+  }
+
+  .row > * {
+    /* padding-right: 10px; */
+    /* padding-left: 0.3rem; */
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .swiper {
+    padding: 15px !important;
+  }
+}
+/* @media (max-width: 420px) {
+  .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+    width: 220x !important;
+    height: 45px !important;
+  }
+} */
+
+@media (max-width: 400px) {
+  .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+    width: 221px !important;
+  }
 }

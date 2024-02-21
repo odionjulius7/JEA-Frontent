@@ -3,13 +3,24 @@
   color: #000000;
   padding: 50px;
 }
+.PropReqForm
+  .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+  width: inherit !important;
+  font-family: MaderaMedium;
+  padding-left: 4rem;
+}
 .PropReqForm h4 {
   font-weight: 700;
-  font-size: 30px;
+  font-size: 32px;
 }
 .PropReqForm h5 {
   font-weight: 700;
   font-size: 15px;
+}
+.PropReqForm textarea,
+.PropReqForm input {
+  border: 1px solid #969696;
+  border-radius: 9px;
 }
 
 @media (max-width: 640px) {

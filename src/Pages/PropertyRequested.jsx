@@ -3,6 +3,7 @@ import Footer from "../components/Footer/Footer";
 import PropertyReqHero from "../components/Hero/PropertyReqHero";
 import PropReqForm from "../components/PropReqForm/PropReqForm";
 import NewsLetter from "../components/CantFind/NewsLetter";
+import FloatWhatsapp from "../components/FloatWhatsapp/FloatWhatsapp";
 const PropertyRequested = () => {
   const [newLetterComp, setNewLetterComp] = useState(true);
 
@@ -16,6 +17,7 @@ const PropertyRequested = () => {
       <PropReqForm />
       <NewsLetter newLetterComp={newLetterComp} />
       <Footer />
+      <FloatWhatsapp />
     </>
   );
 };

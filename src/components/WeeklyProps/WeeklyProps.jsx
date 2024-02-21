@@ -11,7 +11,8 @@ const WeeklyProps = ({ blogPage, url_str, homeBg }) => {
     <div
       className="container-fluid home-weekly-props"
       style={{
-        backgroundColor: homeBg ? "#e1e1e1" : "#ffffff",
+        backgroundColor: homeBg ? "#ffffff" : "#ffffff",
+        // backgroundColor: homeBg ? "#e1e1e1" : "#ffffff",
       }}
     >
       <div className="row">
@@ -19,7 +20,7 @@ const WeeklyProps = ({ blogPage, url_str, homeBg }) => {
           <>
             <div className="col-12 d-flex justify-content-between align-items-center weekly-props-header mb-3">
               <h2>Properties of the Week</h2>
-              <div className="">
+              <div className="display-none">
                 <Button variant="outline-dark py-2 px-5">
                   VIEW ALL PROPERTIES
                 </Button>
@@ -35,22 +36,35 @@ const WeeklyProps = ({ blogPage, url_str, homeBg }) => {
                     color: "black",
                     fontSize: "15px",
                     fontWeight: "400 !important",
+                    border: "1px solid #D7D7D7",
                   }}
                   variant={"outline-light"}
                 />
                 <Buttons
                   text="Rent"
-                  style={{ width: "100px", color: "black" }}
+                  style={{
+                    width: "100px",
+                    color: "black",
+                    border: "1px solid #D7D7D7",
+                  }}
                   variant={"outline-dark"}
                 />
                 <Buttons
                   text="Short Let"
-                  style={{ width: "100px", color: "black" }}
+                  style={{
+                    width: "100px",
+                    color: "black",
+                    border: "1px solid #D7D7D7",
+                  }}
                   variant={"outline-dark"}
                 />
                 <Buttons
                   text="Lands"
-                  style={{ width: "100px", color: "black" }}
+                  style={{
+                    width: "100px",
+                    color: "black",
+                    border: "1px solid #D7D7D7",
+                  }}
                   variant={"outline-dark"}
                 />
               </div>
@@ -58,12 +72,12 @@ const WeeklyProps = ({ blogPage, url_str, homeBg }) => {
           </>
         )}
         <div className="row pt-3 pb-4">
-          {homeBg && <h2 className="mb-5 mt-2">From Our Blog</h2>}
+          {/* {homeBg && <h2 className="mb-5 mt-2">From Our Blog</h2>} */}
           <div className="col d-flex text-align-center justify-content-center">
             <MySwiper homeBg={homeBg} blogPage={blogPage} url_str={url_str} />
           </div>
         </div>
-        {homeBg && (
+        {/* {homeBg && (
           <div className="row mb-4 mt-5">
             <div className="col-md-3 col-sm-3 d-flex justify-content-center  mx-auto search-home ">
               <Link
@@ -89,7 +103,7 @@ const WeeklyProps = ({ blogPage, url_str, homeBg }) => {
               </Link>
             </div>
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );

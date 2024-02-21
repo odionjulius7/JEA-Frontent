@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./PropReqForm.css";
 import Radios from "../Radios";
 import SelectComp from "../Select";
 import { Input } from "antd";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
 
 const PropReqForm = () => {
+  const [age, setAge] = useState("");
+
+  const handleChange = (event) => {
+    setAge(event.target.value);
+  };
+
   return (
     <div className="container-fluid PropReqForm">
       <div className="row">
@@ -19,93 +28,208 @@ const PropReqForm = () => {
             <Radios />
           </div>
           <div className="row">
-            <div className="col-md-6 col-sm-12  py-5x">
+            <div className="col-md-6 col-sm-12 ">
               <h5 className="py-2">Property Category</h5>
-              <SelectComp widthx={"80%"} />
+              <div
+                style={{
+                  width: "385px",
+                  height: "50px",
+                }}
+              >
+                <FormControl
+                  sx={{
+                    width: "inherit",
+                    height: "inherit",
+                  }}
+                >
+                  <Select
+                    value={age}
+                    onChange={handleChange}
+                    displayEmpty
+                    inputProps={{ "aria-label": "Without label" }}
+                  >
+                    <MenuItem value="">
+                      <span className="">{"Sale"}</span>
+                    </MenuItem>
+                    <MenuItem value={10}>10</MenuItem>
+                  </Select>
+                </FormControl>
+              </div>
             </div>
-            <div className="col-md-6 col-sm-12  py-5x">
+            <div className="col-md-6 col-sm-12 ">
               <h5 className="py-2">Number of Bedrooms</h5>
-              <SelectComp widthx={"80%"} />
-            </div>
-          </div>
-          <div className="row my-5x">
-            <div className="col-md-6 col-sm-12  py-5x">
-              <h5 className="py-2">Maximum Budget (N)</h5>
-              <Input
+              <div
                 style={{
-                  width: "80%",
+                  width: "385px",
                   height: "50px",
                 }}
-              />
-            </div>
-            <div className="col-md-6 col-sm-12 py-5x">
-              <h5 className="py-2">Location</h5>
-              <Input
-                style={{
-                  width: "80%",
-                  height: "50px",
-                }}
-              />
-            </div>
-          </div>
-          {/* textarea */}
-          {/* textarea */}
-          <div className="row my-5x">
-            <div className="col-md-6 col-sm-12 py-5x">
-              <h5 className="py-2">Full Name</h5>
-              <Input
-                style={{
-                  width: "80%",
-                  height: "50px",
-                }}
-              />
-            </div>
-            <div className="col-md-6 col-sm-12 py-5x">
-              <h5 className="py-2">Country</h5>
-              <Input
-                style={{
-                  width: "80%",
-                  height: "50px",
-                }}
-              />
-            </div>
-          </div>
-          <div className="row my-5x">
-            <div className="col-md-6 col-sm-12 py-5x">
-              <h5 className="py-2">Phone Number</h5>
-              <Input
-                style={{
-                  width: "80%",
-                  height: "50px",
-                }}
-              />
-            </div>
-            <div className="col-md-6 col-sm-12 py-5x">
-              <h5 className="py-2">Email Address</h5>
-              <Input
-                style={{
-                  width: "80%",
-                  height: "50px",
-                }}
-              />
+              >
+                <FormControl
+                  sx={{
+                    width: "inherit",
+                    height: "inherit",
+                  }}
+                >
+                  <Select
+                    value={age}
+                    onChange={handleChange}
+                    displayEmpty
+                    inputProps={{ "aria-label": "Without label" }}
+                  >
+                    <MenuItem value="">
+                      <span className="">{"1"}</span>
+                    </MenuItem>
+                    <MenuItem value={10}>10</MenuItem>
+                  </Select>
+                </FormControl>
+              </div>
             </div>
           </div>
           <div className="row my-4">
-            <div className="col-3">
-              <button
-                id="search-btn"
-                className="button fit-content"
+            <div className="col-md-6 col-sm-12">
+              <h5 className="py-2">Maximum Budget (N)</h5>
+              <div
                 style={{
-                  background: "#FBC344",
-                  width: "100%",
-                  color: "#000000",
-                  fontWeight: "600",
+                  width: "385px",
+                  height: "50px",
                 }}
               >
-                Submit
-              </button>
+                {" "}
+                <Input
+                  style={{
+                    width: "inherit",
+                    height: "inherit",
+                  }}
+                />
+              </div>
+            </div>
+            <div className="col-md-6 col-sm-12">
+              <h5 className="py-2">Location</h5>
+              <div
+                style={{
+                  width: "385px",
+                  height: "50px",
+                }}
+              >
+                {" "}
+                <Input
+                  style={{
+                    width: "inherit",
+                    height: "inherit",
+                  }}
+                />
+              </div>
             </div>
           </div>
+          {/* textarea */}
+          <div className="row my-4">
+            <div className="">
+              <h5 className="py-2">Additional Details</h5>
+              <div
+                style={{
+                  width: "860px",
+                  height: "118px",
+                }}
+              >
+                {" "}
+                <textarea
+                  name=""
+                  id=""
+                  className="w-100"
+                  style={{
+                    height: "inherit",
+                  }}
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          {/* textarea */}
+          <div className="row my-4">
+            <div className="col-md-6 col-sm-12">
+              <h5 className="py-2">Full Name</h5>
+              <div
+                style={{
+                  width: "385px",
+                  height: "50px",
+                }}
+              >
+                {" "}
+                <Input
+                  style={{
+                    width: "inherit",
+                    height: "inherit",
+                  }}
+                />
+              </div>
+            </div>
+            <div className="col-md-6 col-sm-12">
+              <h5 className="py-2">Country</h5>
+              <div
+                style={{
+                  width: "385px",
+                  height: "50px",
+                }}
+              >
+                <Input
+                  style={{
+                    width: "inherit",
+                    height: "inherit",
+                  }}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="row my-4">
+            <div className="col-md-6 col-sm-12">
+              <h5 className="py-2">Phone Number</h5>
+              <div
+                style={{
+                  width: "385px",
+                  height: "50px",
+                }}
+              >
+                {" "}
+                <Input
+                  style={{
+                    width: "inherit",
+                    height: "inherit",
+                  }}
+                />
+              </div>
+            </div>
+            <div className="col-md-6 col-sm-12">
+              <h5 className="py-2">Email Address</h5>
+              <div
+                style={{
+                  width: "385px",
+                  height: "50px",
+                }}
+              >
+                <Input
+                  style={{
+                    width: "inherit",
+                    height: "inherit",
+                  }}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="row my-4">
+        <div className="col-3 ">
+          <button
+            id="search-btn"
+            className="button fit-content"
+            style={{
+              background: "#FBC344",
+              width: "88%",
+              color: "#000000",
+              fontWeight: "600",
+            }}
+          >
+            Submit
+          </button>
         </div>
       </div>
     </div>

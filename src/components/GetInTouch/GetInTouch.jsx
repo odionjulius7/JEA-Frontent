@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import GetInTInput from "../GetInTInput/GetInTInput";
 import Textareas from "../GetInTInput/Textareas";
@@ -6,11 +6,25 @@ import { FaWhatsapp } from "react-icons/fa";
 
 import "./GetInTouch.css";
 const GetInTouch = ({ homePage }) => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div
       className="container-fluid get-in-touch"
       style={{
         backgroundColor: homePage ? "#ffffff" : "#E3E3E3",
+        padding: isMobile ? "20px" : "",
       }}
     >
       <div className="row">
@@ -42,18 +56,18 @@ const GetInTouch = ({ homePage }) => {
             </p>
           </div>
           <div className="row py-5">
-            <div className="col-6">
+            <div className="col-md-6 col-sm-12 my-2">
               <GetInTInput text={"First name"} bordr={"input-styles"} />
             </div>
-            <div className="col-6">
+            <div className="col-md-6 col-sm-12 my-2">
               <GetInTInput text={"Last name"} bordr={"input-styles"} />
             </div>
           </div>
-          <div className="row py-5">
-            <div className="col-6">
+          <div className="row py-5x">
+            <div className="col-md-6 col-sm-12 my-2">
               <GetInTInput text={"Email address"} bordr={"input-styles"} />
             </div>
-            <div className="col-6">
+            <div className="col-md-6 col-sm-12 my-2">
               <GetInTInput text={"Phone number"} bordr={"input-styles"} />
             </div>
           </div>

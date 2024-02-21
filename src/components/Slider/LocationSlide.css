@@ -1,0 +1,40 @@
+.location_slide_wrap .swiper {
+  overflow: hidden;
+  width: 100%; /* Adjust based on your layout */
+  /* position: relative !important; */
+}
+
+.location_slide_wrap .swiper-slides {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  gap: 2rem;
+}
+
+.location_slide_wrap .slide {
+  /* width: 25%; */
+  flex-shrink: 0;
+  transition: opacity 0.3s ease;
+}
+
+.location_slide_wrap .slide.active {
+  opacity: 1;
+}
+/*  */
+
+.location_wrap {
+  width: 303px;
+  height: 376px;
+}
+.location_wrap img {
+  height: 100%;
+}
+
+@media (max-width: 460px) {
+  .location_slide_wrap .swiper-slides {
+    gap: 1rem;
+  }
+  .location_wrap {
+    width: 292px;
+    height: 355px;
+  }
+}

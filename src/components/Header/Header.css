@@ -26,7 +26,10 @@
 
 #about-mobile {
   display: none;
-  padding: 7px 13px;
+  padding: 7px 13px !important;
+  background: #fbc344 !important;
+  border-radius: 9px;
+  color: #000000 !important;
 }
 
 .header-btn a {
@@ -94,5 +97,51 @@ div .header-btn {
 @media (max-width: 700px) {
   .h-wrapper img {
     width: 65px;
+  }
+}
+@media (max-width: 460px) {
+  .h-wrapper {
+    padding: 5px 10px !important;
+  }
+
+  .menu-icon {
+    cursor: pointer;
+  }
+
+  .h-menu {
+    color: var(--black);
+    position: absolute;
+    gap: 2rem;
+    font-weight: 500;
+    flex-direction: column;
+    right: 0rem;
+    top: 5rem;
+    background: white;
+    display: flex;
+    border-radius: 0px;
+    transition: all 200ms ease;
+    align-items: flex-start;
+    padding: 3rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    font-size: 12px;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .h-wrapper img {
+    width: 46px;
+    height: 30px;
+  }
+
+  svg {
+    width: 25px;
+    height: 20px;
+  }
+  .menu-icon.active {
+    border: 1px solid #d9d9d933;
+    background-color: #d9d9d933;
+    padding: 3px;
   }
 }

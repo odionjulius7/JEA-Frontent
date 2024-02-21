@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { Col, Nav, Row, Tab } from "react-bootstrap";
 import SelectComp from "../Select";
@@ -7,6 +7,19 @@ import Inputs from "../Inputs";
 import "./FindProp.css";
 import SelectTwo from "../SelectTwo";
 const FindProperties = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       <Tab.Container id="left-tabs-example" defaultActiveKey="first">
@@ -17,6 +30,7 @@ const FindProperties = () => {
             md={12}
             sm={12}
             className="mx-auto d-flex justify-content-center"
+            id="tab_1"
           >
             <Nav variant="pills" className="flex-row">
               <Nav.Item>
@@ -67,7 +81,15 @@ const FindProperties = () => {
           </Col>
         </Row>
         <Row>
-          <Col lg={7} md={12} sm={12} className="mx-auto text-dark ">
+          <Col
+            lg={8}
+            md={12}
+            sm={12}
+            className="mx-auto text-dark"
+            style={{
+              padding: isMobile ? "0 2rem" : "0 3rem",
+            }}
+          >
             <Tab.Content
               style={{
                 marginTop: "-0.5rem",
@@ -76,8 +98,8 @@ const FindProperties = () => {
                 borderRadius: "9px",
               }}
             >
-              <Tab.Pane eventKey="first" className="py-3 ">
-                <div className="d-flex flex-row justify-content-center gap-4x align-items-center pt-4 mb-4">
+              <Tab.Pane eventKey="first" className="py-4 px-3 ">
+                <div className="d-flex flex-row justify-content-center gap-4x align-items-center pt-4 mb-4 select_wrap_find">
                   <div className="select-width">
                     <SelectTwo
                       text={"No. of Bedrooms"}
@@ -86,8 +108,8 @@ const FindProperties = () => {
                     />
                   </div>
                   <div
-                    className="divider py-1 bg-dark"
-                    style={{ borderRight: "1px solid #000000", height: "35px" }}
+                    className="divider py-1 bg-dark display-none"
+                    style={{ borderRight: "1px solid #9B9B9B", height: "35px" }}
                   ></div>
                   <div className="select-width">
                     <SelectTwo
@@ -97,8 +119,8 @@ const FindProperties = () => {
                     />
                   </div>
                   <div
-                    className="divider py-1 bg-dark"
-                    style={{ borderRight: "1px solid #000000", height: "35px" }}
+                    className="divider py-1 bg-dark display-none"
+                    style={{ borderRight: "1px solid #9B9B9B", height: "35px" }}
                   ></div>
                   <div className="select-width">
                     <SelectTwo
@@ -115,17 +137,18 @@ const FindProperties = () => {
                   </div>
                 </div>
                 <div className="row my-4">
-                  <div className="col-5 mx-auto search-home">
+                  <div className="col-md-5 mx-auto search-home d-flex justify-content-center">
                     <button
                       id="search-btn"
                       className="button fit-content"
                       style={{
                         background: "#FBC344",
-                        width: "100%",
+                        width: isMobile ? "80%" : "100%",
                         color: "#000000",
                         fontWeight: "400",
                         fontSize: "15px",
                         borderRadius: "9px",
+                        padding: isMobile ? "10px" : "",
                       }}
                     >
                       Search
@@ -133,9 +156,15 @@ const FindProperties = () => {
                   </div>
                 </div>
               </Tab.Pane>
-              <Tab.Pane eventKey="second">Rent</Tab.Pane>
-              <Tab.Pane eventKey="third">Short Let</Tab.Pane>
-              <Tab.Pane eventKey="forth">Land</Tab.Pane>
+              <Tab.Pane eventKey="second" className="py-4 px-3 ">
+                Rent
+              </Tab.Pane>
+              <Tab.Pane eventKey="third" className="py-4 px-3 ">
+                Short Let
+              </Tab.Pane>
+              <Tab.Pane eventKey="forth" className="py-4 px-3 ">
+                Land
+              </Tab.Pane>
             </Tab.Content>
           </Col>
         </Row>

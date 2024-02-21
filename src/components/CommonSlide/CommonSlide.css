@@ -1,0 +1,44 @@
+.rower_wrap .swiper {
+  overflow: hidden;
+  width: 100%; /* Adjust based on your layout */
+}
+
+.rower_wrap .swiper-slides {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  gap: 2rem;
+}
+
+.rower_wrap .slide {
+  width: 25%;
+  flex-shrink: 0;
+  transition: opacity 0.3s ease;
+}
+
+.rower_wrap .slide.active {
+  opacity: 1;
+}
+
+@media (max-width: 460px) {
+  .rower_wrap .slide {
+    width: 90%;
+  }
+}
+
+/* .rower_wrap button.prev,
+.rower_wrap button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.rower_wrap button.prev {
+  left: 10px;
+}
+
+.rower_wrap button.next {
+  right: 10px;
+} */

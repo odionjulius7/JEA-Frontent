@@ -5,6 +5,9 @@ import SwiperCore, { Navigation, Autoplay } from "swiper/core";
 import "swiper/swiper.min.css";
 import "swiper/swiper-bundle.min.css";
 
+//
+import "swiper/css/navigation";
+
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 
@@ -13,7 +16,6 @@ SwiperCore.use([Navigation, Autoplay]);
 const MySwiper = ({ blogPage, url_str, homeBg }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
 
-  console.log("hhome bg is" + homeBg);
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 640);
@@ -26,16 +28,15 @@ const MySwiper = ({ blogPage, url_str, homeBg }) => {
     };
   }, []);
 
-  // console.log(isMobile);
-
   return (
     <Swiper
+      className="swiper-container"
       spaceBetween={25}
-      slidesPerView={isMobile ? 2 : 3}
+      slidesPerView={isMobile ? 1 : 3}
       navigation
-      autoplay={{ delay: 3000, disableOnInteraction: false }}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
+      autoplay={{ delay: 4000, disableOnInteraction: false }}
+      // onSlideChange={() => console.log("slide change")}
+      // onSwiper={(swiper) => console.log(swiper)}
     >
       {[1, 2, 3, 4, 5].map(() => {
         return (
@@ -43,13 +44,13 @@ const MySwiper = ({ blogPage, url_str, homeBg }) => {
             <Link to={`/${url_str}`}>
               <Card
                 className="swipe_card_with"
-                // style={{ width: "24rem" }}
+                // style={{ width: isMobile ? "24rem" : "" }}
               >
                 <Card.Img variant="top" src="./first-slide-img.png" />
                 <Card.Body
                   style={{
                     backgroundColor: "#f9f9f9",
-                    padding: "1rem 2rem",
+                    padding: isMobile ? "1rem 0.9rem" : "1rem 2rem",
                   }}
                   className="card_body py-3"
                 >

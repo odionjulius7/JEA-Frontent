@@ -14,6 +14,20 @@
   background-color: transparent !important;
 }
 
+/* hehsdan */
+.location-props .swiper-button-next:after,
+.location-props .swiper-button-prev:after,
+.location-props .swiper-button-next:after,
+.location-props .swiper-button-prev:after {
+  background: transparent;
+  padding: 15px 20px;
+  border-radius: 200px;
+  color: transparent;
+  font-size: 20px !important;
+  font-weight: 900;
+  pointer-events: none;
+}
+
 @media (max-width: 640px) {
   .location-props #search-btn {
     margin-left: 1rem;

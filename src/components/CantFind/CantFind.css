@@ -19,11 +19,16 @@
 
 .NewsLetter h4 {
   font-weight: 600;
-  font-size: 30px;
+  font-size: 32px;
 }
 .NewsLetter span {
   font-weight: 400;
+  font-size: 13px;
+}
+.NewsLetter button {
+  font-weight: 500;
   font-size: 15px;
+  padding: 13px 25px;
 }
 
 .make_req {

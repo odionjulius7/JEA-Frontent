@@ -32,8 +32,6 @@
 }
 
 .select-width {
-  /* width: 180px;
-  height: 45px; */
 }
 
 /* fbdhjfn */
@@ -87,8 +85,6 @@
 @media (max-width: 700px) {
   /* Adjust styles for screens up to 940px */
   .select-width {
-    /* width: 140px;
-    height: 40px; */
     margin: 5px 1rem;
   }
 }
@@ -107,34 +103,91 @@
   .proj-tab-bg img {
     margin-left: 1rem;
   }
-  .select-width {
-    width: 120px;
-    height: 36px;
-  }
 }
 @media (max-width: 640px) {
   /* Adjust styles for screens up to 640px */
   .proj-tab-bg h2 {
     font-size: 30px;
   }
-  .select-width {
-    width: 100px;
-    height: 33px;
-  }
+
   .App--projs .proj-tab-bg h2 {
     font-size: 27px;
   }
 }
 @media (max-width: 540px) {
-  .select-width {
-    width: 80px;
-    height: 28px;
-  }
 }
 
-@media (max-width: 480px) {
-  /* Adjust styles for screens up to 480px */
-  .proj-tab-bg h2 {
-    font-size: 30px;
+@media (max-width: 460px) {
+  #tab_1 {
+    position: relative;
+  }
+
+  .nav-pills {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    /* margin-bottom: 2rem; */
+    position: absolute;
+    top: 45%;
+    left: 2.8%;
+    z-index: 10;
+    padding: 2rem 0.3rem;
+  }
+
+  .nav-pills .nav-item {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+    padding: 0px !important;
+  }
+  /* .nav-pills .nav-item.active {
+    
+  } */
+  .nav-pills .nav-item a {
+    font-size: 14px !important;
+  }
+  .App-prop .nav-pills .nav-link,
+  .home-prop .nav-pills .nav-link {
+    background-color: #ededed !important;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .App--prop .nav-pills .nav-link {
+    background-color: #ededed;
+    width: 100%;
+  }
+
+  .App--prop .nav-pills .nav-link.active,
+  .App--prop .nav-pills .show > .nav-link,
+  .home-prop .nav-pills .nav-link.active,
+  .home-prop .nav-pills .show > .nav-link {
+    color: #000;
+    background-color: #ededed;
+    border: 2px solid #fbc344;
+    width: 100%;
+  }
+
+  .tab-content {
+    padding-top: 8rem;
+  }
+
+  .select_wrap_find {
+    flex-direction: column !important;
+    /* justify-content: center;
+    align-items: center; */
+  }
+  .select_wrap_find .select-width {
+    /* width: 80%; */
+  }
+
+  :where(.css-dev-only-do-not-override-1b0bdye).ant-input-affix-wrapper
+    > input.ant-input {
+    font-size: 13px;
+    margin-left: 1rem;
   }
 }
