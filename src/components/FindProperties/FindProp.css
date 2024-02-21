@@ -100,9 +100,6 @@
   .proj-tab-bg span {
     font-size: 13px;
   }
-  .proj-tab-bg img {
-    margin-left: 1rem;
-  }
 }
 @media (max-width: 640px) {
   /* Adjust styles for screens up to 640px */
@@ -189,5 +186,20 @@
     > input.ant-input {
     font-size: 13px;
     margin-left: 1rem;
+  }
+
+  .App--projs .proj-tab-bg {
+    min-height: 300px;
+    width: 90vw;
+    background-image: linear-gradient(to bottom, #1312129f 70%, #050505f6 85%),
+      url("/public/selected_proj_new.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    background-position: center;
+  }
+
+  .wrap_flexx {
+    flex-wrap: wrap;
   }
 }
