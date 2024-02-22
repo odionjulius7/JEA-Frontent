@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import Buttons from "../Buttons";
 
 const WhatPeepsSay = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div className="container-fluid WhatPeepsSay">
       <div className="row py-5">
@@ -10,8 +22,13 @@ const WhatPeepsSay = () => {
           <h2 className="mb-5">What People Say About Us</h2>
         </div>
       </div>
-      <div className="row my-5">
-        <div className="col-md-4 col-sm-6">
+      <div
+        className="row my-4x"
+        style={{
+          marginTop: isMobile ? "-22px" : "",
+        }}
+      >
+        <div className="col-md-4 col-sm-6 my-5">
           <div className="what_peep_wrap-1">
             <div className="top-img">
               <img src="./what_peep.jpg" alt="" />
@@ -28,7 +45,7 @@ const WhatPeepsSay = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-4 col-sm-6">
+        <div className="col-md-4 col-sm-6 my-5">
           <div className="what_peep_wrap-1">
             <div className="top-img">
               <img src="./what_peep.jpg" alt="" />
@@ -45,7 +62,7 @@ const WhatPeepsSay = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-4 col-sm-6">
+        <div className="col-md-4 col-sm-6 my-5">
           <div className="what_peep_wrap-1">
             <div className="top-img">
               <img src="./what_peep.jpg" alt="" />

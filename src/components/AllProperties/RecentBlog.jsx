@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Card from "react-bootstrap/Card";
 
 import "./AllProperties.css";
 import { Link } from "react-router-dom";
 
 const RecentBlog = ({ blogPage }) => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="container-fluid AllProperties">
       <div className="row">
@@ -58,13 +71,18 @@ const RecentBlog = ({ blogPage }) => {
           </div>
           <div className="col-md-6 col-sm-12 my-2">
             <Link to="/selected-blog">
-              <Card className="d-flex flex-row mb-3">
+              <Card
+                className="d-flex  mb-3"
+                style={{
+                  flexDirection: isMobile ? "column" : "row",
+                }}
+              >
                 <Card.Img
                   variant="top"
                   src="./first-slide-img.png"
                   className="fit-content"
                   style={{
-                    width: "50%",
+                    width: isMobile ? "100%" : "50%",
                   }}
                 />
                 <Card.Body
@@ -93,10 +111,15 @@ const RecentBlog = ({ blogPage }) => {
               </Card>
             </Link>
             <Link to="/selected-blog">
-              <Card className="d-flex flex-row">
+              <Card
+                className="d-flex"
+                style={{
+                  flexDirection: isMobile ? "column" : "row",
+                }}
+              >
                 <Card.Img
                   style={{
-                    width: "50%",
+                    width: isMobile ? "100%" : "50%",
                   }}
                   variant="top"
                   src="./first-slide-img.png"

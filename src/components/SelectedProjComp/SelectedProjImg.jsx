@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { IoIosCall } from "react-icons/io";
 import { IoLogoWhatsapp } from "react-icons/io";
@@ -6,6 +6,19 @@ import { FaShareAlt } from "react-icons/fa";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 
 const SelectedProjImg = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="container-fluid SelectedPorjImg">
       <div className="row my-5">
@@ -67,7 +80,7 @@ const SelectedProjImg = () => {
               type="button"
               className="btn btn-outline-light fit-content my-2 share_btn"
               style={{
-                width: "50%",
+                width: "30%",
                 color: "#fff",
                 fontWeight: "600",
               }}

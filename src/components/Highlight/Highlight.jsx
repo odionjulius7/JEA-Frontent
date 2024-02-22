@@ -1,14 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import "./Highlight.css";
 import Inputs from "../Inputs";
 
 const Highlight = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="container-fluid Highlight">
       <div className="row py-4 mb-5 flex-row justify-content-between align-items-center">
         <div className="col-md-3 col-sm-6">
-          <h2 className="">Highlights</h2>
+          <h2
+            className=""
+            style={{
+              marginBottom: isMobile ? "2rem" : "",
+            }}
+          >
+            Highlights
+          </h2>
         </div>
         <div className="col-md-5 col-sm-6">
           <Inputs />
@@ -28,7 +48,7 @@ const Highlight = () => {
           <h5
             className="mt-2"
             style={{
-              fontSize: "24px",
+              fontSize: isMobile ? "18px" : "24px",
               fontWeight: "700",
             }}
           >

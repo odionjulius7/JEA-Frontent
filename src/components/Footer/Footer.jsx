@@ -96,7 +96,7 @@ const Footer = () => {
                   window.scrollTo(0, 0);
                 }}
               />
-              <p>Back to top</p>
+              <p style={{ fontSize: "12px" }}>Back to top</p>
             </div>
           </div>
           <div className="row pt-1 pb-5">
@@ -109,7 +109,7 @@ const Footer = () => {
               </span>
             </div>
           </div>
-          <div className="row justify-content-center">
+          <div className="row justify-content-start">
             <div className="col-5 mt-3">
               <h5>Quick Links</h5>
             </div>
@@ -120,8 +120,13 @@ const Footer = () => {
           {isMobile && (
             <hr className="divider my-4" style={{ border: "1px solid #fff" }} />
           )}
-          <div className="row footer-2nd-row justify-content-center mb-5">
-            <div className="col-5">
+          <div className="row footer-2nd-row justify-content-start mb-5">
+            <div
+              className="col-5"
+              style={{
+                marginLeft: "-0.5rem",
+              }}
+            >
               <FooterList List={List} url_links={url_links1} />
             </div>
             <div className="col-5">

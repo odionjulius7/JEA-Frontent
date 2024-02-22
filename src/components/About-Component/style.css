@@ -104,6 +104,7 @@
 
   .AboutImages {
     padding: 10px;
+    margin-left: -13px;
   }
 
   .AboutVideo .AboutVideo_wrap {
@@ -156,5 +157,15 @@
   .AboutImages {
     padding: 0 5 0 15px;
     align-items: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .what_peep_wrap-1 {
+    padding: 55px 30px;
+  }
+
+  .WhatPeepsSay {
+    padding: 20px;
   }
 }

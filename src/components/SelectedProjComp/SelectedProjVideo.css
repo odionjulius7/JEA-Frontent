@@ -36,9 +36,30 @@
   }
 
   .call_mess_btn button {
-    width: 100% !important;
+    width: 100%;
   }
   .share_btn {
     width: 70% !important;
+  }
+}
+
+@media (max-width: 460px) {
+  .SelectedPorjImg {
+    padding: 20px 8px;
+  }
+
+  .call_mess_btn {
+    flex-direction: column;
+    margin: 0px;
+  }
+
+  .SelectedPorjImg .share_btn,
+  .call_mess_btn button {
+    width: 100% !important;
+    padding: 14px;
+    margin: 5px !important;
+  }
+  .SelectedPorjImg .share_btn {
+    margin-top: 1rem !important;
   }
 }

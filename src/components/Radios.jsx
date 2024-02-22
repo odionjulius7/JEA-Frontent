@@ -3,7 +3,7 @@ import { Radio } from "antd";
 import "./Radios.css"; // Import the CSS file
 
 const Radios = () => (
-  <Radio.Group name="radiogroup" className="d-flex gap-5">
+  <Radio.Group name="radiogroup" className="d-flex gap-5x flex-wrap">
     <label className="radio-label">
       <span className="fs-6">Individual</span>
       <Radio value={"Individual"} />

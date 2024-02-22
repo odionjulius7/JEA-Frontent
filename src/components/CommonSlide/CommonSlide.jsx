@@ -47,14 +47,23 @@ const CommonSlide = ({ px, colr, gbColr, stlr, homePage, featuredProp }) => {
         <div className="row">
           <div className="col-12 d-flex justify-content-between align-items-center weekly-props-header">
             <h2 className="mb-0">Featured Properties</h2>
-            <div className="d-flex gap-5x display-none">
+            <div
+              className="d-flex gap-5x"
+              style={{
+                marginTop: isMobile ? "30px" : "",
+              }}
+            >
               <button
                 className="btn btn-outline-dark prev"
                 onClick={prevSlide}
                 style={{
                   border: "1px solid #000000",
-                  padding: "0.3rem 1.4rem",
+                  padding: "0.8rem 2rem",
                   borderRadius: "2rem",
+                  //
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
                 }}
               >
                 <img src="./arrow_left_svg_dk.svg" alt="line-img" />
@@ -65,8 +74,12 @@ const CommonSlide = ({ px, colr, gbColr, stlr, homePage, featuredProp }) => {
                 onClick={nextSlide}
                 style={{
                   border: "1px solid #000000",
-                  padding: "0.3rem 1.4rem",
+                  padding: "0.8rem 2rem",
                   borderRadius: "2rem",
+                  //
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
                 }}
               >
                 <img src="./arrow_right_svg_db.svg" alt="line-img" />
@@ -115,6 +128,12 @@ const CommonSlide = ({ px, colr, gbColr, stlr, homePage, featuredProp }) => {
                 data-bs-target="#carouselExample"
                 data-bs-slide="prev"
                 onClick={prevSlide}
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  padding: "0.8rem 1.5rem",
+                }}
               >
                 <img src="./arrow_left_svg.svg" alt="" />
                 {/* <FaLongArrowAltLeft /> */}
@@ -125,6 +144,12 @@ const CommonSlide = ({ px, colr, gbColr, stlr, homePage, featuredProp }) => {
                 data-bs-target="#carouselExample"
                 data-bs-slide="next"
                 onClick={nextSlide}
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  padding: "0.8rem 1.5rem",
+                }}
               >
                 <img src="./arrow_right_svg.svg" alt="" />
                 {/* <FaLongArrowAltRight /> */}

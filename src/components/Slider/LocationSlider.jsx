@@ -92,8 +92,13 @@ const LocationSlider = ({ homePage }) => {
                 className="btn btn-outline-dark"
                 style={{
                   border: "1px solid #000000",
-                  padding: "0.3rem 1.3rem",
+                  // padding: "0.3rem 1.3rem",
                   borderRadius: "2rem",
+
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  padding: "0.8rem 1.5rem",
                 }}
                 onClick={prevSlide}
               >
@@ -105,8 +110,13 @@ const LocationSlider = ({ homePage }) => {
                 className="btn btn-outline-dark "
                 style={{
                   border: "1px solid #000000",
-                  padding: "0.3rem 1.3rem",
+                  // padding: "0.3rem 1.3rem",
                   borderRadius: "2rem",
+
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  padding: "0.8rem 1.5rem",
                 }}
               >
                 <img src="./arrow_right_svg_db.svg" alt="line-img" />

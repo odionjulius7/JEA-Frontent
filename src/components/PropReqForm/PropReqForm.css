@@ -26,11 +26,30 @@
 @media (max-width: 640px) {
   .PropReqForm {
     padding: 10px;
+    overflow: hidden;
   }
   .PropReqForm h4 {
-    font-size: 20px;
+    font-size: 16px;
   }
   .PropReqForm h5 {
     font-size: 12px;
+  }
+}
+@media (max-width: 460px) {
+  .PropReqForm button {
+    padding: 15px !important;
+    width: 50% !important;
+  }
+  .PropReqForm input {
+    /* width: 90% !important; */
+  }
+  .PropReqForm textarea {
+    /* width: 40% !important; */
+  }
+
+  .PropReqForm
+    .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+    /* width: 90% !important; */
+    padding-left: 1rem;
   }
 }

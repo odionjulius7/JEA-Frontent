@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import "./style.css";
 
 const AboutImages = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="container-fluid AboutImages">
       {/* Images */}

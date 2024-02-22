@@ -1,9 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import GetInTInput from "../GetInTInput/GetInTInput";
 import "./CantFind.css";
 
 const NewsLetter = ({ newLetterComp, blogPage, selectedProps }) => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div className="container-fluid NewsLetter">
       <div className="row py-4">
@@ -37,7 +49,12 @@ const NewsLetter = ({ newLetterComp, blogPage, selectedProps }) => {
           <div className="col-md-6 col-sm-12">
             <GetInTInput text={"First name"} bordr={"news-lett-input"} />
           </div>
-          <div className="col-md-6 col-sm-12">
+          <div
+            className="col-md-6 col-sm-12"
+            style={{
+              marginTop: isMobile ? "2rem" : "",
+            }}
+          >
             <GetInTInput text={"Email address"} bordr={"news-lett-input"} />
           </div>
         </div>

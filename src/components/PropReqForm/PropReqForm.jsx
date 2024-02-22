@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import "./PropReqForm.css";
 import Radios from "../Radios";
@@ -9,6 +9,19 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
 const PropReqForm = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  //
   const [age, setAge] = useState("");
 
   const handleChange = (event) => {
@@ -32,7 +45,7 @@ const PropReqForm = () => {
               <h5 className="py-2">Property Category</h5>
               <div
                 style={{
-                  width: "385px",
+                  width: isMobile ? "250px" : "385px",
                   height: "50px",
                 }}
               >
@@ -60,7 +73,7 @@ const PropReqForm = () => {
               <h5 className="py-2">Number of Bedrooms</h5>
               <div
                 style={{
-                  width: "385px",
+                  width: isMobile ? "250px" : "385px",
                   height: "50px",
                 }}
               >
@@ -90,7 +103,7 @@ const PropReqForm = () => {
               <h5 className="py-2">Maximum Budget (N)</h5>
               <div
                 style={{
-                  width: "385px",
+                  width: isMobile ? "250px" : "385px",
                   height: "50px",
                 }}
               >
@@ -107,7 +120,7 @@ const PropReqForm = () => {
               <h5 className="py-2">Location</h5>
               <div
                 style={{
-                  width: "385px",
+                  width: isMobile ? "250px" : "385px",
                   height: "50px",
                 }}
               >
@@ -127,7 +140,7 @@ const PropReqForm = () => {
               <h5 className="py-2">Additional Details</h5>
               <div
                 style={{
-                  width: "860px",
+                  width: isMobile ? "250px" : "385px",
                   height: "118px",
                 }}
               >
@@ -149,7 +162,7 @@ const PropReqForm = () => {
               <h5 className="py-2">Full Name</h5>
               <div
                 style={{
-                  width: "385px",
+                  width: isMobile ? "250px" : "385px",
                   height: "50px",
                 }}
               >
@@ -166,7 +179,7 @@ const PropReqForm = () => {
               <h5 className="py-2">Country</h5>
               <div
                 style={{
-                  width: "385px",
+                  width: isMobile ? "250px" : "385px",
                   height: "50px",
                 }}
               >
@@ -184,7 +197,7 @@ const PropReqForm = () => {
               <h5 className="py-2">Phone Number</h5>
               <div
                 style={{
-                  width: "385px",
+                  width: isMobile ? "250px" : "385px",
                   height: "50px",
                 }}
               >
@@ -201,7 +214,7 @@ const PropReqForm = () => {
               <h5 className="py-2">Email Address</h5>
               <div
                 style={{
-                  width: "385px",
+                  width: isMobile ? "250px" : "385px",
                   height: "50px",
                 }}
               >
@@ -217,7 +230,7 @@ const PropReqForm = () => {
         </div>
       </div>
       <div className="row my-4">
-        <div className="col-3 ">
+        <div className="col-md-3 col-sm-6">
           <button
             id="search-btn"
             className="button fit-content"

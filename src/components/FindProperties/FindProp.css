@@ -27,7 +27,7 @@
 .App--prop .nav-pills .show > .nav-link,
 .home-prop .nav-pills .nav-link.active,
 .home-prop .nav-pills .show > .nav-link {
-  color: var(--bs-nav-pills-link-active-color);
+  color: #000;
   background-color: #fbc344;
 }
 
@@ -190,7 +190,7 @@
 
   .App--projs .proj-tab-bg {
     min-height: 300px;
-    width: 90vw;
+    width: 93vw;
     background-image: linear-gradient(to bottom, #1312129f 70%, #050505f6 85%),
       url("/public/selected_proj_new.png");
     background-size: cover;

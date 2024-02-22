@@ -87,9 +87,9 @@ const Hero = () => {
                 <div className="row py-4 px-5x align-items-center text-center d-md-flex ">
                   <div className="row less460 justify-content-center">
                     <div
-                      className="col d-flex justify-content-center align-items-center gap-2 mt-1 mb-2"
+                      className="col d-flex justify-content-center align-items-center gap-2 mt-1 mb-3"
                       style={{
-                        marginLeft: "1rem",
+                        marginLeft: "0.2rem",
                       }}
                     >
                       <span>01</span>
