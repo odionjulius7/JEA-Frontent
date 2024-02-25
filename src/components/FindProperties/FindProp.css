@@ -68,8 +68,20 @@
 /* placeholder */
 :where(.css-dev-only-do-not-override-1b0bdye).ant-input-affix-wrapper
   > input.ant-input {
+  font-family: MaderaMedium !important;
   font-size: 15px;
   font-weight: 400;
+  color: #1212123b;
+  padding-left: 0.2rem;
+}
+
+:where(.css-dev-only-do-not-override-1b0bdye).ant-input-affix-wrapper
+  > input.ant-input::placeholder {
+  color: #1212123b;
+  font-size: 15px;
+  font-weight: 400;
+  padding-left: 0.2rem;
+  font-family: MaderaMedium !important;
 }
 
 /* Responsiveness */

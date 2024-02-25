@@ -19,9 +19,29 @@
   opacity: 1;
 }
 
+.hover_btn button.active {
+  background-color: white;
+}
+.hover_btn button:hover {
+  background-color: white;
+}
+
 @media (max-width: 460px) {
   .rower_wrap .slide {
-    width: 90%;
+    width: 100%;
+  }
+
+  .rower_wrap .swiper-slides {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    gap: 0.7rem;
+    /* overflow-x: scroll; */
+  }
+
+  .rower_wrap .swiper {
+    /* overflow: hidden; */
+    width: 100%;
+    overflow-x: scroll;
   }
 }
 

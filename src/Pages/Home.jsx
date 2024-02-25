@@ -28,6 +28,11 @@ const Home = () => {
   const [blogPage, setBlogPage] = useState(true);
   const [homeBg, setHomeBg] = useState(true);
 
+  useEffect(() => {
+    // Scroll to the top when the component is mounted
+    window.scrollTo(0, 0);
+  }, []);
+
   const url_str = "property-selected";
   const url_strblog = "selected-blog";
   return (

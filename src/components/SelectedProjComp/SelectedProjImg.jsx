@@ -50,6 +50,8 @@ const SelectedProjImg = () => {
             className="col-md-6 col-sm-12 mx-auto"
             style={{
               textAlign: "center",
+              marginTop: "3rem",
+              marginBottom: "4.5rem",
             }}
           >
             <div className="d-flex gap-3 justify-content-center call_mess_btn">
@@ -57,35 +59,38 @@ const SelectedProjImg = () => {
                 type="button"
                 className="btn btn-outline-light fit-content my-4"
                 style={{
-                  width: "30%",
+                  width: "26%",
                   color: "#fff",
                   fontWeight: "600",
+                  fontSize: "15px",
                 }}
               >
-                <IoIosCall className="fs-4" /> Call Agent
+                <IoIosCall className="fs-4 mr-1" /> Call Agent
               </button>
               <button
                 type="button"
                 className="btn btn-outline-light fit-content my-4"
                 style={{
-                  width: "30%",
+                  width: "28%",
                   color: "#fff",
                   fontWeight: "600",
+                  fontSize: "15px",
                 }}
               >
-                <IoLogoWhatsapp className="fs-4" /> Message Agent
+                <IoLogoWhatsapp className="fs-4 mr-1" /> Message Agent
               </button>
             </div>
             <button
               type="button"
               className="btn btn-outline-light fit-content my-2 share_btn"
               style={{
-                width: "30%",
+                width: "40%",
                 color: "#fff",
                 fontWeight: "600",
+                fontSize: "15px",
               }}
             >
-              <FaShareAlt className="fs-4 mx-4" /> Share this property
+              <FaShareAlt className="fs-4 mx-3" /> Share this property
             </button>
           </div>
           <div
@@ -94,17 +99,22 @@ const SelectedProjImg = () => {
               textAlign: "center",
             }}
           >
-            <div className="col-md-8 col-sm-12 mx-auto">
+            <div className="col-md-8 col-sm-12 mx-auto mb-5">
               <button
                 type="button"
                 className="btn btn-outline-light fit-content my-2 share_btn"
                 style={{
-                  width: "60%",
+                  width: "50%",
                   color: "#fff",
                   fontWeight: "600",
+                  borderRadius: "200px",
+                  marginTop: "2rem",
+                  // marginBottom: "6rem",
                 }}
               >
-                <FaLongArrowAltLeft className="fs-4 mx-4" /> Back to Projects
+                {/* <FaLongArrowAltLeft className="fs-4 mx-4" /> */}
+                <img src="./proj_left_arr.svg" alt="" className="mx-4" />
+                Back to Projects
               </button>
             </div>
           </div>

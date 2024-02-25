@@ -34,9 +34,11 @@ const WeeklyProps = ({ blogPage, url_str, homeBg }) => {
             <div className="col-12 d-flex justify-content-between align-items-center weekly-props-header mb-3">
               <h2>Properties of the Week</h2>
               <div className="display-none">
-                <Button variant="outline-dark py-2 px-5">
-                  VIEW ALL PROPERTIES
-                </Button>
+                <Link to="/properties">
+                  <Button variant="outline-dark py-2 px-5">
+                    VIEW ALL PROPERTIES
+                  </Button>
+                </Link>
               </div>
             </div>
             <div className="row">
@@ -46,7 +48,7 @@ const WeeklyProps = ({ blogPage, url_str, homeBg }) => {
                   style={{
                     width: "100px",
                     background: "#FBC344",
-                    color: "black",
+                    color: "#121212",
                     fontSize: "15px",
                     fontWeight: "400 !important",
                     border: "1px solid #D7D7D7",
@@ -57,7 +59,9 @@ const WeeklyProps = ({ blogPage, url_str, homeBg }) => {
                   text="Rent"
                   style={{
                     width: "100px",
-                    color: "black",
+                    color: "#121212",
+                    fontSize: "15px",
+                    fontWeight: "400 !important",
                     border: "1px solid #D7D7D7",
                   }}
                   variant={"outline-dark"}
@@ -66,7 +70,9 @@ const WeeklyProps = ({ blogPage, url_str, homeBg }) => {
                   text="Short Let"
                   style={{
                     width: "100px",
-                    color: "black",
+                    color: "#121212",
+                    fontSize: "15px",
+                    fontWeight: "400 !important",
                     border: "1px solid #D7D7D7",
                   }}
                   variant={"outline-dark"}
@@ -75,7 +81,9 @@ const WeeklyProps = ({ blogPage, url_str, homeBg }) => {
                   text="Lands"
                   style={{
                     width: "100px",
-                    color: "black",
+                    color: "#121212",
+                    fontSize: "15px",
+                    fontWeight: "400 !important",
                     border: "1px solid #D7D7D7",
                   }}
                   variant={"outline-dark"}

@@ -13,9 +13,12 @@
   font-weight: 600;
   font-size: 32px;
 }
+
 .weekly-props-header button {
   font-weight: 500;
   font-size: 15px;
+  color: #121212;
+  border: 1px solid #121212;
 }
 
 /* .btn-check:checked + .btn,
@@ -25,6 +28,10 @@
 :not(.btn-check) + .btn:active {
   background-color: white !important;
 } */
+
+.row-btn button {
+  font-family: MaderaMedium !important;
+}
 
 .row-btn button:hover {
   background-color: white;

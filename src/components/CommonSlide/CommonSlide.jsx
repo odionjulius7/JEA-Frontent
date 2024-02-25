@@ -48,7 +48,7 @@ const CommonSlide = ({ px, colr, gbColr, stlr, homePage, featuredProp }) => {
           <div className="col-12 d-flex justify-content-between align-items-center weekly-props-header">
             <h2 className="mb-0">Featured Properties</h2>
             <div
-              className="d-flex gap-5x"
+              className="d-flex gap-5x hover_btn"
               style={{
                 marginTop: isMobile ? "30px" : "",
               }}

@@ -80,12 +80,14 @@ const MySwiper = ({ blogPage, url_str, homeBg }) => {
                       style={{
                         display: !blogPage ? "inline" : "none",
                         fontSize: isMobile ? "13px" : "15px",
+                        color: "#121212",
                       }}
                     >
                       Osapa London |{" "}
                       <b
                         style={{
                           fontWeight: "700",
+                          color: "#121212",
                         }}
                       >
                         ₦140,000,000
@@ -114,13 +116,15 @@ const MySwiper = ({ blogPage, url_str, homeBg }) => {
                   <Card.Text
                     className=" py-1"
                     style={{
-                      fontSize: homeBg ? "13px" : "15px",
+                      fontSize: "15px",
                       fontWeight: "400",
+                      color: "#121212",
                     }}
                   >
                     <b
                       style={{
                         fontSize: "700",
+                        color: "#121212",
                       }}
                     >
                       Features:
