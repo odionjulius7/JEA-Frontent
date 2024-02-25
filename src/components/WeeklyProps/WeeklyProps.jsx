@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import "./WeeklyProps.css";
 import { Button } from "react-bootstrap";
@@ -7,6 +7,19 @@ import MySwiper from "../Slider/Sliderjs";
 import { Link } from "react-router-dom";
 
 const WeeklyProps = ({ blogPage, url_str, homeBg }) => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div
       className="container-fluid home-weekly-props"
@@ -73,7 +86,12 @@ const WeeklyProps = ({ blogPage, url_str, homeBg }) => {
         )}
         <div className="row pt-3 pb-4">
           {/* {homeBg && <h2 className="mb-5 mt-2">From Our Blog</h2>} */}
-          <div className="col d-flex text-align-center justify-content-center">
+          <div
+            className="col d-flex text-align-center justify-content-center"
+            style={{
+              padding: isMobile ? "0px" : "",
+            }}
+          >
             <MySwiper homeBg={homeBg} blogPage={blogPage} url_str={url_str} />
           </div>
         </div>

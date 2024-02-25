@@ -58,7 +58,7 @@ const MySwiper = ({ blogPage, url_str, homeBg }) => {
                     <b
                       style={{
                         display: !blogPage ? "inline" : "none",
-                        fontSize: "21px",
+                        fontSize: isMobile ? "16px" : "21px",
                         fontWeight: "700",
                       }}
                     >
@@ -79,7 +79,7 @@ const MySwiper = ({ blogPage, url_str, homeBg }) => {
                     <span
                       style={{
                         display: !blogPage ? "inline" : "none",
-                        fontSize: "15px",
+                        fontSize: isMobile ? "13px" : "15px",
                       }}
                     >
                       Osapa London |{" "}

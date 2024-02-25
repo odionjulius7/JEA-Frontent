@@ -20,7 +20,7 @@ const CommonSlide = ({ px, colr, gbColr, stlr, homePage, featuredProp }) => {
     };
   }, []);
 
-  //
+  // Slide
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const slides = [1, 2, 3, 4, 5, 6, 7, 8];

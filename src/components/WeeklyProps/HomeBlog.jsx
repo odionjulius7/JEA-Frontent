@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import "./WeeklyProps.css";
-import HomeBlogSlide from "../Slider/HomeBlogSlide";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import MySwiper from "../Slider/Sliderjs";
 
@@ -19,15 +19,51 @@ const HomeBlog = ({ homeBg, blogPage, url_strblog }) => {
     };
   }, []);
 
+  // frame motion
+  const headingRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (headingRef.current) {
+        const headingTop = headingRef.current.offsetTop;
+        const scrollPosition = window.scrollY + window.innerHeight;
+
+        if (scrollPosition > headingTop) {
+          setIsVisible(true);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="container-fluid home-blog">
       <div className="row">
-        <h2 className="mb-5 mt-2">From Our Blog</h2>
+        <motion.h2
+          initial={{ opacity: 0, x: 220 }}
+          animate={isVisible ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.5 }}
+          className="mb-5 mt-2"
+          ref={headingRef}
+        >
+          From Our Blog
+        </motion.h2>
         <div className="row ">
           {/* <div className="col d-flex  text-align-center justify-content-center">
             <HomeBlogSlide />
           </div> */}
-          <div className="col d-flex text-align-center justify-content-center">
+          <div
+            className="col d-flex text-align-center justify-content-center"
+            style={{
+              padding: isMobile ? "0px" : "",
+            }}
+          >
             <MySwiper
               homeBg={homeBg}
               blogPage={blogPage}

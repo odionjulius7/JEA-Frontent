@@ -24,7 +24,7 @@ const GetInTouch = ({ homePage }) => {
       className="container-fluid get-in-touch"
       style={{
         backgroundColor: homePage ? "#ffffff" : "#E3E3E3",
-        padding: isMobile ? "20px" : "",
+        padding: isMobile ? "15px" : "",
       }}
     >
       <div className="row">

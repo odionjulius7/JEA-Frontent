@@ -47,7 +47,7 @@ const FindProperties = () => {
               <Nav.Item>
                 <Nav.Link
                   eventKey="second"
-                  className="py-2 pb-3 px-5xr mx-2"
+                  className="py-2 pb-3 px-5x mx-2"
                   style={{
                     fontWeight: "400",
                   }}
@@ -58,7 +58,7 @@ const FindProperties = () => {
               <Nav.Item>
                 <Nav.Link
                   eventKey="third"
-                  className="py-2 pb-3 px-5xr mx-2"
+                  className="py-2 pb-3 px-5x mx-2"
                   style={{
                     fontWeight: "400",
                   }}
@@ -69,7 +69,7 @@ const FindProperties = () => {
               <Nav.Item>
                 <Nav.Link
                   eventKey="forth"
-                  className="py-2 pb-3 px-5xr mx-2"
+                  className="py-2 pb-3 px-5x mx-2"
                   style={{
                     fontWeight: "400",
                   }}
@@ -87,7 +87,7 @@ const FindProperties = () => {
             sm={12}
             className="mx-auto text-dark"
             style={{
-              padding: isMobile ? "0 2rem" : "0 3rem",
+              padding: isMobile ? "0 0.8rem" : "0 3rem",
             }}
           >
             <Tab.Content
@@ -98,7 +98,7 @@ const FindProperties = () => {
                 borderRadius: "9px",
               }}
             >
-              <Tab.Pane eventKey="first" className="py-4 px-3 ">
+              <Tab.Pane eventKey="first" className="py-4 px-3x">
                 <div className="d-flex flex-row justify-content-center gap-4x align-items-center pt-4 mb-4 select_wrap_find">
                   <div className="select-width">
                     <SelectTwo

@@ -89,6 +89,7 @@
     url("/public/home-hero-img.png");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .hero-img-down .w-100x {
   width: 100% !important;
@@ -412,7 +413,7 @@ div .line-img:hover {
     padding: 0 3.5rem;
   }
   .dflex_2nd .hero-btn button {
-    padding: 10px 14px !important;
+    padding: 10px 21px !important;
   }
 }
 

@@ -6,7 +6,7 @@
 .rower_wrap .swiper-slides {
   display: flex;
   transition: transform 0.3s ease-in-out;
-  gap: 2rem;
+  gap: 1.7rem;
 }
 
 .rower_wrap .slide {

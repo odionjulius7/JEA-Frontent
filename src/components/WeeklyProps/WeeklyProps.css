@@ -18,6 +18,14 @@
   font-size: 15px;
 }
 
+/* .btn-check:checked + .btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check) + .btn:active {
+  background-color: white !important;
+} */
+
 .row-btn button:hover {
   background-color: white;
 }
@@ -39,7 +47,7 @@
 
 @media (max-width: 640px) {
   .home-weekly-props {
-    padding: 30px 5px;
+    padding: 30px 3px;
   }
 
   .weekly-props-header {
@@ -120,6 +128,14 @@
   }
 
   .home-blog h2 {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem !important;
+    text-align: center !important;
   }
+  /*  */
+  /* .swipe_card_with span {
+    font-size: 13px !important;
+  }
+  .swipe_card_with b {
+    font-size: 16px;
+  } */
 }
