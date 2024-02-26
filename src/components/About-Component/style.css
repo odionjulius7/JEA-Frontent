@@ -2,6 +2,15 @@
   min-height: 50vh;
   color: #000000;
 }
+.about_banner {
+  min-height: 220px;
+  color: #ffffff;
+  background-image: linear-gradient(to bottom, #000000ad, #000000ad),
+    url("/public/new_prop_about.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .AboutImages {
   padding: 40px;
 }

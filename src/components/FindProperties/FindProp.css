@@ -133,7 +133,7 @@
 
   .nav-pills {
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 1rem;
     justify-content: center;
     /* margin-bottom: 2rem; */
     position: absolute;
