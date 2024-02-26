@@ -140,11 +140,11 @@
     top: 45%;
     left: 2.8%;
     z-index: 10;
-    padding: 2rem 0.3rem;
+    padding: 1rem 0.3rem;
   }
 
   .nav-pills .nav-item {
-    width: 35%;
+    width: 118px !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -164,6 +164,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 37px !important;
+    padding-top: 0.9rem !important;
   }
 
   .App--prop .nav-pills .nav-link {
@@ -175,10 +177,11 @@
   .App--prop .nav-pills .show > .nav-link,
   .home-prop .nav-pills .nav-link.active,
   .home-prop .nav-pills .show > .nav-link {
-    color: #000;
+    color: #121212;
     background-color: #ededed;
     border: 2px solid #fbc344;
     width: 100%;
+    /* padding: 0.51rem 2.4rem !important; */
   }
 
   .tab-content {
@@ -213,5 +216,15 @@
 
   .wrap_flexx {
     flex-wrap: wrap;
+  }
+
+  .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+    width: 241px !important;
+    height: 43px;
+  }
+
+  :where(.css-dev-only-do-not-override-1b0bdye).ant-input-affix-wrapper
+    > input.ant-input::placeholder {
+    font-size: 12p;
   }
 }

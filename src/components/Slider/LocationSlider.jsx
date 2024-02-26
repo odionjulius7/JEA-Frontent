@@ -65,7 +65,12 @@ const LocationSlider = ({ homePage }) => {
     <>
       <div className="row location_slide_wrap mt-5">
         <div className="col-12">
-          <div className="swiper">
+          <div
+            className="swiper"
+            style={{
+              overflowX: isMobile ? "scroll" : "",
+            }}
+          >
             <div
               className="swiper-slides"
               style={{ transform: `translateX(${transformPercentage}%)` }}

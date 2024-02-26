@@ -98,8 +98,8 @@ const FindProperties = () => {
                 borderRadius: "9px",
               }}
             >
-              <Tab.Pane eventKey="first" className="py-4 px-3x">
-                <div className="d-flex flex-row justify-content-center gap-4x align-items-center pt-4 mb-4 select_wrap_find">
+              <Tab.Pane eventKey="first" className="py-3 px-3x">
+                <div className="d-flex flex-row justify-content-center gap-4x align-items-center mb-4 select_wrap_find">
                   <div className="select-width">
                     <SelectTwo
                       text={"No. of Bedrooms"}
