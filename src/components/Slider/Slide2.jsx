@@ -81,7 +81,7 @@ const Slide2 = ({ blogPage, url_str, homeBg }) => {
                   <div
                     className={`my-2`}
                     style={{
-                      borderBottom: blogPage ? "2px solid #D7D7D7" : "",
+                      borderBottom: "2px solid #D7D7D7",
                     }}
                   ></div>
 

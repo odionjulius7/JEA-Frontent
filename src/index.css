@@ -2,11 +2,13 @@
 
 @font-face {
   font-family: MaderaMedium;
-  src: url(/public/Madera_Complete_Family_Pack/Madera-Medium.ttf);
+  src: url(/public/Original_font/Madera/Madera\ Medium.ttf);
+  /* src: url(/public/Madera_Complete_Family_Pack/Madera-Medium.ttf); */
 }
 @font-face {
   font-family: ClashDisplay;
-  src: url(/public/Fonts/OTF/ClashDisplay-Medium.otf);
+  src: url(/public/Original_font/ClashDisplay_Complete/Fonts/OTF/ClashDisplay-Medium.otf);
+  /* src: url(/public/Fonts/OTF/ClashDisplay-Medium.otf); */
 }
 
 :root {
