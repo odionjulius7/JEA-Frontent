@@ -87,7 +87,12 @@ const ProjectsTab = () => {
                           entire commu ...
                         </span>
                       </div>
-                      <div className="row mt-5">
+                      <div
+                        className="row"
+                        style={{
+                          marginTop: isMobile ? "0.4rem" : "3rem",
+                        }}
+                      >
                         <div className="col-md-6 col-sm-12 btn_center">
                           <Link className="w-100" to="/selected-project">
                             <button
@@ -194,7 +199,12 @@ const ProjectsTab = () => {
                           entire commu ...
                         </span>
                       </div>
-                      <div className="row mt-5">
+                      <div
+                        className="row"
+                        style={{
+                          marginTop: isMobile ? "0.4rem" : "3rem",
+                        }}
+                      >
                         <div className="col-md-6 col-sm-12 btn_center">
                           <Link className="w-100" to="/selected-project">
                             <button
@@ -301,7 +311,12 @@ const ProjectsTab = () => {
                           entire commu ...
                         </span>
                       </div>
-                      <div className="row mt-5">
+                      <div
+                        className="row"
+                        style={{
+                          marginTop: isMobile ? "0.4rem" : "3rem",
+                        }}
+                      >
                         <div className="col-md-6 col-sm-12 btn_center">
                           <Link className="w-100" to="/selected-project">
                             <button

@@ -113,7 +113,11 @@ const SelectedProjImg = () => {
                 }}
               >
                 {/* <FaLongArrowAltLeft className="fs-4 mx-4" /> */}
-                <img src="./proj_left_arr.svg" alt="" className="mx-4" />
+                <img
+                  src="./proj_left_arr.svg"
+                  alt=""
+                  className="mx-4 display-none"
+                />
                 Back to Projects
               </button>
             </div>
