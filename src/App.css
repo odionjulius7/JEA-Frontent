@@ -13,8 +13,10 @@
 }
 
 .css-qiwgdb {
-  font-size: 14px !important;
-  font-weight: 300 !important;
+  font-family: MaderaMedium !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  color: #12121273 !important;
 }
 
 .css-hfutr2-MuiSvgIcon-root-MuiSelect-icon {
@@ -43,6 +45,16 @@
   font-weight: 400 !important;
   color: #12121273 !important;
 }
+.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root span {
+  font-family: MaderaMedium !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  color: #12121273 !important;
+}
+.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+  font-size: 15px !important;
+  color: #12121273 !important;
+}
 
 .swiper-button-next.swiper-button-disabled,
 .swiper-button-prev.swiper-button-disabled {
@@ -61,6 +73,15 @@
   .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root em {
     margin-left: 1rem;
     font-size: 13px !important;
+  }
+  .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root span {
+    margin-left: 1rem;
+    font-size: 13px !important;
+  }
+
+  .css-qiwgdb {
+    font-size: 13px !important;
+    color: #12121273 !important;
   }
 
   .row > * {

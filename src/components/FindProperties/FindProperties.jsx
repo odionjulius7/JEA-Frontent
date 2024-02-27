@@ -99,7 +99,12 @@ const FindProperties = () => {
               }}
             >
               <Tab.Pane eventKey="first" className="py-3 px-3x">
-                <div className="d-flex flex-row justify-content-center gap-4x align-items-center mb-4 select_wrap_find">
+                <div
+                  className="d-flex flex-row justify-content-center gap-4x align-items-center  mb-4 select_wrap_find"
+                  style={{
+                    paddingTop: !isMobile ? "1.6rem" : "",
+                  }}
+                >
                   <div className="select-width">
                     <SelectTwo
                       text={"No. of Bedrooms"}

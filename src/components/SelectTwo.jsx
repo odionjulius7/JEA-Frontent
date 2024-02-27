@@ -29,7 +29,7 @@ export default function SelectTwo({ widthx, heightx, text }) {
         inputProps={{ "aria-label": "Without label" }}
       >
         <MenuItem value="">
-          <em>{text}</em>
+          <span> {text}</span>
         </MenuItem>
         <MenuItem value={10}>Ten</MenuItem>
         <MenuItem value={20}>Twenty</MenuItem>
