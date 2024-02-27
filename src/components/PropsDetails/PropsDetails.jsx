@@ -10,12 +10,12 @@ const PropsDetails = ({ propsDetails }) => {
     <div className="container-fluid PropsDetails">
       {propsDetails && (
         <div className="row">
-          <div className="col-md-3 col-md-12">
+          <div className="col-md-3 col-sm-12">
             <h5>
               Property <br className="brk_none" /> Description
             </h5>
           </div>
-          <div className="col-md-8 col-md-12">
+          <div className="col-md-8 col-sm-12">
             <p className="font_15">
               Nestled in the heart of Osapa London, Lagos, this exquisite
               4-bedroom terrace house presents an ideal family retreat. With its
