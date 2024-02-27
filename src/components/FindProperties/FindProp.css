@@ -184,6 +184,13 @@
     /* padding: 0.51rem 2.4rem !important; */
   }
 
+  /* vercel */
+  .css-qiwgdb.css-qiwgdb.css-qiwgdb {
+    padding-right: 32px;
+    width: 241px;
+  }
+  /* vercel */
+
   .tab-content {
     padding-top: 8rem;
   }
@@ -227,4 +234,21 @@
     > input.ant-input::placeholder {
     font-size: 12p;
   }
+}
+
+@media (max-width: 380px) {
+  /* vercel */
+  .css-qiwgdb.css-qiwgdb.css-qiwgdb {
+    padding-right: 32px;
+    width: 200px;
+  }
+  /* vercel */
+}
+@media (max-width: 330px) {
+  /* vercel */
+  .css-qiwgdb.css-qiwgdb.css-qiwgdb {
+    padding-right: 32px;
+    width: 170px;
+  }
+  /* vercel */
 }
