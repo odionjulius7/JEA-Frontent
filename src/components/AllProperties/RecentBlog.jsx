@@ -39,7 +39,7 @@ const RecentBlog = ({ blogPage }) => {
                   className=" px-4"
                   style={{
                     backgroundColor: "#f9f9f9",
-                    padding: "20px 20px",
+                    padding: isMobile ? "10px 10px" : "20px 20px",
                     // height: "200px",
                   }}
                 >
@@ -51,8 +51,11 @@ const RecentBlog = ({ blogPage }) => {
                       How urban greening projects affect sustainable cities
                     </h5>
                     <div
-                      className="mb-3 mt-5"
-                      style={{ borderBottom: "2px solid #D7D7D7" }}
+                      className="mb-3"
+                      style={{
+                        borderBottom: "2px solid #D7D7D7",
+                        marginTop: isMobile ? "1.5rem" : "2.9rem",
+                      }}
                     ></div>
                   </div>
                   <Card.Text
