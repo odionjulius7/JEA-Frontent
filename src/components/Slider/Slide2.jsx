@@ -14,7 +14,7 @@ import { FaSolarPanel } from "react-icons/fa";
 
 SwiperCore.use([Navigation, Autoplay]);
 
-const MySwiper = ({ blogPage, url_str, homeBg }) => {
+const Slide2 = ({ blogPage, url_str, homeBg }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
 
   useEffect(() => {
@@ -47,7 +47,7 @@ const MySwiper = ({ blogPage, url_str, homeBg }) => {
                 className="swipe_card_with"
                 // style={{ width: isMobile ? "24rem" : "" }}
               >
-                <Card.Img variant="top" src="./first-slide-img.png" />
+                <Card.Img variant="top" src="./blogg.png" />
                 <Card.Body
                   style={{
                     backgroundColor: "#f9f9f9",
@@ -56,31 +56,24 @@ const MySwiper = ({ blogPage, url_str, homeBg }) => {
                   className="card_body py-3"
                 >
                   <Card.Title>
-                    <b
+                    <span
                       style={{
-                        fontSize: isMobile ? "16px" : "21px",
+                        fontSize: "12px",
+                        fontWeight: "400",
+                      }}
+                    >
+                      October 31, 2023
+                    </span>
+                  </Card.Title>
+                  <div className="py-3 d-flex gap-2">
+                    <span
+                      style={{
+                        fontSize: "20px",
                         fontWeight: "700",
                       }}
                     >
-                      4 Bedroom Terrace
-                    </b>
-                  </Card.Title>
-                  <div className="py-3 d-flex gap-2">
-                    <img src="./location_icon.svg" alt="" />
-                    <span
-                      style={{
-                        fontSize: isMobile ? "13px" : "15px",
-                        color: "#121212",
-                      }}
-                    >
-                      Osapa London |{" "}
-                      <b
-                        style={{
-                          fontWeight: "700",
-                          color: "#121212",
-                        }}
-                      >
-                        ₦140,000,000
+                      <b>
+                        How urban greening projects affect sustainable cities
                       </b>{" "}
                     </span>
                   </div>
@@ -95,21 +88,13 @@ const MySwiper = ({ blogPage, url_str, homeBg }) => {
                   <Card.Text
                     className=" py-1"
                     style={{
-                      fontSize: "13px",
+                      fontSize: "15px",
                       fontWeight: "400",
                       color: "#121212",
                     }}
                   >
-                    <b
-                      style={{
-                        fontSize: "700",
-                        color: "#121212",
-                      }}
-                    >
-                      Features:
-                    </b>{" "}
-                    Nicely finished, Fully fitted Kitchen, All rooms ensuite,
-                    Serene Neighbourhood , Secured Estate, BQ ...
+                    Learn how real estate technology can drive value in
+                    commercial real estate by enhancing...
                   </Card.Text>
                 </Card.Body>
               </Card>
@@ -121,4 +106,4 @@ const MySwiper = ({ blogPage, url_str, homeBg }) => {
   );
 };
 
-export default MySwiper;
+export default Slide2;

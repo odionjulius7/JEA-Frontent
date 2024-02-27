@@ -4,6 +4,7 @@ import "./WeeklyProps.css";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import MySwiper from "../Slider/Sliderjs";
+import Slide2 from "../Slider/Slide2";
 
 const HomeBlog = ({ homeBg, blogPage, url_strblog }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
@@ -64,11 +65,7 @@ const HomeBlog = ({ homeBg, blogPage, url_strblog }) => {
               padding: isMobile ? "0px" : "",
             }}
           >
-            <MySwiper
-              homeBg={homeBg}
-              blogPage={blogPage}
-              url_str={url_strblog}
-            />
+            <Slide2 homeBg={homeBg} blogPage={blogPage} url_str={url_strblog} />
           </div>
         </div>
 

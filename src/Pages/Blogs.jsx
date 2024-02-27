@@ -7,6 +7,7 @@ import RecentBlog from "../components/AllProperties/RecentBlog";
 import WeeklyProps from "../components/WeeklyProps/WeeklyProps";
 import BlogHero from "../components/Hero/BlogHero";
 import Highlight from "../components/Highlight/Highlight";
+import HomeBlog from "../components/WeeklyProps/HomeBlog";
 
 const Blogs = () => {
   const [newLetterComp, setNewLetterComp] = useState(false);
@@ -25,7 +26,7 @@ const Blogs = () => {
     <>
       <BlogHero />
       <Highlight />
-      <WeeklyProps blogPage={blogPage} url_str={url_str} />
+      <HomeBlog url_str={url_str} />
       <RecentBlog />
       <AllProperties
         allProps={allProps}
