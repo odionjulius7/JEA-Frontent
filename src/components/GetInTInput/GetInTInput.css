@@ -6,10 +6,12 @@
   border-bottom: 2px solid #fff;
   color: #fff;
 }
+
 .input-styles span,
 .news-lett-input span {
   font-weight: 400;
   font-size: 13px;
+  color: #969696;
 }
 .input-styles input,
 .news-lett-input input,
