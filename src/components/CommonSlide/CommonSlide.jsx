@@ -108,7 +108,7 @@ const CommonSlide = ({ px, colr, gbColr, stlr, homePage, featuredProp }) => {
             >
               {slides.map((slide, index) => (
                 <div key={index} className="slide">
-                  <Cards text={"01"} colr={colr} gbColr={gbColr} />
+                  <Cards text={`0${index + 1}`} colr={colr} gbColr={gbColr} />
                 </div>
               ))}
             </div>

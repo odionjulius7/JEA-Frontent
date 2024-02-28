@@ -44,12 +44,12 @@
 .home-weekly-props .swiper-button-prev:after {
   /* content: "\003c"; */
   background: #fbc34499;
-  padding: 15px 20px;
+  padding: 18px 25px;
   border-radius: 200px;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 30px !important;
   font-weight: 900 !important;
-  margin-bottom: 30px;
+  margin-bottom: 80px;
 }
 
 @media (max-width: 640px) {
@@ -145,4 +145,17 @@
   .swipe_card_with b {
     font-size: 16px;
   } */
+
+  /* Swiperjs */
+  .home-blog .swiper-button-next:after,
+  .home-blog .swiper-button-prev:after,
+  .home-weekly-props .swiper-button-next:after,
+  .home-weekly-props .swiper-button-prev:after {
+    /* content: "\003c"; */
+    background: #fbc34499;
+    padding: 15px 20px;
+    font-size: 16px !important;
+    font-weight: 900 !important;
+    margin-bottom: 80px;
+  }
 }

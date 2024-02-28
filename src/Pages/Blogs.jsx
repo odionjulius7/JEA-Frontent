@@ -26,7 +26,7 @@ const Blogs = () => {
     <>
       <BlogHero />
       <Highlight />
-      <HomeBlog url_str={url_str} />
+      <HomeBlog url_strblog={url_str} />
       <RecentBlog />
       <AllProperties
         allProps={allProps}

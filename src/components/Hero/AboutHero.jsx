@@ -2,9 +2,9 @@ import React from "react";
 
 import Header from "../Header/Header";
 
-const PropertyReqHero = ({ text }) => {
+const AboutHero = ({ text }) => {
   return (
-    <div className="App--prop-reqed text-white">
+    <div className="App--about text-white">
       <div>
         <div className="white-gradient" />
         <Header />
@@ -18,4 +18,4 @@ const PropertyReqHero = ({ text }) => {
   );
 };
 
-export default PropertyReqHero;
+export default AboutHero;

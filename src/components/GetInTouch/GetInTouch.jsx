@@ -55,23 +55,23 @@ const GetInTouch = ({ homePage }) => {
               Fill out the form below and our team will get in touch with you.
             </p>
           </div>
-          <div className="row py-5">
-            <div className="col-md-6 col-sm-12 my-2">
+          <div className="row py-4">
+            <div className="col-md-6 col-sm-12">
               <GetInTInput text={"First name"} bordr={"input-styles"} />
             </div>
-            <div className="col-md-6 col-sm-12 my-2">
+            <div className="col-md-6 col-sm-12">
               <GetInTInput text={"Last name"} bordr={"input-styles"} />
             </div>
           </div>
-          <div className="row py-5x">
-            <div className="col-md-6 col-sm-12 my-2">
+          <div className="row py-3">
+            <div className="col-md-6 col-sm-12">
               <GetInTInput text={"Email address"} bordr={"input-styles"} />
             </div>
-            <div className="col-md-6 col-sm-12 my-2">
+            <div className="col-md-6 col-sm-12 ">
               <GetInTInput text={"Phone number"} bordr={"input-styles"} />
             </div>
           </div>
-          <div className="row py-3">
+          <div className="row py-2">
             <div className="col-12">
               <Textareas />
             </div>

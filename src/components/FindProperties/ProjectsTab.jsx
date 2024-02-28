@@ -30,16 +30,22 @@ const ProjectsTab = () => {
         id="left-tabs-example"
         defaultActiveKey="first"
       >
-        <Row className="mt-3 mb-5">
-          <Col sm={6} className="mx-auto text-white">
-            <Nav variant="" className="flex-row justify-content-center">
-              <Nav.Item>
-                <Nav.Link eventKey="first" className="text-white">
+        <Row className="mt-1 mb-5">
+          <Col md={6} sm={8} className="mx-auto text-white mb-5">
+            <Nav variant="" className="flex-row justify-content-center mb-5">
+              <Nav.Item className=" w-50">
+                <Nav.Link
+                  eventKey="first"
+                  className="text-white  d-flex justify-content-center"
+                >
                   COMPLETED PROJECTS
                 </Nav.Link>
               </Nav.Item>
-              <Nav.Item>
-                <Nav.Link eventKey="second" className="text-white">
+              <Nav.Item className="w-50">
+                <Nav.Link
+                  eventKey="second"
+                  className="text-white d-flex justify-content-center"
+                >
                   ONGOING PROJECTS
                 </Nav.Link>
               </Nav.Item>

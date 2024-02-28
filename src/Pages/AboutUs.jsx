@@ -6,6 +6,7 @@ import AboutImages from "../components/About-Component/AboutImages";
 import AboutWorkWithUs from "../components/About-Component/AboutWorkWithUs";
 import WhatPeepsSay from "../components/About-Component/WhatPeepsSay";
 import AboutBanner from "../components/About-Component/About_banner";
+import AboutHero from "../components/Hero/AboutHero";
 const AboutUs = () => {
   const [newLetterComp, setNewLetterComp] = useState(true);
 
@@ -15,7 +16,7 @@ const AboutUs = () => {
   }, []);
   return (
     <>
-      <PropertyReqHero text="About" />
+      <AboutHero text="About" />
       <AboutVideo />
       <AboutImages />
       <AboutWorkWithUs />

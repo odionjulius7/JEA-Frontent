@@ -40,11 +40,23 @@
   position: relative;
   overflow-x: clip;
   min-height: 60vh;
-  background-image: linear-gradient(to bottom, #2422229f 30%, #1d1c1c8a 80%),
+  background-image: linear-gradient(to bottom, #000000a6 30%, #000000a6 80%),
     url("/public/selected-blog-hero.png");
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
+  background-position: center;
+}
+.App--about {
+  position: relative;
+  overflow-x: clip;
+  min-height: 60vh;
+  background-image: linear-gradient(to bottom, #000000a6 30%, #000000a6 80%),
+    url("/public/about_1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  background-position: center;
 }
 .App--props-selected {
   position: relative;
