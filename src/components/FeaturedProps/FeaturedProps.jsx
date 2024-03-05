@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { FaLongArrowAltLeft } from "react-icons/fa";
-import { FaLongArrowAltRight } from "react-icons/fa";
+// import { FaLongArrowAltLeft } from "react-icons/fa";
+// import { FaLongArrowAltRight } from "react-icons/fa";
 
 import "./FeaturedProps.css";
 import CommonSlide from "../CommonSlide/CommonSlide";
 
-const FeaturedProps = () => {
+const FeaturedProps = ({ featuredProperty }) => {
   const [featuredProp, setFeaturedProp] = useState(true);
   return (
     <div className="container-fluid FeaturedProps">
@@ -15,6 +15,7 @@ const FeaturedProps = () => {
         gbColr={"#ffffff"}
         stlr={"none"}
         featuredProp={featuredProp}
+        availableLuxury={featuredProperty}
       />
       {/* </div> */}
     </div>

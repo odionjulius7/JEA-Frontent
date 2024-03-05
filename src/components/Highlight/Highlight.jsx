@@ -31,7 +31,7 @@ const Highlight = () => {
           </h2>
         </div>
         <div className="col-md-5 col-sm-6">
-          <Inputs />
+          <Inputs text={"Search for an article"} />
         </div>
       </div>
       <div className="row mt-5">

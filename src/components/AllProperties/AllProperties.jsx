@@ -12,21 +12,27 @@ const items = [
   23,
 ];
 
-const AllProperties = ({ allProps, blogPage, url_str, selblogPage }) => {
+const AllProperties = ({
+  allProps,
+  blogPage,
+  url_str,
+  selblogPage,
+  propertys,
+}) => {
   const [currentItems, setCurrentItems] = useState(null);
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
-  const itemsPerPage = 6;
+  const itemsPerPage = 12;
 
   useEffect(() => {
     // Fetch items from another resources.
     const endOffset = itemOffset + itemsPerPage;
-    setCurrentItems(items.slice(itemOffset, endOffset));
-    setPageCount(Math.ceil(items.length / itemsPerPage));
-  }, [itemOffset, itemsPerPage, items]);
+    setCurrentItems(propertys?.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(propertys?.length / itemsPerPage));
+  }, [itemOffset, itemsPerPage, propertys]);
 
   const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % items.length;
+    const newOffset = (event.selected * itemsPerPage) % propertys.length;
     setItemOffset(newOffset);
   };
 
@@ -71,9 +77,19 @@ const AllProperties = ({ allProps, blogPage, url_str, selblogPage }) => {
             currentItems.map((item, i) => {
               return (
                 <div className="col-md-4 col-sm-6 my-2" key={i}>
-                  <Link to={`/${url_str}`}>
+                  <Link to={`/${url_str}/${item?._id}`}>
                     <Card>
-                      <Card.Img variant="top" src="./first-slide-img.png" />
+                      {/* <Card.Img variant="top" src="./first-slide-img.png" /> */}
+                      {item?.images && item.images.length > 0 && (
+                        <Card.Img
+                          variant="top"
+                          className="w-100"
+                          style={{
+                            height: "348px",
+                          }}
+                          src={item.images[0]}
+                        />
+                      )}
                       <Card.Body
                         style={{
                           backgroundColor: "#f9f9f9",
@@ -88,7 +104,7 @@ const AllProperties = ({ allProps, blogPage, url_str, selblogPage }) => {
                               fontSize: "21px",
                             }}
                           >
-                            4 Bedroom Terrace
+                            {item?.title}
                           </b>
                           <span
                             style={{
@@ -97,6 +113,7 @@ const AllProperties = ({ allProps, blogPage, url_str, selblogPage }) => {
                             }}
                           >
                             October 31, 2023
+                            {item?.createdAt}
                           </span>
                           <b
                             style={{
@@ -104,7 +121,7 @@ const AllProperties = ({ allProps, blogPage, url_str, selblogPage }) => {
                               fontWeight: "500",
                             }}
                           >
-                            4 Bedroom Terrace
+                            {item?.title}
                           </b>
                         </Card.Title>
                         <div className="py-2 d-flex gap-2">
@@ -118,8 +135,14 @@ const AllProperties = ({ allProps, blogPage, url_str, selblogPage }) => {
                               fontSize: "15px",
                             }}
                           >
-                            Osapa London |{" "}
-                            <b style={{ fontWeight: "700" }}>₦140,000,000</b>{" "}
+                            {item?.location} |{" "}
+                            <b style={{ fontWeight: "700" }}>
+                              {" "}
+                              {new Intl.NumberFormat("en-NG", {
+                                style: "currency",
+                                currency: "NGN",
+                              }).format(item?.price)}
+                            </b>{" "}
                           </span>
                           <h5
                             style={{
@@ -136,8 +159,14 @@ const AllProperties = ({ allProps, blogPage, url_str, selblogPage }) => {
                               fontSize: "15px",
                             }}
                           >
-                            Osapa London |{" "}
-                            <b style={{ fontWeight: "700" }}>₦140,000,000</b>{" "}
+                            {item?.price?.location} |{" "}
+                            <b style={{ fontWeight: "700" }}>
+                              {" "}
+                              {new Intl.NumberFormat("en-NG", {
+                                style: "currency",
+                                currency: "NGN",
+                              }).format(item?.price)}
+                            </b>{" "}
                           </span>
                         </div>
                         <Card.Text
@@ -154,8 +183,7 @@ const AllProperties = ({ allProps, blogPage, url_str, selblogPage }) => {
                           >
                             Features:
                           </b>{" "}
-                          Nicely finished, Fully fitted Kitchen, All rooms
-                          ensuite, Serene Neighbourhood , Secured Estate, BQ ...
+                          {item?.description?.slice(0, 73)} ...
                         </Card.Text>
                       </Card.Body>
                     </Card>
@@ -188,18 +216,20 @@ const AllProperties = ({ allProps, blogPage, url_str, selblogPage }) => {
             </div>
           ) : (
             <div className="col-md-3 col-sm-12 d-flex justify-content-center mx-auto">
-              <button
-                id="search-btn"
-                className="button fit-content my-4"
-                style={{
-                  background: "#FBC344",
-                  // width: "50%",
-                  color: "#000000",
-                  fontWeight: "600",
-                }}
-              >
-                VIEW ALL PROPERTIES
-              </button>
+              <Link to="/properties">
+                <button
+                  id="search-btn"
+                  className="button fit-content my-4"
+                  style={{
+                    background: "#FBC344",
+                    // width: "50%",
+                    color: "#000000",
+                    fontWeight: "600",
+                  }}
+                >
+                  VIEW ALL PROPERTIES
+                </button>
+              </Link>
             </div>
           )}
         </div>

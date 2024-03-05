@@ -9,8 +9,35 @@ import LocationProps from "../components/LocationProps/LocationProps";
 import HomeBlog from "../components/WeeklyProps/HomeBlog";
 import WeeklyProps from "../components/WeeklyProps/WeeklyProps";
 import FloatWhatsapp from "../components/FloatWhatsapp/FloatWhatsapp";
+import { useDispatch, useSelector } from "react-redux";
+import { allProperty, resetState } from "../features/Property/propertySlice";
 
 const Home = () => {
+  const dispatch = useDispatch();
+
+  const propertyState = useSelector((state) => state.property);
+  const authState = useSelector((state) => state);
+
+  const propertys = propertyState?.properties?.allProperty || [];
+
+  const propertyOfTheWeek = propertys.filter((property) => {
+    return property.tag === "property of the week";
+  });
+  const availableLuxury = propertys.filter((property) => {
+    return property.tag === "available luxury";
+  });
+
+  const uniqueLocations = [
+    ...new Set(propertys.map((property) => property.location)),
+  ];
+
+  console.log(uniqueLocations);
+
+  useEffect(() => {
+    dispatch(resetState());
+    dispatch(allProperty());
+  }, [dispatch]);
+  //
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
   useEffect(() => {
     const handleResize = () => {
@@ -25,7 +52,7 @@ const Home = () => {
   }, []);
 
   const [homePage, setHomePage] = useState(true);
-  const [blogPage, setBlogPage] = useState(true);
+  // const [blogPage, setBlogPage] = useState(true);
   const [homeBg, setHomeBg] = useState(true);
 
   useEffect(() => {
@@ -52,9 +79,17 @@ const Home = () => {
         </div>
         <FindProperties />
       </div>
-      <WeeklyProps homeBg={homeBg} homePage={homePage} url_str={url_str} />
-      <ApartmentAvailable homePage={homePage} />
-      <LocationProps />
+      <WeeklyProps
+        propertyOfTheWeek={propertyOfTheWeek}
+        homeBg={homeBg}
+        homePage={homePage}
+        url_str={url_str}
+      />
+      <ApartmentAvailable
+        availableLuxury={availableLuxury}
+        homePage={homePage}
+      />
+      <LocationProps uniqueLocations={uniqueLocations} />
       {/* <WeeklyProps blogPage={blogPage} url_str={url_strblog} homeBg={homeBg} /> */}
       <HomeBlog homeBg={homeBg} homePage={homePage} url_strblog={url_strblog} />
       <GetInTouch homePage={homePage} />

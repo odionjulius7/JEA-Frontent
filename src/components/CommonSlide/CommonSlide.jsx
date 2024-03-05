@@ -6,7 +6,15 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 
 import "./CommonSlide.css";
 
-const CommonSlide = ({ px, colr, gbColr, stlr, homePage, featuredProp }) => {
+const CommonSlide = ({
+  px,
+  colr,
+  gbColr,
+  stlr,
+  homePage,
+  featuredProp,
+  availableLuxury,
+}) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
   useEffect(() => {
     const handleResize = () => {
@@ -106,9 +114,14 @@ const CommonSlide = ({ px, colr, gbColr, stlr, homePage, featuredProp }) => {
               className="swiper-slides"
               style={{ transform: `translateX(${transformPercentage}%)` }}
             >
-              {slides.map((slide, index) => (
+              {availableLuxury.map((slide, index) => (
                 <div key={index} className="slide">
-                  <Cards text={`0${index + 1}`} colr={colr} gbColr={gbColr} />
+                  <Cards
+                    slide={slide}
+                    text={`0${index + 1}`}
+                    colr={colr}
+                    gbColr={gbColr}
+                  />
                 </div>
               ))}
             </div>

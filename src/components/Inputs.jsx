@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { SearchOutlined } from "@ant-design/icons";
 import { Input } from "antd";
-const Inputs = () => {
+const Inputs = ({ text }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
   useEffect(() => {
     const handleResize = () => {
@@ -19,7 +19,7 @@ const Inputs = () => {
     <>
       <Input
         className="un-input"
-        placeholder="Enter a property description or location"
+        placeholder={text}
         style={{
           background: "#E9E9E9",
         }}

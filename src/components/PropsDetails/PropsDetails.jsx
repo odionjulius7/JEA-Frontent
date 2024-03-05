@@ -5,7 +5,7 @@ import { IoLogoWhatsapp } from "react-icons/io";
 
 import "./PropsDetails.css";
 
-const PropsDetails = ({ propsDetails }) => {
+const PropsDetails = ({ propsDetails, propertyDetail }) => {
   return (
     <div className="container-fluid PropsDetails">
       {propsDetails && (
@@ -16,13 +16,7 @@ const PropsDetails = ({ propsDetails }) => {
             </h5>
           </div>
           <div className="col-md-8 col-sm-12">
-            <p className="font_15">
-              Nestled in the heart of Osapa London, Lagos, this exquisite
-              4-bedroom terrace house presents an ideal family retreat. With its
-              contemporary design, spacious layout, and top-notch amenities,
-              this property offers the perfect blend of comfort, style, and
-              convenience.
-            </p>
+            <p className="font_15">{propertyDetail?.description}</p>
           </div>
         </div>
       )}
@@ -39,26 +33,16 @@ const PropsDetails = ({ propsDetails }) => {
           </h5>
         </div>
         <div className="col-md-8 col-sm-12">
-          <ul>
-            <li className="font_15">Price: ₦140,000,000</li>
-            <li className="font_15">Address: Osapa London, Lagos.</li>
-            <li className="font_15">
-              Additional fees (For only rent categories): Service charge (2.3M),
-              Agency (5%),
-            </li>
-            <li className="font_15">Deposit (1M), Legal (5%).</li>
-            <li className="font_15">Property ID: 2023TERRACE456</li>
-            <li className="font_15">Property Type: Terrace House</li>
-            <li className="font_15">Year Built: 2017</li>
-            <li className="font_15">Category: For Sale</li>
-            <li className="font_15">Status: Active</li>
-            <li className="font_15">Number of Stories: 2</li>
-            <li className="font_15">Garage Capacity: 2 cars</li>
-            <li className="font_15">
-              Recent Renovations: Freshly painted interior, updated kitchen, and
-              modern fixtures.
-            </li>
-          </ul>
+          {/* <ul> */}
+          {/* <li className="font_15"> */}
+          <span
+            className="font_15"
+            dangerouslySetInnerHTML={{
+              __html: propertyDetail?.property_details,
+            }}
+          />
+          {/* </li> */}
+          {/* </ul> */}
         </div>
       </div>
       <div
@@ -72,32 +56,17 @@ const PropsDetails = ({ propsDetails }) => {
           </h5>
         </div>
         <div className="col-md-8 col-sm-15">
-          <ul>
+          {/* <ul>
             <li className="font_15">
               4 spacious bedrooms, including a master suite with a walk-in
               closet and en-suite bathroom.
-            </li>
-            <li className="font_15">
-              A gourmet kitchen with top-of-the-line appliances and granite
-              countertops.
-            </li>
-            <li className="font_15">
-              Open-concept living and dining areas with large windows for
-              natural light.
-            </li>
-            <li className="font_15">Cozy fireplace in the living room.</li>
-            <li className="font_15">
-              Private backyard garden with a patio, perfect for outdoor
-              gatherings.
-            </li>
-            <li className="font_15">
-              Two-car garage with ample storage space.
-            </li>
-            <li className="font_15">Central air conditioning and heating.</li>
-            <li className="font_15">
-              Hardwood floors and elegant finishes throughout.
-            </li>
-          </ul>
+            </li></ul> */}
+          <span
+            className="font_15"
+            dangerouslySetInnerHTML={{
+              __html: propertyDetail?.features,
+            }}
+          />
         </div>
       </div>
       <div
@@ -111,25 +80,12 @@ const PropsDetails = ({ propsDetails }) => {
           </h5>
         </div>
         <div className="col-md-8 col-sm-12">
-          <ul>
-            <li className="font_15">
-              Osapa London is a highly sought-after neighborhood in Lagos, known
-              for its tranquility and convenience.
-            </li>
-            <li className="font_15">
-              Nearby schools, including XYZ School and ABC Academy
-            </li>
-            <li className="font_15">
-              Shopping options at the Osapa Shopping Mall
-            </li>
-            <li className="font_15">
-              Dining and entertainment choices within a short drive
-            </li>
-            <li className="font_15">
-              Well-maintained parks and green spaces for leisure activities
-            </li>
-            <li className="font_15">Easy access to public transportation</li>
-          </ul>
+          <span
+            className="font_15"
+            dangerouslySetInnerHTML={{
+              __html: propertyDetail?.neighborhood_info,
+            }}
+          />
         </div>
       </div>
       {propsDetails && (

@@ -6,7 +6,7 @@ import Buttons from "../Buttons";
 import MySwiper from "../Slider/Sliderjs";
 import { Link } from "react-router-dom";
 
-const WeeklyProps = ({ blogPage, url_str, homeBg }) => {
+const WeeklyProps = ({ blogPage, url_str, homeBg, propertyOfTheWeek }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
   useEffect(() => {
     const handleResize = () => {
@@ -19,6 +19,8 @@ const WeeklyProps = ({ blogPage, url_str, homeBg }) => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  console.log(propertyOfTheWeek);
 
   return (
     <div
@@ -100,7 +102,12 @@ const WeeklyProps = ({ blogPage, url_str, homeBg }) => {
               padding: isMobile ? "0px" : "",
             }}
           >
-            <MySwiper homeBg={homeBg} blogPage={blogPage} url_str={url_str} />
+            <MySwiper
+              propertyOfTheWeek={propertyOfTheWeek}
+              homeBg={homeBg}
+              blogPage={blogPage}
+              url_str={url_str}
+            />
           </div>
         </div>
         {/* {homeBg && (

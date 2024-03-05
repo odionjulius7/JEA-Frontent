@@ -138,7 +138,7 @@ const FindProperties = () => {
                 </div>
                 <div className="row mt-4 pt-1">
                   <div className="col-10 mx-auto">
-                    <Inputs />
+                    <Inputs text={"Enter a property description or location"} />
                   </div>
                 </div>
                 <div className="row my-4">
@@ -161,8 +161,68 @@ const FindProperties = () => {
                   </div>
                 </div>
               </Tab.Pane>
-              <Tab.Pane eventKey="second" className="py-4 px-3 ">
-                Rent
+              <Tab.Pane eventKey="second" className="py-3 px-3x">
+                <div
+                  className="d-flex flex-row justify-content-center gap-4x align-items-center  mb-4 select_wrap_find"
+                  style={{
+                    paddingTop: !isMobile ? "1.6rem" : "",
+                  }}
+                >
+                  <div className="select-width">
+                    <SelectTwo
+                      text={"No. of Bedrooms"}
+                      widthx={"inherit"}
+                      heightx={"inherit"}
+                    />
+                  </div>
+                  <div
+                    className="divider py-1 bg-dark display-none"
+                    style={{ borderRight: "1px solid #9B9B9B", height: "35px" }}
+                  ></div>
+                  <div className="select-width">
+                    <SelectTwo
+                      text={"Min. Price"}
+                      widthx={"inherit"}
+                      heightx={"inherit"}
+                    />
+                  </div>
+                  <div
+                    className="divider py-1 bg-dark display-none"
+                    style={{ borderRight: "1px solid #9B9B9B", height: "35px" }}
+                  ></div>
+                  <div className="select-width">
+                    <SelectTwo
+                      text={"Max Price"}
+                      widthx={"inherit"}
+                      heightx={"inherit"}
+                    />
+                    {/* <SelectComp widthx={"inherit"} heightx={"inherit"} /> */}
+                  </div>
+                </div>
+                <div className="row mt-4 pt-1">
+                  <div className="col-10 mx-auto">
+                    <Inputs text={"Enter a property description or location"} />
+                  </div>
+                </div>
+                <div className="row my-4">
+                  <div className="col-md-5 mx-auto search-home d-flex justify-content-center">
+                    <button
+                      id="search-btn"
+                      className="button fit-content"
+                      style={{
+                        background: "#FBC344",
+                        width: isMobile ? "80%" : "100%",
+                        color: "#000000",
+                        fontWeight: "400",
+                        fontSize: "15px",
+                        borderRadius: "9px",
+                        padding: isMobile ? "10px" : "",
+                      }}
+                    >
+                      Search
+                    </button>
+                  </div>
+                </div>
               </Tab.Pane>
               <Tab.Pane eventKey="third" className="py-4 px-3 ">
                 Short Let

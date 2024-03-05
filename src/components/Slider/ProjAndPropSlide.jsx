@@ -11,7 +11,7 @@ import Card from "react-bootstrap/Card";
 
 SwiperCore.use([Navigation, Autoplay]);
 
-const ProjAndPropSlide = ({ homePage }) => {
+const ProjAndPropSlide = ({ homePage, propertyDetail }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
 
   useEffect(() => {
@@ -33,15 +33,20 @@ const ProjAndPropSlide = ({ homePage }) => {
       slidesPerView={isMobile ? 3 : 5}
       navigation
       autoplay={{ delay: 3000, disableOnInteraction: false }}
+      style={{ width: "100%" }}
     >
-      {[1, 2, 3, 4, 5, 6, 7, 8].map((slide, i) => {
+      {propertyDetail?.images?.map((image, i) => {
         return (
           <SwiperSlide key={i}>
             <Card
               className="card_img_selc"
-              style={{ width: homePage ? "24rem" : "16rem" }}
+              style={{ width: homePage ? "24rem" : "16rem", height: "178px" }}
             >
-              <Card.Img variant="top" src="./selected-pro.png" />
+              <Card.Img
+                variant="top"
+                src={image}
+                style={{ width: "100%", height: "inherit" }}
+              />
             </Card>
           </SwiperSlide>
         );

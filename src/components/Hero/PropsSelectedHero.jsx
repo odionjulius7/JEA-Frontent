@@ -7,8 +7,10 @@ import { IoIosCall } from "react-icons/io";
 
 import "./Hero.css";
 import ProjAndPropSlide from "../Slider/ProjAndPropSlide";
-
-const PropsSelectedHero = () => {
+{
+  /* <div dangerouslySetInnerHTML={{ __html: propertyDetail?.property_details }} /> */
+}
+const PropsSelectedHero = ({ propertyDetail }) => {
   const [homePage, setHomePage] = useState(false);
   return (
     <div className="App--props-selected text-white">
@@ -34,15 +36,33 @@ const PropsSelectedHero = () => {
                 </div>
               </div>
               <div className="row my-4">
-                <h2 className="fw-bold font_30">4 Bedroom Terrace</h2>
+                <h2 className="fw-bold font_30">{propertyDetail?.title}</h2>
                 <div
                   className="input-styles w-50 my-3"
                   style={{
                     borderBottom: "2px solid grey",
                   }}
                 ></div>
-                <span>
-                  Osapa London | <b>₦140,000,000</b>
+                <span
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <img
+                    src="/location_icon.svg"
+                    alt="hehvs"
+                    style={{
+                      marginRight: "5px",
+                    }}
+                  />
+                  {propertyDetail?.location} |{" "}
+                  <b>
+                    {new Intl.NumberFormat("en-NG", {
+                      style: "currency",
+                      currency: "NGN",
+                    }).format(propertyDetail?.price)}
+                  </b>
                 </span>
               </div>
               <div className="row d-flex my-4">
@@ -85,23 +105,29 @@ const PropsSelectedHero = () => {
             </div>
             <div className="col-md-4 col-sm-12 dflex_1st px-5no">
               <div>
-                <img
-                  src="./props-selected-hero-img.png"
-                  className="fit-content"
-                  alt=""
-                />
+                {propertyDetail?.images && propertyDetail.images.length > 0 && (
+                  <img
+                    src={propertyDetail.images[0]}
+                    className="fit-content"
+                    alt=""
+                    style={{
+                      height: "550px",
+                      width: "500px",
+                    }}
+                  />
+                )}
               </div>
             </div>
           </div>
           <div
             className="row mb-5 display-none"
             style={{
-              marginTop: "-16%",
+              marginTop: "-15%",
               marginRight: "-15%",
             }}
           >
             <div className="col d-flex  text-align-center justify-content-center">
-              <ProjAndPropSlide />
+              <ProjAndPropSlide propertyDetail={propertyDetail} />
             </div>
           </div>
         </div>

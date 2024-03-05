@@ -14,7 +14,7 @@ import { FaSolarPanel } from "react-icons/fa";
 
 SwiperCore.use([Navigation, Autoplay]);
 
-const MySwiper = ({ blogPage, url_str, homeBg }) => {
+const MySwiper = ({ blogPage, url_str, homeBg, propertyOfTheWeek }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
 
   useEffect(() => {
@@ -36,22 +36,29 @@ const MySwiper = ({ blogPage, url_str, homeBg }) => {
       slidesPerView={isMobile ? 1 : 3}
       navigation
       autoplay={{ delay: 4000, disableOnInteraction: false }}
-      // onSlideChange={() => console.log("slide change")}
-      // onSwiper={(swiper) => console.log(swiper)}
+      style={{
+        minWidth: "900px",
+      }}
     >
-      {[1, 2, 3, 4, 5].map(() => {
+      {propertyOfTheWeek.map((property, index) => {
         return (
-          <SwiperSlide>
-            <Link to={`/${url_str}`}>
+          <SwiperSlide key={index}>
+            <Link to={`/${url_str}/${property._id}`}>
               <Card
                 className="swipe_card_with"
                 // style={{ width: isMobile ? "24rem" : "" }}
               >
-                <Card.Img variant="top" src="./first-slide-img.png" />
+                {/* <Card.Img
+                  variant="top"
+                  src={propertyOfTheWeek?.images[0] || "./first-slide-img.png"}
+                /> */}
+                {property?.images && property.images.length > 0 && (
+                  <Card.Img variant="top" src={property.images[0]} />
+                )}
                 <Card.Body
                   style={{
                     backgroundColor: "#f9f9f9",
-                    padding: isMobile ? "1rem 0.9rem" : "1rem 2rem",
+                    padding: isMobile ? "1rem 0.9rem" : "1rem 1rem",
                   }}
                   className="card_body py-3"
                 >
@@ -62,7 +69,7 @@ const MySwiper = ({ blogPage, url_str, homeBg }) => {
                         fontWeight: "700",
                       }}
                     >
-                      4 Bedroom Terrace
+                      {property?.title}
                     </b>
                   </Card.Title>
                   <div className="py-3 d-flex gap-2">
@@ -73,14 +80,17 @@ const MySwiper = ({ blogPage, url_str, homeBg }) => {
                         color: "#121212",
                       }}
                     >
-                      Osapa London |{" "}
+                      {property?.location} |{" "}
                       <b
                         style={{
                           fontWeight: "700",
                           color: "#121212",
                         }}
                       >
-                        ₦140,000,000
+                        {new Intl.NumberFormat("en-NG", {
+                          style: "currency",
+                          currency: "NGN",
+                        }).format(property?.price)}
                       </b>{" "}
                     </span>
                   </div>
@@ -108,8 +118,8 @@ const MySwiper = ({ blogPage, url_str, homeBg }) => {
                     >
                       Features:
                     </b>{" "}
-                    Nicely finished, Fully fitted Kitchen, All rooms ensuite,
-                    Serene Neighbourhood , Secured Estate, BQ ...
+                    {/* {property?.description.slice(0, 80)} ... */}
+                    {property?.description?.slice(0, 72) ?? ""} ...
                   </Card.Text>
                 </Card.Body>
               </Card>

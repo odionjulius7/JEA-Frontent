@@ -2,7 +2,7 @@ import "./Hero.css";
 import Header from "../Header/Header";
 import ProjectsTab from "../FindProperties/ProjectsTab";
 
-const ProjectsHero = () => {
+const ProjectsHero = ({ projs }) => {
   return (
     <div className="App--projs text-white">
       <div>
@@ -15,7 +15,7 @@ const ProjectsHero = () => {
             </div>
           </div>
           <div className="row py-5">
-            <ProjectsTab />
+            <ProjectsTab projs={projs} />
           </div>
         </div>
       </div>

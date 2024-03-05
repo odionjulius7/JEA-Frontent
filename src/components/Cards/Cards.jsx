@@ -4,7 +4,7 @@ import Card from "react-bootstrap/Card";
 import "./Cards.css";
 import { Link } from "react-router-dom";
 
-function Cards({ text, colr, gbColr }) {
+function Cards({ text, colr, gbColr, slide }) {
   return (
     <Card
       style={{
@@ -17,16 +17,26 @@ function Cards({ text, colr, gbColr }) {
       }}
       className="avail-card-wrap"
     >
-      <Link to="/property-selected">
+      <Link to={`/property-selected/${slide._id}`}>
         {" "}
-        <Card.Img
+        {/* <Card.Img
           variant="top"
-          src="./avail-img.png"
+          src={slide?.image[0] || "./avail-img.png"}
           className="w-100"
           style={{
             height: "348px",
           }}
-        />
+        /> */}
+        {slide?.images && slide.images.length > 0 && (
+          <Card.Img
+            variant="top"
+            className="w-100"
+            style={{
+              height: "348px",
+            }}
+            src={slide.images[0]}
+          />
+        )}
         <Card.Body>
           <div
             className="avail-card-num"
@@ -37,20 +47,23 @@ function Cards({ text, colr, gbColr }) {
             {text}
           </div>
           <Card.Title>
-            <b className="font_21">4 Bedroom Terrace</b>
+            <b className="font_21">{slide?.title}</b>
           </Card.Title>
           <div className="py-2 d-flex gap-2">
             <img src="./location_icon.svg" alt="" />
             <p>
-              Osapa London | <b>₦140,000,000</b>{" "}
+              {slide?.location} |{" "}
+              <b>
+                {new Intl.NumberFormat("en-NG", {
+                  style: "currency",
+                  currency: "NGN",
+                }).format(slide?.price)}
+              </b>{" "}
             </p>
           </div>
           <Card.Text className="py-1">
             <b style={{ fontWeight: "700" }}>Features:</b>{" "}
-            <span>
-              Nicely finished, Fully fitted Kitchen, All rooms ensuite, Serene
-              Neighbourhood , Secured Estate, BQ ...
-            </span>
+            <span>{slide?.description?.slice(0, 72) ?? ""}...</span>
           </Card.Text>
         </Card.Body>
       </Link>

@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 import "./FindProp.css";
 
-const ProjectsTab = () => {
+const ProjectsTab = ({ projs }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
   useEffect(() => {
     const handleResize = () => {
@@ -22,6 +22,8 @@ const ProjectsTab = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  console.log(projs);
 
   return (
     <>

@@ -3,7 +3,7 @@ import "./ApartmentAvailable.css";
 import CommonSlide from "../CommonSlide/CommonSlide";
 // import Cards from "../Cards/Cards";
 
-const ApartmentAvailable = ({ homePage }) => {
+const ApartmentAvailable = ({ homePage, availableLuxury }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
   useEffect(() => {
     const handleResize = () => {
@@ -26,6 +26,7 @@ const ApartmentAvailable = ({ homePage }) => {
         Available Luxury Apartments <img src="./long.svg" alt="" />
       </h2>
       <CommonSlide
+        availableLuxury={availableLuxury}
         px={"10px"}
         colr={"#ffffff"}
         gbColr={"#000000"}

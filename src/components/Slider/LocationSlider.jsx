@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 
 import "./LocationSlide.css";
 
-const LocationSlider = ({ homePage }) => {
+const LocationSlider = ({ homePage, uniqueLocations }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const slides = [1, 2, 3, 4, 5, 6, 7, 8];
+  const slides = [1, 2, 3, 4, 5];
 
   // Calculate the transform percentage
   const slideWidthPercent = 100 / slides.length;
@@ -75,12 +75,12 @@ const LocationSlider = ({ homePage }) => {
               className="swiper-slides"
               style={{ transform: `translateX(${transformPercentage}%)` }}
             >
-              {slides.map((slide, index) => (
+              {uniqueLocations?.map((slide, index) => (
                 <div key={index} className="slide">
                   <div className="location_wrap">
                     <img src="./location-img.png" alt="" className="w-100" />
                     <div className="location_rotate">
-                      <span>VICTORIA ISLAND</span>
+                      <span>{slide.toUpperCase()}</span>
                     </div>
                   </div>
                 </div>

@@ -64,7 +64,7 @@ function App() {
           }
         />
         <Route
-          path="/property-selected"
+          path="/property-selected/:id"
           element={
             <PageTransition>
               <PropertySelected />
@@ -72,7 +72,7 @@ function App() {
           }
         />
         <Route
-          path="/selected-project"
+          path="/selected-project/:id"
           element={
             <PageTransition>
               <SelectedProject />
