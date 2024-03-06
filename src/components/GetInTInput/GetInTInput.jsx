@@ -1,17 +1,17 @@
 import React from "react";
 import { Input } from "antd";
 
-import "./GetInTInput.css";
-
-const GetInTInput = ({ text, bordr }) => {
+const GetInTInput = ({ text, bordr, name, onChange, value }) => {
   return (
     <div className={`${bordr}`}>
       <span>{text}</span>
       <Input
+        name={name}
+        value={value}
+        onChange={onChange}
         style={{
           color: "inherit",
         }}
-        // onChange={onChange}
       />
     </div>
   );

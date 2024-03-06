@@ -46,6 +46,14 @@ const postProj = async (data) => {
   return response.data;
 };
 
+// getintouch
+const getIntouch = async (data) => {
+  const response = await axios.post(`${base_url}property/getintouch`, {
+    ...data,
+  });
+  return response.data;
+};
+
 // Requests
 const postPropertyRequest = async (data) => {
   const response = await axios.post(`${base_url}property/request`, { ...data });
@@ -102,6 +110,9 @@ const propertyService = {
   allBlog,
   getABlog,
   postBlog,
+
+  //
+  getIntouch,
 };
 
 export default propertyService;

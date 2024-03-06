@@ -52,6 +52,7 @@ const PropReqForm = () => {
 
       try {
         await dispatch(postPropertyRequest(data));
+        formik.resetForm();
       } catch (error) {
         resetForm();
         setTimeout(() => {
@@ -85,12 +86,10 @@ const PropReqForm = () => {
   // };
 
   useEffect(() => {
-    if (propertyState.isSuccess) {
-      toast.success(
-        "Property Request submitted successfully! We'll get in touch with you."
-      );
+    if (propertyState?.isSuccess2 && propertyState?.postRequests) {
+      toast.success("Property Request Sent! We'll get in touch with you.");
     }
-  }, [propertyState.isSuccess]);
+  }, [propertyState?.isSuccess2, propertyState?.postRequests]);
 
   return (
     <div className="container-fluid PropReqForm">

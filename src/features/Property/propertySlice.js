@@ -96,6 +96,17 @@ export const postProj = createAsyncThunk(
   }
 );
 
+// getIntouch
+export const getIntouch = createAsyncThunk(
+  "Getin/post-getIn",
+  async (data, thunkAPI) => {
+    try {
+      return await propertyService.getIntouch(data);
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error);
+    }
+  }
+);
 // Requests
 export const postPropertyRequest = createAsyncThunk(
   "request/post-request",
@@ -308,13 +319,29 @@ export const propertySlice = createSlice({
       .addCase(postPropertyRequest.fulfilled, (state, action) => {
         state.isError = false;
         state.isLoading2 = false;
-        state.isSuccess = true;
+        state.isSuccess2 = true;
         state.postRequests = action.payload;
         state.message = "success";
       })
       .addCase(postPropertyRequest.rejected, (state, action) => {
         state.isError = true;
-        state.isSuccess = false;
+        state.isSuccess2 = false;
+        state.message = action.error;
+        state.isLoading2 = false;
+      })
+      .addCase(getIntouch.pending, (state) => {
+        state.isLoading2 = true;
+      })
+      .addCase(getIntouch.fulfilled, (state, action) => {
+        state.isError = false;
+        state.isLoading2 = false;
+        state.isSuccess2 = true;
+        state.postIntouchData = action.payload;
+        state.message = "success";
+      })
+      .addCase(getIntouch.rejected, (state, action) => {
+        state.isError = true;
+        state.isSuccess2 = false;
         state.message = action.error;
         state.isLoading2 = false;
       })
