@@ -100,7 +100,7 @@ const ProjectsTab = ({ projs }) => {
                           }}
                         />
                         <div>
-                          <span>{projDet?.description?.slice(0, 40)}...</span>
+                          <span>{projDet?.description?.slice(0, 185)}...</span>
                         </div>
                         <div
                           className="row"

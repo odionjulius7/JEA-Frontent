@@ -33,19 +33,19 @@ const ProjAndPropSlide = ({ homePage, propertyDetail }) => {
       slidesPerView={isMobile ? 3 : 5}
       navigation
       autoplay={{ delay: 3000, disableOnInteraction: false }}
-      style={{ width: "100%" }}
+      style={{ width: "95%" }}
     >
       {propertyDetail?.images?.map((image, i) => {
         return (
           <SwiperSlide key={i}>
             <Card
               className="card_img_selc"
-              style={{ width: homePage ? "24rem" : "16rem", height: "178px" }}
+              style={{ width: homePage ? "24rem" : "266px", height: "178px" }}
             >
               <Card.Img
                 variant="top"
                 src={image}
-                style={{ width: "100%", height: "inherit" }}
+                style={{ width: "100%", height: "100%" }}
               />
             </Card>
           </SwiperSlide>
