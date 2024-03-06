@@ -32,7 +32,7 @@ const MySwiper = ({ blogPage, url_str, homeBg, propertyOfTheWeek }) => {
   return (
     <Swiper
       className="swiper-container"
-      spaceBetween={25}
+      spaceBetween={30}
       slidesPerView={isMobile ? 1 : 3}
       navigation
       autoplay={{ delay: 4000, disableOnInteraction: false }}
@@ -46,14 +46,21 @@ const MySwiper = ({ blogPage, url_str, homeBg, propertyOfTheWeek }) => {
             <Link to={`/${url_str}/${property._id}`}>
               <Card
                 className="swipe_card_with"
-                // style={{ width: isMobile ? "24rem" : "" }}
+                style={{ width: isMobile ? "24rem" : "414px" }}
               >
                 {/* <Card.Img
                   variant="top"
                   src={propertyOfTheWeek?.images[0] || "./first-slide-img.png"}
                 /> */}
                 {property?.images && property.images.length > 0 && (
-                  <Card.Img variant="top" src={property.images[0]} />
+                  <Card.Img
+                    variant="top"
+                    src={property.images[0]}
+                    style={{
+                      width: "inherit",
+                      height: "100%",
+                    }}
+                  />
                 )}
                 <Card.Body
                   style={{
