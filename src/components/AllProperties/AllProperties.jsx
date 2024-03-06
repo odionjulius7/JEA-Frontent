@@ -6,6 +6,7 @@ import Paginations from "../Pagination/Pagination";
 import { Link } from "react-router-dom";
 
 import ReactPaginate from "react-paginate";
+import moment from "moment";
 
 const items = [
   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
@@ -112,8 +113,11 @@ const AllProperties = ({
                               display: blogPage ? "block" : "none",
                             }}
                           >
-                            October 31, 2023
-                            {item?.createdAt}
+                            {/* October 31, 2023 */}
+                            {/* {item?.createdAt} */}
+                            {moment(item?.createdAt).format(
+                              "MMMM Do YYYY, h:mm:ss a"
+                            )}
                           </span>
                           <b
                             style={{
