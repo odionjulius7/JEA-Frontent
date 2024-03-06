@@ -10,6 +10,7 @@ import PropertySelected from "./Pages/PropertySelected";
 import SelectedProject from "./Pages/SelectedProject";
 import SelectedBlog from "./Pages/SelectedBlog";
 import PageTransition from "./PageTransition";
+import SearchResult from "./Pages/SearchResult";
 
 function App() {
   return (
@@ -84,6 +85,14 @@ function App() {
           element={
             <PageTransition>
               <SelectedBlog />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/search"
+          element={
+            <PageTransition>
+              <SearchResult />
             </PageTransition>
           }
         />

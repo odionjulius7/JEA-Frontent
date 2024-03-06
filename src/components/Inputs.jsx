@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { SearchOutlined } from "@ant-design/icons";
 import { Input } from "antd";
-const Inputs = ({ text }) => {
+const Inputs = ({ text, onChange, value, name }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
   useEffect(() => {
     const handleResize = () => {
@@ -18,6 +18,9 @@ const Inputs = ({ text }) => {
   return (
     <>
       <Input
+        name={name}
+        onChange={onChange}
+        value={value}
         className="un-input"
         placeholder={text}
         style={{

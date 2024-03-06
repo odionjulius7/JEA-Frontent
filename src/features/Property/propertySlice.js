@@ -11,6 +11,8 @@ const initialState = {
   blogs: [],
   isError: false,
   isLoading: false,
+  isLoading1: false,
+  isLoading2: false,
   isSuccess: false,
   message: "",
 };
@@ -95,6 +97,17 @@ export const postProj = createAsyncThunk(
 );
 
 // Requests
+export const postPropertyRequest = createAsyncThunk(
+  "request/post-request",
+  async (data, thunkAPI) => {
+    try {
+      return await propertyService.postPropertyRequest(data);
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error);
+    }
+  }
+);
+
 export const allRequest = createAsyncThunk(
   "request/get-request",
   async (token, thunkAPI) => {
@@ -175,11 +188,11 @@ export const propertySlice = createSlice({
         state.isLoading = false;
       })
       .addCase(filterPrperty.pending, (state) => {
-        state.isLoading = true;
+        state.isLoading1 = true;
       })
       .addCase(filterPrperty.fulfilled, (state, action) => {
         state.isError = false;
-        state.isLoading = false;
+        state.isLoading1 = false;
         state.isSuccess = true;
         state.filteredProperties = action.payload;
         state.message = "success";
@@ -188,7 +201,7 @@ export const propertySlice = createSlice({
         state.isError = true;
         state.isSuccess = false;
         state.message = action.error;
-        state.isLoading = false;
+        state.isLoading1 = false;
       })
       .addCase(getAproperty.pending, (state) => {
         state.isLoading = true;
@@ -289,8 +302,24 @@ export const propertySlice = createSlice({
         state.message = action.error;
         state.isLoading = false;
       })
+      .addCase(postPropertyRequest.pending, (state) => {
+        state.isLoading2 = true;
+      })
+      .addCase(postPropertyRequest.fulfilled, (state, action) => {
+        state.isError = false;
+        state.isLoading2 = false;
+        state.isSuccess = true;
+        state.postRequests = action.payload;
+        state.message = "success";
+      })
+      .addCase(postPropertyRequest.rejected, (state, action) => {
+        state.isError = true;
+        state.isSuccess = false;
+        state.message = action.error;
+        state.isLoading2 = false;
+      })
       .addCase(getaRequest.pending, (state) => {
-        state.isLoading = true;
+        state.isLoading2 = true;
       })
       .addCase(getaRequest.fulfilled, (state, action) => {
         state.isError = false;

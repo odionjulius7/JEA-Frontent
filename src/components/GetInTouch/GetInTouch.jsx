@@ -30,7 +30,7 @@ const GetInTouch = ({ homePage }) => {
       <div className="row">
         <div className="col-md-5 col-sm-12 display_none p-0">
           <img
-            src="./get-in-touch.png"
+            src="/get-in-touch.png"
             alt=""
             className="w-100"
             // className="fit-content"

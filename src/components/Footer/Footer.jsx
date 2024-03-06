@@ -29,7 +29,7 @@ const Footer = () => {
           <div className="col-md-10 col-sm-12">
             <div className="row justify-content-center align-align-items-center footer-1st-row py-4">
               <div className="col-5">
-                <img src="./Logo-svg.svg" alt="logo" width={70} />
+                <img src="/Logo-svg.svg" alt="logo" width={70} />
               </div>
 
               <div className="col-4 mt-3">
@@ -63,7 +63,7 @@ const Footer = () => {
           </div>
           <div className="col-2 mt-5 back-wrap ">
             <img
-              src="./footer-up-svg.svg"
+              src="/footer-up-svg.svg"
               alt="img"
               className="img-fluid"
               style={{

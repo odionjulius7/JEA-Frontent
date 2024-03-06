@@ -1,10 +1,7 @@
 import * as React from "react";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormHelperText from "@mui/material/FormHelperText";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-// import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
 
 export default function SelectTwo({
   widthx,
@@ -14,18 +11,11 @@ export default function SelectTwo({
   name,
   value,
 }) {
-  // const [age, setAge] = React.useState("");
-
-  // const handleChange = (event) => {
-  //   setAge(event.target.value);
-  // };
-
   return (
     <FormControl
       sx={
         {
-          //  width: widthx,
-          //  height: heightx
+          /* Add any additional styles here */
         }
       }
     >
@@ -33,14 +23,16 @@ export default function SelectTwo({
         name={name}
         value={value}
         onChange={onChange}
-        // displayEmpty
         inputProps={{ "aria-label": "Without label" }}
+        displayEmpty
       >
-        <MenuItem value="">
-          <span> {text}</span>
+        <MenuItem value="" disabled>
+          {text}
         </MenuItem>
         {items?.map((item) => (
-          <MenuItem value={item}>{item}</MenuItem>
+          <MenuItem key={item} value={String(item)}>
+            {item}
+          </MenuItem>
         ))}
       </Select>
     </FormControl>

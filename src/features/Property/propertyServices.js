@@ -12,7 +12,7 @@ const getAproperty = async (ids) => {
 };
 const filterPrperty = async (ids) => {
   const response = await axios.get(
-    `${base_url}property/search?price[lte]=${ids?.minPrice}&price[gte]=${ids?.maxPrice}&location=${ids?.location}&number_of_room=${ids?.number_of_room}&category=${ids?.category}`
+    `${base_url}property/search?price[lte]=${ids?.maxPrice}&price[gte]=${ids?.minPrice}&location=${ids?.location}&number_of_room=${ids?.number_of_room}&category=${ids?.category}`
   );
   return response.data;
 };
@@ -47,6 +47,11 @@ const postProj = async (data) => {
 };
 
 // Requests
+const postPropertyRequest = async (data) => {
+  const response = await axios.post(`${base_url}property/request`, { ...data });
+  return response.data;
+};
+
 const allRequest = async () => {
   // const config = generateAxiosConfig(token);
   // const response = await axios.get(`${base_url}loan/admin?deleted=false`, config);
@@ -92,6 +97,7 @@ const propertyService = {
   //
   allRequest,
   getaRequest,
+  postPropertyRequest,
   //
   allBlog,
   getABlog,

@@ -7,6 +7,7 @@ import { IoIosCall } from "react-icons/io";
 
 import "./Hero.css";
 import ProjAndPropSlide from "../Slider/ProjAndPropSlide";
+import { Link } from "react-router-dom";
 {
   /* <div dangerouslySetInnerHTML={{ __html: propertyDetail?.property_details }} /> */
 }
@@ -22,17 +23,19 @@ const PropsSelectedHero = ({ propertyDetail }) => {
             <div className="col-md-7 col-sm-12 dflex_2nd">
               <div className="row my-4">
                 <div className="col-md-6 col-sm-12">
-                  <button
-                    type="button"
-                    class="btn btn-outline-dark px-4 font_15"
-                    style={{
-                      fontWeight: 500,
-                      fontSize: "15px",
-                      borderRadius: "90px",
-                    }}
-                  >
-                    VIEW ALL PROPERTIES
-                  </button>
+                  <Link to="/properties">
+                    <button
+                      type="button"
+                      class="btn btn-outline-dark px-4 font_15"
+                      style={{
+                        fontWeight: 500,
+                        fontSize: "15px",
+                        borderRadius: "90px",
+                      }}
+                    >
+                      VIEW ALL PROPERTIES
+                    </button>
+                  </Link>
                 </div>
               </div>
               <div className="row my-4">
