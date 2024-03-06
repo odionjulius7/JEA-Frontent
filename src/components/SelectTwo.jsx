@@ -6,12 +6,19 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 // import Select from "@mui/material/Select";
 
-export default function SelectTwo({ widthx, heightx, text }) {
-  const [age, setAge] = React.useState("");
+export default function SelectTwo({
+  widthx,
+  onChange,
+  text,
+  items,
+  name,
+  value,
+}) {
+  // const [age, setAge] = React.useState("");
 
-  const handleChange = (event) => {
-    setAge(event.target.value);
-  };
+  // const handleChange = (event) => {
+  //   setAge(event.target.value);
+  // };
 
   return (
     <FormControl
@@ -23,19 +30,19 @@ export default function SelectTwo({ widthx, heightx, text }) {
       }
     >
       <Select
-        value={age}
-        onChange={handleChange}
-        displayEmpty
+        name={name}
+        value={value}
+        onChange={onChange}
+        // displayEmpty
         inputProps={{ "aria-label": "Without label" }}
       >
         <MenuItem value="">
           <span> {text}</span>
         </MenuItem>
-        <MenuItem value={10}>Ten</MenuItem>
-        <MenuItem value={20}>Twenty</MenuItem>
-        <MenuItem value={30}>Thirty</MenuItem>
+        {items?.map((item) => (
+          <MenuItem value={item}>{item}</MenuItem>
+        ))}
       </Select>
-      {/* <FormHelperText>Without label</FormHelperText> */}
     </FormControl>
   );
 }

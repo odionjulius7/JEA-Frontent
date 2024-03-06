@@ -37,6 +37,16 @@ export const getAproperty = createAsyncThunk(
     }
   }
 );
+export const filterPrperty = createAsyncThunk(
+  "property/filter-property",
+  async (ids, thunkAPI) => {
+    try {
+      return await propertyService.filterPrperty(ids);
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error);
+    }
+  }
+);
 
 export const postProperty = createAsyncThunk(
   "property/post-property",
@@ -159,6 +169,22 @@ export const propertySlice = createSlice({
         state.message = "success";
       })
       .addCase(allProperty.rejected, (state, action) => {
+        state.isError = true;
+        state.isSuccess = false;
+        state.message = action.error;
+        state.isLoading = false;
+      })
+      .addCase(filterPrperty.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(filterPrperty.fulfilled, (state, action) => {
+        state.isError = false;
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.filteredProperties = action.payload;
+        state.message = "success";
+      })
+      .addCase(filterPrperty.rejected, (state, action) => {
         state.isError = true;
         state.isSuccess = false;
         state.message = action.error;

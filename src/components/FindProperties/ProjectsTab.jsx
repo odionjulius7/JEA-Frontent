@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { Col, Nav, Row, Tab } from "react-bootstrap";
 
-import { FaLongArrowAltLeft } from "react-icons/fa";
-import { FaLongArrowAltRight } from "react-icons/fa";
+import moment from "moment";
 
 import { Link } from "react-router-dom";
 
@@ -78,6 +77,183 @@ const ProjectsTab = ({ projs }) => {
                           </div>
                           <div className="d-flex gap-2 align-items-center">
                             <img src="./new_releases.svg" alt="" />
+                            <span>
+                              {moment(projDet?.createdAt)
+                                .format("l")
+                                .slice(4, 8)}
+                            </span>
+                          </div>
+
+                          <div className="d-flex gap-2 align-items-center">
+                            <img src="./cottage.svg" alt="" />
+                            <span>Fully Detached</span>
+                          </div>
+                          <div className="d-flex gap-2 align-items-center">
+                            <img src="./location_on.svg" alt="" />
+                            <span>{projDet?.location}</span>
+                          </div>
+                        </div>
+                        <hr
+                          className="text-white my-3"
+                          style={{
+                            borderTop: "4px solid white",
+                          }}
+                        />
+                        <div>
+                          <span>{projDet?.description?.slice(0, 40)}...</span>
+                        </div>
+                        <div
+                          className="row"
+                          style={{
+                            marginTop: isMobile ? "0.4rem" : "3rem",
+                          }}
+                        >
+                          <div className="col-md-6 col-sm-12 btn_center">
+                            <Link
+                              className="w-100"
+                              to={`/selected-project/${projDet?._id}`}
+                            >
+                              <button
+                                className="btn btn-outline-light px-5 btn_center font_15 mt-5 w-100"
+                                style={{
+                                  fontWeight: "500",
+                                  paddingBottom: "1rem",
+                                  paddingTop: "1rem",
+                                }}
+                              >
+                                VIEW MORE
+                              </button>
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-md-5 col-sm-12 dflex_1st">
+                        <div
+                          id={`carouselExample${index}`}
+                          className="carousel slide"
+                        >
+                          <div className="carousel-inner">
+                            {projDet?.images[0] && (
+                              <div
+                                className="carousel-item active"
+                                style={{
+                                  width: "510px",
+                                  height: "330px",
+                                }}
+                              >
+                                <img
+                                  src={projDet?.images[0]}
+                                  className="d-block w-100"
+                                  alt="..."
+                                  style={{
+                                    marginLeft: isMobile ? "1rem" : "",
+                                    height: "inherit",
+                                  }}
+                                />
+                              </div>
+                            )}
+                            {projDet?.images[1] && (
+                              <div
+                                className="carousel-item"
+                                style={{
+                                  width: "510px",
+                                  height: "330px",
+                                }}
+                              >
+                                <img
+                                  src={projDet?.images[1]}
+                                  className="d-block w-100"
+                                  alt="..."
+                                  style={{
+                                    marginLeft: isMobile ? "1rem" : "",
+                                    height: "inherit",
+                                  }}
+                                />
+                              </div>
+                            )}
+                            {projDet?.images[2] && (
+                              <div
+                                className="carousel-item"
+                                style={{
+                                  width: "510px",
+                                  height: "330px",
+                                }}
+                              >
+                                <img
+                                  src={projDet?.images[2]}
+                                  className="d-block w-100"
+                                  alt="..."
+                                  style={{
+                                    marginLeft: isMobile ? "1rem" : "",
+                                    height: "inherit",
+                                  }}
+                                />
+                              </div>
+                            )}
+                            {projDet?.images[3] && (
+                              <div
+                                className="carousel-item"
+                                style={{
+                                  width: "510px",
+                                  height: "330px",
+                                }}
+                              >
+                                <img
+                                  src={projDet?.images[3]}
+                                  className="d-block w-100"
+                                  alt="..."
+                                  style={{
+                                    marginLeft: isMobile ? "1rem" : "",
+                                    height: "inherit",
+                                  }}
+                                />
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                        <div className="row pb-3 py-5x px-5 align-items-center d-md-flex">
+                          <div className="col">
+                            <button
+                              className="btn btn-outline-light line-img "
+                              type="button"
+                              data-bs-target={`#carouselExample${index}`}
+                              data-bs-slide="prev"
+                            >
+                              <img src="./arrow_left_svg.svg" alt="line-img" />
+                              {/* <FaLongArrowAltLeft /> */}
+                            </button>
+                          </div>
+                          <div className="col div_btn">01 - 03</div>
+                          <div className="col">
+                            <button
+                              className="btn btn-outline-light line-img"
+                              type="button"
+                              data-bs-target={`#carouselExample${index}`}
+                              data-bs-slide="next"
+                            >
+                              <img src="./arrow_right_svg.svg" alt="line-img" />
+                              {/* <FaLongArrowAltRight /> */}
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </Tab.Pane>
+              <Tab.Pane eventKey="second" className="text-white">
+                {projsON?.map((projDet, index) => (
+                  <div key={index} className="proj-tab-bg py-3">
+                    <div className="row align-items-center p-5 justify-content-between">
+                      <div className="col-md-6 col-sm-12 dflex_2nd px-3">
+                        <h2>{projDet?.title}</h2>
+                        <div className="d-flex gap-5x py-3 align-items-center wrap_flexx">
+                          <div className="d-flex gap-2 align-items-center">
+                            <img src="./bed_proj.svg" alt="" />
+                            <span>{projDet?.number_of_room}</span>
+                          </div>
+                          <div className="d-flex gap-2 align-items-center">
+                            <img src="./new_releases.svg" alt="" />
                             <span>{projDet?.createdAt}</span>
                           </div>
 
@@ -106,7 +282,10 @@ const ProjectsTab = ({ projs }) => {
                           }}
                         >
                           <div className="col-md-6 col-sm-12 btn_center">
-                            <Link className="w-100" to="/selected-project">
+                            <Link
+                              className="w-100"
+                              to={`/selected-project/${projDet?._id}`}
+                            >
                               <button
                                 className="btn btn-outline-light px-5 btn_center font_15 mt-5 w-100"
                                 style={{
@@ -122,20 +301,87 @@ const ProjectsTab = ({ projs }) => {
                         </div>
                       </div>
                       <div className="col-md-5 col-sm-12 dflex_1st">
-                        <div id="carouselExample" className="carousel slide">
+                        <div
+                          id={`carouselExample${index}`}
+                          className="carousel slide"
+                        >
                           <div className="carousel-inner">
-                            {projDet?.images?.map((item, index) => (
-                              <div key={index} className="carousel-item active">
+                            {projDet?.images[0] && (
+                              <div
+                                className="carousel-item active"
+                                style={{
+                                  width: "510px",
+                                  height: "330px",
+                                }}
+                              >
                                 <img
-                                  src={item}
+                                  src={projDet?.images[0]}
                                   className="d-block w-100"
                                   alt="..."
                                   style={{
                                     marginLeft: isMobile ? "1rem" : "",
+                                    height: "inherit",
                                   }}
                                 />
                               </div>
-                            ))}
+                            )}
+                            {projDet?.images[1] && (
+                              <div
+                                className="carousel-item"
+                                style={{
+                                  width: "510px",
+                                  height: "330px",
+                                }}
+                              >
+                                <img
+                                  src={projDet?.images[1]}
+                                  className="d-block w-100"
+                                  alt="..."
+                                  style={{
+                                    marginLeft: isMobile ? "1rem" : "",
+                                    height: "inherit",
+                                  }}
+                                />
+                              </div>
+                            )}
+                            {projDet?.images[2] && (
+                              <div
+                                className="carousel-item"
+                                style={{
+                                  width: "510px",
+                                  height: "330px",
+                                }}
+                              >
+                                <img
+                                  src={projDet?.images[2]}
+                                  className="d-block w-100"
+                                  alt="..."
+                                  style={{
+                                    marginLeft: isMobile ? "1rem" : "",
+                                    height: "inherit",
+                                  }}
+                                />
+                              </div>
+                            )}
+                            {projDet?.images[3] && (
+                              <div
+                                className="carousel-item"
+                                style={{
+                                  width: "510px",
+                                  height: "330px",
+                                }}
+                              >
+                                <img
+                                  src={projDet?.images[3]}
+                                  className="d-block w-100"
+                                  alt="..."
+                                  style={{
+                                    marginLeft: isMobile ? "1rem" : "",
+                                    height: "inherit",
+                                  }}
+                                />
+                              </div>
+                            )}
                           </div>
                         </div>
                         <div className="row pb-3 py-5x px-5 align-items-center d-md-flex">
@@ -143,7 +389,7 @@ const ProjectsTab = ({ projs }) => {
                             <button
                               className="btn btn-outline-light line-img "
                               type="button"
-                              data-bs-target="#carouselExample"
+                              data-bs-target={`#carouselExample${index}`}
                               data-bs-slide="prev"
                             >
                               <img src="./arrow_left_svg.svg" alt="line-img" />
@@ -155,7 +401,7 @@ const ProjectsTab = ({ projs }) => {
                             <button
                               className="btn btn-outline-light line-img"
                               type="button"
-                              data-bs-target="#carouselExample"
+                              data-bs-target={`#carouselExample${index}`}
                               data-bs-slide="next"
                             >
                               <img src="./arrow_right_svg.svg" alt="line-img" />
@@ -167,9 +413,6 @@ const ProjectsTab = ({ projs }) => {
                     </div>
                   </div>
                 ))}
-              </Tab.Pane>
-              <Tab.Pane eventKey="second" className="py-3 text-white">
-                Nothing Yet
               </Tab.Pane>
             </Tab.Content>
           </Col>

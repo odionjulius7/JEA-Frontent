@@ -2,23 +2,18 @@ import axios from "axios";
 // import { config } from "../../utils/axiosconfig";
 import { base_url } from "../../utils/baseUrl";
 
-// post config
-// const generateAxiosConfig2 = (token) => ({
-//   headers: {
-//     "Content-Type": "multipart/form-data",
-//     Authorization: `Bearer ${token}`,
-//   },
-// });
-// Properties
 const allProperty = async () => {
-  // const config = generateAxiosConfig(token);
   const response = await axios.get(`${base_url}property/all`);
-  //   console.log(response);
   return response?.data;
 };
 const getAproperty = async (ids) => {
-  // const config = generateAxiosConfig(ids);
   const response = await axios.get(`${base_url}property/${ids.id}`);
+  return response.data;
+};
+const filterPrperty = async (ids) => {
+  const response = await axios.get(
+    `${base_url}property/search?price[lte]=${ids?.minPrice}&price[gte]=${ids?.maxPrice}&location=${ids?.location}&number_of_room=${ids?.number_of_room}&category=${ids?.category}`
+  );
   return response.data;
 };
 
@@ -89,6 +84,7 @@ const propertyService = {
   allProperty,
   getAproperty,
   postProperty,
+  filterPrperty,
   //
   allProject,
   getAproject,

@@ -31,7 +31,7 @@ const Home = () => {
     ...new Set(propertys.map((property) => property.location)),
   ];
 
-  console.log(uniqueLocations);
+  // console.log(uniqueLocations);
 
   useEffect(() => {
     dispatch(resetState());

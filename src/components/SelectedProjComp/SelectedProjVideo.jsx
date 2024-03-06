@@ -2,7 +2,7 @@ import React from "react";
 
 import "./SelectedProjVideo.css";
 
-const SelectedProjVideo = () => {
+const SelectedProjVideo = ({ projectDetail }) => {
   return (
     <div className="container-fluid SelectedProjVideo py-5">
       <div className="row gap-5 align-items-center">
@@ -13,7 +13,7 @@ const SelectedProjVideo = () => {
           }}
         >
           <img
-            src="./SelectedProjVideo.png"
+            src={projectDetail?.images[0]}
             alt=""
             className=""
             style={{
@@ -29,15 +29,9 @@ const SelectedProjVideo = () => {
               fontWeight: "400",
             }}
           >
-            Nestled in the heart of the vibrant and sought-after neighborhood of
-            Osapa London, Lagos, this exquisite 4-bedroom terrace house presents
-            an ideal family retreat that harmonizes modern elegance with the
-            warmth of a welcoming home. As you step into this carefully crafted
-            property, you'll immediately be captivated by its contemporary
-            design, spacious layout, and a myriad of top-notch amenities, making
-            it a true gem in the local real estate market.
+            {projectDetail?.description}
           </p>
-          <p
+          {/* <p
             style={{
               fontSize: "15px",
               fontWeight: "400",
@@ -50,7 +44,7 @@ const SelectedProjVideo = () => {
             palette not only add to the property's curb appeal but also allow
             natural light to flood the interiors, creating an inviting and
             uplifting atmosphere throughout
-          </p>
+          </p> */}
         </div>
       </div>
     </div>

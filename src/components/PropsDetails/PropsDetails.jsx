@@ -6,6 +6,7 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import "./PropsDetails.css";
 
 const PropsDetails = ({ propsDetails, propertyDetail }) => {
+  console.log(propertyDetail);
   return (
     <div className="container-fluid PropsDetails">
       {propsDetails && (
@@ -36,7 +37,7 @@ const PropsDetails = ({ propsDetails, propertyDetail }) => {
           {/* <ul> */}
           {/* <li className="font_15"> */}
           <span
-            className="font_15"
+            className="font_15 text-white"
             dangerouslySetInnerHTML={{
               __html: propertyDetail?.property_details,
             }}

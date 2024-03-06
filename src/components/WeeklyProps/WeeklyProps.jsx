@@ -7,6 +7,8 @@ import MySwiper from "../Slider/Sliderjs";
 import { Link } from "react-router-dom";
 
 const WeeklyProps = ({ blogPage, url_str, homeBg, propertyOfTheWeek }) => {
+  const [category, setCategory] = useState("buy");
+
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
   useEffect(() => {
     const handleResize = () => {
@@ -20,14 +22,54 @@ const WeeklyProps = ({ blogPage, url_str, homeBg, propertyOfTheWeek }) => {
     };
   }, []);
 
-  console.log(propertyOfTheWeek);
+  // console.log(propertyOfTheWeek);
+
+  const [activeButton, setActiveButton] = useState("Buy"); // Set the default active button
+
+  const handleButtonClick = (text) => {
+    console.log(text.toLowerCase());
+    setActiveButton(text);
+
+    // You can use setCateroy(text) here or perform any other actions based on the clicked button
+    // setCateroy(text);
+  };
+
+  const buttonsData = [
+    {
+      text: "Buy",
+      variant: "outline-light",
+      // background: "#FBC344",
+      color: "#121212",
+    },
+    {
+      text: "Rent",
+      variant: "outline-dark",
+      // background: "#ffffff",
+      color: "#121212",
+    },
+    {
+      text: "Short Let",
+      variant: "outline-dark",
+      // background: "#ffffff",
+      color: "#121212",
+    },
+    {
+      text: "Land",
+      variant: "outline-dark",
+      // background: "#ffffff",
+      color: "#121212",
+    },
+  ];
+
+  const filteredProperties = propertyOfTheWeek.filter(
+    (item) => item.category.toLowerCase() === activeButton.toLowerCase()
+  );
 
   return (
     <div
       className="container-fluid home-weekly-props"
       style={{
         backgroundColor: homeBg ? "#ffffff" : "#ffffff",
-        // backgroundColor: homeBg ? "#e1e1e1" : "#ffffff",
       }}
     >
       <div className="row">
@@ -45,51 +87,26 @@ const WeeklyProps = ({ blogPage, url_str, homeBg, propertyOfTheWeek }) => {
             </div>
             <div className="row">
               <div className="col-md-6 col-sm-12 d-flex gap-3 my-4 row-btn">
-                <Buttons
-                  text="Buy"
-                  style={{
-                    width: "100px",
-                    background: "#FBC344",
-                    color: "#121212",
-                    fontSize: "15px",
-                    fontWeight: "400 !important",
-                    border: "1px solid #D7D7D7",
-                  }}
-                  variant={"outline-light"}
-                />
-                <Buttons
-                  text="Rent"
-                  style={{
-                    width: "100px",
-                    color: "#121212",
-                    fontSize: "15px",
-                    fontWeight: "400 !important",
-                    border: "1px solid #D7D7D7",
-                  }}
-                  variant={"outline-dark"}
-                />
-                <Buttons
-                  text="Short Let"
-                  style={{
-                    width: "100px",
-                    color: "#121212",
-                    fontSize: "15px",
-                    fontWeight: "400 !important",
-                    border: "1px solid #D7D7D7",
-                  }}
-                  variant={"outline-dark"}
-                />
-                <Buttons
-                  text="Lands"
-                  style={{
-                    width: "100px",
-                    color: "#121212",
-                    fontSize: "15px",
-                    fontWeight: "400 !important",
-                    border: "1px solid #D7D7D7",
-                  }}
-                  variant={"outline-dark"}
-                />
+                {buttonsData.map((button) => (
+                  <button
+                    key={button.text}
+                    className={`btn btn-${button.variant} ${
+                      activeButton === button.text ? "active" : ""
+                    }`}
+                    style={{
+                      width: "100px",
+                      color: button.color,
+                      fontSize: "15px",
+                      fontWeight: "400 !important",
+                      border: "1px solid #D7D7D7",
+                      background:
+                        activeButton === button.text ? "#FBC344" : "#fff",
+                    }}
+                    onClick={() => handleButtonClick(button.text)}
+                  >
+                    {button.text}
+                  </button>
+                ))}
               </div>
             </div>
           </>
@@ -103,7 +120,7 @@ const WeeklyProps = ({ blogPage, url_str, homeBg, propertyOfTheWeek }) => {
             }}
           >
             <MySwiper
-              propertyOfTheWeek={propertyOfTheWeek}
+              propertyOfTheWeek={filteredProperties}
               homeBg={homeBg}
               blogPage={blogPage}
               url_str={url_str}

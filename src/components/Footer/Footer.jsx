@@ -82,11 +82,11 @@ const Footer = () => {
           {" "}
           <div className="row justify-content-between pt-4 pb-2">
             <div className="col-5">
-              <img src="./Logo-svg.svg" alt="logo" width={70} />
+              <img src="/Logo-svg.svg" alt="logo" width={70} />
             </div>
             <div className="col-5 d-flex flex-column align-items-center gap-2">
               <img
-                src="./footer-up-svg.svg"
+                src="/footer-up-svg.svg"
                 alt="img"
                 className="img-fluid"
                 style={{

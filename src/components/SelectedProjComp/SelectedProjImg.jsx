@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { FaWhatsapp } from "react-icons/fa";
 import { IoIosCall } from "react-icons/io";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaShareAlt } from "react-icons/fa";
-import { FaLongArrowAltLeft } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-const SelectedProjImg = () => {
+const SelectedProjImg = ({ projectDetail }) => {
+  // console.log(projectDetail);
+  //
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
   useEffect(() => {
     const handleResize = () => {
@@ -22,26 +23,38 @@ const SelectedProjImg = () => {
   return (
     <div className="container-fluid SelectedPorjImg">
       <div className="row my-5">
-        <div className="col-4">
-          <img src="./selected-proj-ig.png" alt="" className="fit-content" />
-        </div>
-        <div className="col-4 ">
-          <img src="./selected-proj-ig.png" alt="" className="fit-content" />
-        </div>
-        <div className="col-4">
-          <img src="./selected-proj-ig.png" alt="" className="fit-content" />
-        </div>
+        {projectDetail?.images?.slice(0, 3).map((item, index) => {
+          return (
+            <div key={index} className="col-4">
+              <img
+                src={item}
+                alt=""
+                className="w-100"
+                style={{
+                  height: "322px",
+                  minWidth: "392px",
+                }}
+              />
+            </div>
+          );
+        })}
       </div>
       <div className="row my-5">
-        <div className="col-4">
-          <img src="./selected-proj-ig.png" alt="" className="fit-content" />
-        </div>
-        <div className="col-4">
-          <img src="./selected-proj-ig.png" alt="" className="fit-content" />
-        </div>
-        <div className="col-4">
-          <img src="./selected-proj-ig.png" alt="" className="fit-content" />
-        </div>
+        {projectDetail?.images?.slice(3, 6).map((item, index) => {
+          return (
+            <div key={index} className="col-4 mb-5">
+              <img
+                src={item}
+                alt=""
+                className=""
+                style={{
+                  height: "322px",
+                  width: "412px",
+                }}
+              />
+            </div>
+          );
+        })}
       </div>
 
       <div className="row align-items-center ">
@@ -100,26 +113,28 @@ const SelectedProjImg = () => {
             }}
           >
             <div className="col-md-8 col-sm-12 mx-auto mb-5">
-              <button
-                type="button"
-                className="btn btn-outline-light fit-content my-2 share_btn"
-                style={{
-                  width: "50%",
-                  color: "#fff",
-                  fontWeight: "600",
-                  borderRadius: "200px",
-                  marginTop: "2rem",
-                  // marginBottom: "6rem",
-                }}
-              >
-                {/* <FaLongArrowAltLeft className="fs-4 mx-4" /> */}
-                <img
-                  src="./proj_left_arr.svg"
-                  alt=""
-                  className="mx-4 display-none"
-                />
-                Back to Projects
-              </button>
+              <Link to="/projects">
+                <button
+                  type="button"
+                  className="btn btn-outline-light fit-content my-2 share_btn"
+                  style={{
+                    width: "50%",
+                    color: "#fff",
+                    fontWeight: "600",
+                    borderRadius: "200px",
+                    marginTop: "2rem",
+                    // marginBottom: "6rem",
+                  }}
+                >
+                  {/* <FaLongArrowAltLeft className="fs-4 mx-4" /> */}
+                  <img
+                    src="./proj_left_arr.svg"
+                    alt=""
+                    className="mx-4 display-none"
+                  />
+                  Back to Projects
+                </button>
+              </Link>
             </div>
           </div>
         </div>
