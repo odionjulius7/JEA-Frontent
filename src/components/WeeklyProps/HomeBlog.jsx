@@ -46,15 +46,17 @@ const HomeBlog = ({ homeBg, blogPage, url_strblog }) => {
   return (
     <div className="container-fluid home-blog">
       <div className="row">
-        <motion.h2
-          initial={{ opacity: 0, x: 220 }}
-          animate={isVisible ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.5 }}
-          className="mb-5 mt-2"
-          ref={headingRef}
-        >
-          From Our Blog
-        </motion.h2>
+        {!blogPage && (
+          <motion.h2
+            initial={{ opacity: 0, x: 220 }}
+            animate={isVisible ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.5 }}
+            className="mb-5 mt-2"
+            ref={headingRef}
+          >
+            From Our Blog
+          </motion.h2>
+        )}
         <div className="row ">
           {/* <div className="col d-flex  text-align-center justify-content-center">
             <HomeBlogSlide />
@@ -65,36 +67,43 @@ const HomeBlog = ({ homeBg, blogPage, url_strblog }) => {
               padding: isMobile ? "0px" : "",
             }}
           >
-            <Slide2 homeBg={homeBg} blogPage={blogPage} url_str={url_strblog} />
+            <Slide2
+              // blogs={blogs}
+              homeBg={homeBg}
+              blogPage={blogPage}
+              url_str={url_strblog}
+            />
           </div>
         </div>
 
-        <div className="row mb-4 mt-5">
-          <div className="col-md-3 col-sm-3 d-flex justify-content-center  mx-auto search-home ">
-            <Link
-              to="/blogs"
-              style={{
-                width: "100%",
-              }}
-            >
-              <button
-                id="search-btn"
-                className="button fit-content mt-3"
+        {!blogPage && (
+          <div className="row mb-4 mt-5">
+            <div className="col-md-3 col-sm-3 d-flex justify-content-center  mx-auto search-home ">
+              <Link
+                to="/blogs"
                 style={{
-                  background: "#FBC344",
                   width: "100%",
-                  color: "#000000",
-                  fontWeight: "500",
-                  fontSize: "15px",
-                  borderRadius: "9px",
-                  padding: isMobile ? "10px 0" : "",
                 }}
               >
-                VIEW ALL BLOG POSTS
-              </button>
-            </Link>
+                <button
+                  id="search-btn"
+                  className="button fit-content mt-3"
+                  style={{
+                    background: "#FBC344",
+                    width: "100%",
+                    color: "#000000",
+                    fontWeight: "500",
+                    fontSize: "15px",
+                    borderRadius: "9px",
+                    padding: isMobile ? "10px 0" : "",
+                  }}
+                >
+                  VIEW ALL BLOG POSTS
+                </button>
+              </Link>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

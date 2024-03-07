@@ -2,6 +2,38 @@
   width: fit-content;
 }
 
+/* modal */
+
+.modal-content {
+  min-height: 420px !important;
+  margin-top: 8rem !important;
+  padding: 20px !important;
+  min-width: 490px !important;
+}
+
+.modal-header {
+  border-bottom: none !important;
+}
+.modal-content .share_modal {
+  border: 1px solid #d7d7d7;
+  /* padding: 10px; */
+  border-radius: 200px;
+  width: 55px;
+  cursor: pointer;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content .share_modal a {
+  padding: 10px;
+}
+
+.modal-header .btn-close {
+  background-color: #6a6a6a !important;
+  border-radius: 200px !important;
+}
+
 /* Select */
 
 .css-13sljp9 {

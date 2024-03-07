@@ -10,15 +10,22 @@ import HomeBlog from "../components/WeeklyProps/HomeBlog";
 import WeeklyProps from "../components/WeeklyProps/WeeklyProps";
 import FloatWhatsapp from "../components/FloatWhatsapp/FloatWhatsapp";
 import { useDispatch, useSelector } from "react-redux";
-import { allProperty, resetState } from "../features/Property/propertySlice";
+import {
+  allBlog,
+  allProperty,
+  resetState,
+} from "../features/Property/propertySlice";
 
 const Home = () => {
   const dispatch = useDispatch();
 
   const propertyState = useSelector((state) => state.property);
-  const authState = useSelector((state) => state);
+  const blogsState = useSelector((state) => state.property);
 
   const propertys = propertyState?.properties?.allProperty || [];
+  const blogs = blogsState?.blogs?.blog || [];
+
+  console.log(blogs);
 
   const propertyOfTheWeek = propertys.filter((property) => {
     return property.tag === "property of the week";
@@ -36,6 +43,7 @@ const Home = () => {
   useEffect(() => {
     dispatch(resetState());
     dispatch(allProperty());
+    dispatch(allBlog());
   }, [dispatch]);
   //
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
@@ -91,7 +99,12 @@ const Home = () => {
       />
       <LocationProps uniqueLocations={uniqueLocations} />
       {/* <WeeklyProps blogPage={blogPage} url_str={url_strblog} homeBg={homeBg} /> */}
-      <HomeBlog homeBg={homeBg} homePage={homePage} url_strblog={url_strblog} />
+      <HomeBlog
+        // blogs={blogs}
+        homeBg={homeBg}
+        homePage={homePage}
+        url_strblog={url_strblog}
+      />
       <GetInTouch homePage={homePage} />
       <Footer />
       <FloatWhatsapp />

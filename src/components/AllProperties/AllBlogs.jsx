@@ -13,7 +13,7 @@ const items = [
   23,
 ];
 
-const AllProperties = ({
+const AllBlogs = ({
   allProps,
   blogPage,
   url_str,
@@ -29,12 +29,12 @@ const AllProperties = ({
   useEffect(() => {
     // Fetch items from another resources.
     const endOffset = itemOffset + itemsPerPage;
-    setCurrentItems(propertys?.slice(itemOffset, endOffset));
-    setPageCount(Math.ceil(propertys?.length / itemsPerPage));
-  }, [itemOffset, itemsPerPage, propertys]);
+    setCurrentItems(items?.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(items?.length / itemsPerPage));
+  }, [itemOffset, itemsPerPage, items]);
 
   const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % propertys.length;
+    const newOffset = (event.selected * itemsPerPage) % items.length;
     setItemOffset(newOffset);
   };
 
@@ -74,19 +74,19 @@ const AllProperties = ({
             </h2>
           </div>
         </div>
-        <div className="row  my-3 gap-5 ">
+        <div className="row  my-3">
           {currentItems &&
             currentItems.map((item, i) => {
               return (
                 <div
-                  className="col-md-4 col-sm-6"
+                  className="col-md-4 col-sm-6 my-2"
                   key={i}
                   style={{ width: "414px", height: "503px" }}
                 >
-                  <Link to={`/${url_str}/${item?._id}`}>
+                  <Link to={`/${url_str}/${item}`}>
                     <Card>
-                      {/* <Card.Img variant="top" src="./first-slide-img.png" /> */}
-                      {item?.images && item.images.length > 0 && (
+                      <Card.Img variant="top" src="/first-slide-img.png" />
+                      {/* {item?.images && item.images.length > 0 && (
                         <Card.Img
                           variant="top"
                           className="w-100"
@@ -95,15 +95,15 @@ const AllProperties = ({
                           }}
                           src={item.images[0]}
                         />
-                      )}
+                      )} */}
                       <Card.Body
                         style={{
                           backgroundColor: "#f9f9f9",
                           padding: "25px",
-                          height: "225px",
+                          height: "208px",
                         }}
                       >
-                        <Card.Title className="mt-2">
+                        <Card.Title>
                           <b
                             style={{
                               display: allProps & !blogPage ? "block" : "none",
@@ -142,7 +142,6 @@ const AllProperties = ({
                               fontWeight: "400",
                               fontSize: "15px",
                             }}
-                            className="my-2"
                           >
                             {item?.location} |{" "}
                             <b style={{ fontWeight: "700" }}>
@@ -192,7 +191,7 @@ const AllProperties = ({
                           >
                             Features:
                           </b>{" "}
-                          {item?.description?.slice(0, 85)} ...
+                          {item?.description?.slice(0, 73)} ...
                         </Card.Text>
                       </Card.Body>
                     </Card>
@@ -247,4 +246,4 @@ const AllProperties = ({
   );
 };
 
-export default AllProperties;
+export default AllBlogs;

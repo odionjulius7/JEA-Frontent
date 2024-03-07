@@ -95,6 +95,8 @@
   align-items: flex-end;
 }
 
+/* Modal */
+
 /* linear */
 .hero-img-down {
   background-image: linear-gradient(to bottom, #121212 20%, #121212b8 80%),

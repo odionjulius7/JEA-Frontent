@@ -9,20 +9,24 @@ const FloatWhatsapp = () => {
     // <div className="row align-items-right FloatWhatsapp">
     <div className="d-flex justify-content-end align-items-center gap-3 FloatWhatsapp p-0">
       {" "}
-      <button
-        //   id="search-btn"
-        className="button fit-content my-4"
-        style={{
-          background: "#25D366",
-          //   width: "50%",
-          color: "#ffffff",
-          fontWeight: "600",
-          borderRadius: "90px",
-          fontSize: "13px",
-        }}
+      <a
+        href="https://api.whatsapp.com/send?phone=2438125461587"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        Chat with us
-      </button>
+        <button
+          className="button fit-content my-4"
+          style={{
+            background: "#25D366",
+            color: "#ffffff",
+            fontWeight: "600",
+            borderRadius: "90px",
+            fontSize: "13px",
+          }}
+        >
+          Chat with us
+        </button>
+      </a>
       <div
         className="d-flex align-items-center justify-content-center"
         style={{

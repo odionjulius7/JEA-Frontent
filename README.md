@@ -10,46 +10,7 @@ In the project directory, you can run:
 
 <!--
 
-https://ultrasports.ng/product/adidas-adicolor-cargo/
-https://ultrasports.ng/product/adidas-men-run-60s-2-0-shoes/
-https://ultrasports.ng/product/adidas-men-swift-run-x-shoes/
-https://ultrasports.ng/product/color-blocked-slides-black/
-https://ultrasports.ng/product/color-blocked-slides-red/
-https://ultrasports.ng/product/nike-escape-run-2/
-https://ultrasports.ng/product/nike-escape-run-2/
-https://ultrasports.ng/product/nike-waffle-debut/
-https://ultrasports.ng/product/original-penguin-mens-william-crossbody/
-https://ultrasports.ng/product/nike-victori-one-mens-slide/
-https://ultrasports.ng/product/nike-mens-shoe-nike-challenger-og-2/
-https://ultrasports.ng/product/essential-logo-pool-slides/
-https://ultrasports.ng/product/essential-logo-pool-slides/
-https://ultrasports.ng/product/french-connection-mens-fcuk-flight-bag/
-https://ultrasports.ng/product/essentials-fleece-tapered-cuff-3-stripes-joggers/
-https://ultrasports.ng/product/original-penguin-mens-william-crossbody/
-https://ultrasports.ng/product/polo-ralph-lauren-polo-sport-slide/
-https://ultrasports.ng/product/puma-iconic-t7-double-knit-mens-track-pants-joggers-3/
-https://ultrasports.ng/product/puma-mens-essentials-backpack-black/
-https://ultrasports.ng/product/puma-mirage-sport-men-shoes/
-https://ultrasports.ng/product/puma-retaliate-2-running-shoes/
-https://ultrasports.ng/product/stripe-pool-slides/
-https://ultrasports.ng/product/signature-flag-pool-slides/
-https://ultrasports.ng/product/tokyo-laundry-mens-cross-avenue/
-https://ultrasports.ng/product/umbro-mens-taped-tricot-joggers/
- https://ultrasports.ng/product/adidas-adicolor-cargo/
-https://ultrasports.ng/product/adidas-men-run-60s-2-0-shoes/
-https://ultrasports.ng/product/adidas-men-swift-run-x-shoes/
-https://ultrasports.ng/product/color-blocked-slides-black/
-https://ultrasports.ng/product/color-blocked-slides-red/
-https://ultrasports.ng/product/nike-escape-run-2/
-https://ultrasports.ng/product/nike-escape-run-2/
-https://ultrasports.ng/product/nike-waffle-debut/
-https://ultrasports.ng/product/original-penguin-mens-william-crossbody/
-https://ultrasports.ng/product/nike-victori-one-mens-slide/
-https://ultrasports.ng/product/nike-mens-shoe-nike-challenger-og-2/
-https://ultrasports.ng/product/essential-logo-pool-slides/
-https://ultrasports.ng/product/essential-logo-pool-slides/
-https://ultrasports.ng/product/french-connection-mens-fcuk-flight-bag/
-https://ultrasports.ng/product/essentials-fleece-tapered-cuff-3-stripes-joggers/ -->
+-->
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.

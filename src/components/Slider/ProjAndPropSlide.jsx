@@ -33,7 +33,7 @@ const ProjAndPropSlide = ({ homePage, propertyDetail }) => {
       slidesPerView={isMobile ? 3 : 5}
       navigation
       autoplay={{ delay: 3000, disableOnInteraction: false }}
-      style={{ width: "95%" }}
+      style={{ width: "98%", marginRight: "8px" }}
     >
       {propertyDetail?.images?.map((image, i) => {
         return (

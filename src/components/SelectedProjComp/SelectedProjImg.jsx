@@ -80,18 +80,24 @@ const SelectedProjImg = ({ projectDetail }) => {
               >
                 <IoIosCall className="fs-4 mr-1" /> Call Agent
               </button>
-              <button
-                type="button"
-                className="btn btn-outline-light fit-content my-4"
-                style={{
-                  width: "28%",
-                  color: "#fff",
-                  fontWeight: "600",
-                  fontSize: "15px",
-                }}
+              <a
+                href="https://api.whatsapp.com/send?phone=08125461587"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <IoLogoWhatsapp className="fs-4 mr-1" /> Message Agent
-              </button>
+                <button
+                  type="button"
+                  className="btn btn-outline-light fit-content my-4"
+                  style={{
+                    width: "28%",
+                    color: "#fff",
+                    fontWeight: "600",
+                    fontSize: "15px",
+                  }}
+                >
+                  <IoLogoWhatsapp className="fs-4 mr-1" /> Message Agent
+                </button>
+              </a>
             </div>
             <button
               type="button"
@@ -128,7 +134,7 @@ const SelectedProjImg = ({ projectDetail }) => {
                 >
                   {/* <FaLongArrowAltLeft className="fs-4 mx-4" /> */}
                   <img
-                    src="./proj_left_arr.svg"
+                    src="/proj_left_arr.svg"
                     alt=""
                     className="mx-4 display-none"
                   />

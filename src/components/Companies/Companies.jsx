@@ -28,24 +28,24 @@ const Companies = () => {
         }}
       >
         <div className="col d-flex flex-column align-items-center justify-content-center">
-          <img src="./gym-img.png" alt="" className="fit-content comp_img" />
+          <img src="/gym-img.png" alt="" className="fit-content comp_img" />
           <span>Gym</span>
         </div>
         <div className="col d-flex flex-column align-items-center  justify-content-center">
           <img
-            src="./electric_meter.png"
+            src="/electric_meter.png"
             alt=""
             className="fit-content comp_img"
           />
           <span>Power</span>
         </div>
         <div className="col d-flex flex-column align-items-center  justify-content-center">
-          <img src="./wifi.png" alt="" className="fit-content comp_img" />
+          <img src="/wifi.png" alt="" className="fit-content comp_img" />
           <span>High Speed Internet</span>
         </div>
         <div className="col d-flex flex-column align-items-center  justify-content-center">
           <img
-            src="./nest_cam_iq_outdoor.png"
+            src="/nest_cam_iq_outdoor.png"
             className="fit-content comp_img"
             alt=""
           />
@@ -59,16 +59,16 @@ const Companies = () => {
         }}
       >
         <div className="col d-flex flex-column align-items-center justify-content-center">
-          <img src="./smartphone.png" alt="" className="fit-content comp_img" />
+          <img src="/smartphone.png" alt="" className="fit-content comp_img" />
           <span>Smart Home</span>
         </div>
         <div className="col d-flex flex-column align-items-center justify-content-center">
-          <img src="./ev_station.png" alt="" className="fit-content comp_img" />
+          <img src="/ev_station.png" alt="" className="fit-content comp_img" />
           <span>Charging Dock</span>
         </div>
         <div className="col d-flex flex-column align-items-center justify-content-center">
           <img
-            src="./bath_private.png"
+            src="/bath_private.png"
             alt=""
             className="fit-content comp_img"
           />
@@ -76,7 +76,7 @@ const Companies = () => {
         </div>
         <div className="col d-flex flex-column align-items-center justify-content-center">
           <img
-            src="./other_houses.png"
+            src="/other_houses.png"
             className="fit-content comp_img"
             alt=""
           />
@@ -91,7 +91,7 @@ const Companies = () => {
       >
         <div className="col d-flex flex-column align-items-center  justify-content-center">
           <img
-            src="./countertops-1.png"
+            src="/countertops-1.png"
             alt=""
             className="fit-content comp_img"
           />
@@ -99,18 +99,18 @@ const Companies = () => {
         </div>
         <div className="col d-flex flex-column align-items-center">
           <img
-            src="./wine_bar.png"
+            src="/wine_bar.png"
             alt=""
             className="fit-content  justify-content-center comp_img"
           />
           <span>Wine Chiller</span>
         </div>
         <div className="col d-flex flex-column align-items-center  justify-content-center">
-          <img src="./book_4.png" alt="" className="fit-content comp_img" />
+          <img src="/book_4.png" alt="" className="fit-content comp_img" />
           <span>Study</span>
         </div>
         <div className="col d-flex flex-column align-items-center  justify-content-center">
-          <img src="./heat.png" className="fit-content comp_img" alt="" />
+          <img src="/heat.png" className="fit-content comp_img" alt="" />
           <span>Heat Extractor</span>
         </div>
       </div>

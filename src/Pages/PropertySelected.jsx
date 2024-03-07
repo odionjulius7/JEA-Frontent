@@ -26,6 +26,13 @@ const PropertySelected = () => {
 
   const { id } = useParams();
 
+  // Assuming properties is an array of objects with a 'location' property
+  const filteredProperties = propertys.filter(
+    (item) => item.location === propertyDetail?.location
+  );
+
+  // Now 'filteredProperties' contains only the items with a matching location
+
   useEffect(() => {
     const ids = { id };
     dispatch(resetState());
@@ -47,6 +54,7 @@ const PropertySelected = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  // const [allProps, setAllProps] = useState(true);
   const url_str = "property-selected";
   return (
     <>
@@ -57,9 +65,10 @@ const PropertySelected = () => {
       />
       <NewsLetter newLetterComp={newLetterComp} selectedProps={selectedProps} />
       <AllProperties
-        propertys={propertys}
+        propertys={filteredProperties}
         allProps={allProps}
         url_str={url_str}
+        selectedProps={selectedProps}
       />
       <GetInTouch homePage={homePage} />
       <Footer />

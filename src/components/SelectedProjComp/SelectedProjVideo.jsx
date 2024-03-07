@@ -18,6 +18,7 @@ const SelectedProjVideo = ({ projectDetail }) => {
             className=""
             style={{
               width: "100%",
+              height: "421px",
             }}
           />
         </div>

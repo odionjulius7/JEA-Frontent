@@ -8,8 +8,17 @@ import RecentBlog from "../components/AllProperties/RecentBlog";
 import BlogHero from "../components/Hero/BlogHero";
 import Highlight from "../components/Highlight/Highlight";
 import HomeBlog from "../components/WeeklyProps/HomeBlog";
+import { useDispatch, useSelector } from "react-redux";
+import { allBlog, resetState } from "../features/Property/propertySlice";
+import AllBlogs from "../components/AllProperties/AllBlogs";
 
 const Blogs = () => {
+  const dispatch = useDispatch();
+  const blogsState = useSelector((state) => state.property);
+
+  const blogs = blogsState?.blogs?.blog || [];
+
+  //
   const [newLetterComp, setNewLetterComp] = useState(false);
   const [allProps, setAllProps] = useState(true);
   const [blogPage, setBlogPage] = useState(true);
@@ -21,18 +30,19 @@ const Blogs = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  useEffect(() => {
+    dispatch(resetState());
+    dispatch(allBlog());
+  }, [dispatch]);
+
   const url_str = "selected-blog";
   return (
     <>
       <BlogHero />
       <Highlight />
-      <HomeBlog url_strblog={url_str} />
+      <HomeBlog blogPage={blogPage} blogs={blogs} url_strblog={url_str} />
       <RecentBlog />
-      <AllProperties
-        allProps={allProps}
-        blogPage={blogPage}
-        url_str={url_str}
-      />
+      <AllBlogs allProps={allProps} blogPage={blogPage} url_str={url_str} />
       <NewsLetter newLetterComp={newLetterComp} blogPage={blogPage} />
       <Footer />
     </>

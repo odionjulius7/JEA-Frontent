@@ -19,7 +19,7 @@ const SelectedProjHero = ({ projectDetail }) => {
               marginBottom: "6.5rem",
             }}
           >
-            <div className="col-md-8 col-sm-12 d-flex  justify-content-between align-items-center gap-3 center-display">
+            <div className="col-md-8 col-sm-12 d-flex  justify-content-between align-items-center gap-3 center-display mb-4">
               <Link to="/projects" style={{ marginLeft: "20px" }}>
                 <button
                   className="btn btn-outline-light line-img brk_none "
@@ -39,6 +39,7 @@ const SelectedProjHero = ({ projectDetail }) => {
             style={{
               paddingLeft: "30px",
               marginRight: "-25%",
+              // marginTop: "3rem",
             }}
           >
             <div className="col-md-10 col-sm-12 d-flex  text-align-center justify-content-center">

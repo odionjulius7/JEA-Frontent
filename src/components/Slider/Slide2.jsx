@@ -11,6 +11,7 @@ import "swiper/css/navigation";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 import { FaSolarPanel } from "react-icons/fa";
+import moment from "moment";
 
 SwiperCore.use([Navigation, Autoplay]);
 
@@ -39,15 +40,15 @@ const Slide2 = ({ blogPage, url_str, homeBg }) => {
       // onSlideChange={() => console.log("slide change")}
       // onSwiper={(swiper) => console.log(swiper)}
     >
-      {[1, 2, 3, 4, 5].map(() => {
+      {[1, 2, 3, 4, 4, 5, 5, 5, 5, 5]?.map((blog, index) => {
         return (
-          <SwiperSlide>
+          <SwiperSlide key={index}>
             <Link to={`/${url_str}`}>
               <Card
                 className="swipe_card_with"
                 // style={{ width: isMobile ? "24rem" : "" }}
               >
-                <Card.Img variant="top" src="./blogg.png" />
+                <Card.Img variant="top" src="/first-slide-img.png" />
                 <Card.Body
                   style={{
                     backgroundColor: "#f9f9f9",
@@ -62,6 +63,7 @@ const Slide2 = ({ blogPage, url_str, homeBg }) => {
                         fontWeight: "400",
                       }}
                     >
+                      {/* {moment(blog?.createdAt).format("MMMM Do YYYY")} */}
                       October 31, 2023
                     </span>
                   </Card.Title>
