@@ -38,7 +38,7 @@ const PropsSelectedHero = ({ propertyDetail }) => {
         <div>
           <div className="white-gradient" />
           <Header />
-          <div className="container-fluid px-5no">
+          <div className="container-fluid px-5no mt-4">
             <div className="row py-5x">
               <div className="col-md-7 col-sm-12 dflex_2nd">
                 <div className="row my-4">
