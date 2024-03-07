@@ -74,7 +74,7 @@ const AllProperties = ({
             </h2>
           </div>
         </div>
-        <div className="row  my-3 gap-5 ">
+        <div className="row my-3 ">
           {currentItems &&
             currentItems.map((item, i) => {
               return (
