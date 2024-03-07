@@ -113,9 +113,9 @@ const PropsSelectedHero = ({ propertyDetail }) => {
                       >
                         {" "}
                         <a
-                          href="https://api.whatsapp.com/send?phone=2438125461587"
+                          href="https://wa.me/2348125461587"
                           target="_blank"
-                          rel="noopener noreferrer"
+                          rel="noreferrer"
                         >
                           <IoLogoWhatsapp className="fs-4" /> Message Agent
                         </a>
@@ -145,7 +145,7 @@ const PropsSelectedHero = ({ propertyDetail }) => {
                         className="fit-content"
                         alt=""
                         style={{
-                          height: "550px",
+                          height: "590px",
                           width: "500px",
                         }}
                       />
@@ -156,8 +156,8 @@ const PropsSelectedHero = ({ propertyDetail }) => {
             <div
               className="row mb-5 display-none"
               style={{
-                marginTop: "-15%",
-                marginRight: "-8%",
+                marginTop: "-18%",
+                marginRight: "-6%",
               }}
             >
               <div className="col d-flex  text-align-center justify-content-center">
