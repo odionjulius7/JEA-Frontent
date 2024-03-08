@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
 import Header from "../Header/Header";
 
-import { FaLongArrowAltLeft } from "react-icons/fa";
-import { FaLongArrowAltRight } from "react-icons/fa";
-
 import "./Hero.css";
-const Hero = () => {
+import { Link } from "react-router-dom";
+const Hero = ({ featuredPrj }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
   useEffect(() => {
     const handleResize = () => {
@@ -19,6 +17,7 @@ const Hero = () => {
     };
   }, []);
 
+  console.log(featuredPrj);
   return (
     <div className="App text-white">
       <div>
@@ -35,7 +34,12 @@ const Hero = () => {
                     height: "184px",
                   }}
                 >
-                  <img src="./sixtus-svg.svg" alt="img" className="img-fluid" />
+                  {/* <img src="./sixtus-svg.svg" alt="img" className="img-fluid" /> */}
+                  <img
+                    src={featuredPrj[0]?.logo}
+                    alt="img"
+                    className="img-fluid"
+                  />
                 </div>
               </div>
             </div>
@@ -47,20 +51,25 @@ const Hero = () => {
                 style={{ marginBottom: isMobile ? "2rem" : "6rem" }}
               >
                 <p className="text-white italic_p ">
+                  {featuredPrj[0]?.description?.slice(0, 250)}.
+                </p>
+                {/* <p className="text-white italic_p ">
                   The Sixtus contains 4 Bedroom Terrace houses and two fully
                   detached homes which brings it to six units. This development
                   is a sleek contemporary work of art, designed specially for
                   the ones who have chosen a luxurious life.
-                </p>
+                </p> */}
                 <div
                   className="d-flex gap-4 hero-btn"
                   style={{ marginTop: isMobile ? "3rem" : "8rem" }}
                 >
                   <button className="btn btn-outline-light">
-                    VIEW THIS PROJECT
+                    <Link to={`/selected-project/${featuredPrj[0]?._id}`}>
+                      VIEW THIS PROJECT
+                    </Link>
                   </button>
                   <button className="btn btn-outline-light">
-                    VIEW ALL PROJECTS
+                    <Link to="/projects">VIEW ALL PROJECTS</Link>
                   </button>
                 </div>
               </div>
@@ -68,22 +77,64 @@ const Hero = () => {
                 {/* <img src="./hero-img-1.png" alt="hero-img" className="pb-4" /> */}
                 <div id="carouselExample" className="carousel slide">
                   <div className="carousel-inner">
-                    <div className="carousel-item active">
-                      <img
-                        src="./hero-img-1.png"
-                        className="d-block w-100x"
-                        alt="..."
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <img
-                        src="./hero-img-1.png"
-                        className="d-block w-100x"
-                        alt="..."
-                      />
-                    </div>
+                    {featuredPrj[0]?.images[0] && (
+                      <div className="carousel-item active">
+                        <img
+                          // src="./hero-img-1.png"
+                          src={featuredPrj[0]?.images[0]}
+                          className="d-block w-100x"
+                          alt="..."
+                        />
+                      </div>
+                    )}
+                    {featuredPrj[0]?.images[1] && (
+                      <div className="carousel-item">
+                        <img
+                          src={featuredPrj[0]?.images[1]}
+                          className="d-block w-100x"
+                          alt="..."
+                        />
+                      </div>
+                    )}
+                    {featuredPrj[0]?.images[2] && (
+                      <div className="carousel-item">
+                        <img
+                          src={featuredPrj[0]?.images[2]}
+                          className="d-block w-100x"
+                          alt="..."
+                        />
+                      </div>
+                    )}
+                    {featuredPrj[0]?.images[3] && (
+                      <div className="carousel-item">
+                        <img
+                          src={featuredPrj[0]?.images[3]}
+                          className="d-block w-100x"
+                          alt="..."
+                        />
+                      </div>
+                    )}
+                    {featuredPrj[0]?.images[4] && (
+                      <div className="carousel-item">
+                        <img
+                          src={featuredPrj[0]?.images[3]}
+                          className="d-block w-100x"
+                          alt="..."
+                        />
+                      </div>
+                    )}
+                    {featuredPrj[0]?.images[5] && (
+                      <div className="carousel-item">
+                        <img
+                          src={featuredPrj[0]?.images[4]}
+                          className="d-block w-100x"
+                          alt="..."
+                        />
+                      </div>
+                    )}
                   </div>
                 </div>
+
                 <div className="row py-4 px-5x align-items-center text-center d-md-flex ">
                   <div className="row less460 justify-content-center">
                     <div

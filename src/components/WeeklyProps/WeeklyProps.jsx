@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const WeeklyProps = ({ blogPage, url_str, homeBg, propertyOfTheWeek }) => {
   const [category, setCategory] = useState("buy");
-  console.log(propertyOfTheWeek);
+  // console.log(propertyOfTheWeek);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
   useEffect(() => {
     const handleResize = () => {

@@ -12,6 +12,7 @@ import FloatWhatsapp from "../components/FloatWhatsapp/FloatWhatsapp";
 import { useDispatch, useSelector } from "react-redux";
 import {
   allBlog,
+  allProject,
   allProperty,
   resetState,
 } from "../features/Property/propertySlice";
@@ -21,12 +22,19 @@ const Home = () => {
 
   const propertyState = useSelector((state) => state.property);
   const blogsState = useSelector((state) => state.property);
+  const projectState = useSelector((state) => state.property);
 
+  const projs = projectState?.projects?.allProject || [];
   const propertys = propertyState?.properties?.allProperty || [];
   const blogs = blogsState?.blogs?.blog || [];
 
-  console.log(blogs);
+  // console.log(projs);
 
+  const featuredPrj = projs
+    .filter((property) => {
+      return property.tag === "featured";
+    })
+    .reverse();
   const propertyOfTheWeek = propertys.filter((property) => {
     return property.tag === "property of the week";
   });
@@ -44,6 +52,7 @@ const Home = () => {
     dispatch(resetState());
     dispatch(allProperty());
     dispatch(allBlog());
+    dispatch(allProject());
   }, [dispatch]);
   //
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
@@ -72,7 +81,7 @@ const Home = () => {
   const url_strblog = "selected-blog";
   return (
     <>
-      <Hero />
+      <Hero featuredPrj={featuredPrj} />
       <div
         className="container-fluid px-5x text-white home-prop"
         style={{
