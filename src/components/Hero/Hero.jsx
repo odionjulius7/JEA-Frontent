@@ -17,7 +17,7 @@ const Hero = ({ featuredPrj }) => {
     };
   }, []);
 
-  console.log(featuredPrj);
+  // console.log(featuredPrj);
   return (
     <div className="App text-white">
       <div>
