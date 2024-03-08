@@ -74,6 +74,7 @@ const GetInTouch = ({ homePage }) => {
 
   return (
     <div
+      id="getInto"
       className="container-fluid get-in-touch"
       style={{
         backgroundColor: homePage ? "#ffffff" : "#E3E3E3",

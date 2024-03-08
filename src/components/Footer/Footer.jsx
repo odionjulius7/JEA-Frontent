@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import FooterList from "./FooterList";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
-import { ArrowUpOutlined } from "@ant-design/icons";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
@@ -54,10 +54,31 @@ const Footer = () => {
                 <FooterList List={List} url_links={url_links1} />
               </div>
               <div className="col-3">
-                <FooterList
+                {/* <FooterList
                   List={["About Us", "Get in touch", "Live Chat"]}
                   url_links={url_links2}
-                />
+                /> */}
+                <ul className="list-group footer-list">
+                  <li class="list-group-item">
+                    <Link to="/about-us">About Us</Link>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="#getInto"> Get in touch</a>
+                  </li>
+
+                  <li class="list-group-item" style={{ cursor: "pointer" }}>
+                    {" "}
+                    <a
+                      // href="https://api.whatsapp.com/send?phone=2438125461587"
+                      href={`https://wa.me/2438125461587`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {" "}
+                      Live Chat{" "}
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -145,9 +166,18 @@ const Footer = () => {
         <div className="col-md-3 col-sm-12 social-icon-wrap">
           <p className="">Follow us</p>
           <div className="social-icon">
-            <FaFacebookF />
-            <FaTwitter />
-            <FaInstagram />
+            <a href="https://web.facebook.com/">
+              {" "}
+              <FaFacebookF />
+            </a>
+            <a href="https://twitter.com/">
+              {" "}
+              <FaTwitter />
+            </a>
+            <a href="https://www.instagram.com/">
+              {" "}
+              <FaInstagram />
+            </a>
           </div>
         </div>
       </div>

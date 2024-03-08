@@ -10,7 +10,8 @@ const FloatWhatsapp = () => {
     <div className="d-flex justify-content-end align-items-center gap-3 FloatWhatsapp p-0">
       {" "}
       <a
-        href="https://api.whatsapp.com/send?phone=2438125461587"
+        // href="https://api.whatsapp.com/send?phone=2438125461587"
+        href={`https://wa.me/2438125461587`}
         target="_blank"
         rel="noopener noreferrer"
       >
