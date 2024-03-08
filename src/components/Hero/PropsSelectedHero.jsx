@@ -99,7 +99,7 @@ const PropsSelectedHero = ({ propertyDetail }) => {
                           fontWeight: "600",
                         }}
                       >
-                        <a href="tel:+2348125461587">
+                        <a href={`tel:+${propertyDetail?.agent_call}`}>
                           <IoIosCall className="fs-4" /> Call Agent
                         </a>
                       </button>
@@ -113,7 +113,7 @@ const PropsSelectedHero = ({ propertyDetail }) => {
                       >
                         {" "}
                         <a
-                          href="https://wa.me/2348125461587"
+                          href={`https://wa.me/${propertyDetail?.agent_whatsapp}`}
                           target="_blank"
                           rel="noreferrer"
                         >

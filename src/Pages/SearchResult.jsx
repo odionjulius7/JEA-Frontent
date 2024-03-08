@@ -28,13 +28,13 @@ const SearchResult = () => {
       <div className="container my-3">
         <h2 className="m-4">Search Results:</h2>
         <div className="row  my-3">
-          {propertyState?.filteredProperties?.data ? (
+          {propertyState?.filteredProperties?.data &&
+          propertyState?.filteredProperties?.data.length > 0 ? (
             propertyState?.filteredProperties?.data.map((item, i) => {
               return (
                 <div className="col-md-4 col-sm-6 my-4" key={i}>
                   <Link to={`/${url_str}/${item?._id}`}>
                     <Card>
-                      {/* <Card.Img variant="top" src="./first-slide-img.png" /> */}
                       {item?.images && item.images.length > 0 && (
                         <Card.Img
                           variant="top"
@@ -60,7 +60,6 @@ const SearchResult = () => {
                           >
                             {item?.title}
                           </b>
-
                           <b
                             style={{
                               display: !allProps ? "block" : "none",
@@ -72,7 +71,6 @@ const SearchResult = () => {
                         </Card.Title>
                         <div className="py-2 d-flex gap-2">
                           <img src="./location_icon.svg" alt="" />
-
                           <span
                             style={{
                               display: allProps ? "block" : "none",
@@ -82,14 +80,12 @@ const SearchResult = () => {
                           >
                             {item?.location} |{" "}
                             <b style={{ fontWeight: "700" }}>
-                              {" "}
                               {new Intl.NumberFormat("en-NG", {
                                 style: "currency",
                                 currency: "NGN",
                               }).format(item?.price)}
                             </b>{" "}
                           </span>
-
                           <span
                             style={{
                               display: !allProps ? "block" : "none",
@@ -99,7 +95,6 @@ const SearchResult = () => {
                           >
                             {item?.price?.location} |{" "}
                             <b style={{ fontWeight: "700" }}>
-                              {" "}
                               {new Intl.NumberFormat("en-NG", {
                                 style: "currency",
                                 currency: "NGN",

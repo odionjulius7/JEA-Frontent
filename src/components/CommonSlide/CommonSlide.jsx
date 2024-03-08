@@ -114,16 +114,20 @@ const CommonSlide = ({
               className="swiper-slides"
               style={{ transform: `translateX(${transformPercentage}%)` }}
             >
-              {availableLuxury.map((slide, index) => (
-                <div key={index} className="slide">
-                  <Cards
-                    slide={slide}
-                    text={`0${index + 1}`}
-                    colr={colr}
-                    gbColr={gbColr}
-                  />
-                </div>
-              ))}
+              {availableLuxury.length > 0 ? (
+                availableLuxury.map((slide, index) => (
+                  <div key={index} className="slide">
+                    <Cards
+                      slide={slide}
+                      text={`0${index + 1}`}
+                      colr={colr}
+                      gbColr={gbColr}
+                    />
+                  </div>
+                ))
+              ) : (
+                <h4>Not Property Yet!</h4>
+              )}
             </div>
           </div>
         </div>

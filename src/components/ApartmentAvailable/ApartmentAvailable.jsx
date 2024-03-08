@@ -25,13 +25,23 @@ const ApartmentAvailable = ({ homePage, availableLuxury }) => {
       >
         Available Luxury Apartments <img src="./long.svg" alt="" />
       </h2>
-      <CommonSlide
-        availableLuxury={availableLuxury}
-        px={"10px"}
-        colr={"#ffffff"}
-        gbColr={"#000000"}
-        homePage={homePage}
-      />
+      {availableLuxury.length > 0 ? (
+        <CommonSlide
+          availableLuxury={availableLuxury}
+          px={"10px"}
+          colr={"#ffffff"}
+          gbColr={"#000000"}
+          homePage={homePage}
+        />
+      ) : (
+        <h4
+          style={{
+            margin: "10rem",
+          }}
+        >
+          There is no property here!
+        </h4>
+      )}
     </div>
   );
 };

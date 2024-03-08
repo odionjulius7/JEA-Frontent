@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { IoIosCall } from "react-icons/io";
 import { IoLogoWhatsapp } from "react-icons/io";
@@ -6,7 +6,29 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import "./PropsDetails.css";
 
 const PropsDetails = ({ propsDetails, propertyDetail }) => {
-  // console.log(propertyDetail?.property_details);
+  // const [parsedPropertyDetails, setParsedPropertyDetails] = useState({});
+  // const [parsedNeighborhoodInfo, setParsedNeighborhoodInfo] = useState({});
+  // const [parsedFeatures, setParsedFeatures] = useState({});
+
+  // useEffect(() => {
+  //   const propertyDetailsString = propertyDetail?.property_details;
+  //   const neighborhoodInfoString = propertyDetail?.neighborhood_info;
+  //   const featuresString = propertyDetail?.features;
+
+  //   setParsedPropertyDetails(parseJSON(propertyDetailsString));
+  //   setParsedNeighborhoodInfo(parseJSON(neighborhoodInfoString));
+  //   setParsedFeatures(parseJSON(featuresString));
+  // }, []);
+
+  // function parseJSON(str) {
+  //   try {
+  //     return JSON.parse(str) || {};
+  //   } catch (e) {
+  //     return {};
+  //   }
+  // }
+  // console.log(propertyDetail);
+
   return (
     <div className="container-fluid PropsDetails">
       {propsDetails && (
@@ -35,23 +57,58 @@ const PropsDetails = ({ propsDetails, propertyDetail }) => {
         </div>
         <div className="col-md-8 col-sm-12">
           <ul>
-            <li className="font_15">Price: ₦140,000,000</li>
-            <li className="font_15">Address: Osapa London, Lagos.</li>
-            <li className="font_15">
-              Additional fees (For only rent categories): Service charge (2.3M),
-              Agency (5%), Power Deposit (1M), Legal (5%).
-            </li>
-            <li className="font_15">Property ID: 2023TERRACE456</li>
-            <li className="font_15">Property Type: Terrace House</li>
-            <li className="font_15">Year Built: 2017</li>
-            <li className="font_15">Category: For Sale</li>
-            <li className="font_15">Status: Active</li>
-            <li className="font_15">Number of Stories: 2</li>
-            <li className="font_15">Garage Capacity: 2 cars</li>
-            <li className="font_15">
-              Recent Renovations: Freshly painted interior, updated kitchen, and
-              modern fixtures.
-            </li>
+            {propertyDetail?.price && (
+              <li className="font_15">Price: {propertyDetail?.price}</li>
+            )}
+            {propertyDetail?.address && (
+              <li className="font_15">Address: {propertyDetail?.address}.</li>
+            )}
+            {propertyDetail?.additional_fees && (
+              <li className="font_15">
+                Additional fees (For only rent categories):{" "}
+                {propertyDetail?.additional_fees}
+              </li>
+            )}
+            {propertyDetail?.property_id && (
+              <li className="font_15">
+                Property ID: {propertyDetail?.property_id}
+              </li>
+            )}
+            {propertyDetail?.property_type && (
+              <li className="font_15">{propertyDetail?.property_type}</li>
+            )}
+            {propertyDetail?.year_built && (
+              <li className="font_15">{propertyDetail?.year_built}</li>
+            )}
+            {propertyDetail?.details_category && (
+              <li className="font_15">{propertyDetail?.details_category}</li>
+            )}
+            {propertyDetail?.status && (
+              <li className="font_15">{propertyDetail?.status}</li>
+            )}
+            {propertyDetail?.Number_of_Stories && (
+              <li className="font_15">{propertyDetail?.Number_of_Stories}</li>
+            )}
+            {propertyDetail?.garage_capacity && (
+              <li className="font_15">{propertyDetail?.property_id}</li>
+            )}
+            {propertyDetail?.recent_renovations && (
+              <li className="font_15">
+                Recent Renovations: {propertyDetail?.recent_renovations}
+              </li>
+            )}
+            {propertyDetail?.youtube_url && (
+              <li className="font_15">
+                <a
+                  style={{
+                    color: "blue",
+                  }}
+                  href={propertyDetail?.youtube_url}
+                >
+                  Youtube Link
+                </a>
+              </li>
+            )}
           </ul>
         </div>
       </div>
@@ -67,28 +124,27 @@ const PropsDetails = ({ propsDetails, propertyDetail }) => {
         </div>
         <div className="col-md-8 col-sm-15">
           <ul>
-            <li className="font_15">
-              4 spacious bedrooms, including a master suite with a walk-in
-              closet and en-suite bathroom.
-            </li>
-            <li className="font_15">
-              A gourmet kitchen with top-of-the-line appliances and granite
-              countertops.
-            </li>
-            <li className="font_15">
-              Open-concept living and dining areas with large windows for
-              natural light.
-            </li>
-            <li className="font_15">Cozy fireplace in the living room.</li>
-            <li className="font_15">
-              Private backyard garden with a patio, perfect for outdoor
-              gatherings.
-            </li>
-            <li className="font_15">wo-car garage with ample storage space.</li>
-            <li className="font_15">Central air conditioning and heating</li>
-            <li className="font_15">
-              Hardwood floors and elegant finishes throughout.
-            </li>
+            {propertyDetail?.feature_1 && (
+              <li className="font_15">{propertyDetail?.feature_1}</li>
+            )}
+            {propertyDetail?.feature_2 && (
+              <li className="font_15">{propertyDetail?.feature_2}</li>
+            )}
+            {propertyDetail?.feature_4 && (
+              <li className="font_15">{propertyDetail?.feature_4}</li>
+            )}
+            {propertyDetail?.feature_5 && (
+              <li className="font_15">{propertyDetail?.feature_5}</li>
+            )}
+            {propertyDetail?.feature_6 && (
+              <li className="font_15">{propertyDetail?.feature_6}</li>
+            )}
+            {propertyDetail?.feature_7 && (
+              <li className="font_15">{propertyDetail?.feature_7}</li>
+            )}
+            {propertyDetail?.feature_8 && (
+              <li className="font_15">{propertyDetail?.feature_8}</li>
+            )}
           </ul>
         </div>
       </div>
@@ -104,23 +160,24 @@ const PropsDetails = ({ propsDetails, propertyDetail }) => {
         </div>
         <div className="col-md-8 col-sm-12">
           <ul>
-            <li className="font_15">
-              Osapa London is a highly sought-after neighborhood in Lagos, known
-              for its tranquility and convenience.
-            </li>
-            <li className="font_15">
-              Nearby schools, including XYZ School and ABC Academy
-            </li>
-            <li className="font_15">
-              Shopping options at the Osapa Shopping Mall
-            </li>
-            <li className="font_15">
-              Dining and entertainment choices within a short drive
-            </li>
-            <li className="font_15">
-              Well-maintained parks and green spaces for leisure activities
-            </li>
-            <li className="font_15">Easy access to public transportation</li>
+            {propertyDetail?.neighborhood_info1 && (
+              <li className="font_15">{propertyDetail?.neighborhood_info1}</li>
+            )}
+            {propertyDetail?.neighborhood_info2 && (
+              <li className="font_15">{propertyDetail?.neighborhood_info2}</li>
+            )}
+            {propertyDetail?.neighborhood_info3 && (
+              <li className="font_15">{propertyDetail?.neighborhood_info3}</li>
+            )}
+            {propertyDetail?.neighborhood_info4 && (
+              <li className="font_15">{propertyDetail?.neighborhood_info4}</li>
+            )}
+            {propertyDetail?.neighborhood_info5 && (
+              <li className="font_15">{propertyDetail?.neighborhood_info5}</li>
+            )}
+            {propertyDetail?.neighborhood_info6 && (
+              <li className="font_15">{propertyDetail?.neighborhood_info6}</li>
+            )}
           </ul>
         </div>
       </div>
@@ -135,7 +192,7 @@ const PropsDetails = ({ propsDetails, propertyDetail }) => {
                   fontWeight: "600",
                 }}
               >
-                <a href="tel:+2348125461587">
+                <a href={`tel:+${propertyDetail?.agent_call}`}>
                   <IoIosCall className="fs-4" /> Call Agent
                 </a>
               </button>
@@ -149,7 +206,7 @@ const PropsDetails = ({ propsDetails, propertyDetail }) => {
                 }}
               >
                 <a
-                  href="https://wa.me/2348125461587"
+                  href={`https://wa.me/${propertyDetail?.agent_whatsapp}`}
                   target="_blank"
                   rel="noreferrer"
                 >

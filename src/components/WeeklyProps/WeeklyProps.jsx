@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const WeeklyProps = ({ blogPage, url_str, homeBg, propertyOfTheWeek }) => {
   const [category, setCategory] = useState("buy");
-
+  console.log(propertyOfTheWeek);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
   useEffect(() => {
     const handleResize = () => {
@@ -113,19 +113,23 @@ const WeeklyProps = ({ blogPage, url_str, homeBg, propertyOfTheWeek }) => {
         )}
         <div className="row pt-3 pb-4">
           {/* {homeBg && <h2 className="mb-5 mt-2">From Our Blog</h2>} */}
-          <div
-            className="col d-flex text-align-center justify-content-center"
-            style={{
-              padding: isMobile ? "0px" : "",
-            }}
-          >
-            <MySwiper
-              propertyOfTheWeek={filteredProperties}
-              homeBg={homeBg}
-              blogPage={blogPage}
-              url_str={url_str}
-            />
-          </div>
+          {filteredProperties.length > 0 ? (
+            <div
+              className="col d-flex text-align-center justify-content-center"
+              style={{
+                padding: isMobile ? "0px" : "",
+              }}
+            >
+              <MySwiper
+                propertyOfTheWeek={filteredProperties}
+                homeBg={homeBg}
+                blogPage={blogPage}
+                url_str={url_str}
+              />
+            </div>
+          ) : (
+            <h4 className="m-4">There is no property here!</h4>
+          )}
         </div>
         {/* {homeBg && (
           <div className="row mb-4 mt-5">
