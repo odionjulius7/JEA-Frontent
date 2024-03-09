@@ -147,7 +147,27 @@ const AboutImages = ({ blogs }) => {
         </div>
         {/*  */}
         <div className="row my-4 img_padding">
-          {blogs?.slice(3, 3).map((item, index) => (
+          {blogs?.slice(3, 6).map((item, index) => (
+            <div
+              key={index}
+              className="col-md-4 col-sm-6 d-flex flex-column justify-content-center align-items-center px-0"
+            >
+              <img
+                src={item?.image}
+                // src="./our_agent-1.png"
+                alt="sds"
+                className="fit-content"
+                style={{
+                  height: "auto",
+                }}
+              />
+              <h6 className="font_18 mt-4">{item?.title}</h6>
+              <p className="font_12">{item?.body}</p>
+            </div>
+          ))}
+        </div>
+        <div className="row my-4 img_padding">
+          {blogs?.slice(6, 9).map((item, index) => (
             <div
               key={index}
               className="col-md-4 col-sm-6 d-flex flex-column justify-content-center align-items-center px-0"
