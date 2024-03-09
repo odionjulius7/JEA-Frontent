@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import "./style.css";
 
-const AboutImages = () => {
+const AboutImages = ({ blogs }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
   useEffect(() => {
     const handleResize = () => {
@@ -126,80 +126,45 @@ const AboutImages = () => {
           </div>
         </div>
         <div className="row my-2 img_padding">
-          <div className="col-md-4 col-sm-6 d-flex flex-column justify-content-center align-items-center px-0">
-            <img
-              src="./our_agent-1.png"
-              alt=""
-              className="fit-content"
-              style={{
-                height: "auto",
-              }}
-            />
-            <h6 className="font_18 mt-4">John Doe</h6>
-            <p className="font_12">Realtor</p>
-          </div>
-          <div className="col-md-4 col-sm-6 d-flex flex-column justify-content-center align-items-center px-0">
-            <img
-              src="./our_agent-2.png"
-              alt=""
-              className="fit-content"
-              style={{
-                height: "auto",
-              }}
-            />
-            <h6 className="font_18 mt-4">John Doe</h6>
-            <p className="font_12">Realtor</p>
-          </div>
-          <div className="col-md-4 col-sm-6 d-flex flex-column justify-content-center align-items-center  px-0">
-            <img
-              src="./our_agent-1.png"
-              alt=""
-              className="fit-content"
-              style={{
-                height: "auto",
-              }}
-            />
-            <h6 className="font_18 mt-4">John Doe</h6>
-            <p className="font_12">Realtor</p>
-          </div>
+          {blogs?.slice(0, 3).map((item, index) => (
+            <div
+              key={index}
+              className="col-md-4 col-sm-6 d-flex flex-column justify-content-center align-items-center px-0"
+            >
+              <img
+                src={item?.image}
+                // src="./our_agent-1.png"
+                alt="sds"
+                className="fit-content"
+                style={{
+                  height: "auto",
+                }}
+              />
+              <h6 className="font_18 mt-4">{item?.title}</h6>
+              <p className="font_12">{item?.body}</p>
+            </div>
+          ))}
         </div>
+        {/*  */}
         <div className="row my-4 img_padding">
-          <div className="col-md-4 col-sm-6 d-flex flex-column justify-content-center align-items-center  px-0">
-            <img
-              src="./our_agent-2.png"
-              alt=""
-              className="fit-content"
-              style={{
-                height: "auto",
-              }}
-            />
-            <h6 className="font_18 mt-4">John Doe</h6>
-            <p className="font_12">Realtor</p>
-          </div>
-          <div className="col-md-4 col-sm-6 d-flex flex-column justify-content-center align-items-center px-0">
-            <img
-              src="./our_agent-1.png"
-              alt=""
-              className="fit-content"
-              style={{
-                height: "auto",
-              }}
-            />
-            <h6 className="font_18 mt-4">John Doe</h6>
-            <p className="font_12">Realtor</p>
-          </div>
-          <div className="col-md-4 col-sm-6 d-flex flex-column justify-content-center align-items-center  px-0">
-            <img
-              src="./our_agent-2.png"
-              alt=""
-              className="fit-content"
-              style={{
-                height: "auto",
-              }}
-            />
-            <h6 className="font_18 mt-4">John Doe</h6>
-            <p className="font_12">Realtor</p>
-          </div>
+          {blogs?.slice(3, 3).map((item, index) => (
+            <div
+              key={index}
+              className="col-md-4 col-sm-6 d-flex flex-column justify-content-center align-items-center px-0"
+            >
+              <img
+                src={item?.image}
+                // src="./our_agent-1.png"
+                alt="sds"
+                className="fit-content"
+                style={{
+                  height: "auto",
+                }}
+              />
+              <h6 className="font_18 mt-4">{item?.title}</h6>
+              <p className="font_12">{item?.body}</p>
+            </div>
+          ))}
         </div>
       </div>
 
