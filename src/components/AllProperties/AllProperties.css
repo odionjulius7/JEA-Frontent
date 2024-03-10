@@ -95,4 +95,8 @@
     padding: 4px;
     cursor: pointer;
   }
+
+  .pagination__react {
+    margin: 0px !important;
+  }
 }

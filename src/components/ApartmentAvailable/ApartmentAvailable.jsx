@@ -23,7 +23,13 @@ const ApartmentAvailable = ({ homePage, availableLuxury }) => {
         className="card-title-1"
         style={{ marginLeft: !isMobile ? "1.1rem" : "" }}
       >
-        Available Luxury Apartments <img src="./long.svg" alt="" />
+        Available Luxury Apartments{" "}
+        <br
+          style={{
+            display: isMobile ? "block" : "none",
+          }}
+        />{" "}
+        <img src="./long.svg" alt="" />
       </h2>
       {availableLuxury.length > 0 ? (
         <CommonSlide

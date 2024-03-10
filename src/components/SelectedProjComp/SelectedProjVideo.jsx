@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import "./SelectedProjVideo.css";
 
 const SelectedProjVideo = ({ projectDetail }) => {
+  //
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="container-fluid SelectedProjVideo py-5">
       <div className="row gap-5 align-items-center">
@@ -18,7 +32,7 @@ const SelectedProjVideo = ({ projectDetail }) => {
             className=""
             style={{
               width: "100%",
-              height: "421px",
+              height: !isMobile ? "421px" : "312px",
             }}
           />
         </div>

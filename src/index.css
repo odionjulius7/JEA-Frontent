@@ -299,9 +299,10 @@ a {
   }
 
   #search-btn {
-    padding: 5px 8px;
-    width: 60%;
+    padding: 7px 13px;
+    width: 100%;
   }
+
   #search-btn a {
     font-size: 13px;
   }
@@ -349,7 +350,7 @@ a {
     padding-top: 1.5rem;
   }
   .card_img_selc {
-    width: 95% !important;
+    width: 84% !important;
   }
   .card_img_selc img {
     width: 100%;
@@ -410,14 +411,6 @@ a {
 }
 
 @media (max-width: 460px) {
-  /* .container-fluid {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  .container {
-    margin-left: 0px;
-    margin-right: 0px;
-  } */
   .row {
     margin-left: 0px;
     margin-right: 0px;
@@ -436,9 +429,14 @@ a {
   }
 
   .location_wrap .location_rotate {
-    bottom: 18.5%;
-    left: -24%;
-    padding: 13px 35px;
+    bottom: 19.5%;
+    left: -23%;
+    /* padding: 9px; */
+    height: 40px;
+    width: 177px;
+    /*  */
+    display: flex;
+    justify-content: center;
   }
 }
 /* @media (max-width: 450px) {

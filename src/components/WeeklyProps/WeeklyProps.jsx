@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import "./WeeklyProps.css";
 import { Button } from "react-bootstrap";
-import Buttons from "../Buttons";
+// import Buttons from "../Buttons";
 import MySwiper from "../Slider/Sliderjs";
 import { Link } from "react-router-dom";
 
@@ -111,7 +111,12 @@ const WeeklyProps = ({ blogPage, url_str, homeBg, propertyOfTheWeek }) => {
             </div>
           </>
         )}
-        <div className="row pt-3 pb-4">
+        <div
+          className="row pt-3 pb-4"
+          style={{
+            margin: isMobile ? "0 1rem " : "",
+          }}
+        >
           {/* {homeBg && <h2 className="mb-5 mt-2">From Our Blog</h2>} */}
           {filteredProperties.length > 0 ? (
             <div
@@ -131,33 +136,6 @@ const WeeklyProps = ({ blogPage, url_str, homeBg, propertyOfTheWeek }) => {
             <h4 className="m-4">There is no property here!</h4>
           )}
         </div>
-        {/* {homeBg && (
-          <div className="row mb-4 mt-5">
-            <div className="col-md-3 col-sm-3 d-flex justify-content-center  mx-auto search-home ">
-              <Link
-                to="/blogs"
-                style={{
-                  width: "100%",
-                }}
-              >
-                <button
-                  id="search-btn"
-                  className="button fit-content"
-                  style={{
-                    background: "#FBC344",
-                    width: "100%",
-                    color: "#000000",
-                    fontWeight: "500",
-                    fontSize: "15px",
-                    borderRadius: "9px",
-                  }}
-                >
-                  VIEW ALL BLOG POSTS
-                </button>
-              </Link>
-            </div>
-          </div>
-        )} */}
       </div>
     </div>
   );

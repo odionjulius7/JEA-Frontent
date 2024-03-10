@@ -117,8 +117,8 @@ const ProjectsTab = ({ projs }) => {
                                 className="btn btn-outline-light px-5 btn_center font_15 mt-5 w-100"
                                 style={{
                                   fontWeight: "500",
-                                  paddingBottom: "1rem",
-                                  paddingTop: "1rem",
+                                  paddingBottom: !isMobile ? "1rem" : "0.5rem",
+                                  paddingTop: !isMobile ? "1rem" : "0.5rem",
                                 }}
                               >
                                 VIEW MORE
@@ -137,7 +137,7 @@ const ProjectsTab = ({ projs }) => {
                               <div
                                 className="carousel-item active"
                                 style={{
-                                  width: "510px",
+                                  width: !isMobile ? "510px" : "325px",
                                   height: "330px",
                                 }}
                               >

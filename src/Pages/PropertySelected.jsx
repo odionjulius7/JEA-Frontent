@@ -21,7 +21,7 @@ const PropertySelected = () => {
 
   const propertys = propertiestState?.properties?.allProperty || [];
   const propertyDetail = propertyState?.property?.property;
-  console.log(propertyDetail);
+  // console.log(propertyDetail);
   // user auth
 
   const { id } = useParams();

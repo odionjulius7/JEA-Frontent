@@ -98,6 +98,12 @@
 /* Media query */
 
 @media (max-width: 460px) {
+  /* slide img */
+  .m-img {
+    width: 280px !important;
+  }
+
+  /*  */
   .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
     width: 271px !important;
     height: 45px !important;

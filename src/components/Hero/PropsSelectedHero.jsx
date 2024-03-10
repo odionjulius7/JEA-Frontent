@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "../Header/Header";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaShareAlt } from "react-icons/fa";
@@ -32,6 +32,20 @@ const PropsSelectedHero = ({ propertyDetail }) => {
 
   //
   const [homePage, setHomePage] = useState(false);
+
+  //
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <>
       <div className="App--props-selected text-white">
@@ -40,8 +54,18 @@ const PropsSelectedHero = ({ propertyDetail }) => {
           <Header />
           <div className="container-fluid px-5no mt-4">
             <div className="row py-5x">
-              <div className="col-md-7 col-sm-12 dflex_2nd">
-                <div className="row my-4">
+              <div
+                className="col-md-7 col-sm-12 dflex_2nd"
+                style={{
+                  marginTop: isMobile ? "0px" : "",
+                }}
+              >
+                <div
+                  className="row my-4"
+                  style={{
+                    marginTop: isMobile ? "0px" : "",
+                  }}
+                >
                   <div className="col-md-6 col-sm-12">
                     <Link to="/properties">
                       <button
@@ -142,14 +166,25 @@ const PropsSelectedHero = ({ propertyDetail }) => {
                     propertyDetail.images.length > 0 && (
                       <img
                         src={propertyDetail.images[0]}
-                        className="fit-content"
+                        className="fit-content main-selected-img"
                         alt=""
                         style={{
-                          height: "590px",
+                          height: "560px",
                           width: "500px",
                         }}
                       />
                     )}
+                </div>
+                <div
+                  style={{
+                    display: isMobile ? "block" : "none",
+                  }}
+                  className="col d-flex  text-align-center justify-content-center"
+                >
+                  <ProjAndPropSlide
+                    widthxs={!isMobile ? "98%" : "62.9%"}
+                    propertyDetail={propertyDetail}
+                  />
                 </div>
               </div>
             </div>

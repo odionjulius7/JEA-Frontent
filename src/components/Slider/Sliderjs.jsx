@@ -37,7 +37,7 @@ const MySwiper = ({ blogPage, url_str, homeBg, propertyOfTheWeek }) => {
       navigation
       autoplay={{ delay: 4000, disableOnInteraction: false }}
       style={{
-        minWidth: "900px",
+        minWidth: !isMobile ? "900px" : "",
       }}
     >
       {propertyOfTheWeek.map((property, index) => {
@@ -46,7 +46,7 @@ const MySwiper = ({ blogPage, url_str, homeBg, propertyOfTheWeek }) => {
             <Link to={`/${url_str}/${property._id}`}>
               <Card
                 className="swipe_card_with"
-                style={{ width: isMobile ? "24rem" : "414px" }}
+                style={{ width: isMobile ? "20rem" : "414px" }}
               >
                 {/* <Card.Img
                   variant="top"

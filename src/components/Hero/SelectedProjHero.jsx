@@ -1,10 +1,25 @@
+import { useEffect, useState } from "react";
 import "./Hero.css";
 import Header from "../Header/Header";
-import { useState } from "react";
 import ProjAndPropSlide from "../Slider/ProjAndPropSlide";
 import { Link } from "react-router-dom";
 
 const SelectedProjHero = ({ projectDetail }) => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  //
   const [homePage, setHomePage] = useState(false);
 
   return (
@@ -14,7 +29,7 @@ const SelectedProjHero = ({ projectDetail }) => {
         <Header />
         <div className="container-fluid py-5">
           <div
-            className="row py-5 px-4 sel_project_wrap"
+            className="row py-5x px-4 sel_project_wrap"
             style={{
               marginBottom: "6.5rem",
             }}
@@ -37,13 +52,16 @@ const SelectedProjHero = ({ projectDetail }) => {
           <div
             className="row pt-5 sel_project_wrap-2"
             style={{
-              paddingLeft: "30px",
-              marginRight: "-25%",
+              paddingLeft: !isMobile ? "30px" : "8px",
+              marginRight: !isMobile ? "-25%" : "0px",
               // marginTop: "3rem",
             }}
           >
             <div className="col-md-10 col-sm-12 d-flex  text-align-center justify-content-center">
-              <ProjAndPropSlide propertyDetail={projectDetail} />
+              <ProjAndPropSlide
+                widthxs={!isMobile ? "98%" : "90%"}
+                propertyDetail={projectDetail}
+              />
             </div>
           </div>
         </div>

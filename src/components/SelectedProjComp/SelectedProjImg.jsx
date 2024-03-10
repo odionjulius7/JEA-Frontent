@@ -42,10 +42,21 @@ const SelectedProjImg = ({ projectDetail }) => {
     <>
       {" "}
       <div className="container-fluid SelectedPorjImg">
-        <div className="row my-5">
+        <div
+          className="row my-5"
+          style={{
+            marginLeft: "-10px",
+          }}
+        >
           {projectDetail?.images?.slice(0, 3).map((item, index) => {
             return (
-              <div key={index} className="col-4">
+              <div
+                key={index}
+                className="col-md-4 col-sm-10 mx-auto"
+                style={{
+                  margin: isMobile ? "5px 0 5px 0px" : "",
+                }}
+              >
                 <img
                   src={item}
                   alt=""
@@ -62,14 +73,14 @@ const SelectedProjImg = ({ projectDetail }) => {
         <div className="row my-5">
           {projectDetail?.images?.slice(3, 6).map((item, index) => {
             return (
-              <div key={index} className="col-4 mb-5">
+              <div key={index} className="col-md-4 col-sm-12 mb-5">
                 <img
                   src={item}
                   alt=""
                   className="w-100"
                   style={{
-                    height: "322px",
-                    minWidth: "392px",
+                    height: !isMobile ? "322px" : "312px",
+                    minWidth: !isMobile ? "392px" : "370px",
                   }}
                 />
               </div>
@@ -91,7 +102,7 @@ const SelectedProjImg = ({ projectDetail }) => {
                 <a
                   href={`tel:+${projectDetail?.agent_call}`}
                   style={{
-                    width: "26%",
+                    width: !isMobile ? "26%" : "97",
                   }}
                 >
                   <button
@@ -113,7 +124,7 @@ const SelectedProjImg = ({ projectDetail }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
-                    width: "28%",
+                    width: !isMobile ? "28%" : "97",
                   }}
                 >
                   <button

@@ -58,12 +58,16 @@
   color: #fff;
   background-position: center;
 }
+
+/*  */
 .App--props-selected {
   position: relative;
   overflow-x: clip;
   min-height: 50vh;
   background: linear-gradient(to bottom, #fff 30%, #fff 80%);
 }
+
+/*  */
 .App--projs {
   position: relative;
   overflow-x: clip;
@@ -364,6 +368,10 @@ div .line-img:hover {
 }
 
 @media (max-width: 460px) {
+  .App--props-selected .main-selected-img {
+    height: 385px !important;
+    width: 376px !important;
+  }
   /* Adjust styles for screens up to 480px */
   .hero-title > h1,
   .h1-one {
@@ -391,7 +399,7 @@ div .line-img:hover {
     align-items: center;
   }
   .carousel-inner {
-    width: 299px;
+    width: 350px;
     height: 199px !important;
   }
   .hero-img-down .w-100x {

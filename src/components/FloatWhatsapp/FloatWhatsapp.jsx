@@ -11,7 +11,7 @@ const FloatWhatsapp = () => {
       {" "}
       <a
         // href="https://api.whatsapp.com/send?phone=2438125461587"
-        href={`https://wa.me/2438125461587`}
+        href={`https://wa.me/2348125461587`}
         target="_blank"
         rel="noopener noreferrer"
       >

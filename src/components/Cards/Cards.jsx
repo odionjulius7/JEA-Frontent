@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
@@ -5,6 +6,18 @@ import "./Cards.css";
 import { Link } from "react-router-dom";
 
 function Cards({ text, colr, gbColr, slide }) {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <Card
       style={{
@@ -32,7 +45,7 @@ function Cards({ text, colr, gbColr, slide }) {
             variant="top"
             className="w-100"
             style={{
-              height: "348px",
+              height: !isMobile ? "348px" : "280px",
             }}
             src={slide.images[0]}
           />

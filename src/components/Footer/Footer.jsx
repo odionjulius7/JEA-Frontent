@@ -151,10 +151,31 @@ const Footer = () => {
               <FooterList List={List} url_links={url_links1} />
             </div>
             <div className="col-5">
-              <FooterList
+              {/* <FooterList
                 List={["About Us", "Get in touch", "Live Chat"]}
                 url_links={url_links2}
-              />
+              /> */}
+              <ul className="list-group footer-list">
+                <li class="list-group-item">
+                  <Link to="/about-us">About Us</Link>
+                </li>
+                <li class="list-group-item">
+                  <a href="#getInto"> Get in touch</a>
+                </li>
+
+                <li class="list-group-item" style={{ cursor: "pointer" }}>
+                  {" "}
+                  <a
+                    // href="https://api.whatsapp.com/send?phone=2438125461587"
+                    href={`https://wa.me/2438125461587`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {" "}
+                    Live Chat{" "}
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </>

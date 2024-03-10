@@ -58,7 +58,13 @@ const PropsDetails = ({ propsDetails, propertyDetail }) => {
         <div className="col-md-8 col-sm-12">
           <ul>
             {propertyDetail?.price && (
-              <li className="font_15">Price: {propertyDetail?.price}</li>
+              <li className="font_15">
+                Price:{" "}
+                {new Intl.NumberFormat("en-NG", {
+                  style: "currency",
+                  currency: "NGN",
+                }).format(propertyDetail?.price)}
+              </li>
             )}
             {propertyDetail?.address && (
               <li className="font_15">Address: {propertyDetail?.address}.</li>
@@ -66,7 +72,10 @@ const PropsDetails = ({ propsDetails, propertyDetail }) => {
             {propertyDetail?.additional_fees && (
               <li className="font_15">
                 Additional fees (For only rent categories):{" "}
-                {propertyDetail?.additional_fees}
+                {new Intl.NumberFormat("en-NG", {
+                  style: "currency",
+                  currency: "NGN",
+                }).format(propertyDetail?.additional_fees)}
               </li>
             )}
             {propertyDetail?.property_id && (

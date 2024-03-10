@@ -38,6 +38,20 @@ const AllProperties = ({
     setItemOffset(newOffset);
   };
 
+  //
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="container-fluid AllProperties">
       <div className="row">
@@ -81,7 +95,10 @@ const AllProperties = ({
                 <div
                   className="col-md-4 col-sm-6"
                   key={i}
-                  style={{ width: "414px", height: "503px" }}
+                  style={{
+                    width: "414px",
+                    height: !isMobile ? "503px" : "420px",
+                  }}
                 >
                   <Link to={`/${url_str}/${item?._id}`}>
                     <Card>
@@ -91,7 +108,7 @@ const AllProperties = ({
                           variant="top"
                           className="w-100"
                           style={{
-                            height: "258px",
+                            height: !isMobile ? "258px" : "180px",
                           }}
                           src={item.images[0]}
                         />
@@ -99,8 +116,8 @@ const AllProperties = ({
                       <Card.Body
                         style={{
                           backgroundColor: "#f9f9f9",
-                          padding: "25px",
-                          height: "225px",
+                          padding: !isMobile ? "25px" : "19px",
+                          height: !isMobile ? "225px" : "200px",
                         }}
                       >
                         <Card.Title className="mt-2">
