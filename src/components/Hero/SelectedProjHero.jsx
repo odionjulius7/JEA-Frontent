@@ -46,7 +46,7 @@ const SelectedProjHero = ({ projectDetail }) => {
                 </button>
               </Link>
 
-              <h1 className="h1-one">Our Projects</h1>
+              <h1 className="h1-one">{projectDetail?.title}</h1>
             </div>
           </div>
           <div
