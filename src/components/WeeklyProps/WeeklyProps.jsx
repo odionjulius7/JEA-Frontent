@@ -133,7 +133,13 @@ const WeeklyProps = ({ blogPage, url_str, homeBg, propertyOfTheWeek }) => {
               />
             </div>
           ) : (
-            <h4 className="m-4">There is no property here!</h4>
+            <h4
+              style={{
+                margin: "8rem",
+              }}
+            >
+              There is no property here!
+            </h4>
           )}
         </div>
       </div>

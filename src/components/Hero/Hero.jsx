@@ -35,11 +35,13 @@ const Hero = ({ featuredPrj }) => {
                   }}
                 >
                   {/* <img src="./sixtus-svg.svg" alt="img" className="img-fluid" /> */}
-                  <img
-                    src={featuredPrj[0]?.logo}
-                    alt="img"
-                    className="img-fluid"
-                  />
+                  {featuredPrj[0]?.logo && (
+                    <img
+                      src={featuredPrj[0]?.logo}
+                      alt="img"
+                      className="img-fluid"
+                    />
+                  )}
                 </div>
               </div>
             </div>

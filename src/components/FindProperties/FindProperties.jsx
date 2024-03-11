@@ -196,7 +196,7 @@ const FindProperties = () => {
                         value={formik.values.number_of_room}
                         items={[
                           1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
-                          17, 18, 19, 20, 21, 22,
+                          17, 18, 19, 20, 21, 22, 23, 24, 25,
                         ]}
                       />
                     </div>
@@ -215,7 +215,10 @@ const FindProperties = () => {
                         name="minPrice"
                         onChange={formik.handleChange}
                         value={formik.values.minPrice}
-                        items={[20000, 300000, 40000]}
+                        items={[
+                          200000, 300000, 400000, 500000, 600000, 1000000,
+                          2000000, 3000000, 5000000, 10000000, 2000000,
+                        ]}
                       />
                     </div>
                     <div
@@ -233,7 +236,10 @@ const FindProperties = () => {
                         name="maxPrice"
                         onChange={formik.handleChange}
                         value={formik.values.maxPrice}
-                        items={[600000, 700000, 1000000, 2000000]}
+                        items={[
+                          2000000, 3000000, 4000000, 5000000, 7000000, 9000000,
+                          12000000, 15000000, 20000000, 30000000, 50000000,
+                        ]}
                       />
                       {/* <SelectComp widthx={"inherit"} heightx={"inherit"} /> */}
                     </div>
@@ -314,7 +320,10 @@ const FindProperties = () => {
                         name="minPrice"
                         onChange={formik.handleChange}
                         value={formik.values.minPrice}
-                        items={[20000, 300000, 40000]}
+                        items={[
+                          200000, 300000, 400000, 500000, 600000, 1000000,
+                          2000000, 3000000, 5000000, 10000000, 2000000,
+                        ]}
                       />
                     </div>
                     <div
@@ -332,7 +341,10 @@ const FindProperties = () => {
                         name="maxPrice"
                         onChange={formik.handleChange}
                         value={formik.values.maxPrice}
-                        items={[600000, 700000, 1000000, 2000000]}
+                        items={[
+                          2000000, 3000000, 4000000, 5000000, 7000000, 9000000,
+                          12000000, 15000000, 20000000, 30000000, 50000000,
+                        ]}
                       />
                       {/* <SelectComp widthx={"inherit"} heightx={"inherit"} /> */}
                     </div>
@@ -413,7 +425,10 @@ const FindProperties = () => {
                         name="minPrice"
                         onChange={formik.handleChange}
                         value={formik.values.minPrice}
-                        items={[20000, 300000, 40000]}
+                        items={[
+                          200000, 300000, 400000, 500000, 600000, 1000000,
+                          2000000, 3000000, 5000000, 10000000, 2000000,
+                        ]}
                       />
                     </div>
                     <div
@@ -431,7 +446,10 @@ const FindProperties = () => {
                         name="maxPrice"
                         onChange={formik.handleChange}
                         value={formik.values.maxPrice}
-                        items={[600000, 700000, 1000000, 2000000]}
+                        items={[
+                          2000000, 3000000, 4000000, 5000000, 7000000, 9000000,
+                          12000000, 15000000, 20000000, 30000000, 50000000,
+                        ]}
                       />
                       {/* <SelectComp widthx={"inherit"} heightx={"inherit"} /> */}
                     </div>
@@ -512,7 +530,10 @@ const FindProperties = () => {
                         name="minPrice"
                         onChange={formik.handleChange}
                         value={formik.values.minPrice}
-                        items={[20000, 300000, 40000]}
+                        items={[
+                          200000, 300000, 400000, 500000, 600000, 1000000,
+                          2000000, 3000000, 5000000, 10000000, 2000000,
+                        ]}
                       />
                     </div>
                     <div
@@ -531,7 +552,8 @@ const FindProperties = () => {
                         onChange={formik.handleChange}
                         value={formik.values.maxPrice}
                         items={[
-                          600000, 700000, 1000000, 2000000, 9000000, 10000000,
+                          2000000, 3000000, 4000000, 5000000, 7000000, 9000000,
+                          12000000, 15000000, 20000000, 30000000, 50000000,
                         ]}
                       />
                       {/* <SelectComp widthx={"inherit"} heightx={"inherit"} /> */}

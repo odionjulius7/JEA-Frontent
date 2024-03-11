@@ -8,7 +8,17 @@ const LocationProps = ({ uniqueLocations }) => {
       <h2 className="card-title-1">Properties by location</h2>
       <div className="row text-align-right div_1">
         <div className="col-12">
-          <LocationSlider uniqueLocations={uniqueLocations} />
+          {uniqueLocations?.length > 0 ? (
+            <LocationSlider uniqueLocations={uniqueLocations} />
+          ) : (
+            <h4
+              style={{
+                margin: "8rem",
+              }}
+            >
+              No property Yet
+            </h4>
+          )}
         </div>
       </div>
     </div>
