@@ -19,7 +19,7 @@ const AboutImages = ({ blogs }) => {
   return (
     <div className="container-fluid AboutImages">
       {/* Images */}
-      <div className="row my-5x">
+      <div className="row my-5x first-mg">
         <div className="row">
           <div className="col-md-7 col-sm-6">
             <img

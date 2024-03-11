@@ -11,6 +11,14 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+.bg-boss-1 {
+  min-height: 720px;
+  color: #000000;
+  background-image: url("/public/Boss-1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .AboutImages {
   padding: 40px;
 }
@@ -160,7 +168,8 @@
   }
 
   .img_padding img {
-    width: 92%;
+    width: 220px !important;
+    height: 180px !important;
   }
 
   .AboutImages {
@@ -176,5 +185,40 @@
 
   .WhatPeepsSay {
     padding: 20px;
+  }
+}
+@media (max-width: 460px) {
+  .AboutImages .first-mg img {
+    height: 220px !important;
+    width: 350px !important;
+    margin: 0 !important;
+    margin-bottom: 0.7rem !important;
+  }
+  .what_peep_wrap-1 span,
+  .what_peep_wrap-1 p {
+    font-weight: 400;
+    font-size: 13px;
+  }
+
+  .what_peep_wrap-1 {
+    padding: 30px 16px;
+  }
+
+  .img_padding div {
+    margin-bottom: 0.6rem;
+  }
+
+  /* Boss */
+  .bg-boss-1 {
+    min-height: 420px;
+    color: #000000;
+    background-image: linear-gradient(to top, #fdfbfbad, #f3f0f077),
+      url("/public/Boss-1.png");
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-position-x: right;
+  }
+  .bg-boss-1 p {
+    font-size: 11px !important;
   }
 }

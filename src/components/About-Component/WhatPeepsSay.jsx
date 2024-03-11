@@ -17,7 +17,7 @@ const WhatPeepsSay = () => {
   }, []);
   return (
     <div className="container-fluid WhatPeepsSay">
-      <div className="row py-5">
+      <div className="row py-5x">
         <div className="col-12 d-flex justify-content-center">
           <h2 className="mb-5">What People Say About Us</h2>
         </div>
