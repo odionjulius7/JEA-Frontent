@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
-import { BiMenuAltRight } from "react-icons/bi";
+// import { BiMenuAltRight } from "react-icons/bi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { getMenuStyles } from "../../utils/common";
 import useHeaderColor from "../../hooks/useHeaderColor";
-import OutsideClickHandler from "react-outside-click-handler";
+// import OutsideClickHandler from "react-outside-click-handler";
 import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
@@ -23,7 +23,7 @@ const Header = () => {
   //
   const [menuOpened, setMenuOpened] = useState(false);
   const [classActive, setClassActive] = useState(false);
-  const headerColor = useHeaderColor();
+  const { headerColor, textColor } = useHeaderColor();
 
   let activeStyle = {
     borderBottom: "2px solid #fbc344",
@@ -35,6 +35,7 @@ const Header = () => {
       className="h-wrapper pt-3 px-4"
       style={{
         background: headerColor,
+        color: textColor && textColor,
       }}
     >
       <div className="flexCenter innerWidth paddings h-container">

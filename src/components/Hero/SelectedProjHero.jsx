@@ -34,26 +34,46 @@ const SelectedProjHero = ({ projectDetail }) => {
               marginBottom: "6.5rem",
             }}
           >
-            <div className="col-md-8 col-sm-12 d-flex  justify-content-between align-items-center gap-3 center-display mb-4">
-              <Link to="/projects" style={{ marginLeft: "20px" }}>
+            <div
+              className=" brk_none "
+              style={{
+                marginBottom: "-4.5rem",
+                marginLeft: "1.1rem",
+              }}
+            >
+              <Link to="/projects">
                 <button
-                  className="btn btn-outline-light line-img brk_none "
+                  className="btn btn-outline-light line-img"
                   type="button"
                   data-bs-target="#carouselExample"
                   data-bs-slide="prev"
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    padding: "11px 27px",
+                    marginBottom: "1.19rem",
+                  }}
                 >
                   <img src="/Line-1.png" alt="line-img" />
                 </button>
               </Link>
-
+            </div>
+            <div
+              className="col-md-12 col-sm-12 d-flex  justify-content-center align-items-center"
+              style={{
+                marginBottom: "4rem",
+              }}
+            >
               <h1 className="h1-one">{projectDetail?.title}</h1>
             </div>
           </div>
+
           <div
             className="row pt-5 sel_project_wrap-2"
             style={{
               paddingLeft: !isMobile ? "30px" : "8px",
-              marginRight: !isMobile ? "-25%" : "0px",
+              marginRight: !isMobile ? "-23%" : "0px",
               // marginTop: "3rem",
             }}
           >

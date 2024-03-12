@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import { IoIosCall } from "react-icons/io";
 import { IoLogoWhatsapp } from "react-icons/io";
@@ -106,7 +106,7 @@ const PropsDetails = ({ propsDetails, propertyDetail }) => {
                 Recent Renovations: {propertyDetail?.recent_renovations}
               </li>
             )}
-            {propertyDetail?.youtube_url && (
+            {/* {propertyDetail?.youtube_url && (
               <li className="font_15">
                 <a
                   style={{
@@ -117,7 +117,7 @@ const PropsDetails = ({ propsDetails, propertyDetail }) => {
                   Youtube Link
                 </a>
               </li>
-            )}
+            )} */}
           </ul>
         </div>
       </div>

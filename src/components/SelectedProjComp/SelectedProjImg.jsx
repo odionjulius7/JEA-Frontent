@@ -224,15 +224,38 @@ const SelectedProjImg = ({ projectDetail }) => {
         </div>
       </div>
       {/*  Pop Up */}
-      <Modal show={show} onHide={handleClose}>
+      <Modal
+        show={show}
+        onHide={handleClose}
+        style={{
+          backgroundColor: "#FFFFFFD6",
+        }}
+      >
         <Modal.Header closeButton>
-          <Modal.Title className=" mb-3">Share this property</Modal.Title>
+          <Modal.Title
+            className=" mb-2"
+            style={{
+              fontSize: "22px",
+              color: "#121212",
+              fontWeight: "700",
+            }}
+          >
+            Share this property
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div className="row">
-            <span>Share this link via</span>
+            <span
+              style={{
+                color: "#121212",
+                size: "15px",
+                fontWeight: "400",
+              }}
+            >
+              Share this link via
+            </span>
           </div>
-          <div className="row mt-5 gap-4">
+          <div className="row mt-5 gap-5">
             <div className="col-1 share_modal">
               <a
                 href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
@@ -255,10 +278,9 @@ const SelectedProjImg = ({ projectDetail }) => {
                 <FaTwitter style={{ color: "#46C2F8", fontSize: "22px" }} />
               </a>
             </div>
-            <div className="col-1 share_modal">
-              {/* Add similar links for other social media platforms */}
+            {/* <div className="col-1 share_modal">
               <FaInstagram style={{ color: "#D04B7B", fontSize: "22px" }} />
-            </div>
+            </div> */}
             <div className="col-1 share_modal">
               <a
                 href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
@@ -271,8 +293,17 @@ const SelectedProjImg = ({ projectDetail }) => {
               </a>
             </div>
             <div className="col-1 share_modal">
-              {/* Add similar links for other social media platforms */}
-              <FaTelegramPlane style={{ color: "#0689C4", fontSize: "22px" }} />
+              <a
+                href={`https://t.me/share/url?url=${encodeURIComponent(
+                  window.location.href
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaTelegramPlane
+                  style={{ color: "#0689C4", fontSize: "22px" }}
+                />
+              </a>
             </div>
           </div>
           <div className="row my-4">
@@ -295,7 +326,7 @@ const SelectedProjImg = ({ projectDetail }) => {
                 color: "#7A7A7A",
               }}
             >
-              jea-frontent.vercel.app/property-selected/
+              jea-frontent.vercel.app/selected-project/
               {projectDetail?._id}
             </span>
             <CopyToClipboard
@@ -307,6 +338,11 @@ const SelectedProjImg = ({ projectDetail }) => {
                   color: "#000000",
                   backgroundColor: "#FBC344",
                   borderColor: "#FBC344",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: "5px 10px",
+                  paddingBottom: "8px",
                 }}
               >
                 {copied ? "Copied!" : "Copy"}
