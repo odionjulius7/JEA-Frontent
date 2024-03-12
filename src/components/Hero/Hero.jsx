@@ -66,7 +66,7 @@ const Hero = ({ featuredPrj }) => {
                   style={{ marginTop: isMobile ? "3rem" : "8rem" }}
                 >
                   <button className="btn btn-outline-light">
-                    <Link to={`/selected-project/${featuredPrj[0]?._id}`}>
+                    <Link to={`/project/${featuredPrj[0]?.slug}`}>
                       VIEW THIS PROJECT
                     </Link>
                   </button>

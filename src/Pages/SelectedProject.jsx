@@ -17,13 +17,13 @@ const SelectedProject = () => {
   const projectState = useSelector((state) => state.property);
 
   const projectDetail = projectState?.project?.project;
-  const { id } = useParams();
+  const { slug } = useParams();
 
   useEffect(() => {
-    const ids = { id };
+    const ids = { slug };
     dispatch(resetState());
     dispatch(getAproject(ids));
-  }, [dispatch, id]);
+  }, [dispatch, slug]);
 
   //
   const [homePage, setHomePage] = useState(false);

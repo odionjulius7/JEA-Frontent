@@ -32,7 +32,7 @@ const Properties = () => {
     dispatch(allProperty());
   }, [dispatch]);
 
-  const url_str = "property-selected";
+  const url_str = "property";
   return (
     <>
       <PropertyHero />

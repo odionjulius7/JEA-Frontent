@@ -48,7 +48,7 @@ const WeeklyProps = ({ blogPage, url_str, homeBg, propertyOfTheWeek }) => {
       color: "#121212",
     },
     {
-      text: "Short Let",
+      text: "Shortlet",
       variant: "outline-dark",
       // background: "#ffffff",
       color: "#121212",
@@ -98,7 +98,10 @@ const WeeklyProps = ({ blogPage, url_str, homeBg, propertyOfTheWeek }) => {
                       color: button.color,
                       fontSize: "15px",
                       fontWeight: "400 !important",
-                      border: "1px solid #D7D7D7",
+                      border:
+                        activeButton === button.text
+                          ? "2px solid #FBC344"
+                          : "1px solid #D7D7D7",
                       background:
                         activeButton === button.text ? "#FBC344" : "#fff",
                     }}
@@ -135,7 +138,7 @@ const WeeklyProps = ({ blogPage, url_str, homeBg, propertyOfTheWeek }) => {
           ) : (
             <h4
               style={{
-                margin: "8rem",
+                margin: !isMobile ? "8rem" : "2rem",
               }}
             >
               There is no property here!

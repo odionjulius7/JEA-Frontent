@@ -100,7 +100,7 @@ const AllProperties = ({
                     height: !isMobile ? "503px" : "420px",
                   }}
                 >
-                  <Link to={`/${url_str}/${item?._id}`}>
+                  <Link to={`/${url_str}/${item?.slug}`}>
                     <Card>
                       {/* <Card.Img variant="top" src="./first-slide-img.png" /> */}
                       {item?.images && item.images.length > 0 && (

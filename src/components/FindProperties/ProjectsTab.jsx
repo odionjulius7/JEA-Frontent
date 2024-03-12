@@ -111,7 +111,7 @@ const ProjectsTab = ({ projs }) => {
                           <div className="col-md-6 col-sm-12 btn_center">
                             <Link
                               className="w-100"
-                              to={`/selected-project/${projDet?._id}`}
+                              to={`/project/${projDet?.slug}`}
                             >
                               <button
                                 className="btn btn-outline-light px-5 btn_center font_15 mt-5 w-100"
@@ -254,7 +254,11 @@ const ProjectsTab = ({ projs }) => {
                           </div>
                           <div className="d-flex gap-2 align-items-center">
                             <img src="./new_releases.svg" alt="" />
-                            <span>{projDet?.createdAt}</span>
+                            <span>
+                              {moment(projDet?.createdAt)
+                                .format("l")
+                                .slice(4, 8)}
+                            </span>
                           </div>
 
                           <div className="d-flex gap-2 align-items-center">
@@ -273,7 +277,7 @@ const ProjectsTab = ({ projs }) => {
                           }}
                         />
                         <div>
-                          <span>{projDet?.description?.slice(0, 40)}...</span>
+                          <span>{projDet?.description?.slice(0, 185)}...</span>
                         </div>
                         <div
                           className="row"
@@ -284,14 +288,14 @@ const ProjectsTab = ({ projs }) => {
                           <div className="col-md-6 col-sm-12 btn_center">
                             <Link
                               className="w-100"
-                              to={`/selected-project/${projDet?._id}`}
+                              to={`/project/${projDet?.slug}`}
                             >
                               <button
                                 className="btn btn-outline-light px-5 btn_center font_15 mt-5 w-100"
                                 style={{
                                   fontWeight: "500",
-                                  paddingBottom: "1rem",
-                                  paddingTop: "1rem",
+                                  paddingBottom: !isMobile ? "1rem" : "0.5rem",
+                                  paddingTop: !isMobile ? "1rem" : "0.5rem",
                                 }}
                               >
                                 VIEW MORE
@@ -310,7 +314,7 @@ const ProjectsTab = ({ projs }) => {
                               <div
                                 className="carousel-item active"
                                 style={{
-                                  width: "510px",
+                                  width: !isMobile ? "510px" : "325px",
                                   height: "330px",
                                 }}
                               >

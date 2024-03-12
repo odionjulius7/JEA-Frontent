@@ -30,7 +30,7 @@ function Cards({ text, colr, gbColr, slide }) {
       }}
       className="avail-card-wrap"
     >
-      <Link to={`/property-selected/${slide._id}`}>
+      <Link to={`/property/${slide.slug}`}>
         {" "}
         {/* <Card.Img
           variant="top"

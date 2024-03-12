@@ -24,7 +24,7 @@ const PropertySelected = () => {
   // console.log(propertyDetail);
   // user auth
 
-  const { id } = useParams();
+  const { slug } = useParams();
 
   // Assuming properties is an array of objects with a 'location' property
   const filteredProperties = propertys.filter(
@@ -34,11 +34,11 @@ const PropertySelected = () => {
   // Now 'filteredProperties' contains only the items with a matching location
 
   useEffect(() => {
-    const ids = { id };
+    const ids = { slug };
     dispatch(resetState());
     dispatch(getAproperty(ids));
     dispatch(allProperty());
-  }, [dispatch, id]);
+  }, [dispatch, slug]);
 
   //
 

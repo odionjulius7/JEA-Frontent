@@ -79,7 +79,7 @@ const FindProperties = () => {
     const navItems = [
       { key: "first", text: "buy" },
       { key: "second", text: "rent" },
-      { key: "third", text: "short let" },
+      { key: "third", text: "shortlet" },
       { key: "fourth", text: "land" },
     ];
     const selectedText = navItems.find(
@@ -142,7 +142,7 @@ const FindProperties = () => {
                     fontWeight: "400",
                   }}
                 >
-                  Short Let
+                  Shortlet
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>

@@ -7,7 +7,7 @@ const allProperty = async () => {
   return response?.data;
 };
 const getAproperty = async (ids) => {
-  const response = await axios.get(`${base_url}property/${ids.id}`);
+  const response = await axios.get(`${base_url}property/prop/${ids.slug}`);
   return response.data;
 };
 const filterPrperty = async (ids) => {
@@ -34,7 +34,7 @@ const allProject = async () => {
 
 const getAproject = async (ids) => {
   // const config = generateAxiosConfig(ids.token);
-  const response = await axios.get(`${base_url}project/${ids.id}`);
+  const response = await axios.get(`${base_url}project/proj/${ids.slug}`);
   // console.log(response);
   return response.data;
 };

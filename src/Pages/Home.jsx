@@ -77,7 +77,7 @@ const Home = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const url_str = "property-selected";
+  const url_str = "property";
   const url_strblog = "selected-blog";
   return (
     <>

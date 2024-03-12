@@ -43,7 +43,7 @@ const MySwiper = ({ blogPage, url_str, homeBg, propertyOfTheWeek }) => {
       {propertyOfTheWeek.map((property, index) => {
         return (
           <SwiperSlide key={index}>
-            <Link to={`/${url_str}/${property._id}`}>
+            <Link to={`/${url_str}/${property.slug}`}>
               <Card
                 className="swipe_card_with"
                 style={{ width: isMobile ? "20rem" : "414px" }}
