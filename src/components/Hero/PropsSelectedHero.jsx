@@ -178,11 +178,14 @@ const PropsSelectedHero = ({ propertyDetail }) => {
                 <div
                   style={{
                     display: isMobile ? "block" : "none",
+                    maxWidth: isMobile ? "400px" : "none",
+                    overflowX: "hidden",
                   }}
                   className="col d-flex  text-align-center justify-content-center"
                 >
                   <ProjAndPropSlide
-                    widthxs={!isMobile ? "98%" : "62.9%"}
+                    // widthxs={!isMobile ? "98%" : "62.9%"}
+                    widthxs={!isMobile ? "98%" : ""}
                     propertyDetail={propertyDetail}
                   />
                 </div>

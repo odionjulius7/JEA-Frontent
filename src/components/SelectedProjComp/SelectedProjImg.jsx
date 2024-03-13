@@ -63,7 +63,7 @@ const SelectedProjImg = ({ projectDetail }) => {
                   className="w-100"
                   style={{
                     height: "322px",
-                    minWidth: "392px",
+                    maxWidth: "390px",
                   }}
                 />
               </div>

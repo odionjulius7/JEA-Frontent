@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { IoIosCall } from "react-icons/io";
 import { IoLogoWhatsapp } from "react-icons/io";
@@ -29,6 +29,19 @@ const PropsDetails = ({ propsDetails, propertyDetail }) => {
   // }
   // console.log(propertyDetail);
 
+  //
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div className="container-fluid PropsDetails">
       {propsDetails && (
@@ -195,7 +208,7 @@ const PropsDetails = ({ propsDetails, propertyDetail }) => {
               // width="50%"
               // height="400"
               style={{
-                width: "50%",
+                width: !isMobile ? "50%" : "100%",
                 height: "300px",
               }}
               src={`https://www.youtube-nocookie.com/embed/${propertyDetail?.youtube_url}`}

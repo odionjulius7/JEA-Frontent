@@ -24,7 +24,7 @@ const SelectedProject = () => {
     dispatch(resetState());
     dispatch(getAproject(ids));
   }, [dispatch, slug]);
-  console.log(projectDetail?.featuresAndLogos);
+  // console.log(projectDetail?.featuresAndLogos);
   //
   const [homePage, setHomePage] = useState(false);
   const [propsDetails, setPropsDetails] = useState(false);
