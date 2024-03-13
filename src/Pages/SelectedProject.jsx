@@ -34,10 +34,10 @@ const SelectedProject = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const location = {
-    latitude: "11.63777",
-    longitude: "40.63777",
-  };
+  // const location = {
+  //   latitude: "11.63777",
+  //   longitude: "40.63777",
+  // };
 
   return (
     <>
@@ -55,7 +55,7 @@ const SelectedProject = () => {
           propsDetails={propsDetails}
         />
       </div>
-      <SelectedProjMap location={location} />
+      <SelectedProjMap projectDetail={projectDetail} />
       <SelectedProjImg projectDetail={projectDetail} />
       <Footer />
       <FloatWhatsapp />
