@@ -37,8 +37,8 @@ const SelectedProjHero = ({ projectDetail }) => {
             <div
               className=" brk_none "
               style={{
-                marginBottom: "-4.5rem",
                 marginLeft: "1.1rem",
+                position: "absolute",
               }}
             >
               <Link to="/projects">
@@ -53,6 +53,7 @@ const SelectedProjHero = ({ projectDetail }) => {
                     alignItems: "center",
                     padding: "11px 27px",
                     marginBottom: "1.19rem",
+                    cursor: "pointer",
                   }}
                 >
                   <img src="/Line-1.png" alt="line-img" />
