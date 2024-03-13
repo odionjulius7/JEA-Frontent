@@ -3,6 +3,11 @@ import mapboxgl from "mapbox-gl";
 
 const SelectedProjMap = ({ projectDetail }) => {
   useEffect(() => {
+    if (!projectDetail || !projectDetail.longitude || !projectDetail.latitude) {
+      console.error("Invalid coordinates provided:", projectDetail);
+      return;
+    }
+
     mapboxgl.accessToken =
       "pk.eyJ1Ijoib2Rpb25qdWxpdXM3IiwiYSI6ImNsdHB0NnR4MzBxd2oya21ld2hidGoxcHAifQ.cKBjjsBDVcsUjTFxMfSHFw";
 
@@ -17,8 +22,8 @@ const SelectedProjMap = ({ projectDetail }) => {
       return coord;
     };
 
-    const longitude = convertToNumber(projectDetail?.longitude);
-    const latitude = convertToNumber(projectDetail?.latitude);
+    const longitude = convertToNumber(projectDetail.longitude);
+    const latitude = convertToNumber(projectDetail.latitude);
 
     if (isValidCoordinate(longitude) && isValidCoordinate(latitude)) {
       const map = new mapboxgl.Map({
