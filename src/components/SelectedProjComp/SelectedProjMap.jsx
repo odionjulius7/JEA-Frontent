@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import mapboxgl from "mapbox-gl";
 
+import "./SelectedProjVideo.css";
+
 const SelectedProjMap = ({ projectDetail }) => {
   useEffect(() => {
     if (!projectDetail || !projectDetail.longitude || !projectDetail.latitude) {
@@ -28,19 +30,25 @@ const SelectedProjMap = ({ projectDetail }) => {
     if (isValidCoordinate(longitude) && isValidCoordinate(latitude)) {
       const map = new mapboxgl.Map({
         container: "map-container",
-        style: "mapbox://styles/mapbox/streets-v11",
+        // style: "mapbox://styles/mapbox/streets-v11",
         center: [longitude, latitude],
         zoom: 9,
       });
 
+      // Create a marker element
+      const markerElement = document.createElement("div");
+      markerElement.className = "marker";
+
       // Create a marker and add it to the map
-      new mapboxgl.Marker().setLngLat([longitude, latitude]).addTo(map);
+      new mapboxgl.Marker(markerElement, { offset: [0, -25] }) // Adjust the offset as needed
+        .setLngLat([longitude, latitude])
+        .addTo(map);
     } else {
       console.error("Invalid coordinates provided:", projectDetail);
     }
   }, [projectDetail]);
 
-  return <div id="map-container" style={{ width: "100%", height: "400px" }} />;
+  return <div id="map-container" />;
 };
 
 export default SelectedProjMap;
