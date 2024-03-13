@@ -106,18 +106,6 @@ const PropsDetails = ({ propsDetails, propertyDetail }) => {
                 Recent Renovations: {propertyDetail?.recent_renovations}
               </li>
             )}
-            {/* {propertyDetail?.youtube_url && (
-              <li className="font_15">
-                <a
-                  style={{
-                    color: "blue",
-                  }}
-                  href={propertyDetail?.youtube_url}
-                >
-                  Youtube Link
-                </a>
-              </li>
-            )} */}
           </ul>
         </div>
       </div>
@@ -190,6 +178,38 @@ const PropsDetails = ({ propsDetails, propertyDetail }) => {
           </ul>
         </div>
       </div>
+      {propertyDetail?.youtube_url && (
+        // <li className="font_15">
+        //   <a
+        //     style={{
+        //       color: "blue",
+        //     }}
+        //     href={propertyDetail?.youtube_url}
+        //   >
+        //     Youtube Link
+        //   </a>
+        // </li>
+        <div className="row mt-5 mb-2">
+          <div className="video d-flex justify-content-center">
+            <iframe
+              // width="50%"
+              // height="400"
+              style={{
+                width: "50%",
+                height: "300px",
+              }}
+              src={`https://www.youtube-nocookie.com/embed/${propertyDetail?.youtube_url}`}
+              // src={`https://www.youtube-nocookie.com/embed/g-TYUdM0rjk`}
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;controls=0;showinfo=0;mode=opaque&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;"
+              allowfullscreen
+            ></iframe>
+                      
+          </div>
+        </div>
+      )}
+      {/*  */}
       {propsDetails && (
         <div className="row py-4 my-4 ">
           <div className="col-md-5 col-sm-12 d-flex justify-content-center gap-4 mx-auto">

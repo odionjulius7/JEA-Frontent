@@ -21,3 +21,26 @@ const SelectedProjMap = () => {
 };
 
 export default SelectedProjMap;
+
+// import React from "react";
+// import { GoogleMap, Marker, LoadScript } from "@react-google-maps/api";
+
+// const SelectedProjMap = ({ location }) => {
+//   const mapStyles = {
+//     height: "400px",
+//     width: "100%",
+//   };
+
+//   const defaultCenter = {
+//     lat: location.latitude,
+//     lng: location.longitude,
+//   };
+
+//   return (
+//     <LoadScript googleMapsApiKey="YOUR_API_KEY">
+//       <GoogleMap mapContainerStyle={mapStyles} zoom={10} center={defaultCenter}>
+//         <Marker position={defaultCenter} />
+//       </GoogleMap>
+//     </LoadScript>
+//   );
+// };

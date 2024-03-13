@@ -24,7 +24,7 @@ const SelectedProject = () => {
     dispatch(resetState());
     dispatch(getAproject(ids));
   }, [dispatch, slug]);
-
+  console.log(projectDetail?.featuresAndLogos);
   //
   const [homePage, setHomePage] = useState(false);
   const [propsDetails, setPropsDetails] = useState(false);
@@ -34,10 +34,15 @@ const SelectedProject = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const location = {
+    latitude: "11.63777",
+    longitude: "40.63777",
+  };
+
   return (
     <>
       <SelectedProjHero projectDetail={projectDetail} />
-      <Companies />
+      <Companies featuresAndLogos={projectDetail?.featuresAndLogos || []} />
       <SelectedProjVideo projectDetail={projectDetail} />
       <div
         className="py-5 text-white py-wrap"
@@ -50,7 +55,7 @@ const SelectedProject = () => {
           propsDetails={propsDetails}
         />
       </div>
-      <SelectedProjMap />
+      <SelectedProjMap location={location} />
       <SelectedProjImg projectDetail={projectDetail} />
       <Footer />
       <FloatWhatsapp />
