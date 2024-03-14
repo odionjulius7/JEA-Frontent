@@ -27,8 +27,8 @@ const SelectedProjMap = ({ projectDetail }) => {
       if (isValidCoordinate(longitude) && isValidCoordinate(latitude)) {
         const map = new mapboxgl.Map({
           container: "map-container", // HTML element ID where you want to render the map
-          style: "mapbox://styles/odionjulius7/cltqow30y00x201pk92j103dq", // Map style URL
-          // style: "mapbox://styles/mapbox/streets-v11", // Map style URL
+          // style: "mapbox://styles/odionjulius7/cltqow30y00x201pk92j103dq", // Map style URL
+          style: "mapbox://styles/mapbox/streets-v11", // Map style URL
           center: [longitude, latitude], // Specify longitude and latitude here
           zoom: 12, // Initial zoom level
         });
@@ -48,7 +48,10 @@ const SelectedProjMap = ({ projectDetail }) => {
   return (
     <div style={{ width: "100%", minheight: "350px" }}>
       {projectDetail ? (
-        <div id="map-container" style={{ width: "100%", height: "350px" }} />
+        <div
+          id="map-container"
+          style={{ width: "100%", height: "350px", overflow: "hidden" }}
+        />
       ) : (
         <h4>No Coordinate</h4>
       )}
@@ -58,25 +61,6 @@ const SelectedProjMap = ({ projectDetail }) => {
 
 export default SelectedProjMap;
 
-// import React from "react";
-// import { GoogleMap, Marker, LoadScript } from "@react-google-maps/api";
+// AIzaSyBVUFcyQX9Pizz7L13GSc_LMdGtbzE9T9o
 
-// const SelectedProjMap = ({ location }) => {
-//   const mapStyles = {
-//     height: "400px",
-//     width: "100%",
-//   };
-
-//   const defaultCenter = {
-//     lat: location.latitude,
-//     lng: location.longitude,
-//   };
-
-//   return (
-//     <LoadScript googleMapsApiKey="YOUR_API_KEY">
-//       <GoogleMap mapContainerStyle={mapStyles} zoom={10} center={defaultCenter}>
-//         <Marker position={defaultCenter} />
-//       </GoogleMap>
-//     </LoadScript>
-//   );
-// };
+// AIzaSyA4tav6MnHiVziVsTILw33Nd4Q6Nt8LqqI

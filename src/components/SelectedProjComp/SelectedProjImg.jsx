@@ -102,7 +102,7 @@ const SelectedProjImg = ({ projectDetail }) => {
                 <a
                   href={`tel:+${projectDetail?.agent_call}`}
                   style={{
-                    width: !isMobile ? "26%" : "97",
+                    width: !isMobile ? "26%" : "99%",
                   }}
                 >
                   <button
@@ -124,7 +124,7 @@ const SelectedProjImg = ({ projectDetail }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
-                    width: !isMobile ? "28%" : "97",
+                    width: !isMobile ? "28%" : "99%",
                   }}
                 >
                   <button

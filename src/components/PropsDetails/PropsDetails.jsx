@@ -192,18 +192,13 @@ const PropsDetails = ({ propsDetails, propertyDetail }) => {
         </div>
       </div>
       {propertyDetail?.youtube_url && (
-        // <li className="font_15">
-        //   <a
-        //     style={{
-        //       color: "blue",
-        //     }}
-        //     href={propertyDetail?.youtube_url}
-        //   >
-        //     Youtube Link
-        //   </a>
-        // </li>
         <div className="row mt-5 mb-2">
-          <div className="video d-flex justify-content-center">
+          <div
+            className=" video d-flex justify-content-center"
+            style={{
+              padding: isMobile ? "5px 0 5px 23px" : "",
+            }}
+          >
             <iframe
               // width="50%"
               // height="400"

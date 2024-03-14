@@ -194,7 +194,7 @@ const PropsSelectedHero = ({ propertyDetail }) => {
             <div
               className="row mb-5 display-none"
               style={{
-                marginTop: "-18%",
+                marginTop: "-17.4%",
                 marginRight: "-6%",
               }}
             >

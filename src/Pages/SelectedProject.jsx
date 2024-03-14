@@ -10,6 +10,7 @@ import FloatWhatsapp from "../components/FloatWhatsapp/FloatWhatsapp";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getAproject, resetState } from "../features/Property/propertySlice";
+import SelectedProjMap2 from "../components/SelectedProjComp/SelecteProjMap2";
 
 const SelectedProject = () => {
   const dispatch = useDispatch();
