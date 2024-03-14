@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import mapboxgl from "mapbox-gl";
 
+import "./SelectedProjVideo.css";
+
 const SelectedProjMap = ({ projectDetail }) => {
   console.log(projectDetail?.longitude);
   useEffect(() => {
@@ -30,6 +32,13 @@ const SelectedProjMap = ({ projectDetail }) => {
           center: [longitude, latitude], // Specify longitude and latitude here
           zoom: 12, // Initial zoom level
         });
+
+        // Add a marker to the map
+        new mapboxgl.Marker({
+          offset: [-10, -25], // Adjust the offset as needed
+        })
+          .setLngLat([longitude, latitude])
+          .addTo(map);
       } else {
         console.error("Invalid coordinates provided:", projectDetail);
       }

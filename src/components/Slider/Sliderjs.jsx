@@ -58,7 +58,7 @@ const MySwiper = ({ blogPage, url_str, homeBg, propertyOfTheWeek }) => {
                     src={property.images[0]}
                     style={{
                       width: "inherit",
-                      height: "100%",
+                      height: "260px",
                     }}
                   />
                 )}

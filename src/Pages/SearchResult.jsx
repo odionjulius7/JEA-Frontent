@@ -12,6 +12,20 @@ import moment from "moment";
 import { useSelector } from "react-redux";
 
 const SearchResult = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  //
   const propertyState = useSelector((state) => state.property);
   console.log(propertyState?.filteredProperties?.data);
   const [allProps, setAllProps] = useState(true);
@@ -40,7 +54,7 @@ const SearchResult = () => {
                           variant="top"
                           className="w-100"
                           style={{
-                            height: "348px",
+                            height: !isMobile ? "258px" : "180px",
                           }}
                           src={item.images[0]}
                         />
@@ -48,7 +62,8 @@ const SearchResult = () => {
                       <Card.Body
                         style={{
                           backgroundColor: "#f9f9f9",
-                          padding: "20px",
+                          padding: !isMobile ? "20px" : "10px",
+                          // height: !isMobile ? "225px" : "200px",
                         }}
                       >
                         <Card.Title>
