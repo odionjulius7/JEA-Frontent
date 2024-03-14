@@ -126,7 +126,7 @@ const CommonSlide = ({
                   </div>
                 ))
               ) : (
-                <h4>Not Property Yet!</h4>
+                <h4>Check Back</h4>
               )}
             </div>
           </div>
