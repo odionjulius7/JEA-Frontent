@@ -66,14 +66,23 @@ body {
 }
 .location_wrap .location_rotate {
   position: absolute !important;
-  bottom: 9%;
-  left: -12%;
+  bottom: 23%;
+  left: -28.5%;
+  height: 47px;
+  width: 220px;
   background: #676767;
   transform: rotate(270deg);
-  padding: 16px 40px;
+  padding: 0px 10px;
   color: #fff;
   /* min-width: 200px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.card {
+  border: none !important;
+}
+/*  */
 
 .px-5no,
 .px-5x,
@@ -285,10 +294,16 @@ a {
 
 @media (max-width: 640px) {
   .location_wrap .location_rotate {
-    bottom: 16%;
+    bottom: 19.5%;
     left: -23%;
-    padding: 5px 17px;
+    /* padding: 9px; */
+    height: 40px;
+    width: 177px;
+    /*  */
+    display: flex;
+    justify-content: center;
   }
+
   .location_wrap .location_rotate span {
     font-size: 13px;
   }

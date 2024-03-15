@@ -10,7 +10,8 @@ import FloatWhatsapp from "../components/FloatWhatsapp/FloatWhatsapp";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getAproject, resetState } from "../features/Property/propertySlice";
-import SelectedProjMap2 from "../components/SelectedProjComp/SelecteProjMap2";
+// import SelectedProjMap2 from "../components/SelectedProjComp/SelecteProjMap2";
+import Preloader from "../components/Preloader/Preloader";
 
 const SelectedProject = () => {
   const dispatch = useDispatch();
@@ -39,6 +40,19 @@ const SelectedProject = () => {
   //   latitude: "11.63777",
   //   longitude: "40.63777",
   // };
+
+  const [isLoading, setIsLoading] = useState(true);
+  // const blogsLoading = useSelector((state) => state.property.isLoadingBlog);
+  // const propertyLoading = useSelector((state) => state.property.isLoading);
+  const projectsLoading = useSelector((state) => state.property.isLoadingProj);
+
+  useEffect(() => {
+    setIsLoading(projectsLoading);
+  }, [projectsLoading]);
+
+  if (isLoading) {
+    return <Preloader />;
+  }
 
   return (
     <>

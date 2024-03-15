@@ -16,6 +16,12 @@
   font-size: 15px;
   font-weight: 400 !important;
 }
+.App--selected-blog .nav-pills .nav-link {
+  background-color: #ffffff;
+  color: #121212;
+  font-size: 15px;
+  font-weight: 400 !important;
+}
 .App--prop .nav-pills .nav-link {
   background-color: #ffffff;
   color: #121212;
@@ -23,6 +29,8 @@
   font-weight: 400 !important;
 }
 
+.App--selected-blog .nav-pills .nav-link.active,
+.App--selected-blog .nav-pills .show > .nav-link,
 .App--prop .nav-pills .nav-link.active,
 .App--prop .nav-pills .show > .nav-link,
 .home-prop .nav-pills .nav-link.active,

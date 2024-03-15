@@ -64,6 +64,7 @@ const CommonSlide = ({
               <button
                 className="btn btn-outline-dark prev"
                 onClick={prevSlide}
+                disabled={availableLuxury.length < 5 && true}
                 style={{
                   border: "1px solid #000000",
                   padding: "0.8rem 2rem",
@@ -80,6 +81,7 @@ const CommonSlide = ({
               <button
                 className="btn btn-outline-dark next"
                 onClick={nextSlide}
+                disabled={availableLuxury.length < 5 && true}
                 style={{
                   border: "1px solid #000000",
                   padding: "0.8rem 2rem",
@@ -126,7 +128,7 @@ const CommonSlide = ({
                   </div>
                 ))
               ) : (
-                <h4>Check Back</h4>
+                <h4>Please Check Back</h4>
               )}
             </div>
           </div>
@@ -142,6 +144,7 @@ const CommonSlide = ({
               <button
                 className="btn btn-outline-light line-img prev"
                 type="button"
+                disabled={availableLuxury.length < 5 && true}
                 data-bs-target="#carouselExample"
                 data-bs-slide="prev"
                 onClick={prevSlide}
@@ -161,6 +164,7 @@ const CommonSlide = ({
                 data-bs-target="#carouselExample"
                 data-bs-slide="next"
                 onClick={nextSlide}
+                disabled={availableLuxury.length < 5 && true}
                 style={{
                   display: "flex",
                   justifyContent: "center",

@@ -45,7 +45,7 @@ const ApartmentAvailable = ({ homePage, availableLuxury }) => {
             margin: "10rem",
           }}
         >
-          There is no property here!
+          Please! Check Back
         </h4>
       )}
     </div>

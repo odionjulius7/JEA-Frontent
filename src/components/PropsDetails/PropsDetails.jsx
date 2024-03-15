@@ -76,6 +76,7 @@ const PropsDetails = ({ propsDetails, propertyDetail }) => {
                 {new Intl.NumberFormat("en-NG", {
                   style: "currency",
                   currency: "NGN",
+                  minimumFractionDigits: 0,
                 }).format(propertyDetail?.price)}
               </li>
             )}
@@ -88,6 +89,7 @@ const PropsDetails = ({ propsDetails, propertyDetail }) => {
                 {new Intl.NumberFormat("en-NG", {
                   style: "currency",
                   currency: "NGN",
+                  minimumFractionDigits: 0,
                 }).format(propertyDetail?.additional_fees)}
               </li>
             )}

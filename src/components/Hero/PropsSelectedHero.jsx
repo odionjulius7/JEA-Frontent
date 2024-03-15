@@ -34,7 +34,7 @@ const PropsSelectedHero = ({ propertyDetail }) => {
   const [homePage, setHomePage] = useState(false);
 
   //
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 640);
@@ -108,6 +108,7 @@ const PropsSelectedHero = ({ propertyDetail }) => {
                       {new Intl.NumberFormat("en-NG", {
                         style: "currency",
                         currency: "NGN",
+                        minimumFractionDigits: 0,
                       }).format(propertyDetail?.price)}
                     </b>
                   </span>
@@ -176,11 +177,7 @@ const PropsSelectedHero = ({ propertyDetail }) => {
                     )}
                 </div>
                 <div
-                  style={{
-                    display: isMobile ? "block" : "none",
-                    maxWidth: isMobile ? "400px" : "none",
-                    overflowX: "hidden",
-                  }}
+                  id="slide_prop"
                   className="col d-flex  text-align-center justify-content-center"
                 >
                   <ProjAndPropSlide

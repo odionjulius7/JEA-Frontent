@@ -14,6 +14,8 @@ import { useSelector } from "react-redux";
 const SearchResult = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
 
+  const [searchPage, setSearchPage] = useState(true);
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 640);
@@ -35,10 +37,11 @@ const SearchResult = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const url_str = "property-selected";
+  const url_str = "property";
+
   return (
     <>
-      <SelectedBlogHero />
+      <SelectedBlogHero searchPage={searchPage} />
       <div className="container my-3">
         <h2 className="m-4">Search Results:</h2>
         <div className="row  my-3">

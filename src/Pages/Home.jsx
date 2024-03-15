@@ -16,6 +16,7 @@ import {
   allProperty,
   resetState,
 } from "../features/Property/propertySlice";
+import Preloader from "../components/Preloader/Preloader";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -26,9 +27,9 @@ const Home = () => {
 
   const projs = projectState?.projects?.allProject || [];
   const propertys = propertyState?.properties?.allProperty || [];
-  const blogs = blogsState?.blogs?.blog || [];
+  // const blogs = blogsState?.blogs?.blog || [];
 
-  // console.log(projs);
+  // console.log(propertyState?.isLoading);
 
   const featuredPrj = projs
     .filter((property) => {
@@ -51,11 +52,21 @@ const Home = () => {
   useEffect(() => {
     dispatch(resetState());
     dispatch(allProperty());
-    dispatch(allBlog());
+    // dispatch(allBlog());
     dispatch(allProject());
   }, [dispatch]);
   //
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const propertyLoading = useSelector((state) => state.property.isLoading);
+  // const blogsLoading = useSelector((state) => state.property.isLoadingBlog);
+  const projectsLoading = useSelector((state) => state.property.isLoadingProj);
+
+  useEffect(() => {
+    setIsLoading(propertyLoading || projectsLoading);
+  }, [propertyLoading, projectsLoading]);
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 640);
@@ -79,6 +90,13 @@ const Home = () => {
 
   const url_str = "property";
   const url_strblog = "selected-blog";
+
+  if (isLoading) {
+    return <Preloader />;
+  }
+
+  // console.log(isLoading);
+
   return (
     <>
       <Hero featuredPrj={featuredPrj} />

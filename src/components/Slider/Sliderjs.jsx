@@ -97,6 +97,7 @@ const MySwiper = ({ blogPage, url_str, homeBg, propertyOfTheWeek }) => {
                         {new Intl.NumberFormat("en-NG", {
                           style: "currency",
                           currency: "NGN",
+                          minimumFractionDigits: 0,
                         }).format(property?.price)}
                       </b>{" "}
                     </span>

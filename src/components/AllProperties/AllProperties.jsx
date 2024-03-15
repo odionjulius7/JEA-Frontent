@@ -88,7 +88,12 @@ const AllProperties = ({
             </h2>
           </div>
         </div>
-        <div className="row my-3 ">
+        <div
+          className="row my-3 "
+          style={{
+            justifyContent: "center",
+          }}
+        >
           {currentItems &&
             currentItems.map((item, i) => {
               return (
@@ -167,6 +172,7 @@ const AllProperties = ({
                               {new Intl.NumberFormat("en-NG", {
                                 style: "currency",
                                 currency: "NGN",
+                                minimumFractionDigits: 0,
                               }).format(item?.price)}
                             </b>{" "}
                           </span>

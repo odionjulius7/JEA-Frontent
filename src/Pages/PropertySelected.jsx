@@ -7,6 +7,7 @@ import GetInTouch from "../components/GetInTouch/GetInTouch";
 import PropsSelectedHero from "../components/Hero/PropsSelectedHero";
 import PropsDetails from "../components/PropsDetails/PropsDetails";
 import { useDispatch, useSelector } from "react-redux";
+import Preloader from "../components/Preloader/Preloader";
 import {
   allProperty,
   getAproperty,
@@ -18,6 +19,7 @@ const PropertySelected = () => {
   const dispatch = useDispatch();
   const propertyState = useSelector((state) => state.property);
   const propertiestState = useSelector((state) => state.property);
+  const [isLoading, setIsLoading] = useState(true);
 
   const propertys = propertiestState?.properties?.allProperty || [];
   const propertyDetail = propertyState?.property?.property;
@@ -40,6 +42,14 @@ const PropertySelected = () => {
     dispatch(allProperty());
   }, [dispatch, slug]);
 
+  // const blogsLoading = useSelector((state) => state.property.isLoadingBlog);
+  const propertyLoading = useSelector((state) => state.property.isLoading);
+  // const projectsLoading = useSelector((state) => state.property.isLoadingProj);
+
+  useEffect(() => {
+    setIsLoading(propertyLoading);
+  }, [propertyLoading]);
+
   //
 
   //
@@ -56,6 +66,11 @@ const PropertySelected = () => {
 
   // const [allProps, setAllProps] = useState(true);
   const url_str = "property-selected";
+
+  if (isLoading) {
+    return <Preloader />;
+  }
+
   return (
     <>
       <PropsSelectedHero propertyDetail={propertyDetail} />

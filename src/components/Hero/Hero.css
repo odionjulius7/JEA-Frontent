@@ -219,6 +219,10 @@ div .line-img:hover {
 
 /* Responsive styles */
 
+#slide_prop {
+  display: none !important;
+}
+
 @media (max-width: 1200px) {
   /* Adjust styles for screens up to 1200px */
   .search-bar,
@@ -290,6 +294,12 @@ div .line-img:hover {
 }
 
 @media (max-width: 640px) {
+  #slide_prop {
+    display: block !important;
+
+    max-width: 400px;
+    overflow-x: hidden;
+  }
   /*  */
   .App--props-selected .span_12 {
     font-size: 13px !important;

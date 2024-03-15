@@ -14,6 +14,8 @@ const initialState = {
   isLoading1: false,
   isLoading2: false,
   isSuccess: false,
+  isLoadingProj: false,
+  isLoadingBlog: false,
   message: "",
 };
 
@@ -249,11 +251,11 @@ export const propertySlice = createSlice({
 
       //  Projects
       .addCase(allProject.pending, (state) => {
-        state.isLoading = true;
+        state.isLoadingProj = true;
       })
       .addCase(allProject.fulfilled, (state, action) => {
         state.isError = false;
-        state.isLoading = false;
+        state.isLoadingProj = false;
         state.isSuccess = true;
         state.projects = action.payload;
         state.message = "success";
@@ -262,14 +264,14 @@ export const propertySlice = createSlice({
         state.isError = true;
         state.isSuccess = false;
         state.message = action.error;
-        state.isLoading = false;
+        state.isLoadingProj = false;
       })
       .addCase(getAproject.pending, (state) => {
-        state.isLoading = true;
+        state.isLoadingProj = true;
       })
       .addCase(getAproject.fulfilled, (state, action) => {
         state.isError = false;
-        state.isLoading = false;
+        state.isLoadingProj = false;
         state.isSuccess = true;
         state.project = action.payload;
         state.message = "success";
@@ -278,14 +280,14 @@ export const propertySlice = createSlice({
         state.isError = true;
         state.isSuccess = false;
         state.message = action.error;
-        state.isLoading = false;
+        state.isLoadingProj = false;
       })
       .addCase(postProj.pending, (state) => {
-        state.isLoading = true;
+        state.isLoadingProj = true;
       })
       .addCase(postProj.fulfilled, (state, action) => {
         state.isError = false;
-        state.isLoading = false;
+        state.isLoadingProj = false;
         state.isSuccess = true;
         state.postedProject = action.payload;
         state.message = "success";
@@ -294,7 +296,7 @@ export const propertySlice = createSlice({
         state.isError = true;
         state.isSuccess = false;
         state.message = action.error;
-        state.isLoading = false;
+        state.isLoadingProj = false;
       })
       //  Requests
       .addCase(allRequest.pending, (state) => {
@@ -363,11 +365,11 @@ export const propertySlice = createSlice({
       })
       //  Blogs
       .addCase(allBlog.pending, (state) => {
-        state.isLoading = true;
+        state.isLoadingBlog = true;
       })
       .addCase(allBlog.fulfilled, (state, action) => {
         state.isError = false;
-        state.isLoading = false;
+        state.isLoadingBlog = false;
         state.isSuccess = true;
         state.blogs = action.payload;
         state.message = "success";
@@ -376,14 +378,14 @@ export const propertySlice = createSlice({
         state.isError = true;
         state.isSuccess = false;
         state.message = action.error;
-        state.isLoading = false;
+        state.isLoadingBlog = false;
       })
       .addCase(getABlog.pending, (state) => {
-        state.isLoading = true;
+        state.isLoadingBlog = true;
       })
       .addCase(getABlog.fulfilled, (state, action) => {
         state.isError = false;
-        state.isLoading = false;
+        state.isLoadingBlog = false;
         state.isSuccess = true;
         state.singleBlog = action.payload;
         state.message = "success";
@@ -392,14 +394,14 @@ export const propertySlice = createSlice({
         state.isError = true;
         state.isSuccess = false;
         state.message = action.error;
-        state.isLoading = false;
+        state.isLoadingBlog = false;
       })
       .addCase(postBlog.pending, (state) => {
-        state.isLoading = true;
+        state.isLoadingBlog = true;
       })
       .addCase(postBlog.fulfilled, (state, action) => {
         state.isError = false;
-        state.isLoading = false;
+        state.isLoadingBlog = false;
         state.isSuccess = true;
         state.postedBlog = action.payload;
         state.message = "success";
@@ -408,7 +410,7 @@ export const propertySlice = createSlice({
         state.isError = true;
         state.isSuccess = false;
         state.message = action.error;
-        state.isLoading = false;
+        state.isLoadingBlog = false;
       })
       .addCase(resetState, () => initialState);
   },

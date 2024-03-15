@@ -16,7 +16,7 @@ import { useDispatch, useSelector } from "react-redux";
 import * as yup from "yup";
 
 const schema = yup.object().shape({
-  number_of_room: yup.string(),
+  number_of_room: yup.number(),
   location: yup.string(),
   minPrice: yup.string(),
   maxPrice: yup.string(),
@@ -194,10 +194,7 @@ const FindProperties = () => {
                         name="number_of_room"
                         onChange={formik.handleChange}
                         value={formik.values.number_of_room}
-                        items={[
-                          1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
-                          17, 18, 19, 20, 21, 22, 23, 24, 25,
-                        ]}
+                        items={[1, 2, 3, 4, 5, 6]}
                       />
                     </div>
                     <div
@@ -299,10 +296,7 @@ const FindProperties = () => {
                         name="number_of_room"
                         onChange={formik.handleChange}
                         value={formik.values.number_of_room}
-                        items={[
-                          1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
-                          17, 18, 19, 20, 21, 22,
-                        ]}
+                        items={[1, 2, 3, 4, 5, 6]}
                       />
                     </div>
                     <div
@@ -404,10 +398,7 @@ const FindProperties = () => {
                         name="number_of_room"
                         onChange={formik.handleChange}
                         value={formik.values.number_of_room}
-                        items={[
-                          1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
-                          17, 18, 19, 20, 21, 22,
-                        ]}
+                        items={[1, 2, 3, 4, 5, 6]}
                       />
                     </div>
                     <div
@@ -509,10 +500,7 @@ const FindProperties = () => {
                         name="number_of_room"
                         onChange={formik.handleChange}
                         value={formik.values.number_of_room}
-                        items={[
-                          1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
-                          17, 18, 19, 20, 21, 22,
-                        ]}
+                        items={[1, 2, 3, 4, 5, 6]}
                       />
                     </div>
                     <div

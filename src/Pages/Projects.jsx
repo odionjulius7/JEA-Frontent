@@ -5,6 +5,7 @@ import GetInTouch from "../components/GetInTouch/GetInTouch";
 import FloatWhatsapp from "../components/FloatWhatsapp/FloatWhatsapp";
 import { allProject, resetState } from "../features/Property/propertySlice";
 import { useDispatch, useSelector } from "react-redux";
+import Preloader from "../components/Preloader/Preloader";
 
 const Projects = () => {
   const dispatch = useDispatch();
@@ -24,6 +25,19 @@ const Projects = () => {
     dispatch(resetState());
     dispatch(allProject());
   }, [dispatch]);
+
+  const [isLoading, setIsLoading] = useState(true);
+  // const blogsLoading = useSelector((state) => state.property.isLoadingBlog);
+  // const propertyLoading = useSelector((state) => state.property.isLoading);
+  const projectsLoading = useSelector((state) => state.property.isLoadingProj);
+
+  useEffect(() => {
+    setIsLoading(projectsLoading);
+  }, [projectsLoading]);
+
+  if (isLoading) {
+    return <Preloader />;
+  }
 
   return (
     <>
