@@ -29,6 +29,8 @@ const FindProperties = () => {
 
   const propertyState = useSelector((state) => state.property);
 
+  // console.log(propertyState?.isLoading);
+
   const [category, setCategory] = useState("buy");
 
   const formik = useFormik({
@@ -267,7 +269,7 @@ const FindProperties = () => {
                           padding: isMobile ? "10px" : "",
                         }}
                       >
-                        {propertyState?.isLoading ? (
+                        {propertyState?.isLoading1 ? (
                           <div class="spinner-border" role="status">
                             <span class="visually-hidden">Loading...</span>
                           </div>

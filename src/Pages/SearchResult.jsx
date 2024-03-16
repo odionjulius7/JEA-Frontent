@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import Footer from "../components/Footer/Footer";
 import SelectedBlogHero from "../components/Hero/SelectedBlogHero";
@@ -32,9 +32,13 @@ const SearchResult = () => {
   console.log(propertyState?.filteredProperties?.data);
   const [allProps, setAllProps] = useState(true);
 
+  const desiredComponentRef = useRef(null);
+
   useEffect(() => {
-    // Scroll to the top when the component is mounted
-    window.scrollTo(0, 0);
+    // Scroll to the desired component when the component is mounted
+    if (desiredComponentRef.current && !propertyState?.isLoading1) {
+      desiredComponentRef.current.scrollIntoView({ behavior: "smooth" });
+    }
   }, []);
 
   const url_str = "property";
@@ -42,7 +46,7 @@ const SearchResult = () => {
   return (
     <>
       <SelectedBlogHero searchPage={searchPage} />
-      <div className="container my-3">
+      <div className="container my-3" ref={desiredComponentRef}>
         <h2 className="m-4">Search Results:</h2>
         <div className="row  my-3">
           {propertyState?.filteredProperties?.data &&
@@ -101,6 +105,7 @@ const SearchResult = () => {
                               {new Intl.NumberFormat("en-NG", {
                                 style: "currency",
                                 currency: "NGN",
+                                minimumFractionDigits: 0,
                               }).format(item?.price)}
                             </b>{" "}
                           </span>
