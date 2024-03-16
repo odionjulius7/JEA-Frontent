@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.287d620c.css",
-    "main.js": "/static/js/main.36fe31a1.js",
+    "main.css": "/static/css/main.6f63cded.css",
+    "main.js": "/static/js/main.104af85b.js",
     "static/js/453.7c70d248.chunk.js": "/static/js/453.7c70d248.chunk.js",
     "static/media/selected-proj.png": "/static/media/selected-proj.f334c62d19d7dfe61ff4.png",
     "static/media/props-img-page.png": "/static/media/props-img-page.79a2baddc9a88abc1651.png",
     "static/media/hightlight.png": "/static/media/hightlight.0fd5afdda7804a48a3d8.png",
+    "static/media/Boss-1.png": "/static/media/Boss-1.47ac07f011c6e4981b9a.png",
     "static/media/selected_proj_new.png": "/static/media/selected_proj_new.23f617638be118408230.png",
     "static/media/home-hero-img.png": "/static/media/home-hero-img.abf54a40a3d09fb38ec4.png",
     "static/media/selected-blog-hero.png": "/static/media/selected-blog-hero.6eebdbcd1a1badfa69b5.png",
@@ -17,12 +18,12 @@
     "static/media/Madera Medium.ttf": "/static/media/Madera Medium.389972be9996cc5a0759.ttf",
     "static/media/ClashDisplay-Medium.otf": "/static/media/ClashDisplay-Medium.afcc86306d88484344b4.otf",
     "index.html": "/index.html",
-    "main.287d620c.css.map": "/static/css/main.287d620c.css.map",
-    "main.36fe31a1.js.map": "/static/js/main.36fe31a1.js.map",
+    "main.6f63cded.css.map": "/static/css/main.6f63cded.css.map",
+    "main.104af85b.js.map": "/static/js/main.104af85b.js.map",
     "453.7c70d248.chunk.js.map": "/static/js/453.7c70d248.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.287d620c.css",
-    "static/js/main.36fe31a1.js"
+    "static/css/main.6f63cded.css",
+    "static/js/main.104af85b.js"
   ]
 }

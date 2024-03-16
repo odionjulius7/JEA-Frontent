@@ -9,6 +9,11 @@ import { Link } from "react-router-dom";
 import "./FindProp.css";
 
 const ProjectsTab = ({ projs }) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const handleSlideChange = (index) => {
+    setActiveIndex(index);
+  };
+  //
   const projsComp = projs.filter((property) => {
     return property.category === "completed";
   });
@@ -80,7 +85,7 @@ const ProjectsTab = ({ projs }) => {
                             <span>
                               {moment(projDet?.createdAt)
                                 .format("l")
-                                .slice(4, 8)}
+                                .slice(5, 9)}
                             </span>
                           </div>
 
@@ -257,7 +262,7 @@ const ProjectsTab = ({ projs }) => {
                             <span>
                               {moment(projDet?.createdAt)
                                 .format("l")
-                                .slice(4, 8)}
+                                .slice(5, 9)}
                             </span>
                           </div>
 
@@ -304,112 +309,74 @@ const ProjectsTab = ({ projs }) => {
                           </div>
                         </div>
                       </div>
-                      <div className="col-md-5 col-sm-12 dflex_1st">
-                        <div
-                          id={`carouselExample${index}`}
-                          className="carousel slide"
-                        >
+                      <div className="col-md-6 col-sm-12 dflex_1st">
+                        <div id="carouselExample" className="carousel slide">
                           <div className="carousel-inner">
-                            {projDet?.images[0] && (
+                            {projDet[0]?.images.map((image, index) => (
                               <div
-                                className="carousel-item active"
-                                style={{
-                                  width: !isMobile ? "510px" : "325px",
-                                  height: "330px",
-                                }}
+                                key={index}
+                                className={`carousel-item ${
+                                  index === activeIndex ? "active" : ""
+                                }`}
                               >
                                 <img
-                                  src={projDet?.images[0]}
-                                  className="d-block w-100"
-                                  alt="..."
-                                  style={{
-                                    marginLeft: isMobile ? "1rem" : "",
-                                    height: "inherit",
-                                  }}
+                                  src={image}
+                                  className="d-block w-100x"
+                                  alt={`Slide ${index + 1}`}
                                 />
                               </div>
-                            )}
-                            {projDet?.images[1] && (
-                              <div
-                                className="carousel-item"
-                                style={{
-                                  width: "510px",
-                                  height: "330px",
-                                }}
-                              >
-                                <img
-                                  src={projDet?.images[1]}
-                                  className="d-block w-100"
-                                  alt="..."
-                                  style={{
-                                    marginLeft: isMobile ? "1rem" : "",
-                                    height: "inherit",
-                                  }}
-                                />
-                              </div>
-                            )}
-                            {projDet?.images[2] && (
-                              <div
-                                className="carousel-item"
-                                style={{
-                                  width: "510px",
-                                  height: "330px",
-                                }}
-                              >
-                                <img
-                                  src={projDet?.images[2]}
-                                  className="d-block w-100"
-                                  alt="..."
-                                  style={{
-                                    marginLeft: isMobile ? "1rem" : "",
-                                    height: "inherit",
-                                  }}
-                                />
-                              </div>
-                            )}
-                            {projDet?.images[3] && (
-                              <div
-                                className="carousel-item"
-                                style={{
-                                  width: "510px",
-                                  height: "330px",
-                                }}
-                              >
-                                <img
-                                  src={projDet?.images[3]}
-                                  className="d-block w-100"
-                                  alt="..."
-                                  style={{
-                                    marginLeft: isMobile ? "1rem" : "",
-                                    height: "inherit",
-                                  }}
-                                />
-                              </div>
-                            )}
+                            ))}
                           </div>
                         </div>
-                        <div className="row pb-3 py-5x px-5 align-items-center d-md-flex">
+
+                        <div className="row py-4 px-5x align-items-center text-center d-md-flex">
+                          <div className="row less460 justify-content-center">
+                            <div
+                              className="col d-flex justify-content-center align-items-center gap-2 mt-1 mb-3"
+                              style={{
+                                marginLeft: "0.2rem",
+                              }}
+                            >
+                              <span>{activeIndex + 1}</span>
+                              <img src="./div_line.svg" alt="" />
+                              <span>{projDet[0]?.images.length}</span>
+                            </div>
+                          </div>
                           <div className="col">
                             <button
                               className="btn btn-outline-light line-img "
                               type="button"
-                              data-bs-target={`#carouselExample${index}`}
+                              data-bs-target="#carouselExample"
                               data-bs-slide="prev"
+                              onClick={() =>
+                                handleSlideChange(
+                                  activeIndex - 1 >= 0 ? activeIndex - 1 : 0
+                                )
+                              }
                             >
                               <img src="./arrow_left_svg.svg" alt="line-img" />
-                              {/* <FaLongArrowAltLeft /> */}
                             </button>
                           </div>
-                          <div className="col div_btn">01 - 03</div>
+                          <div className="col d-flex justify-content-center align-items-center gap-3 mt-2 div_btn">
+                            <span>0{activeIndex + 1}</span>
+                            <img src="./div_line.svg" alt="" />
+                            <span>0{projDet[0]?.images.length}</span>
+                          </div>
                           <div className="col">
                             <button
                               className="btn btn-outline-light line-img"
                               type="button"
-                              data-bs-target={`#carouselExample${index}`}
+                              data-bs-target="#carouselExample"
                               data-bs-slide="next"
+                              onClick={() =>
+                                handleSlideChange(
+                                  activeIndex + 1 < projDet[0]?.images.length
+                                    ? activeIndex + 1
+                                    : activeIndex
+                                )
+                              }
                             >
                               <img src="./arrow_right_svg.svg" alt="line-img" />
-                              {/* <FaLongArrowAltRight /> */}
                             </button>
                           </div>
                         </div>

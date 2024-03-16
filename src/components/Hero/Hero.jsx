@@ -4,6 +4,11 @@ import Header from "../Header/Header";
 import "./Hero.css";
 import { Link } from "react-router-dom";
 const Hero = ({ featuredPrj }) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const handleSlideChange = (index) => {
+    setActiveIndex(index);
+  };
+  //
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
   useEffect(() => {
     const handleResize = () => {
@@ -76,68 +81,26 @@ const Hero = ({ featuredPrj }) => {
                 </div>
               </div>
               <div className="col-md-6 col-sm-12 dflex_1st">
-                {/* <img src="./hero-img-1.png" alt="hero-img" className="pb-4" /> */}
                 <div id="carouselExample" className="carousel slide">
                   <div className="carousel-inner">
-                    {featuredPrj[0]?.images[0] && (
-                      <div className="carousel-item active">
+                    {featuredPrj[0]?.images.map((image, index) => (
+                      <div
+                        key={index}
+                        className={`carousel-item ${
+                          index === activeIndex ? "active" : ""
+                        }`}
+                      >
                         <img
-                          // src="./hero-img-1.png"
-                          src={featuredPrj[0]?.images[0]}
+                          src={image}
                           className="d-block w-100x"
-                          alt="..."
+                          alt={`Slide ${index + 1}`}
                         />
                       </div>
-                    )}
-                    {featuredPrj[0]?.images[1] && (
-                      <div className="carousel-item">
-                        <img
-                          src={featuredPrj[0]?.images[1]}
-                          className="d-block w-100x"
-                          alt="..."
-                        />
-                      </div>
-                    )}
-                    {featuredPrj[0]?.images[2] && (
-                      <div className="carousel-item">
-                        <img
-                          src={featuredPrj[0]?.images[2]}
-                          className="d-block w-100x"
-                          alt="..."
-                        />
-                      </div>
-                    )}
-                    {featuredPrj[0]?.images[3] && (
-                      <div className="carousel-item">
-                        <img
-                          src={featuredPrj[0]?.images[3]}
-                          className="d-block w-100x"
-                          alt="..."
-                        />
-                      </div>
-                    )}
-                    {featuredPrj[0]?.images[4] && (
-                      <div className="carousel-item">
-                        <img
-                          src={featuredPrj[0]?.images[3]}
-                          className="d-block w-100x"
-                          alt="..."
-                        />
-                      </div>
-                    )}
-                    {featuredPrj[0]?.images[5] && (
-                      <div className="carousel-item">
-                        <img
-                          src={featuredPrj[0]?.images[4]}
-                          className="d-block w-100x"
-                          alt="..."
-                        />
-                      </div>
-                    )}
+                    ))}
                   </div>
                 </div>
 
-                <div className="row py-4 px-5x align-items-center text-center d-md-flex ">
+                <div className="row py-4 px-5x align-items-center text-center d-md-flex">
                   <div className="row less460 justify-content-center">
                     <div
                       className="col d-flex justify-content-center align-items-center gap-2 mt-1 mb-3"
@@ -145,9 +108,9 @@ const Hero = ({ featuredPrj }) => {
                         marginLeft: "0.2rem",
                       }}
                     >
-                      <span>01</span>
+                      <span>{activeIndex + 1}</span>
                       <img src="./div_line.svg" alt="" />
-                      <span>03</span>
+                      <span>{featuredPrj[0]?.images.length}</span>
                     </div>
                   </div>
                   <div className="col">
@@ -156,15 +119,19 @@ const Hero = ({ featuredPrj }) => {
                       type="button"
                       data-bs-target="#carouselExample"
                       data-bs-slide="prev"
+                      onClick={() =>
+                        handleSlideChange(
+                          activeIndex - 1 >= 0 ? activeIndex - 1 : 0
+                        )
+                      }
                     >
                       <img src="./arrow_left_svg.svg" alt="line-img" />
-                      {/* <FaLongArrowAltLeft /> */}
                     </button>
                   </div>
                   <div className="col d-flex justify-content-center align-items-center gap-3 mt-2 div_btn">
-                    <span>01</span>
+                    <span>0{activeIndex + 1}</span>
                     <img src="./div_line.svg" alt="" />
-                    <span>03</span>
+                    <span>0{featuredPrj[0]?.images.length}</span>
                   </div>
                   <div className="col">
                     <button
@@ -172,8 +139,14 @@ const Hero = ({ featuredPrj }) => {
                       type="button"
                       data-bs-target="#carouselExample"
                       data-bs-slide="next"
+                      onClick={() =>
+                        handleSlideChange(
+                          activeIndex + 1 < featuredPrj[0]?.images.length
+                            ? activeIndex + 1
+                            : activeIndex
+                        )
+                      }
                     >
-                      {/* <FaLongArrowAltRight /> */}
                       <img src="./arrow_right_svg.svg" alt="line-img" />
                     </button>
                   </div>
