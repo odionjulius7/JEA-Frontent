@@ -232,8 +232,13 @@ const ProjectsTab = ({ projs }) => {
                               <img src="./arrow_left_svg.svg" alt="line-img" />
                             </button>
                           </div>
-                          <div className="col div_btn">
-                            {activeIndex} - {" " + projDet?.images?.length}
+                          <div className="col div_btn d-flex gap-1 align-align-items-center">
+                            {/* {activeIndex} - {" " + projDet?.images?.length} */}
+
+                            <span>{activeIndex}</span>
+                            <img src="/div_line.svg" alt="" />
+                            {projDet?.images?.length}
+                            {/* <span>{featuredPrj[0]?.images.length}</span> */}
                           </div>
                           <div className="col">
                             <button
@@ -413,8 +418,13 @@ const ProjectsTab = ({ projs }) => {
                               <img src="./arrow_left_svg.svg" alt="line-img" />
                             </button>
                           </div>
-                          <div className="col div_btn">
-                            {activeIndex} - {" " + projDet?.images?.length}
+                          <div className="col div_btn d-flex gap-1 align-align-items-center">
+                            {/* {activeIndex} - {" " + projDet?.images?.length} */}
+
+                            <span>{activeIndex}</span>
+                            <img src="/div_line.svg" alt="" />
+                            {projDet?.images?.length}
+                            {/* <span>{featuredPrj[0]?.images.length}</span> */}
                           </div>
                           <div className="col">
                             <button
