@@ -186,6 +186,7 @@ const PropsSelectedHero = ({ propertyDetail }) => {
                     // widthxs={!isMobile ? "98%" : "62.9%"}
                     widthxs={!isMobile ? "98%" : ""}
                     propertyDetail={propertyDetail}
+                    setDisplayImg={setDisplayImg}
                   />
                 </div>
               </div>
