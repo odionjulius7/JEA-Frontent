@@ -32,6 +32,7 @@ const PropsSelectedHero = ({ propertyDetail }) => {
 
   //
   const [homePage, setHomePage] = useState(false);
+  const [displayImg, setDisplayImg] = useState(2);
 
   //
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
@@ -46,6 +47,7 @@ const PropsSelectedHero = ({ propertyDetail }) => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  //
   return (
     <>
       <div className="App--props-selected text-white">
@@ -166,7 +168,7 @@ const PropsSelectedHero = ({ propertyDetail }) => {
                   {propertyDetail?.images &&
                     propertyDetail.images.length > 0 && (
                       <img
-                        src={propertyDetail.images[0]}
+                        src={propertyDetail.images[displayImg]}
                         className="fit-content main-selected-img"
                         alt=""
                         style={{
@@ -196,7 +198,10 @@ const PropsSelectedHero = ({ propertyDetail }) => {
               }}
             >
               <div className="col d-flex  text-align-center justify-content-center">
-                <ProjAndPropSlide propertyDetail={propertyDetail} />
+                <ProjAndPropSlide
+                  setDisplayImg={setDisplayImg}
+                  propertyDetail={propertyDetail}
+                />
               </div>
             </div>
           </div>

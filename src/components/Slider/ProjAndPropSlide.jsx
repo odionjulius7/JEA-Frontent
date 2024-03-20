@@ -11,7 +11,12 @@ import Card from "react-bootstrap/Card";
 
 SwiperCore.use([Navigation, Autoplay]);
 
-const ProjAndPropSlide = ({ homePage, propertyDetail, widthxs }) => {
+const ProjAndPropSlide = ({
+  homePage,
+  propertyDetail,
+  widthxs,
+  setDisplayImg,
+}) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
 
   useEffect(() => {
@@ -37,7 +42,14 @@ const ProjAndPropSlide = ({ homePage, propertyDetail, widthxs }) => {
     >
       {propertyDetail?.images?.map((image, i) => {
         return (
-          <SwiperSlide key={i} className="m-img">
+          <SwiperSlide
+            key={i}
+            className="m-img"
+            onClick={() => setDisplayImg(i)}
+            style={{
+              cursor: "pointer",
+            }}
+          >
             <Card
               className="card_img_selc "
               style={{

@@ -54,7 +54,7 @@ const SearchResult = () => {
             propertyState?.filteredProperties?.data.map((item, i) => {
               return (
                 <div className="col-md-4 col-sm-6 my-4" key={i}>
-                  <Link to={`/${url_str}/${item?._id}`}>
+                  <Link to={`/${url_str}/${item?.slug}`}>
                     <Card>
                       {item?.images && item.images.length > 0 && (
                         <Card.Img
