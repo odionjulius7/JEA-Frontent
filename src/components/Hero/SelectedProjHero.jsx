@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 const SelectedProjHero = ({ projectDetail }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
+  const [displayImg, setDisplayImg] = useState(2);
 
   useEffect(() => {
     const handleResize = () => {
@@ -82,6 +83,7 @@ const SelectedProjHero = ({ projectDetail }) => {
               <ProjAndPropSlide
                 widthxs={!isMobile ? "98%" : "90%"}
                 propertyDetail={projectDetail}
+                setDisplayImg={setDisplayImg}
               />
             </div>
           </div>

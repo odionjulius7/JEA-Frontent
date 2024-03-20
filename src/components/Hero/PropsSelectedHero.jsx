@@ -32,7 +32,7 @@ const PropsSelectedHero = ({ propertyDetail }) => {
 
   //
   const [homePage, setHomePage] = useState(false);
-  const [displayImg, setDisplayImg] = useState(2);
+  const [displayImg, setDisplayImg] = useState(0);
 
   //
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
