@@ -29,6 +29,7 @@ const PropsSelectedHero = ({ propertyDetail }) => {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const handleShow1 = () => setShow(false);
 
   //
   const [homePage, setHomePage] = useState(false);
@@ -187,6 +188,7 @@ const PropsSelectedHero = ({ propertyDetail }) => {
                     widthxs={!isMobile ? "98%" : ""}
                     propertyDetail={propertyDetail}
                     setDisplayImg={setDisplayImg}
+                    handleShow1={handleShow1}
                   />
                 </div>
               </div>
@@ -202,6 +204,7 @@ const PropsSelectedHero = ({ propertyDetail }) => {
                 <ProjAndPropSlide
                   setDisplayImg={setDisplayImg}
                   propertyDetail={propertyDetail}
+                  handleShow1={handleShow1}
                 />
               </div>
             </div>

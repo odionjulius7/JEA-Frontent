@@ -16,6 +16,8 @@ const ProjAndPropSlide = ({
   propertyDetail,
   widthxs,
   setDisplayImg,
+  handleShow1,
+  selectedProjPage,
 }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
 
@@ -45,7 +47,12 @@ const ProjAndPropSlide = ({
           <SwiperSlide
             key={i}
             className="m-img"
-            onClick={() => setDisplayImg(i)}
+            onClick={() => {
+              setDisplayImg(i);
+              if (selectedProjPage) {
+                handleShow1();
+              }
+            }}
             style={{
               cursor: "pointer",
             }}

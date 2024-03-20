@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { Modal, Button } from "react-bootstrap";
 import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
+// import { FaInstagram } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaTelegramPlane } from "react-icons/fa";
 import { CopyToClipboard } from "react-copy-to-clipboard";
