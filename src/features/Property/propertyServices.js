@@ -10,39 +10,39 @@ const getAproperty = async (ids) => {
   const response = await axios.get(`${base_url}property/prop/${ids.slug}`);
   return response.data;
 };
-// const filterPrperty = async (ids) => {
-//   const response = await axios.get(
-//     `${base_url}property/search?price=>${ids?.minPrice}&price<=${ids?.maxPrice}&location=${ids?.location}&number_of_room=${ids?.number_of_room}&category=${ids?.category}`
-//     // `${base_url}property/search?price[lte]=${ids?.maxPrice}&price[gte]=${ids?.minPrice}&location=${ids?.location}&number_of_room=${ids?.number_of_room}&category=${ids?.category}`
-//   );
-//   return response.data;
-// };
-
 const filterPrperty = async (ids) => {
-  let queryString = `${base_url}property/search?`;
-
-  if (ids.minPrice && ids.maxPrice) {
-    queryString += `price=>${ids.minPrice}&price<=${ids.maxPrice}&`;
-  }
-
-  if (ids.location) {
-    queryString += `location=${ids.location}&`;
-  }
-
-  if (ids.number_of_room) {
-    queryString += `number_of_room=${ids.number_of_room}&`;
-  }
-
-  if (ids.category) {
-    queryString += `category=${ids.category}&`;
-  }
-
-  // Remove trailing '&' if present
-  queryString = queryString.replace(/&$/, "");
-
-  const response = await axios.get(queryString);
+  const response = await axios.get(
+    // `${base_url}property/search?price=>${ids?.minPrice}&price<=${ids?.maxPrice}&location=${ids?.location}&number_of_room=${ids?.number_of_room}&category=${ids?.category}`
+    `${base_url}property/search?price[lte]=${ids?.maxPrice}&price[gte]=${ids?.minPrice}&location=${ids?.location}&number_of_room=${ids?.number_of_room}&category=${ids?.category}`
+  );
   return response.data;
 };
+
+// const filterPrperty = async (ids) => {
+//   let queryString = `${base_url}property/search?`;
+
+//   if (ids.minPrice && ids.maxPrice) {
+//     queryString += `price[gte]=${ids.minPrice}&price[gte]=${ids.maxPrice}&`;
+//   }
+
+//   if (ids.location) {
+//     queryString += `location=${ids.location}&`;
+//   }
+
+//   if (ids.number_of_room) {
+//     queryString += `number_of_room=${ids.number_of_room}&`;
+//   }
+//   // `${base_url}property/search?price[lte]=${ids?.maxPrice}&price[gte]=${ids?.minPrice}&location=${ids?.location}&number_of_room=${ids?.number_of_room}&category=${ids?.category}`
+//   if (ids.category) {
+//     queryString += `category=${ids.category}&`;
+//   }
+
+//   // Remove trailing '&' if present
+//   queryString = queryString.replace(/&$/, "");
+
+//   const response = await axios.get(queryString);
+//   return response.data;
+// };
 
 const postProperty = async (data) => {
   // const config = generateAxiosConfig2(data.token);

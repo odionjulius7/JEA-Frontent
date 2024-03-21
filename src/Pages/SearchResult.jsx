@@ -7,7 +7,7 @@ import Card from "react-bootstrap/Card";
 // import "./AllProperties.css";
 import { Link } from "react-router-dom";
 
-import moment from "moment";
+// import moment from "moment";
 
 import { useSelector } from "react-redux";
 
@@ -29,7 +29,7 @@ const SearchResult = () => {
   }, []);
   //
   const propertyState = useSelector((state) => state.property);
-  console.log(propertyState?.filteredProperties?.data);
+  console.log(propertyState?.filteredProperties?.allProperty);
   const [allProps, setAllProps] = useState(true);
 
   const desiredComponentRef = useRef(null);

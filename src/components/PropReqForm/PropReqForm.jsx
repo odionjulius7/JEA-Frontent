@@ -240,6 +240,7 @@ const PropReqForm = () => {
                     className="w-100"
                     style={{
                       height: "inherit",
+                      padding: "0.3rem 0.5rem",
                     }}
                   ></textarea>
                 </div>
@@ -347,7 +348,7 @@ const PropReqForm = () => {
                   <span class="visually-hidden">Loading...</span>
                 </div>
               ) : (
-                "Search"
+                "Submit"
               )}
             </button>
           </div>

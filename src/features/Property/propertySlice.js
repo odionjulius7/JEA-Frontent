@@ -9,6 +9,7 @@ const initialState = {
   projects: [],
   requests: [],
   blogs: [],
+  filteredProperties: [],
   isError: false,
   isLoading: false,
   isLoading1: false,

@@ -6,29 +6,6 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import "./PropsDetails.css";
 
 const PropsDetails = ({ propsDetails, propertyDetail }) => {
-  // const [parsedPropertyDetails, setParsedPropertyDetails] = useState({});
-  // const [parsedNeighborhoodInfo, setParsedNeighborhoodInfo] = useState({});
-  // const [parsedFeatures, setParsedFeatures] = useState({});
-
-  // useEffect(() => {
-  //   const propertyDetailsString = propertyDetail?.property_details;
-  //   const neighborhoodInfoString = propertyDetail?.neighborhood_info;
-  //   const featuresString = propertyDetail?.features;
-
-  //   setParsedPropertyDetails(parseJSON(propertyDetailsString));
-  //   setParsedNeighborhoodInfo(parseJSON(neighborhoodInfoString));
-  //   setParsedFeatures(parseJSON(featuresString));
-  // }, []);
-
-  // function parseJSON(str) {
-  //   try {
-  //     return JSON.parse(str) || {};
-  //   } catch (e) {
-  //     return {};
-  //   }
-  // }
-  // console.log(propertyDetail);
-
   //
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 460);
   useEffect(() => {
@@ -42,6 +19,9 @@ const PropsDetails = ({ propsDetails, propertyDetail }) => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  console.log(propertyDetail);
+
   return (
     <div className="container-fluid PropsDetails">
       {propsDetails && (
@@ -86,11 +66,7 @@ const PropsDetails = ({ propsDetails, propertyDetail }) => {
             {propertyDetail?.additional_fees && (
               <li className="font_15">
                 Additional fees (For only rent categories):{" "}
-                {new Intl.NumberFormat("en-NG", {
-                  style: "currency",
-                  currency: "NGN",
-                  minimumFractionDigits: 0,
-                }).format(propertyDetail?.additional_fees)}
+                {propertyDetail?.additional_fees}
               </li>
             )}
             {propertyDetail?.property_id && (
@@ -99,22 +75,37 @@ const PropsDetails = ({ propsDetails, propertyDetail }) => {
               </li>
             )}
             {propertyDetail?.property_type && (
-              <li className="font_15">{propertyDetail?.property_type}</li>
+              <li className="font_15">
+                Property Type: {propertyDetail?.property_type}
+              </li>
             )}
             {propertyDetail?.year_built && (
-              <li className="font_15">{propertyDetail?.year_built}</li>
+              <li className="font_15">
+                Year Built: {propertyDetail?.year_built}
+              </li>
             )}
             {propertyDetail?.details_category && (
-              <li className="font_15">{propertyDetail?.details_category}</li>
+              <li className="font_15">
+                Category: {propertyDetail?.details_category}
+              </li>
             )}
             {propertyDetail?.status && (
-              <li className="font_15">{propertyDetail?.status}</li>
+              <li className="font_15">Status: {propertyDetail?.status}</li>
+            )}
+            {propertyDetail?.number_of_room && (
+              <li className="font_15">
+                Number of Rooms: {propertyDetail?.number_of_room}
+              </li>
             )}
             {propertyDetail?.Number_of_Stories && (
-              <li className="font_15">{propertyDetail?.Number_of_Stories}</li>
+              <li className="font_15">
+                Number of Stories: {propertyDetail?.Number_of_Stories}
+              </li>
             )}
             {propertyDetail?.garage_capacity && (
-              <li className="font_15">{propertyDetail?.property_id}</li>
+              <li className="font_15">
+                Garage Capacity: {propertyDetail?.property_id}
+              </li>
             )}
             {propertyDetail?.recent_renovations && (
               <li className="font_15">

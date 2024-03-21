@@ -1,6 +1,7 @@
 :where(.css-dev-only-do-not-override-1uweeqc).ant-flex-align-stretch {
   align-items: stretch;
-  background-color: rgb(229, 231, 244);
+  background-color: rgb(10, 11, 11);
+  color: #fff;
 }
 
 .full-width {
@@ -29,3 +30,64 @@
   align-items: center;
   justify-content: center;
 }
+
+:where(.css-dev-only-do-not-override-1uweeqc).ant-spin-nested-loading
+  > div
+  > .ant-spin
+  .ant-spin-dot {
+  position: absolute;
+  top: 60%;
+  inset-inline-start: 50%;
+  margin: -10px;
+}
+
+:where(.css-dev-only-do-not-override-1uweeqc).ant-spin-nested-loading
+  > div
+  > .ant-spin
+  .ant-spin-text {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-shadow: 0 1px 2px #ffffff;
+  color: #fff;
+  font-size: 20px;
+}
+
+:where(.css-dev-only-do-not-override-1uweeqc).ant-spin .ant-spin-dot-item {
+  position: absolute;
+  display: block;
+  width: 9px;
+  height: 9px;
+  background-color: #ffffff;
+  font-size: 18px !important;
+  width: 30px;
+  height: 30px;
+}
+
+/* .preloader-now {
+  height: 100vh;
+  width: 100vw;
+  background: #000;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 55;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.preloader-now .text-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  width: 200px;
+  font-size: 20px;
+  font-weight: 800;
+  overflow: hidden;
+  color: #fff;
+} */
