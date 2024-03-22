@@ -69,6 +69,10 @@
   color: #fff !important;
 }
 
+:where(.css-1uweeqc).ant-spin-nested-loading > div > .ant-spin {
+  background: #000;
+}
+
 :where(.css-1uweeqc).ant-spin .ant-spin-dot-item {
   position: absolute;
   display: block;
