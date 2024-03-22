@@ -1,11 +1,11 @@
 :where(.css-dev-only-do-not-override-1uweeqc).ant-flex-align-stretch {
   align-items: stretch;
-  background-color: rgb(10, 11, 11);
-  color: #fff;
+  background-color: rgb(10, 11, 11) !important;
+  color: #fff !important;
 }
 
 .full-width {
-  width: 100%;
+  width: 100% !important;
   height: 100vh !important;
 }
 
@@ -15,20 +15,20 @@
   position: absolute;
   top: 0;
   inset-inline-start: 0;
-  z-index: 4;
+  z-index: 4 !important;
   display: block;
-  width: 100%;
-  height: 100vh;
-  max-height: 739px;
+  width: 100% !important;
+  height: 100vh !important;
+  max-height: 739px !important;
 }
 
 :where(.css-dev-only-do-not-override-1uweeqc).ant-spin-nested-loading {
-  position: relative;
-  width: 100%;
+  position: relative !important;
+  width: 100% !important;
   height: 100vh !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 :where(.css-dev-only-do-not-override-1uweeqc).ant-spin-nested-loading
@@ -36,9 +36,9 @@
   > .ant-spin
   .ant-spin-dot {
   position: absolute;
-  top: 60%;
-  inset-inline-start: 50%;
-  margin: -10px;
+  top: 60% !important;
+  inset-inline-start: 50% !important;
+  margin: -10px !important;
 }
 
 :where(.css-dev-only-do-not-override-1uweeqc).ant-spin-nested-loading
@@ -46,22 +46,22 @@
   > .ant-spin
   .ant-spin-text {
   position: absolute;
-  top: 50%;
-  width: 100%;
+  top: 50% !important;
+  width: 100% !important;
   text-shadow: 0 1px 2px #ffffff;
-  color: #fff;
-  font-size: 20px;
+  color: #fff !important;
+  font-size: 20px !important;
 }
 
 :where(.css-dev-only-do-not-override-1uweeqc).ant-spin .ant-spin-dot-item {
   position: absolute;
   display: block;
-  width: 9px;
-  height: 9px;
+  width: 9px !important;
+  height: 9px !important;
   background-color: #ffffff;
   font-size: 18px !important;
-  width: 30px;
-  height: 30px;
+  width: 30px !important;
+  height: 30px !important;
 }
 
 /* .preloader-now {

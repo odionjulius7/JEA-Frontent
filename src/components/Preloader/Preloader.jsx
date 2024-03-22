@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
-import { Skeleton } from "antd";
+import React from "react";
+// import { Skeleton } from "antd";
 import { Alert, Flex, Spin } from "antd";
 import "./Preloader.css"; // Import your CSS file for styling
 
-const Preloader = ({ content }) => {
+const Preloader = () => {
   return (
     <div className="full-width">
       <Flex
@@ -17,7 +17,7 @@ const Preloader = ({ content }) => {
         }
       >
         <Spin
-          tip="Loading..."
+          tip="Page Loading..."
           style={{
             height: "100vh",
             width: "100vw",
