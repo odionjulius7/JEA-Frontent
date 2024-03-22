@@ -11,7 +11,7 @@ import WeeklyProps from "../components/WeeklyProps/WeeklyProps";
 import FloatWhatsapp from "../components/FloatWhatsapp/FloatWhatsapp";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  allBlog,
+  // allBlog,
   allProject,
   allProperty,
   resetState,
@@ -22,7 +22,7 @@ const Home = () => {
   const dispatch = useDispatch();
 
   const propertyState = useSelector((state) => state.property);
-  const blogsState = useSelector((state) => state.property);
+  // const blogsState = useSelector((state) => state.property);
   const projectState = useSelector((state) => state.property);
 
   const projs = projectState?.projects?.allProject || [];
