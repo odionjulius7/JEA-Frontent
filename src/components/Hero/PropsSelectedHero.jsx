@@ -49,6 +49,28 @@ const PropsSelectedHero = ({ propertyDetail }) => {
     };
   }, []);
   //
+  let phoneNumber;
+  if (propertyDetail?.agent_whatsapp.startsWith("234")) {
+    // If what_num contains a country code, use it as is
+    phoneNumber = propertyDetail?.agent_whatsapp;
+  } else {
+    // If no country code is found, add 234 as the prefix
+    phoneNumber = `234${propertyDetail?.agent_whatsapp}`;
+  }
+
+  const href = `https://wa.me/${phoneNumber}`;
+
+  //
+  let callNumber;
+  if (propertyDetail?.agent_call.startsWith("234")) {
+    // If what_num contains a country code, use it as is
+    callNumber = propertyDetail?.agent_call;
+  } else {
+    // If no country code is found, add 234 as the prefix
+    callNumber = `234${propertyDetail?.agent_call}`;
+  }
+
+  const hrefCall = `tel:+${callNumber}`;
   return (
     <>
       <div className="App--props-selected text-white">
@@ -127,7 +149,7 @@ const PropsSelectedHero = ({ propertyDetail }) => {
                           fontWeight: "600",
                         }}
                       >
-                        <a href={`tel:+${propertyDetail?.agent_call}`}>
+                        <a href={hrefCall}>
                           <IoIosCall className="fs-4" /> Call Agent
                         </a>
                       </button>
@@ -140,11 +162,7 @@ const PropsSelectedHero = ({ propertyDetail }) => {
                         }}
                       >
                         {" "}
-                        <a
-                          href={`https://wa.me/${propertyDetail?.agent_whatsapp}`}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
+                        <a href={href} target="_blank" rel="noreferrer">
                           <IoLogoWhatsapp className="fs-4" /> Message Agent
                         </a>
                       </button>

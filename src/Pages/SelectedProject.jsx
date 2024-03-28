@@ -12,6 +12,7 @@ import { useParams } from "react-router-dom";
 import { getAproject, resetState } from "../features/Property/propertySlice";
 // import SelectedProjMap2 from "../components/SelectedProjComp/SelecteProjMap2";
 import Preloader from "../components/Preloader/Preloader";
+import Contact from "../components/SelectedProjComp/SelecteProjMap2";
 
 const SelectedProject = () => {
   const dispatch = useDispatch();
@@ -33,7 +34,12 @@ const SelectedProject = () => {
 
   useEffect(() => {
     // Scroll to the top when the component is mounted
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
   }, []);
 
   // const location = {
@@ -70,7 +76,8 @@ const SelectedProject = () => {
           propsDetails={propsDetails}
         />
       </div>
-      <SelectedProjMap projectDetail={projectDetail} />
+      {/* <SelectedProjMap projectDetail={projectDetail} /> */}
+      <Contact projectDetail={projectDetail} />
       <SelectedProjImg projectDetail={projectDetail} />
       <Footer />
       <FloatWhatsapp />

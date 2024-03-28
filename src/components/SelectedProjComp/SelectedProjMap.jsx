@@ -21,9 +21,13 @@ const SelectedProjMap = ({ projectDetail }) => {
         return coord;
       };
 
-      const longitude = convertToNumber(projectDetail.longitude);
-      const latitude = convertToNumber(projectDetail.latitude);
+      // const longitude = convertToNumber(projectDetail.longitude);
+      // const latitude = convertToNumber(projectDetail.latitude);
 
+      const latitude = 6.4524638;
+      const longitude = 3.4197735;
+      console.log(longitude);
+      console.log(latitude);
       if (isValidCoordinate(longitude) && isValidCoordinate(latitude)) {
         const map = new mapboxgl.Map({
           container: "map-container", // HTML element ID where you want to render the map
@@ -35,9 +39,9 @@ const SelectedProjMap = ({ projectDetail }) => {
 
         // Add a marker to the map
         new mapboxgl.Marker({
-          offset: [-10, -25], // Adjust the offset as needed
+          // offset: [-10, -25], // Adjust the offset as needed
         })
-          .setLngLat([longitude, latitude])
+          .setLngLat([latitude, longitude])
           .addTo(map);
       } else {
         console.error("Invalid coordinates provided:", projectDetail);
