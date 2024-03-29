@@ -322,12 +322,12 @@ const SelectedProjImg = ({ projectDetail }) => {
             <img src="/link.svg" alt="hh" />
             <span
               style={{
-                fontSize: "13px",
+                fontSize: !isMobile ? "12px" : "9px",
                 color: "#7A7A7A",
               }}
             >
-              jea-frontent.vercel.app/selected-project/
-              {projectDetail?._id}
+              jea-frontent.vercel.app/project/
+              {projectDetail?.slug}
             </span>
             <CopyToClipboard
               text={window.location.href}

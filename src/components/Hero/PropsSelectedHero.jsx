@@ -328,12 +328,12 @@ const PropsSelectedHero = ({ propertyDetail }) => {
             <img src="/link.svg" alt="hh" />
             <span
               style={{
-                fontSize: "13px",
+                fontSize: !isMobile ? "12px" : "9px",
                 color: "#7A7A7A",
               }}
             >
-              jea-frontent.vercel.app/property-selected/
-              {propertyDetail?._id}
+              jea-frontent.vercel.app/property/
+              {propertyDetail?.slug}
             </span>
             <CopyToClipboard
               text={window.location.href}

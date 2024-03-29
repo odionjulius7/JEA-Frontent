@@ -58,7 +58,7 @@ const Hero = ({ featuredPrj }) => {
                 style={{ marginBottom: isMobile ? "2rem" : "6rem" }}
               >
                 <p className="text-white italic_p ">
-                  {featuredPrj[0]?.description?.slice(0, 250)}.
+                  {featuredPrj[0]?.short_description}
                 </p>
                 {/* <p className="text-white italic_p ">
                   The Sixtus contains 4 Bedroom Terrace houses and two fully

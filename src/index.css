@@ -426,9 +426,17 @@ a {
 }
 
 @media (max-width: 460px) {
+  body {
+    overflow-x: hidden;
+  }
   .row {
     margin-left: 0px;
     margin-right: 0px;
+    /* overflow-x: hidden !important; */
+  }
+
+  .container-fluid {
+    overflow-x: hidden !important;
   }
 
   .less460 {
