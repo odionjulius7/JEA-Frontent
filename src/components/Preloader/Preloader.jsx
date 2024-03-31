@@ -19,7 +19,7 @@ const Preloader = () => {
         <Spin
           tip="Page Loading..."
           style={{
-            marginTop: "7rem",
+            paddingTop: "34rem",
             height: "100vh",
             width: "100vw",
           }}
