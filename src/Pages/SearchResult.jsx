@@ -48,12 +48,17 @@ const SearchResult = () => {
       <SelectedBlogHero searchPage={searchPage} />
       <div className="container my-3" ref={desiredComponentRef}>
         <h2 className="m-4">Search Results:</h2>
-        <div className="row  my-3">
+        <div
+          className="row  my-3"
+          style={{
+            padding: "0.5rem 1rem",
+          }}
+        >
           {propertyState?.filteredProperties?.data &&
           propertyState?.filteredProperties?.data.length > 0 ? (
             propertyState?.filteredProperties?.data.map((item, i) => {
               return (
-                <div className="col-md-4 col-sm-6 my-4" key={i}>
+                <div className="col-md-4 col-sm-6 my-4" key={i} style={{}}>
                   <Link to={`/${url_str}/${item?.slug}`}>
                     <Card>
                       {item?.images && item.images.length > 0 && (

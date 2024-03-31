@@ -55,7 +55,7 @@ const AllProperties = ({
   return (
     <div className="container-fluid AllProperties">
       <div className="row">
-        <div className="col-12">
+        <div className="container">
           <div className="col-12">
             <h2
               style={{
@@ -90,20 +90,22 @@ const AllProperties = ({
         </div>
         <div
           className="row my-3 "
-          style={{
-            justifyContent: "center",
-          }}
+          style={
+            {
+              // justifyContent: "center",
+            }
+          }
         >
           {currentItems &&
             currentItems.map((item, i) => {
               return (
                 <div
-                  className="col-md-4 col-sm-6"
+                  className="col-md-4 col-sm-6 my-3"
                   key={i}
-                  style={{
-                    width: "414px",
-                    height: !isMobile ? "503px" : "420px",
-                  }}
+                  // style={{
+                  //   width: "414px",
+                  //   height: !isMobile ? "503px" : "420px",
+                  // }}
                 >
                   <Link to={`/${url_str}/${item?.slug}`}>
                     <Card>
