@@ -183,9 +183,10 @@ const FindProperties = () => {
                 <form onSubmit={formik.handleSubmit}>
                   {" "}
                   <div
-                    className="d-flex flex-row justify-content-center gap-4x align-items-center  mb-4 select_wrap_find"
+                    className="d-flex flex-row justify-content-center align-items-center gap-4x mb-4 select_wrap_find"
                     style={{
                       paddingTop: !isMobile ? "1.6rem" : "",
+                      // paddingTop: !isMobile ? "1.6rem" : "",
                     }}
                   >
                     <div className="select-width">

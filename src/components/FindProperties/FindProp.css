@@ -9,6 +9,11 @@
   color: black !important;
 }
 
+.css-qiwgdb.css-qiwgdb.css-qiwgdb {
+  padding-right: 32px;
+  width: 155px;
+}
+
 /* default edit */
 .home-prop .nav-pills .nav-link {
   background-color: #ffffff;
@@ -193,9 +198,10 @@
   }
 
   /* vercel */
+  .css-qiwgdb.css-qiwgdb.css-qiwgdb,
   .css-qiwgdb.css-qiwgdb.css-qiwgdb {
     padding-right: 32px;
-    width: 241px;
+    width: 231px;
   }
   /* vercel */
 
@@ -246,6 +252,7 @@
 
 @media (max-width: 380px) {
   /* vercel */
+  .css-qiwgdb.css-qiwgdb.css-qiwgdb,
   .css-qiwgdb.css-qiwgdb.css-qiwgdb {
     padding-right: 32px;
     width: 200px;
