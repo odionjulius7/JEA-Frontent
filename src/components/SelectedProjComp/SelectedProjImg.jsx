@@ -38,6 +38,30 @@ const SelectedProjImg = ({ projectDetail }) => {
     };
   }, []);
 
+  let phoneNumber;
+  if (projectDetail?.agent_whatsapp.startsWith("234")) {
+    // If what_num contains a country code, use it as is
+    phoneNumber = projectDetail?.agent_whatsapp;
+  } else {
+    // If no country code is found, add 234 as the prefix
+    phoneNumber = `234${projectDetail?.agent_whatsapp}`;
+  }
+
+  const href = `https://wa.me/${phoneNumber}`;
+
+  //
+  let callNumber;
+  if (projectDetail?.agent_call.startsWith("234")) {
+    // If what_num contains a country code, use it as is
+    callNumber = projectDetail?.agent_call;
+  } else {
+    // If no country code is found, add 234 as the prefix
+    callNumber = `234${projectDetail?.agent_call}`;
+  }
+
+  const hrefCall = `tel:+${callNumber}`;
+  console.log(callNumber);
+
   return (
     <>
       {" "}
@@ -70,7 +94,35 @@ const SelectedProjImg = ({ projectDetail }) => {
             );
           })}
         </div>
-        <div className="row my-5">
+        <div
+          className="row my-5"
+          style={{
+            marginLeft: "-10px",
+          }}
+        >
+          {projectDetail?.images?.slice(3, 6).map((item, index) => {
+            return (
+              <div
+                key={index}
+                className="col-md-4 col-sm-10 mx-auto"
+                style={{
+                  margin: isMobile ? "5px 0 5px 0px" : "",
+                }}
+              >
+                <img
+                  src={item}
+                  alt=""
+                  className="w-100"
+                  style={{
+                    height: "322px",
+                    maxWidth: "390px",
+                  }}
+                />
+              </div>
+            );
+          })}
+        </div>
+        {/* <div className="row my-5">
           {projectDetail?.images?.slice(3, 6).map((item, index) => {
             return (
               <div key={index} className="col-md-4 col-sm-12 mb-5">
@@ -86,7 +138,7 @@ const SelectedProjImg = ({ projectDetail }) => {
               </div>
             );
           })}
-        </div>
+        </div> */}
 
         <div className="row align-items-center ">
           <div className="row">
@@ -100,7 +152,7 @@ const SelectedProjImg = ({ projectDetail }) => {
             >
               <div className="d-flex gap-3 justify-content-center call_mess_btn">
                 <a
-                  href={`tel:+${projectDetail?.agent_call}`}
+                  href={hrefCall}
                   style={{
                     width: !isMobile ? "26%" : "99%",
                   }}
@@ -120,7 +172,7 @@ const SelectedProjImg = ({ projectDetail }) => {
                   </button>
                 </a>
                 <a
-                  href={`https://wa.me/${projectDetail?.agent_whatsapp}`}
+                  href={href}
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
@@ -322,7 +374,7 @@ const SelectedProjImg = ({ projectDetail }) => {
             <img src="/link.svg" alt="hh" />
             <span
               style={{
-                fontSize: !isMobile ? "12px" : "9px",
+                fontSize: !isMobile ? "13px" : "9px",
                 color: "#7A7A7A",
               }}
             >

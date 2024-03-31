@@ -71,6 +71,7 @@ const PropsSelectedHero = ({ propertyDetail }) => {
   }
 
   const hrefCall = `tel:+${callNumber}`;
+  console.log(callNumber);
   return (
     <>
       <div className="App--props-selected text-white">
@@ -328,7 +329,7 @@ const PropsSelectedHero = ({ propertyDetail }) => {
             <img src="/link.svg" alt="hh" />
             <span
               style={{
-                fontSize: !isMobile ? "12px" : "9px",
+                fontSize: !isMobile ? "13px" : "9px",
                 color: "#7A7A7A",
               }}
             >
