@@ -170,7 +170,9 @@
   .nav-pills .nav-item a {
     font-size: 14px !important;
   }
-  .App-prop .nav-pills .nav-link,
+
+  .App--selected-blog .nav-pills .nav-link,
+  .App--selected-blog .nav-pills .nav-link .App-prop .nav-pills .nav-link,
   .home-prop .nav-pills .nav-link {
     background-color: #ededed !important;
     width: 100%;
@@ -184,8 +186,13 @@
   .App--prop .nav-pills .nav-link {
     background-color: #ededed;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
+  .App--selected-blog .nav-pills .nav-link.active,
+  .App--selected-blog .nav-pills .show > .nav-link,
   .App--prop .nav-pills .nav-link.active,
   .App--prop .nav-pills .show > .nav-link,
   .home-prop .nav-pills .nav-link.active,
@@ -195,6 +202,9 @@
     border: 2px solid #fbc344;
     width: 100%;
     /* padding: 0.51rem 2.4rem !important; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   /* vercel */
