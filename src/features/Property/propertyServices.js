@@ -73,6 +73,21 @@ const postProj = async (data) => {
   return response.data;
 };
 
+const fetchFeatProject = async (token) => {
+  const tag = "featured";
+  try {
+    // const config = generateAxiosConfig(token);
+    const response = await axios.get(
+      `${base_url}project/tag/${tag}`
+      // config
+    );
+    return response?.data;
+  } catch (error) {
+    console.error("Error fetching projects:", error);
+    return null; // Handle error appropriately in your application
+  }
+};
+
 // getintouch
 const getIntouch = async (data) => {
   const response = await axios.post(`${base_url}property/getintouch`, {
@@ -129,6 +144,7 @@ const propertyService = {
   allProject,
   getAproject,
   postProj,
+  fetchFeatProject,
   //
   allRequest,
   getaRequest,

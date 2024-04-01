@@ -9,6 +9,7 @@ const initialState = {
   projects: [],
   requests: [],
   blogs: [],
+  featProject: null,
   filteredProperties: [],
   isError: false,
   isLoading: false,
@@ -71,6 +72,17 @@ export const allProject = createAsyncThunk(
   async (token, thunkAPI) => {
     try {
       return await propertyService.allProject(token);
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error);
+    }
+  }
+);
+
+export const fetchFeatProject = createAsyncThunk(
+  "project/get-feat-project",
+  async (_, thunkAPI) => {
+    try {
+      return await propertyService.fetchFeatProject();
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
     }
@@ -266,6 +278,22 @@ export const propertySlice = createSlice({
         state.isSuccess = false;
         state.message = action.error;
         state.isLoadingProj = false;
+      })
+      .addCase(fetchFeatProject.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(fetchFeatProject.fulfilled, (state, action) => {
+        state.isError = false;
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.featProject = action.payload;
+        state.message = "success";
+      })
+      .addCase(fetchFeatProject.rejected, (state, action) => {
+        state.isError = true;
+        state.isSuccess = false;
+        state.message = action.error;
+        state.isLoading = false;
       })
       .addCase(getAproject.pending, (state) => {
         state.isLoadingProj = true;

@@ -12,8 +12,9 @@ import FloatWhatsapp from "../components/FloatWhatsapp/FloatWhatsapp";
 import { useDispatch, useSelector } from "react-redux";
 import {
   // allBlog,
-  allProject,
+  // allProject,
   allProperty,
+  fetchFeatProject,
   resetState,
 } from "../features/Property/propertySlice";
 import Preloader from "../components/Preloader/Preloader";
@@ -25,17 +26,17 @@ const Home = () => {
   // const blogsState = useSelector((state) => state.property);
   const projectState = useSelector((state) => state.property);
 
-  const projs = projectState?.projects?.allProject || [];
+  // const projs = projectState?.projects?.allProject || [];
   const propertys = propertyState?.properties?.allProperty || [];
   // const blogs = blogsState?.blogs?.blog || [];
 
-  // console.log(propertyState?.isLoading);
+  console.log(projectState?.featProject?.project);
 
-  const featuredPrj = projs
-    .filter((property) => {
-      return property.tag === "featured";
-    })
-    .reverse();
+  // const featuredPrj = projs
+  //   .filter((property) => {
+  //     return property.tag === "featured";
+  //   })
+  //   .reverse();
   const propertyOfTheWeek = propertys.filter((property) => {
     return property.tag === "property of the week";
   });
@@ -52,8 +53,8 @@ const Home = () => {
   useEffect(() => {
     dispatch(resetState());
     dispatch(allProperty());
-    // dispatch(allBlog());
-    dispatch(allProject());
+    dispatch(fetchFeatProject());
+    // dispatch(allProject());
   }, [dispatch]);
   //
   const [isLoading, setIsLoading] = useState(true);
@@ -99,7 +100,7 @@ const Home = () => {
 
   return (
     <>
-      <Hero featuredPrj={featuredPrj} />
+      <Hero featuredPrj={projectState?.featProject?.project} />
       <div
         className="container-fluid px-5x text-white home-prop"
         style={{

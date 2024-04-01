@@ -40,9 +40,9 @@ const Hero = ({ featuredPrj }) => {
                   }}
                 >
                   {/* <img src="./sixtus-svg.svg" alt="img" className="img-fluid" /> */}
-                  {featuredPrj[0]?.logo && (
+                  {featuredPrj?.logo && (
                     <img
-                      src={featuredPrj[0]?.logo}
+                      src={featuredPrj?.logo}
                       alt="img"
                       className="img-fluid"
                     />
@@ -58,7 +58,7 @@ const Hero = ({ featuredPrj }) => {
                 style={{ marginBottom: isMobile ? "2rem" : "6rem" }}
               >
                 <p className="text-white italic_p ">
-                  {featuredPrj[0]?.short_description}
+                  {featuredPrj?.short_description}
                 </p>
                 {/* <p className="text-white italic_p ">
                   The Sixtus contains 4 Bedroom Terrace houses and two fully
@@ -71,7 +71,7 @@ const Hero = ({ featuredPrj }) => {
                   style={{ marginTop: isMobile ? "3rem" : "8rem" }}
                 >
                   <button className="btn btn-outline-light">
-                    <Link to={`/project/${featuredPrj[0]?.slug}`}>
+                    <Link to={`/project/${featuredPrj?.slug}`}>
                       VIEW THIS PROJECT
                     </Link>
                   </button>
@@ -83,7 +83,7 @@ const Hero = ({ featuredPrj }) => {
               <div className="col-md-6 col-sm-12 dflex_1st">
                 <div id="carouselExample" className="carousel slide">
                   <div className="carousel-inner">
-                    {featuredPrj[0]?.images.map((image, index) => (
+                    {featuredPrj?.images.map((image, index) => (
                       <div
                         key={index}
                         className={`carousel-item ${
@@ -110,7 +110,7 @@ const Hero = ({ featuredPrj }) => {
                     >
                       <span>{activeIndex + 1}</span>
                       <img src="./div_line.svg" alt="" />
-                      <span>{featuredPrj[0]?.images.length}</span>
+                      <span>{featuredPrj?.images.length}</span>
                     </div>
                   </div>
                   <div className="col">
@@ -131,7 +131,7 @@ const Hero = ({ featuredPrj }) => {
                   <div className="col d-flex justify-content-center align-items-center gap-3 mt-2 div_btn">
                     <span>0{activeIndex + 1}</span>
                     <img src="./div_line.svg" alt="" />
-                    <span>0{featuredPrj[0]?.images.length}</span>
+                    <span>0{featuredPrj?.images.length}</span>
                   </div>
                   <div className="col">
                     <button
@@ -141,7 +141,7 @@ const Hero = ({ featuredPrj }) => {
                       data-bs-slide="next"
                       onClick={() =>
                         handleSlideChange(
-                          activeIndex + 1 < featuredPrj[0]?.images.length
+                          activeIndex + 1 < featuredPrj?.images.length
                             ? activeIndex + 1
                             : activeIndex
                         )
