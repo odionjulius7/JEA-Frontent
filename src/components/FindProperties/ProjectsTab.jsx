@@ -38,7 +38,7 @@ const ProjectsTab = ({ projs }) => {
     };
   }, []);
 
-  console.log(projs);
+  console.log(projs[0]);
 
   return (
     <>
@@ -86,15 +86,20 @@ const ProjectsTab = ({ projs }) => {
                           <div className="d-flex gap-2 align-items-center">
                             <img src="./new_releases.svg" alt="" />
                             <span>
-                              {moment(projDet?.createdAt)
+                              {/* {moment(projDet?.createdAt)
                                 .format("l")
-                                .slice(5, 9)}
+                                .slice(5, 9)} */}
+                              {moment(projDet?.createdAt).format("YYYY")}
                             </span>
                           </div>
 
                           <div className="d-flex gap-2 align-items-center">
                             <img src="./cottage.svg" alt="" />
-                            <span>Fully Detached</span>
+                            <span>
+                              {projDet?.property_type
+                                ? projDet?.property_type
+                                : "Fully Detached"}
+                            </span>
                           </div>
                           <div className="d-flex gap-2 align-items-center">
                             <img src="./location_on.svg" alt="" />
@@ -272,15 +277,21 @@ const ProjectsTab = ({ projs }) => {
                           <div className="d-flex gap-2 align-items-center">
                             <img src="./new_releases.svg" alt="" />
                             <span>
-                              {moment(projDet?.createdAt)
+                              {/* {moment(projDet?.createdAt)
                                 .format("l")
-                                .slice(5, 9)}
+                                .slice(5, 9)} */}
+
+                              {moment(projDet?.createdAt).format("YYYY")}
                             </span>
                           </div>
 
                           <div className="d-flex gap-2 align-items-center">
                             <img src="./cottage.svg" alt="" />
-                            <span>Fully Detached</span>
+                            <span>
+                              {projDet?.property_type
+                                ? projDet?.property_type
+                                : "Fully Detached"}
+                            </span>
                           </div>
                           <div className="d-flex gap-2 align-items-center">
                             <img src="./location_on.svg" alt="" />

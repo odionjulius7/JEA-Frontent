@@ -74,7 +74,8 @@ export default function Contact({ projectDetail }) {
           width="100%"
           height="100%"
           transitionDuration="200"
-          mapStyle="mapbox://styles/mapbox/streets-v9"
+          mapStyle="mapbox://styles/mapbox/streets-v11"
+          // mapStyle="mapbox://styles/mapbox/streets-v9"
         >
           <FullscreenControl position="top-left" />
           <NavigationControl position="top-left" />
