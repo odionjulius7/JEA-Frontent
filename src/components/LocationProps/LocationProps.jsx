@@ -16,7 +16,7 @@ const LocationProps = ({ uniqueLocations }) => {
                 margin: "8rem",
               }}
             >
-              No property Yet
+              Please! Check Back
             </h4>
           )}
         </div>

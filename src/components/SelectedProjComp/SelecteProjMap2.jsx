@@ -57,13 +57,14 @@ export default function Contact({ projectDetail }) {
       behavior: "smooth",
     });
   }, []);
+
   return (
     <section className="map2">
       {longitude !== null && latitude !== null ? (
         <Map
           initialViewState={{
-            //   longitude: 5.6027986,
-            //   latitude: 6.4672911,
+            // longitude: 5.6027986,
+            // latitude: 6.4672911,
             longitude: longitude,
             latitude: latitude,
             zoom: 12,
@@ -74,17 +75,16 @@ export default function Contact({ projectDetail }) {
           width="100%"
           height="100%"
           transitionDuration="200"
-          mapStyle="mapbox://styles/mapbox/streets-v11"
-          // mapStyle="mapbox://styles/mapbox/streets-v9"
+          mapStyle="mapbox://styles/mapbox/streets-v9"
         >
           <FullscreenControl position="top-left" />
           <NavigationControl position="top-left" />
           <ScaleControl />
           <Marker
-            longitude={longitude.toString()}
-            latitude={latitude.toString()}
-            //   longitude="5.6027986"
-            //   latitude="6.4672911"
+            longitude={longitude}
+            latitude={latitude}
+            // longitude="5.6027986"
+            // latitude="6.4672911"
             offsetLeft={-3.5 * 12}
             offsetTop={-7 * 12}
           ></Marker>
@@ -95,6 +95,9 @@ export default function Contact({ projectDetail }) {
     </section>
   );
 }
+
+// longitude={longitude.toString()}
+// latitude={latitude.toString()}
 
 // import React, { useEffect, useState } from "react";
 // import Map, {

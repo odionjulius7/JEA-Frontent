@@ -10,18 +10,18 @@ const LocationSlider = ({ homePage, uniqueLocations }) => {
   const slides = [1, 2, 3, 4, 5];
 
   // Calculate the transform percentage
-  const slideWidthPercent = 100 / slides.length;
+  const slideWidthPercent = 100 / uniqueLocations?.length;
   const transformPercentage = -(currentIndex * slideWidthPercent);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === slides.length - 1 ? 0 : prevIndex + 1
+      prevIndex === uniqueLocations?.length - 1 ? 0 : prevIndex + 1
     );
   };
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? slides.length - 1 : prevIndex - 1
+      prevIndex === 0 ? uniqueLocations?.length - 1 : prevIndex - 1
     );
   };
 
@@ -38,28 +38,6 @@ const LocationSlider = ({ homePage, uniqueLocations }) => {
   }, []);
 
   return (
-    // <Swiper
-    //   spaceBetween={11}
-    //   slidesPerView={isMobile ? 2 : 5}
-    //   navigation
-    //   autoplay={{ delay: 4000, disableOnInteraction: false }}
-    //   onSlideChange={() => console.log("slide change")}
-    //   onSwiper={(swiper) => console.log(swiper)}
-    // >
-    //   {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((Item, i) => {
-    //     return (
-    //       <SwiperSlide key={i} className="mx-2">
-    //         <div className="location_wrap">
-    //           <img src="./location-img.png" alt="" className="w-100" />
-    //           <div className="location_rotate">
-    //             <span>VICTORIA ISLAND</span>
-    //           </div>
-    //         </div>
-    //       </SwiperSlide>
-    //     );
-    //   })}
-    // </Swiper>
-    //
     <>
       <div className="row location_slide_wrap mt-5">
         <div className="col-12">
@@ -104,12 +82,14 @@ const LocationSlider = ({ homePage, uniqueLocations }) => {
                   padding: "0.8rem 1.5rem",
                 }}
                 onClick={prevSlide}
+                disabled={uniqueLocations.length < 5}
               >
                 <img src="./arrow_left_svg_dk.svg" alt="line-img" />
                 {/* <FaLongArrowAltLeft /> */}
               </button>
               <button
                 onClick={nextSlide}
+                disabled={uniqueLocations.length < 5}
                 className="btn btn-outline-dark "
                 style={{
                   border: "1px solid #000000",
@@ -165,3 +145,26 @@ const LocationSlider = ({ homePage, uniqueLocations }) => {
 };
 
 export default LocationSlider;
+
+// <Swiper
+//   spaceBetween={11}
+//   slidesPerView={isMobile ? 2 : 5}
+//   navigation
+//   autoplay={{ delay: 4000, disableOnInteraction: false }}
+//   onSlideChange={() => console.log("slide change")}
+//   onSwiper={(swiper) => console.log(swiper)}
+// >
+//   {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((Item, i) => {
+//     return (
+//       <SwiperSlide key={i} className="mx-2">
+//         <div className="location_wrap">
+//           <img src="./location-img.png" alt="" className="w-100" />
+//           <div className="location_rotate">
+//             <span>VICTORIA ISLAND</span>
+//           </div>
+//         </div>
+//       </SwiperSlide>
+//     );
+//   })}
+// </Swiper>
+//

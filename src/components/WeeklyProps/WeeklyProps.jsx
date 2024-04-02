@@ -141,7 +141,7 @@ const WeeklyProps = ({ blogPage, url_str, homeBg, propertyOfTheWeek }) => {
                 margin: !isMobile ? "8rem" : "2rem",
               }}
             >
-              Check Back
+              Please! Check Back
             </h4>
           )}
         </div>

@@ -12,6 +12,12 @@
   overflow-y: hidden;
   /* padding: 1rem; */
 }
+
+/* .mapboxgl-map {
+  position: relative;
+    width: 100%;
+    height: 100%;
+} */
 /*  */
 .SelectedProjVideo {
   min-height: 400px;

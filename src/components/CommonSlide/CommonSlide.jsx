@@ -34,18 +34,18 @@ const CommonSlide = ({
   const slides = [1, 2, 3, 4, 5, 6, 7, 8];
 
   // Calculate the transform percentage
-  const slideWidthPercent = 100 / slides.length;
+  const slideWidthPercent = 100 / availableLuxury?.length;
   const transformPercentage = -(currentIndex * slideWidthPercent);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === slides.length - 1 ? 0 : prevIndex + 1
+      prevIndex === availableLuxury?.length - 1 ? 0 : prevIndex + 1
     );
   };
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? slides.length - 1 : prevIndex - 1
+      prevIndex === 0 ? availableLuxury?.length - 1 : prevIndex - 1
     );
   };
 
@@ -173,7 +173,6 @@ const CommonSlide = ({
                 }}
               >
                 <img src="./arrow_right_svg.svg" alt="" />
-                {/* <FaLongArrowAltRight /> */}
               </button>
             </div>
           </div>
