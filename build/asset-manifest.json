@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.ce9c398a.css",
-    "main.js": "/static/js/main.fe6c3468.js",
+    "main.css": "/static/css/main.9f6c5390.css",
+    "main.js": "/static/js/main.63e726be.js",
     "static/js/453.7c70d248.chunk.js": "/static/js/453.7c70d248.chunk.js",
     "static/media/selected-proj.png": "/static/media/selected-proj.f334c62d19d7dfe61ff4.png",
     "static/media/props-img-page.png": "/static/media/props-img-page.79a2baddc9a88abc1651.png",
@@ -13,17 +13,18 @@
     "static/media/cant-find.png": "/static/media/cant-find.dd1c2a4c8e9b2816cbec.png",
     "static/media/news-letter-img.png": "/static/media/news-letter-img.a5d9cc4828b79a9a3c2f.png",
     "static/media/property-req.png": "/static/media/property-req.13ba9a189801286200f7.png",
+    "static/js/mapbox-gl-csp-worker.968a1a88.worker.js": "/static/js/mapbox-gl-csp-worker.968a1a88.worker.js",
     "static/media/about_1.png": "/static/media/about_1.2b7afe3b918fd070808d.png",
     "static/media/new_prop_about.png": "/static/media/new_prop_about.316ad39925c9a7931451.png",
     "static/media/Madera Medium.ttf": "/static/media/Madera Medium.389972be9996cc5a0759.ttf",
     "static/media/ClashDisplay-Medium.otf": "/static/media/ClashDisplay-Medium.afcc86306d88484344b4.otf",
     "index.html": "/index.html",
-    "main.ce9c398a.css.map": "/static/css/main.ce9c398a.css.map",
-    "main.fe6c3468.js.map": "/static/js/main.fe6c3468.js.map",
+    "main.9f6c5390.css.map": "/static/css/main.9f6c5390.css.map",
+    "main.63e726be.js.map": "/static/js/main.63e726be.js.map",
     "453.7c70d248.chunk.js.map": "/static/js/453.7c70d248.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ce9c398a.css",
-    "static/js/main.fe6c3468.js"
+    "static/css/main.9f6c5390.css",
+    "static/js/main.63e726be.js"
   ]
 }
