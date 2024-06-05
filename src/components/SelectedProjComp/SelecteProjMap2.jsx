@@ -50,6 +50,7 @@ export default function Contact({ projectDetail }) {
     }
   }, [projectDetail]);
 
+  //
   useEffect(() => {
     window.scroll({
       top: 0,
