@@ -26,6 +26,7 @@ const FloatWhatsapp = () => {
         >
           Chat with us
         </button>
+        {/* what */}
       </a>
       <div
         className="d-flex align-items-center justify-content-center"
