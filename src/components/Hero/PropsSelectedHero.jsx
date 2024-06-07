@@ -333,7 +333,7 @@ const PropsSelectedHero = ({ propertyDetail }) => {
                 color: "#7A7A7A",
               }}
             >
-              jea-frontent.vercel.app/property/
+              https://joetoniruest.com/property/
               {propertyDetail?.slug}
             </span>
             <CopyToClipboard

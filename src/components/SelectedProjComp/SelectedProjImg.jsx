@@ -378,7 +378,7 @@ const SelectedProjImg = ({ projectDetail }) => {
                 color: "#7A7A7A",
               }}
             >
-              jea-frontent.vercel.app/project/
+              https://joetoniruest.com/project/
               {projectDetail?.slug}
             </span>
             <CopyToClipboard
