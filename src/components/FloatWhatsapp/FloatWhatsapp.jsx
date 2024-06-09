@@ -10,7 +10,7 @@ const FloatWhatsapp = () => {
     <div className="d-flex justify-content-end align-items-center gap-3 FloatWhatsapp p-0">
       {" "}
       <a
-        href={`https://wa.me/2348166792537 `}
+        href={`https://wa.me/2348166792537`}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -18,7 +18,7 @@ const FloatWhatsapp = () => {
           className="button fit-content my-4"
           style={{
             background: "#25D366",
-            color: "#ffffff",
+            color: "#fff",
             fontWeight: "600",
             borderRadius: "90px",
             fontSize: "13px",
@@ -26,6 +26,7 @@ const FloatWhatsapp = () => {
         >
           Chat with us
         </button>
+        {/* what */}
       </a>
       <div
         className="d-flex align-items-center justify-content-center"
